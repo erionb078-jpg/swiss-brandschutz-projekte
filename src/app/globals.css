@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1b1b1b;
+  --color-night: #17181a;
+  --color-night-2: #26272a;
+  --color-paper: #f6f4f0;
+  --color-sand: #f4f0e9;
+  --color-line: #e4e0d9;
+  --color-line-2: #d9d5ce;
+  --color-muted: #5f5d58;
+  --color-brand: #b3262d;
+  --color-brand-dark: #8e1c22;
+  --color-brand-soft: #fbedec;
+  --font-sans: "Public Sans", system-ui, sans-serif;
+  --font-display: "Archivo", system-ui, sans-serif;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+@utility field {
+  @apply h-11 w-full rounded-lg border border-line-2 bg-white px-3 text-[14.5px] text-ink outline-none focus:ring-2 focus:ring-night focus:ring-offset-1;
+}
+@utility btn {
+  @apply inline-flex h-11 items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition-colors disabled:opacity-50;
+}
+@utility btn-primary {
+  @apply btn bg-brand text-white hover:bg-brand-dark;
+}
+@utility btn-secondary {
+  @apply btn border border-line-2 bg-white font-medium text-ink hover:border-night;
+}
+@utility panel {
+  @apply flex min-w-0 flex-col gap-4 rounded-[10px] border border-line bg-white px-5 py-5 sm:px-6;
+}
+@utility label {
+  @apply text-[13px] font-semibold;
+}
+@utility muted {
+  @apply text-xs text-muted;
+}
