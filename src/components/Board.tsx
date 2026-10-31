@@ -13,7 +13,7 @@ import {
   type DragEndEvent,
 } from "@dnd-kit/core";
 import { STATUSES, SERVICES, type StatusKey } from "@/lib/types";
-import { setStatus } from "@/app/actions";
+import { setStatus } from "@/lib/db";
 import { initials } from "@/lib/format";
 import { Icon } from "./Icon";
 
@@ -38,7 +38,7 @@ const toneClass = {
   blue: "bg-[#EEF1F6] text-[#2C4A78]",
 };
 
-export function Board({ cards: initial }: { cards: CardData[] }) {
+export function Board({ cards: initial, onChanged }: { cards: CardData[]; onChanged: () => unknown }) {
   const [cards, setCards] = useState(initial);
   useEffect(() => setCards(initial), [initial]);
   const [q, setQ] = useState("");
@@ -65,7 +65,10 @@ export function Board({ cards: initial }: { cards: CardData[] }) {
     const card = cards.find((c) => c.id === id);
     if (!card || card.status === to) return;
     setCards((cs) => cs.map((c) => (c.id === id ? { ...c, status: to } : c)));
-    start(() => setStatus(id, to));
+    start(async () => {
+      await setStatus(id, to);
+      await onChanged();
+    });
   }
 
   return (
@@ -149,7 +152,7 @@ function Card({ c }: { c: CardData }) {
   return (
     <Link
       ref={setNodeRef}
-      href={`/projekte/${c.id}`}
+      href={`/projekt/?id=${c.id}`}
       style={style}
       {...listeners}
       {...attributes}

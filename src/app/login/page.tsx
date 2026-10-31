@@ -1,16 +1,32 @@
 "use client";
 
-import Image from "next/image";
-import { useActionState } from "react";
-import { login } from "@/app/actions";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { sb } from "@/lib/supabase";
 
 export default function LoginPage() {
-  const [error, action, pending] = useActionState(login, null);
+  const router = useRouter();
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
   return (
     <div className="flex min-h-screen items-center justify-center bg-night px-4">
-      <form action={action} className="flex w-full max-w-[380px] flex-col gap-4 rounded-xl bg-white p-7">
+      <form
+        onSubmit={async (e) => {
+          e.preventDefault();
+          setBusy(true);
+          setError(null);
+          const fd = new FormData(e.currentTarget);
+          const { error } = await sb().auth.signInWithPassword({ email: String(fd.get("email")), password: String(fd.get("password")) });
+          if (error) {
+            setError("E-Mail oder Passwort stimmt nicht.");
+            setBusy(false);
+          } else router.replace("/");
+        }}
+        className="flex w-full max-w-[380px] flex-col gap-4 rounded-xl bg-white p-7"
+      >
         <div className="-mx-7 -mt-7 mb-2 rounded-t-xl bg-night px-7 pb-5 pt-7">
-          <Image src="/logo-hell.png" alt="Swiss Brandschutz" width={180} height={40} className="h-10 w-auto" priority />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo-hell.png" alt="Swiss Brandschutz" className="h-10 w-auto" />
         </div>
         <h1 className="font-display text-2xl font-extrabold">Projekte</h1>
         <label className="flex flex-col gap-1.5">
@@ -22,7 +38,7 @@ export default function LoginPage() {
           <input name="password" type="password" autoComplete="current-password" required className="field" />
         </label>
         {error && <p role="alert" className="text-sm font-medium text-brand">{error}</p>}
-        <button disabled={pending} className="btn-primary">{pending ? "Anmelden …" : "Anmelden"}</button>
+        <button disabled={busy} className="btn-primary">{busy ? "Anmelden …" : "Anmelden"}</button>
       </form>
     </div>
   );

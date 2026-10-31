@@ -2,10 +2,10 @@
 
 import { useOptimistic, useTransition } from "react";
 import { STEPS, type StatusKey } from "@/lib/types";
-import { setStatus, toggleTask, deleteTask } from "@/app/actions";
+import { setStatus, toggleTask, deleteTask } from "@/lib/db";
 import { Icon } from "./Icon";
 
-export function StatusSteps({ projectId, status, dates }: { projectId: string; status: StatusKey; dates: Partial<Record<StatusKey, string>> }) {
+export function StatusSteps({ projectId, status, dates, onChange }: { projectId: string; status: StatusKey; dates: Partial<Record<StatusKey, string>>; onChange: () => unknown }) {
   const [opt, setOpt] = useOptimistic(status);
   const [pending, start] = useTransition();
   const idx = STEPS.findIndex((s) => s.key === opt);
@@ -15,6 +15,7 @@ export function StatusSteps({ projectId, status, dates }: { projectId: string; s
     start(async () => {
       setOpt(k);
       await setStatus(projectId, k);
+      await onChange();
     });
 
   return (
@@ -56,7 +57,7 @@ export function StatusSteps({ projectId, status, dates }: { projectId: string; s
   );
 }
 
-export function TaskItem({ id, projectId, title, due, done, overdue }: { id: string; projectId: string; title: string; due: string; done: boolean; overdue: boolean }) {
+export function TaskItem({ id, projectId, title, due, done, overdue, onChange }: { id: string; projectId: string; title: string; due: string; done: boolean; overdue: boolean; onChange: () => unknown }) {
   const [opt, setOpt] = useOptimistic(done);
   const [, start] = useTransition();
   return (
@@ -70,6 +71,7 @@ export function TaskItem({ id, projectId, title, due, done, overdue }: { id: str
           start(async () => {
             setOpt(v);
             await toggleTask(id, projectId, v);
+            await onChange();
           });
         }}
         className="mt-0.5 h-[18px] w-[18px] shrink-0 accent-brand"
@@ -81,7 +83,7 @@ export function TaskItem({ id, projectId, title, due, done, overdue }: { id: str
       <button
         type="button"
         aria-label="Aufgabe löschen"
-        onClick={() => start(() => deleteTask(id, projectId))}
+        onClick={() => start(async () => { await deleteTask(id); await onChange(); })}
         className="rounded p-1 text-muted opacity-0 hover:text-brand focus:opacity-100 group-hover:opacity-100"
       >
         <Icon name="trash" size={15} />

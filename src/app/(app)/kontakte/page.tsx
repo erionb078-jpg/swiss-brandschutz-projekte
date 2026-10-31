@@ -1,23 +1,22 @@
+"use client";
+
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
+import { ErrorBox, Loading } from "@/components/Ui";
+import { loadContacts, useLoad, type ContactRow } from "@/lib/db";
 import { initials } from "@/lib/format";
 
-export const dynamic = "force-dynamic";
-
-type Row = { id: string; name: string; company: string | null; role: string | null; phone: string | null; email: string | null; project_id: string | null; projects: { title: string } | null };
-
-export default async function ContactsPage() {
-  const supabase = await createClient();
-  const { data } = await supabase.from("contacts").select("id, name, company, role, phone, email, project_id, projects(title)").order("name");
-  const rows = (data ?? []) as unknown as Row[];
+export default function ContactsPage() {
+  const { data: rows, error } = useLoad(loadContacts);
+  if (error) return <ErrorBox error={error} />;
+  if (!rows) return <Loading />;
   // gleiche Person bei mehreren Projekten zusammenfassen
-  const people = new Map<string, Row & { projects_list: { id: string; title: string }[] }>();
+  const people = new Map<string, ContactRow & { list: { id: string; title: string }[] }>();
   for (const r of rows) {
     const key = (r.email || r.name).toLowerCase();
-    const cur = people.get(key) ?? { ...r, projects_list: [] };
+    const cur = people.get(key) ?? { ...r, list: [] };
     cur.phone ??= r.phone;
     cur.email ??= r.email;
-    if (r.project_id && r.projects) cur.projects_list.push({ id: r.project_id, title: r.projects.title });
+    if (r.project_id && r.projects) cur.list.push({ id: r.project_id, title: r.projects.title });
     people.set(key, cur);
   }
 
@@ -39,8 +38,8 @@ export default async function ContactsPage() {
               {c.email ? <a href={`mailto:${c.email}`} className="block break-all hover:text-brand-dark">{c.email}</a> : <span className="block text-muted">E-Mail fehlt</span>}
             </div>
             <div className="flex flex-wrap gap-1.5">
-              {c.projects_list.map((p) => (
-                <Link key={p.id} href={`/projekte/${p.id}`} className="rounded-full bg-sand px-2.5 py-1 text-xs font-medium hover:bg-[#ECE5D8]">{p.title}</Link>
+              {c.list.map((p) => (
+                <Link key={p.id} href={`/projekt/?id=${p.id}`} className="rounded-full bg-sand px-2.5 py-1 text-xs font-medium hover:bg-[#ECE5D8]">{p.title}</Link>
               ))}
             </div>
           </article>

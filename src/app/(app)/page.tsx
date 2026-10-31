@@ -1,30 +1,27 @@
+"use client";
+
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
 import { Board, type CardData } from "@/components/Board";
 import { Icon } from "@/components/Icon";
+import { ErrorBox, Loading } from "@/components/Ui";
+import { loadBoard, useLoad } from "@/lib/db";
 import { chf, dmy, addDays, today, shortName } from "@/lib/format";
-import type { Contact, Project, Task } from "@/lib/types";
-
-export const dynamic = "force-dynamic";
 
 type Tone = "red" | "amber" | "green" | "blue";
 
-export default async function BoardPage() {
-  const supabase = await createClient();
-  const [{ data: projects }, { data: contacts }, { data: tasks }] = await Promise.all([
-    supabase.from("projects").select("*").order("position").order("created_at", { ascending: false }),
-    supabase.from("contacts").select("id, project_id, name, company").order("created_at"),
-    supabase.from("tasks").select("id, project_id, title, due, done").eq("done", false).order("due", { ascending: true, nullsFirst: false }),
-  ]);
+export default function BoardPage() {
+  const { data, error, reload } = useLoad(loadBoard);
+  if (error) return <ErrorBox error={error} />;
+  if (!data) return <Loading />;
 
+  const { projects: ps, contacts, tasks } = data;
   const t = today();
   const soon = addDays(t, 3);
-  const ps = (projects ?? []) as Project[];
   const byId = new Map(ps.map((p) => [p.id, p]));
 
   const cards: CardData[] = ps.map((p) => {
-    const c = (contacts as Contact[] | null)?.find((x) => x.project_id === p.id);
-    const open = ((tasks ?? []) as Task[]).filter((x) => x.project_id === p.id);
+    const c = contacts.find((x) => x.project_id === p.id);
+    const open = tasks.filter((x) => x.project_id === p.id);
     const overdue = open.find((x) => x.due && x.due <= t);
     let flag: { text: string; tone: Tone } | null = null;
     if (p.status === "versendet" && p.follow_up && p.follow_up <= t) flag = { text: "Nachfassen fällig", tone: "red" };
@@ -50,17 +47,16 @@ export default async function BoardPage() {
   const active = ps.filter((p) => !["auftrag", "absage"].includes(p.status));
   const offered = active.filter((p) => ["offerte", "versendet"].includes(p.status)).reduce((s, p) => s + Number(p.amount_net ?? 0), 0);
 
-  // Heute: Überfälliges zuerst, dann bald Fälliges, dann offene Punkte ohne Datum
   const todo: { id: string; text: string; tone: "red" | "amber" }[] = [];
   for (const p of ps) {
     if (p.status === "versendet" && p.follow_up && p.follow_up <= t) todo.push({ id: p.id, text: `${p.title}: nachfassen`, tone: "red" });
   }
-  for (const x of (tasks ?? []) as Task[]) {
+  for (const x of tasks) {
     const p = byId.get(x.project_id);
     if (!p || p.status === "absage") continue;
     if (x.due && x.due <= t) todo.push({ id: p.id, text: `${short(p.title)}: ${cut(x.title, 46)} · seit ${dmy(x.due)}`, tone: "red" });
   }
-  for (const x of (tasks ?? []) as Task[]) {
+  for (const x of tasks) {
     const p = byId.get(x.project_id);
     if (!p || p.status === "absage" || todo.length >= 4) continue;
     if ((x.due && x.due > t && x.due <= soon) || !x.due) todo.push({ id: p.id, text: `${short(p.title)}: ${cut(x.title, 46)}`, tone: "amber" });
@@ -73,7 +69,7 @@ export default async function BoardPage() {
         <span className="text-sm text-muted">
           {active.length} aktiv · {chf(offered)} offeriert
         </span>
-        <Link href="/projekte/neu" className="btn-primary ml-auto">
+        <Link href="/neu/" className="btn-primary ml-auto">
           <Icon name="plus" size={16} /> Neue Anfrage
         </Link>
       </header>
@@ -84,7 +80,7 @@ export default async function BoardPage() {
           {todo.slice(0, 5).map((x, i) => (
             <Link
               key={i}
-              href={`/projekte/${x.id}`}
+              href={`/projekt/?id=${x.id}`}
               className={`inline-flex items-center gap-2 rounded-lg px-3 py-2 text-[13.5px] font-medium ${x.tone === "red" ? "bg-brand-soft text-brand-dark" : "bg-sand"}`}
             >
               <span className={`h-[7px] w-[7px] rounded-full ${x.tone === "red" ? "bg-brand" : "bg-[#9A6A12]"}`} />
@@ -94,7 +90,7 @@ export default async function BoardPage() {
         </section>
       )}
 
-      <Board cards={cards} />
+      <Board cards={cards} onChanged={reload} />
     </div>
   );
 }

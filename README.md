@@ -3,7 +3,7 @@
 Projekt-App für Anfragen, Offerten, Begehungen und Kontakte von Swiss Brandschutz.
 Läuft unter **projekte.swiss-brandschutz.ch**.
 
-Technik: Next.js 15 · TypeScript · Tailwind CSS 4 · Supabase (Datenbank + Login) · Vercel (Hosting)
+Technik: Next.js 15 (statischer Export) · TypeScript · Tailwind CSS 4 · Supabase (Datenbank + Login) · Vercel (Hosting)
 
 ---
 
@@ -16,37 +16,29 @@ Technik: Next.js 15 · TypeScript · Tailwind CSS 4 · Supabase (Datenbank + Log
 3. Nochmals **New query**, Inhalt von `supabase/seed.sql` einfügen → **Run**. Damit sind alle aktuellen Projekte drin.
 4. **Authentication → Sign In / Providers:** „Allow new users to sign up“ **ausschalten**. So kann sich niemand selbst registrieren.
 5. **Authentication → Users → Add user → Create new user:** für dich und Fadil je E-Mail und Passwort setzen, „Auto Confirm User“ anhaken.
-6. **Project Settings → API:** Diese drei Werte brauchst du gleich für Vercel:
-   - Project URL
-   - `anon` `public` Key
-   - `service_role` Key (geheim halten)
+6. **Project Settings → API:** Project URL und `anon` `public` Key notieren.
 
-### 2. Vercel – Hosting
+### 2. Ordner bauen
 
-1. Auf [vercel.com](https://vercel.com) mit GitHub anmelden → **Add New → Project** → dieses Repo importieren.
-2. Unter **Environment Variables** eintragen:
+```bash
+cp .env.example .env.local   # Project URL und anon Key eintragen
+npm install
+npm run build                # erzeugt den Ordner "out"
+```
 
-   | Name | Wert |
-   |---|---|
-   | `NEXT_PUBLIC_SUPABASE_URL` | Project URL aus Supabase |
-   | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | `anon` Key |
-   | `SUPABASE_SERVICE_ROLE_KEY` | `service_role` Key |
-   | `ANFRAGE_SECRET` | ein langes Zufallswort, z. B. 40 Zeichen |
+### 3. Auf Vercel hochladen (ohne GitHub)
 
-3. **Deploy.** Nach 1–2 Minuten läuft die App unter einer `….vercel.app`-Adresse.
+1. [vercel.com/drop](https://vercel.com/drop) öffnen.
+2. Den Ordner **out** ins Browserfenster ziehen. Nach wenigen Sekunden ist die App online.
+3. Die Seite einem Vercel-Konto zuordnen („Claim“), damit sie dauerhaft bleibt und eine eigene Domain bekommt.
 
-### 3. Domain projekte.swiss-brandschutz.ch
+Alternativ mit GitHub: Repo in Vercel importieren und unter Environment Variables `NEXT_PUBLIC_SUPABASE_URL` und `NEXT_PUBLIC_SUPABASE_ANON_KEY` setzen. Vercel baut dann bei jeder Änderung neu.
 
-1. In Vercel: Projekt → **Settings → Domains** → `projekte.swiss-brandschutz.ch` eingeben → **Add**.
-2. Vercel zeigt einen **CNAME-Eintrag** an (Ziel meist `cname.vercel-dns.com`).
-3. Beim Anbieter, wo `swiss-brandschutz.ch` verwaltet wird (z. B. Hostpoint, Infomaniak, Cyon): DNS-Verwaltung öffnen und neuen Eintrag anlegen:
-   - Typ: `CNAME`
-   - Name/Host: `projekte`
-   - Ziel/Wert: der Wert, den Vercel anzeigt
-4. Nach wenigen Minuten (selten bis 24 h) zeigt Vercel „Valid Configuration“, das SSL-Zertifikat kommt automatisch.
-5. In Supabase **Authentication → URL Configuration → Site URL** auf `https://projekte.swiss-brandschutz.ch` setzen.
+### 4. Domain projekte.swiss-brandschutz.ch
 
-Die bestehende Website auf swiss-brandschutz.ch wird dadurch nicht verändert.
+1. In Vercel: Projekt → **Settings → Domains** → `projekte.swiss-brandschutz.ch` → **Add**.
+2. Beim Anbieter von `swiss-brandschutz.ch` einen DNS-Eintrag anlegen: Typ `CNAME`, Name `projekte`, Ziel der Wert, den Vercel anzeigt.
+3. In Supabase **Authentication → URL Configuration → Site URL** auf `https://projekte.swiss-brandschutz.ch` setzen.
 
 ---
 
@@ -57,20 +49,7 @@ Die bestehende Website auf swiss-brandschutz.ch wird dadurch nicht verändert.
 - **Projektseite:** Status per Klick setzen, Offerte, Begehungen mit Notizen, Kontakte, Aufgaben, Links zu Dokumenten und ein Verlauf.
 - **Neue Anfrage:** Formular erfasst Projekt, Kontakt und eine erste Aufgabe „Kunde kontaktieren“.
 
-## Anfragen von der Website automatisch übernehmen
-
-Das Kontaktformular auf swiss-brandschutz.ch kann jede Anfrage zusätzlich an die App schicken:
-
-```
-POST https://projekte.swiss-brandschutz.ch/api/anfrage
-Header:  Content-Type: application/json
-         x-anfrage-secret: <ANFRAGE_SECRET>
-Body:    { "name": "Michael Sörensen", "firma": "Arkoteam GmbH", "telefon": "076 786 44 21",
-           "email": "info@arkoteam.gmbh", "ort": "5312 Döttingen",
-           "nachricht": "Wir benötigen … eine Brandschutztüre." }
-```
-
-Die Anfrage erscheint dann als neue Karte in „Neue Anfrage“, mit Kontakt und Aufgabe „kontaktieren“ (fällig am nächsten Tag). Der Aufruf muss vom Server der Website kommen, nicht aus dem Browser, damit das Geheimwort nicht sichtbar ist.
+Die App ist eine reine statische Seite. Alle Daten liegen in Supabase und sind nur nach Login sichtbar (Row Level Security).
 
 ## Lokal entwickeln
 

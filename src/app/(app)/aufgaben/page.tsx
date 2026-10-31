@@ -1,20 +1,15 @@
+"use client";
+
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/server";
 import { TaskItem } from "@/components/ProjectBits";
+import { ErrorBox, Loading } from "@/components/Ui";
+import { loadTasks, useLoad } from "@/lib/db";
 import { dmy, today, addDays } from "@/lib/format";
 
-export const dynamic = "force-dynamic";
-
-type Row = { id: string; project_id: string; title: string; due: string | null; done: boolean; projects: { title: string } | null };
-
-export default async function TasksPage() {
-  const supabase = await createClient();
-  const { data } = await supabase
-    .from("tasks")
-    .select("id, project_id, title, due, done, projects(title)")
-    .eq("done", false)
-    .order("due", { ascending: true, nullsFirst: false });
-  const rows = (data ?? []) as unknown as Row[];
+export default function TasksPage() {
+  const { data: rows, error, reload } = useLoad(loadTasks);
+  if (error) return <ErrorBox error={error} />;
+  if (!rows) return <Loading />;
   const t = today();
   const week = addDays(t, 7);
   const groups = [
@@ -34,8 +29,8 @@ export default async function TasksPage() {
           <div className="flex flex-col gap-3">
             {g.items.map((r) => (
               <div key={r.id} className="flex flex-col gap-0.5">
-                <Link href={`/projekte/${r.project_id}`} className="text-xs font-semibold text-muted hover:text-brand-dark">{r.projects?.title}</Link>
-                <TaskItem id={r.id} projectId={r.project_id} title={r.title} due={dmy(r.due)} done={r.done} overdue={!!r.due && r.due <= t} />
+                <Link href={`/projekt/?id=${r.project_id}`} className="text-xs font-semibold text-muted hover:text-brand-dark">{r.projects?.title}</Link>
+                <TaskItem id={r.id} projectId={r.project_id} title={r.title} due={dmy(r.due)} done={r.done} overdue={!!r.due && r.due <= t} onChange={reload} />
               </div>
             ))}
           </div>

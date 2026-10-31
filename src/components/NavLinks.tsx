@@ -6,9 +6,9 @@ import { Icon } from "./Icon";
 
 const items = [
   { href: "/", label: "Projekte", icon: "board" },
-  { href: "/aufgaben", label: "Aufgaben", icon: "tasks" },
-  { href: "/kontakte", label: "Kontakte", icon: "people" },
-  { href: "/begehungen", label: "Begehungen", icon: "calendar" },
+  { href: "/aufgaben/", label: "Aufgaben", icon: "tasks" },
+  { href: "/kontakte/", label: "Kontakte", icon: "people" },
+  { href: "/begehungen/", label: "Begehungen", icon: "calendar" },
 ];
 
 export function NavLinks({ openTasks }: { openTasks: number }) {
@@ -16,7 +16,7 @@ export function NavLinks({ openTasks }: { openTasks: number }) {
   return (
     <div className="flex gap-0.5 overflow-x-auto lg:flex-col">
       {items.map((it) => {
-        const active = it.href === "/" ? path === "/" || path.startsWith("/projekte") : path.startsWith(it.href);
+        const active = it.href === "/" ? path === "/" || path.startsWith("/projekt") || path.startsWith("/neu") : path.startsWith(it.href.replace(/\/$/, ""));
         return (
           <Link
             key={it.href}
