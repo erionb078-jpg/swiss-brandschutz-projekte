@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Ich liebe dich, Mina – in 54 Sprachen.">
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Für Mina</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@1,6..96,800;1,6..96,900&family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Jost:wght@400;500&display=swap">
+<style>
+/* Layout: eine Nachtseite – Wortwand aus Liebesworten hinter einem schlagenden Herz, darunter alle Sprachen als Briefkarten */
+:root{
+  --night:#1b0a13;      /* tiefes Weinrot-Schwarz */
+  --night-2:#2a0f1e;
+  --rose:#ff4f6d;       /* Herzrot hell */
+  --blood:#c4123f;      /* Herzrot dunkel */
+  --gold:#f2c88e;       /* warmes Kerzenlicht */
+  --cream:#fbeee6;      /* Schrift */
+  --muted:#c9a7b3;
+  --line:rgba(242,200,142,.18);
+  --f-name:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --f-love:"Cormorant Garamond","Garamond","Times New Roman",serif;
+  --f-label:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--night);color:var(--cream);font-family:var(--f-label);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--night)}
+#sky{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;z-index:1;overflow:hidden;
+  padding-block:clamp(40px,7vw,72px) clamp(36px,6vw,64px);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  background:radial-gradient(60% 55% at 50% 48%,rgba(196,18,63,.35),transparent 70%),linear-gradient(var(--night-2),var(--night));
+  display:flex;flex-direction:column;align-items:center;text-align:center}
+.wall{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-around;pointer-events:none;
+  mask-image:radial-gradient(70% 60% at 50% 50%,transparent 18%,#000 62%);-webkit-mask-image:radial-gradient(70% 60% at 50% 50%,transparent 18%,#000 62%)}
+.row{display:flex;width:max-content;white-space:nowrap;font-family:var(--f-love);font-style:italic;font-weight:500;
+  font-size:clamp(18px,2.4vw,26px);color:var(--cream);opacity:.16;animation:slide var(--d,80s) linear infinite}
+.row:nth-child(even){animation-direction:reverse;color:var(--gold);opacity:.13}
+.row span{padding-inline:22px}
+.row span::after{content:"♥";font-style:normal;font-size:.6em;margin-left:22px;color:var(--rose);opacity:.7}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+.eyebrow{position:relative;font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin:0 0 6px}
+.heartbtn{position:relative;border:0;background:none;padding:0;cursor:pointer;width:min(80vw,470px);aspect-ratio:100/90;max-width:100%;
+  -webkit-tap-highlight-color:transparent;border-radius:40%}
+.heartbtn:focus-visible{outline:2px dashed var(--gold);outline-offset:8px}
+.heart{width:100%;height:100%;display:block;overflow:visible;filter:drop-shadow(0 18px 50px rgba(255,79,109,.45));
+  transform-origin:50% 55%;animation:beat 1.6s ease-in-out infinite}
+@keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.07)}24%{transform:scale(.99)}36%{transform:scale(1.045)}52%{transform:scale(1)}}
+.name{position:absolute;left:0;right:0;top:41%;transform:translateY(-50%);margin:0;pointer-events:none;
+  font-family:var(--f-name);font-style:italic;font-weight:900;font-size:clamp(64px,15vw,150px);line-height:1;letter-spacing:-.01em;
+  color:var(--cream);text-shadow:0 4px 22px rgba(90,0,25,.55)}
+.name i{font-style:italic;color:var(--gold)}
+.tap{position:absolute;left:0;right:0;top:63%;margin:0;pointer-events:none;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(251,238,230,.75)}
+
+.say{position:relative;min-height:3.6em;margin-top:clamp(14px,3vw,26px);display:flex;flex-direction:column;align-items:center;gap:4px}
+.say b{font-family:var(--f-love);font-style:italic;font-weight:600;font-size:clamp(28px,5vw,46px);line-height:1.1;color:var(--cream);text-wrap:balance;transition:opacity .45s,transform .45s}
+.say small{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);transition:opacity .45s}
+.say.out b,.say.out small{opacity:0;transform:translateY(6px)}
+
+/* ---------- Alle Sprachen ---------- */
+.letters{position:relative;z-index:1;padding-block:clamp(44px,7vw,80px);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:28px}
+.head h2{margin:0;font-family:var(--f-name);font-style:italic;font-weight:800;font-size:clamp(30px,4.6vw,48px);line-height:1.05;text-wrap:balance}
+.head h2 em{color:var(--rose);font-style:italic}
+.head p{margin:0;color:var(--muted);font-size:15px;max-width:38ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{position:relative;background:var(--night);padding:20px 20px 22px;display:flex;flex-direction:column;gap:10px;min-width:0;cursor:pointer;
+  transition:background .25s;text-align:left;border:0;color:inherit;font:inherit}
+.card:hover,.card:focus-visible{background:#250d1a;outline:none}
+.card:focus-visible{box-shadow:inset 0 0 0 1px var(--gold)}
+.card .lang{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:flex;justify-content:space-between;gap:10px}
+.card .lang span:last-child{color:var(--muted);letter-spacing:.12em;font-variant-numeric:tabular-nums}
+.card .phrase{font-family:var(--f-love);font-style:italic;font-weight:600;font-size:clamp(23px,2.4vw,27px);line-height:1.2;color:var(--cream);overflow-wrap:anywhere}
+.card[dir=rtl] .phrase{text-align:right;font-style:normal}
+.card::after{content:"♥";position:absolute;right:16px;bottom:14px;color:var(--rose);font-size:15px;opacity:0;transform:scale(.4);transition:opacity .25s,transform .25s}
+.card:hover::after,.card.loved::after{opacity:1;transform:scale(1)}
+
+footer{position:relative;z-index:1;text-align:center;padding-block:28px 48px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+footer p{margin:0;font-family:var(--f-name);font-style:italic;font-weight:800;font-size:clamp(22px,3vw,30px)}
+footer p span{color:var(--rose)}
+footer small{display:block;margin-top:8px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+
+@media (prefers-reduced-motion:reduce){
+  .row,.heart{animation:none}
+  .say b,.say small{transition:none}
+}
+</style>
+</head>
+<body>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<header class="hero">
+  <div class="wall" id="wall" aria-hidden="true"></div>
+  <p class="eyebrow">Ich liebe dich</p>
+  <button class="heartbtn" id="heart" aria-label="Herz für Mina – antippen">
+    <svg class="heart" viewBox="0 0 100 90" aria-hidden="true">
+      <defs>
+        <radialGradient id="hg" cx="38%" cy="30%" r="80%">
+          <stop offset="0" stop-color="#ff8197"/>
+          <stop offset=".45" stop-color="#ff4f6d"/>
+          <stop offset="1" stop-color="#9e0a33"/>
+        </radialGradient>
+        <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+          <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M50 88C18 66 2 46 2 27 2 12 14 2 28 2c10 0 18 6 22 14C54 8 62 2 72 2c14 0 26 10 26 25 0 19-16 39-48 61Z" fill="url(#hg)"/>
+      <path d="M16 12c6-6 16-6 22 0-8-1-15 3-19 10-2-4-3-7-3-10Z" fill="url(#shine)"/>
+    </svg>
+    <p class="name">M<i>1</i>NA</p>
+    <p class="tap">Antippen</p>
+  </button>
+  <div class="say" id="say" aria-live="polite"><b id="sayText">Ich liebe dich, Mina</b><small id="sayLang">Deutsch</small></div>
+</header>
+
+<main class="letters">
+  <div class="wrap">
+    <div class="head">
+      <h2>Ich liebe dich, Mina – in <em id="count">54</em> Sprachen</h2>
+      <p>Egal in welcher Sprache: es heißt immer dasselbe. Tippe eine Karte an, dann sagt das Herz es oben in dieser Sprache.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</main>
+
+<footer>
+  <p>M1NA <span>♥</span></p>
+  <small id="foot">54 Sprachen · ein Herz</small>
+</footer>
+
+<script>
+const L=[
+["Deutsch","de","Ich liebe dich, Mina"],
+["Shqip","sq","Të dua, Mina"],
+["English","en","I love you, Mina"],
+["Français","fr","Je t’aime, Mina"],
+["Español","es","Te quiero, Mina"],
+["Italiano","it","Ti amo, Mina"],
+["Português","pt","Eu te amo, Mina"],
+["Nederlands","nl","Ik hou van je, Mina"],
+["Schwiizerdütsch","gsw","I ha di gärn, Mina"],
+["Türkçe","tr","Seni seviyorum, Mina"],
+["العربية","ar","أحبّكِ يا مينا",1],
+["فارسی","fa","دوستت دارم، مینا",1],
+["اردو","ur","مجھے تم سے محبت ہے، مینا",1],
+["Русский","ru","Я люблю тебя, Мина"],
+["Українська","uk","Я тебе кохаю, Міна"],
+["Polski","pl","Kocham cię, Mina"],
+["Čeština","cs","Miluji tě, Mino"],
+["Slovenčina","sk","Ľúbim ťa, Mina"],
+["Bosanski · Hrvatski · Srpski","bs","Volim te, Mina"],
+["Slovenščina","sl","Ljubim te, Mina"],
+["Македонски","mk","Те сакам, Мина"],
+["Български","bg","Обичам те, Мина"],
+["Ελληνικά","el","Σ’ αγαπώ, Μίνα"],
+["Română","ro","Te iubesc, Mina"],
+["Magyar","hu","Szeretlek, Mina"],
+["Svenska","sv","Jag älskar dig, Mina"],
+["Norsk","no","Jeg elsker deg, Mina"],
+["Dansk","da","Jeg elsker dig, Mina"],
+["Suomi","fi","Minä rakastan sinua, Mina"],
+["Eesti","et","Ma armastan sind, Mina"],
+["Latviešu","lv","Es tevi mīlu, Mina"],
+["Lietuvių","lt","Aš tave myliu, Mina"],
+["Gaeilge","ga","Is breá liom thú, Mina"],
+["Català","ca","T’estimo, Mina"],
+["Euskara","eu","Maite zaitut, Mina"],
+["Latina","la","Te amo, Mina"],
+["Esperanto","eo","Mi amas vin, Mina"],
+["ქართული","ka","მიყვარხარ, მინა"],
+["Հայերեն","hy","Սիրում եմ քեզ, Մինա"],
+["Azərbaycanca","az","Səni sevirəm, Mina"],
+["Kurdî","ku","Ez ji te hez dikim, Mina"],
+["हिन्दी","hi","मुझे तुमसे प्यार है, मीना"],
+["বাংলা","bn","আমি তোমাকে ভালোবাসি, মিনা"],
+["日本語","ja","愛してる、ミナ"],
+["한국어","ko","사랑해, 미나"],
+["中文","zh","我爱你，米娜"],
+["ไทย","th","ฉันรักเธอ มีนา"],
+["Bahasa Indonesia","id","Aku cinta kamu, Mina"],
+["Bahasa Melayu","ms","Saya cintakan awak, Mina"],
+["Tagalog","tl","Mahal kita, Mina"],
+["Kiswahili","sw","Nakupenda, Mina"],
+["አማርኛ","am","እወድሻለሁ፣ ሚና"],
+["ʻŌlelo Hawaiʻi","haw","Aloha au iā ʻoe, Mina"],
+["Lëtzebuergesch","lb","Ech hunn dech gär, Mina"]
+];
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+const $=id=>document.getElementById(id);
+$("count").textContent=L.length;
+$("foot").textContent=L.length+" Sprachen · ein Herz";
+
+/* Wortwand */
+const wall=$("wall");
+for(let r=0;r<7;r++){
+  const row=document.createElement("div");row.className="row";
+  row.style.setProperty("--d",(70+r*9)+"s");
+  const pick=L.slice(r*7%L.length).concat(L.slice(0,r*7%L.length)).slice(0,16);
+  const html=pick.map(x=>`<span lang="${x[1]}"${x[3]?' dir="rtl"':''}>${x[2]}</span>`).join("");
+  row.innerHTML=html+html;wall.appendChild(row);
+}
+
+/* Karten */
+const grid=$("grid");
+L.forEach((x,i)=>{
+  const c=document.createElement("button");c.className="card";c.id="lang-"+x[1];c.type="button";
+  if(x[3])c.dir="rtl";
+  c.innerHTML=`<span class="lang" dir="ltr"><span>${x[0]}</span><span>${String(i+1).padStart(2,"0")}</span></span><span class="phrase" lang="${x[1]}">${x[2]}</span>`;
+  c.addEventListener("click",()=>{c.classList.add("loved");show(i);window.scrollTo({top:0,behavior:reduce?"auto":"smooth"});setTimeout(()=>burst(),reduce?0:450)});
+  grid.appendChild(c);
+});
+
+/* Wechselnder Satz unter dem Herz */
+let cur=0,timer;
+const say=$("say");
+function show(i){
+  cur=i;say.classList.add("out");
+  setTimeout(()=>{const x=L[i];const t=$("sayText");t.textContent=x[2];t.lang=x[1];t.dir=x[3]?"rtl":"ltr";$("sayLang").textContent=x[0];say.classList.remove("out")},reduce?0:420);
+  clearInterval(timer);timer=setInterval(()=>show((cur+1)%L.length),2600);
+}
+timer=setInterval(()=>show((cur+1)%L.length),2600);
+
+/* Himmel: aufsteigende kleine Herzen + Herz-Explosion */
+const cv=$("sky"),cx=cv.getContext("2d");let W,H,dpr;const P=[];
+function size(){dpr=Math.min(2,devicePixelRatio||1);W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cx.setTransform(dpr,0,0,dpr,0,0)}
+size();addEventListener("resize",size);
+const cols=["#ff4f6d","#ff8197","#f2c88e","#c4123f"];
+function heartPath(x,y,s){cx.beginPath();cx.moveTo(x,y+s*.35);
+  cx.bezierCurveTo(x,y,x-s*.5,y,x-s*.5,y+s*.35);cx.bezierCurveTo(x-s*.5,y+s*.65,x,y+s*.8,x,y+s);
+  cx.bezierCurveTo(x,y+s*.8,x+s*.5,y+s*.65,x+s*.5,y+s*.35);cx.bezierCurveTo(x+s*.5,y,x,y,x,y+s*.35);cx.fill()}
+function ambient(){P.push({x:Math.random()*W,y:H+20,vx:(Math.random()-.5)*.25,vy:-(.3+Math.random()*.5),s:6+Math.random()*10,a:.12+Math.random()*.22,c:cols[Math.random()*4|0],life:1e9,sway:Math.random()*6})}
+function burst(){
+  const b=$("heart").getBoundingClientRect();const ox=b.left+b.width/2,oy=b.top+b.height*.45;
+  const n=reduce?0:46;
+  for(let i=0;i<n;i++){const ang=Math.random()*Math.PI*2,sp=2+Math.random()*5.5;
+    P.push({x:ox,y:oy,vx:Math.cos(ang)*sp,vy:Math.sin(ang)*sp-2,s:8+Math.random()*14,a:.95,c:cols[Math.random()*4|0],life:70+Math.random()*40,g:.08,sway:0})}
+}
+let t=0;
+function tick(){
+  t++;cx.clearRect(0,0,W,H);
+  if(!reduce&&t%22===0&&P.length<70)ambient();
+  for(let i=P.length-1;i>=0;i--){const p=P[i];
+    p.x+=p.vx+(p.sway?Math.sin((t+p.sway*40)/50)*.3:0);p.y+=p.vy;if(p.g){p.vy+=p.g;p.vx*=.985}
+    p.life--;if(p.g)p.a=Math.max(0,p.a-.012);
+    if(p.y<-30||p.life<=0||p.a<=0||p.y>H+60){P.splice(i,1);continue}
+    cx.globalAlpha=p.a;cx.fillStyle=p.c;heartPath(p.x,p.y,p.s)}
+  cx.globalAlpha=1;requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+
+/* Herz antippen */
+$("heart").addEventListener("click",()=>{burst();show((cur+1)%L.length)});
+</script>
+</body>
+</html>
