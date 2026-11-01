@@ -6,7 +6,8 @@ ABRAR – WEBSITE
 Ordner:
   index.html                 Startseite (Buch + Lernspiele)
   buch/index.html            Das Abrar Online Buch zum Blättern und Beschreiben
-  buch/Abrar_Quran_Reading_2026.pdf   Das Buch als PDF zum Herunterladen
+  buch/Abrar_Quran_lesen_lernen_2026_DE.pdf   Das Buch auf Deutsch (PDF)
+  buch/Abrar_Quran_Reading_2026.pdf   Englische Originalausgabe (PDF)
   spiel/index.html           Lernspiel „Harf für Harf“
   spiel/audio/               Eigene Aufnahmen (siehe LIESMICH.txt dort)
   sira/index.html            Lernspiel „Sira mit Fuffl“
