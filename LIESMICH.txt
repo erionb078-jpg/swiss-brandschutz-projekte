@@ -10,6 +10,7 @@ Ordner:
   spiel/index.html           Lernspiel „Harf für Harf“
   spiel/audio/               Eigene Aufnahmen (siehe LIESMICH.txt dort)
   sira/index.html            Lernspiel „Sira mit Fuffel“
+  urkunde/index.html         Urkunde online ausfüllen und drucken
   uebungsblaetter/           Malblätter zum Ausdrucken (PDF)
   downloads/                 Poster, Lernplan, Sternchen-Plan, Memory, Zahlen,
                              Gebets-Tracker, Stickerbogen, Bastelbögen (PDF)
