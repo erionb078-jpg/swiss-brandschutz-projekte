@@ -1,0 +1,47 @@
+AUFNAHMEN FÜR DAS LERNSPIEL
+
+Lege hier MP3-Dateien mit genau diesen Namen ab.
+Gibt es eine Datei, spielt das Spiel sie ab. Fehlt sie, spricht die Computerstimme des Geräts.
+
+Pro Buchstabe bis zu 4 Dateien:
+  NN-name.mp3          = Name des Buchstabens (Lernkarte + Form „Allein“)
+  NN-name-anfang.mp3   = Beispielwort, Buchstabe am Anfang
+  NN-name-mitte.mp3    = Beispielwort, Buchstabe in der Mitte
+  NN-name-ende.mp3     = Beispielwort, Buchstabe am Ende
+
+01-alif   ا
+02-ba   ب
+03-ta   ت
+04-tha   ث
+05-jim   ج
+06-ha2   ح
+07-kha   خ
+08-dal   د
+09-dhal   ذ
+10-ra   ر
+11-zay   ز
+12-sin   س
+13-shin   ش
+14-sad   ص
+15-dad   ض
+16-ta2   ط
+17-za2   ظ
+18-ain   ع
+19-ghain   غ
+20-fa   ف
+21-qaf   ق
+22-kaf   ك
+23-lam   ل
+24-mim   م
+25-nun   ن
+26-ha   ه
+27-waw   و
+28-ya   ي
+
+SCHWER & LEICHT (Welt 5) – Hörvergleich:
+  paar-1-leicht.mp3 / paar-1-schwer.mp3   سَ – صَ
+  paar-2-leicht.mp3 / paar-2-schwer.mp3   تَ – طَ
+  paar-3-leicht.mp3 / paar-3-schwer.mp3   دَ – ضَ
+  paar-4-leicht.mp3 / paar-4-schwer.mp3   ذَ – ظَ
+  paar-5-leicht.mp3 / paar-5-schwer.mp3   كَ – قَ
+  paar-6-leicht.mp3 / paar-6-schwer.mp3   حَ – خَ

@@ -1,0 +1,576 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ee7a2b">
+<title>Sira mit Fuffel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
+<style>
+/* Layout: a story app — header with stars, Fuffel the fox greets, four big doors (Lebensweg, Karte, Familie, Freunde); each opens a full-screen view. Desert night palette: deep indigo, warm fox orange, palm green. */
+:root{
+  --bg:#eef2f8; --bg-2:#dde4f0; --card:#ffffff; --ink:#1c2440; --muted:#5b6582; --line:#cfd8e8;
+  --fox:#ee7a2b; --fox-soft:#fde4d1; --palm:#24946a; --palm-soft:#d3efe2; --gold:#f2b632; --gold-soft:#fdf0cc;
+  --sky:#3a5bb0; --sky-soft:#dbe4f7; --sand:#e9cf98; --sea:#a9c7ea; --land:#ecd9ae;
+  --ok:#1f9d55; --ok-soft:#d6f3e1; --bad:#e0413a; --bad-soft:#fde0dd; --lock:#b9c2d4;
+  --f-display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
+  --f-body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-ar:"Noto Naskh Arabic","Amiri","Geeza Pro",serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#111729; --bg-2:#0b1020; --card:#1a2238; --ink:#e9edf8; --muted:#9ea8c4; --line:#2b3654;
+  --fox:#ff9a52; --fox-soft:#3d2617; --palm:#4fc493; --palm-soft:#16362a; --gold:#ffcf5c; --gold-soft:#3a3018;
+  --sky:#86a5ff; --sky-soft:#1d2a4d; --sand:#8a764c; --sea:#22385e; --land:#4a4232;
+  --ok:#47c97f; --ok-soft:#163a27; --bad:#ff6e66; --bad-soft:#3d1c1b; --lock:#3a4560; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#111729; --bg-2:#0b1020; --card:#1a2238; --ink:#e9edf8; --muted:#9ea8c4; --line:#2b3654;
+  --fox:#ff9a52; --fox-soft:#3d2617; --palm:#4fc493; --palm-soft:#16362a; --gold:#ffcf5c; --gold-soft:#3a3018;
+  --sky:#86a5ff; --sky-soft:#1d2a4d; --sand:#8a764c; --sea:#22385e; --land:#4a4232;
+  --ok:#47c97f; --ok-soft:#163a27; --bad:#ff6e66; --bad-soft:#3d1c1b; --lock:#3a4560; color-scheme:dark}
+[hidden]{display:none!important}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.5}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+h1,h2,h3{font-family:var(--f-display);line-height:1.15;margin:0;text-wrap:balance}
+.ar{font-family:var(--f-ar);direction:rtl;unicode-bidi:isolate}
+.wrap{max-width:780px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.saw{font-family:var(--f-ar);font-size:1.05em}
+
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px)}
+.top .wrap{display:flex;align-items:center;gap:10px;padding-block:10px}
+.back{display:flex;align-items:center;gap:6px;font-weight:800;color:var(--muted);border-radius:12px;padding:6px 10px 6px 6px}
+.back:hover{background:var(--bg-2)}
+.back svg{width:22px;height:22px}
+.logo{flex:1;min-width:0;font-family:var(--f-display);font-weight:800;font-size:22px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.logo span{color:var(--fox)}
+.chip{display:flex;align-items:center;gap:6px;background:var(--card);border:2px solid var(--line);border-radius:999px;padding:4px 12px 4px 8px;font-weight:800;font-variant-numeric:tabular-nums;white-space:nowrap;text-decoration:none;color:inherit;flex:none}
+.chip svg{width:20px;height:20px}
+
+/* home */
+.hero{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;padding-block:14px 8px}
+.fox{width:120px;height:auto}
+.hero h1{font-size:clamp(26px,5.6vw,38px);font-weight:800}
+.hero p{margin:6px 0 0;color:var(--muted);font-size:17px;max-width:48ch}
+@media (max-width:520px){.hero{grid-template-columns:1fr;justify-items:start}.fox{width:96px}}
+.note{background:var(--gold-soft);border-radius:16px;padding:10px 14px;font-size:14.5px;color:color-mix(in srgb,var(--gold) 30%,var(--ink));margin:6px 0 14px}
+.doors{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding-bottom:30px}
+@media (max-width:520px){.doors{grid-template-columns:1fr}}
+.door{background:var(--card);border:3px solid var(--line);border-radius:24px;padding:14px 16px;display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:center;text-align:left;box-shadow:0 5px 0 var(--line);transition:transform .1s}
+.door:hover{transform:translateY(-2px)}
+.door svg{width:84px;height:66px}
+.door h2{font-size:22px}
+.door small{display:block;color:var(--muted);font-size:14px;line-height:1.35;margin-top:2px}
+.door .prog{margin-top:8px}
+.bar{height:10px;background:var(--bg-2);border-radius:999px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--palm);border-radius:999px}
+
+/* path */
+.path{position:relative;padding:10px 0 30px}
+.path svg.trail{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.stop{position:relative;display:flex;flex-direction:column;align-items:center;width:170px;margin:4px 0 14px;z-index:1}
+.node{width:96px;height:80px;border-radius:24px;background:var(--card);border:3px solid var(--line);display:grid;place-items:center;box-shadow:0 5px 0 var(--line)}
+.node svg{width:74px;height:56px}
+.stop.locked .node{filter:grayscale(1);opacity:.5;cursor:not-allowed}
+.stop.done .node{border-color:var(--palm);box-shadow:0 5px 0 var(--palm)}
+.stop.next .node{border-color:var(--fox);box-shadow:0 5px 0 var(--fox)}
+.stop .yr{font-size:12px;font-weight:800;color:var(--fox);margin-top:8px;letter-spacing:.04em}
+.stop .lb{font-weight:800;font-size:14px;text-align:center;line-height:1.2}
+.stars{display:flex;gap:2px;margin-top:2px}.stars svg{width:16px;height:16px}
+
+/* lesson */
+.screen{position:fixed;inset:0;background:var(--bg);z-index:20;display:grid;grid-template-rows:auto minmax(0,1fr) auto;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.lbar .wrap{display:flex;align-items:center;gap:12px;padding-block:12px}
+.x{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:var(--muted);flex:none}
+.x:hover{background:var(--bg-2)} .x svg{width:26px;height:26px}
+.pbar{flex:1;height:14px;background:var(--bg-2);border-radius:999px;overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--fox);border-radius:999px;transition:width .35s}
+.main{overflow:auto}
+.main .wrap{padding-block:6px 24px;display:grid;gap:16px;justify-items:center}
+.story{background:var(--card);border:3px solid var(--line);border-radius:28px;box-shadow:0 6px 0 var(--line);width:100%;max-width:580px;padding:18px 20px 22px;display:grid;gap:12px;justify-items:center;text-align:center}
+.story .scene{width:100%;max-width:300px;height:auto}
+.story h3{font-size:26px;font-weight:800}
+.story .yr{font-weight:800;color:var(--fox);font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+.story p{margin:0;font-size:18px;line-height:1.55;max-width:44ch;text-align:left}
+.fuffel{display:flex;gap:10px;align-items:flex-start;text-align:left;background:var(--fox-soft);border-radius:18px;padding:10px 12px;max-width:520px;width:100%}
+.fuffel svg{width:46px;height:46px;flex:none}
+.fuffel span{font-weight:700;font-size:15px}
+.ask{font-family:var(--f-display);font-weight:800;font-size:clamp(21px,4.4vw,27px);text-align:center;max-width:30ch}
+.opts{display:grid;gap:10px;width:100%;max-width:520px}
+.opt{background:var(--card);border:3px solid var(--line);border-radius:18px;padding:14px 16px;box-shadow:0 5px 0 var(--line);font-weight:800;font-size:18px;text-align:left}
+.opt:active{transform:translateY(3px);box-shadow:0 2px 0 var(--line)}
+.opt.ok{background:var(--ok-soft);border-color:var(--ok);box-shadow:0 5px 0 var(--ok);color:var(--ok)}
+.opt.bad{background:var(--bad-soft);border-color:var(--bad);box-shadow:0 5px 0 var(--bad);color:var(--bad);animation:shake .35s}
+.opt.dim{opacity:.45}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.foot{border-top:2px solid var(--line);background:var(--bg)}
+.foot.ok{background:var(--ok-soft);border-color:transparent}.foot.bad{background:var(--bad-soft);border-color:transparent}
+.foot .wrap{display:flex;align-items:center;gap:12px;padding-block:12px;flex-wrap:wrap}
+.fb{flex:1;min-width:200px}
+.fb b{font-family:var(--f-display);font-size:21px;display:block}
+.foot.ok .fb b{color:var(--ok)}.foot.bad .fb b{color:var(--bad)}
+.fb span{font-weight:600}
+.go{background:var(--fox);color:#fff;font-family:var(--f-display);font-weight:800;font-size:19px;border-radius:16px;padding:9px 24px;box-shadow:0 5px 0 color-mix(in srgb,var(--fox) 60%,#000);margin-left:auto}
+.go.ok{background:var(--ok);box-shadow:0 5px 0 color-mix(in srgb,var(--ok) 60%,#000)}
+.go.bad{background:var(--bad);box-shadow:0 5px 0 color-mix(in srgb,var(--bad) 60%,#000)}
+.go.ghost{background:transparent;color:var(--muted);box-shadow:none;border:2px solid var(--line);margin-left:0}
+.go:active{transform:translateY(3px)}
+
+/* order game */
+.order{display:grid;gap:10px;width:100%;max-width:520px}
+.order .opt{display:flex;gap:12px;align-items:center}
+.order .num{width:32px;height:32px;border-radius:50%;background:var(--bg-2);display:grid;place-items:center;font-family:var(--f-display);flex:none}
+.order .opt.ok .num{background:var(--ok);color:#fff}
+
+/* map */
+.mapbox{width:100%;max-width:560px;background:var(--card);border:3px solid var(--line);border-radius:24px;padding:8px;box-shadow:0 6px 0 var(--line)}
+.mapbox svg{width:100%;height:auto;display:block;border-radius:16px}
+.sea{fill:var(--sea)} .land{fill:var(--land);stroke:color-mix(in srgb,var(--land) 70%,#000);stroke-width:.6}
+.pl circle.dot{fill:var(--fox);stroke:#fff;stroke-width:1.6;cursor:pointer}
+.pl circle.hit{fill:transparent;cursor:pointer}
+.pl text{font:800 8.5px var(--f-body);fill:var(--ink);paint-order:stroke;stroke:var(--card);stroke-width:2.2px}
+.pl.ok circle.dot{fill:var(--ok)} .pl.bad circle.dot{fill:var(--bad)}
+.pl.sel circle.dot{fill:var(--sky)}
+.route{fill:none;stroke:var(--fox);stroke-width:1.8;stroke-dasharray:3 3}
+.info{background:var(--card);border:3px solid var(--line);border-radius:20px;padding:12px 14px;width:100%;max-width:560px}
+.info h3{font-size:22px}
+.info p{margin:4px 0 0}
+.seg{display:flex;gap:6px;background:var(--bg-2);border-radius:14px;padding:4px}
+.seg button{padding:7px 14px;border-radius:10px;font-weight:800;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+
+/* family */
+.fam{width:100%;max-width:680px;display:grid;gap:16px}
+.fsec h3{font-size:18px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-family:var(--f-body);font-weight:800;margin:0 0 8px}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px}
+.person{background:var(--card);border:2px solid var(--line);border-radius:16px;padding:8px 10px;text-align:left;display:grid;gap:0}
+.person .ar{font-size:20px;color:var(--sky);line-height:1.5}
+.person b{font-size:14.5px;line-height:1.25}
+.person small{color:var(--muted);font-size:12.5px;line-height:1.3}
+.person.center{background:var(--fox-soft);border-color:var(--fox)}
+.fam .pr{font-size:13px;color:var(--muted)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;width:100%}
+.card{aspect-ratio:3/4;border-radius:20px;padding:12px;display:grid;grid-template-rows:auto 1fr auto;text-align:center;justify-items:center;color:#fff;background:linear-gradient(160deg,var(--c1),var(--c2));box-shadow:0 5px 0 color-mix(in srgb,var(--c2) 60%,#000);position:relative;overflow:hidden}
+.card .ar{font-size:26px;line-height:1.5;align-self:center}
+.card b{font-family:var(--f-display);font-size:17px;line-height:1.15}
+.card small{font-size:12px;font-weight:800;opacity:.9;text-transform:uppercase;letter-spacing:.05em}
+.card.locked{background:var(--lock);box-shadow:0 5px 0 color-mix(in srgb,var(--lock) 60%,#000);color:color-mix(in srgb,var(--ink) 50%,transparent)}
+.card .orn{position:absolute;inset:auto -20px -30px auto;width:110px;height:110px;opacity:.15}
+.modal{position:fixed;inset:0;z-index:30;background:rgba(10,15,35,.5);display:grid;place-items:center;padding:16px}
+.mcard{background:var(--card);border-radius:26px;max-width:420px;width:100%;padding:20px;display:grid;gap:10px;text-align:center;justify-items:center;max-height:88vh;overflow:auto}
+.mcard .ar{font-size:34px;color:var(--sky);line-height:1.5}
+.mcard h3{font-size:26px}
+.mcard .tag{background:var(--gold-soft);border-radius:999px;padding:3px 12px;font-weight:800;font-size:14px}
+.mcard p{margin:0;font-size:17px;text-align:left}
+.mcard .ra{font-size:13px;color:var(--muted)}
+
+.result{display:grid;justify-items:center;gap:12px;text-align:center;padding-top:14px}
+.result h2{font-size:38px}
+.bigstars{display:flex;gap:8px}.bigstars svg{width:66px;height:66px}
+.bigstars svg.on{animation:pop .5s cubic-bezier(.3,1.6,.5,1) backwards}
+@keyframes pop{from{transform:scale(0) rotate(-30deg)}}
+.newcard{background:var(--gold-soft);border:2px dashed var(--gold);border-radius:18px;padding:10px 14px;max-width:440px}
+canvas.confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:50}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<header class="top"><div class="wrap">
+  <button class="back" id="backBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>Start</button>
+  <div class="logo" id="logo">Sira mit <span>Fuffel</span></div>
+  <a class="chip" href="../index.html" title="Zur Startseite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Start</a>
+  <div class="chip" title="Deine Sterne"><svg viewBox="0 0 24 24"><path fill="#f2b632" stroke="#d99a10" stroke-width="1.2" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><span id="starCount">0</span></div>
+</div></header>
+<main class="wrap" id="view"></main>
+<section class="screen" id="screen" hidden>
+  <div class="lbar"><div class="wrap"><button class="x" id="quit" aria-label="Schließen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div class="pbar"><i id="pfill"></i></div></div></div>
+  <div class="main"><div class="wrap" id="sbox"></div></div>
+  <div class="foot" id="foot"><div class="wrap" id="fbox"></div></div>
+</section>
+<div class="modal" id="modal" hidden></div>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const h=(tag,props,...kids)=>{const e=document.createElement(tag);if(props)for(const k in props){const v=props[k];if(v==null||v===false)continue;if(k==="class")e.className=v;else if(k==="text")e.textContent=v;else if(k==="html")e.innerHTML=v;else if(k.startsWith("on"))e.addEventListener(k.slice(2),v);else e.setAttribute(k,v===true?"":v);}kids.flat().forEach(c=>c!=null&&e.append(c));return e;};
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]];}return a;};
+const pick=a=>a[Math.random()*a.length|0];
+const SAW="ﷺ";
+// text with ﷺ rendered in Arabic font
+function rich(t){const f=document.createDocumentFragment();t.split(SAW).forEach((p,i,arr)=>{f.append(p);if(i<arr.length-1)f.append(h("span",{class:"saw",text:SAW}));});return f;}
+const STAR='<svg viewBox="0 0 24 24"><path fill="F" stroke="S" stroke-width="1.2" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>';
+const star=on=>STAR.replace("F",on?"#f2b632":"var(--lock)").replace("S",on?"#d99a10":"transparent");
+
+// ---------- Fuffel the fox ----------
+const FOX=`<svg viewBox="0 0 140 140" aria-hidden="true">
+<path d="M98 112c22 2 36-12 34-30-1-10-8-16-14-14 6 10 2 24-12 28z" fill="#ee7a2b"/><path d="M118 70c8 6 9 18 2 26 4-10 0-20-6-24z" fill="#fff"/>
+<ellipse cx="68" cy="104" rx="30" ry="26" fill="#ee7a2b"/><ellipse cx="68" cy="110" rx="16" ry="17" fill="#fff4ea"/>
+<path d="M28 30l12 34 18-14z" fill="#ee7a2b"/><path d="M108 30l-12 34-18-14z" fill="#ee7a2b"/>
+<path d="M33 38l8 21 9-7z" fill="#5b2a14"/><path d="M103 38l-8 21-9-7z" fill="#5b2a14"/>
+<path d="M68 34c-24 0-38 16-38 32 0 10 6 16 14 20l24 14 24-14c8-4 14-10 14-20 0-16-14-32-38-32z" fill="#ee7a2b"/>
+<path d="M32 70c6 10 18 14 36 30 18-16 30-20 36-30-8 6-20 6-26 2l-10 8-10-8c-6 4-18 4-26-2z" fill="#fff4ea"/>
+<circle cx="54" cy="62" r="5.5" fill="#1c2440"/><circle cx="82" cy="62" r="5.5" fill="#1c2440"/><circle cx="55.8" cy="60" r="1.8" fill="#fff"/><circle cx="83.8" cy="60" r="1.8" fill="#fff"/>
+<ellipse cx="68" cy="84" rx="6" ry="4.5" fill="#1c2440"/><path d="M62 92q6 5 12 0" fill="none" stroke="#1c2440" stroke-width="2.6" stroke-linecap="round"/>
+<circle cx="44" cy="76" r="4.5" fill="#ff9e9e" opacity=".55"/><circle cx="92" cy="76" r="4.5" fill="#ff9e9e" opacity=".55"/>
+<ellipse cx="54" cy="128" rx="9" ry="5" fill="#5b2a14"/><ellipse cx="82" cy="128" rx="9" ry="5" fill="#5b2a14"/></svg>`;
+const fuffelSays=t=>h("div",{class:"fuffel"},h("span",{html:FOX}),h("span",null,rich(t)));
+
+// ---------- scene icons (places & objects only, no people) ----------
+const IC={
+ kaaba:`<svg viewBox="0 0 120 90"><rect x="0" y="72" width="120" height="18" fill="var(--sand)"/><path d="M34 30l26-10 26 10v44H34z" fill="#1c1c22"/><path d="M60 20l26 10-26 8-26-8z" fill="#2c2c34"/><rect x="34" y="40" width="52" height="6" fill="#d9a520"/><rect x="66" y="52" width="10" height="20" rx="1" fill="#d9a520"/></svg>`,
+ elephant:`<svg viewBox="0 0 120 90"><rect x="0" y="72" width="120" height="18" fill="var(--sand)"/><ellipse cx="60" cy="46" rx="30" ry="20" fill="#8e96a8"/><rect x="38" y="56" width="9" height="18" rx="3" fill="#7d8597"/><rect x="72" y="56" width="9" height="18" rx="3" fill="#7d8597"/><circle cx="88" cy="38" r="14" fill="#8e96a8"/><path d="M98 44c6 8 6 18 0 24" stroke="#8e96a8" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M80 30c-8-4-10 10-2 14" fill="#a6adbd"/><circle cx="92" cy="34" r="2" fill="#1c2440"/><path d="M20 20l6 4M30 12l4 6M44 10l2 6" stroke="#1c2440" stroke-width="3" stroke-linecap="round"/></svg>`,
+ tent:`<svg viewBox="0 0 120 90"><rect x="0" y="66" width="120" height="24" fill="var(--sand)"/><circle cx="96" cy="20" r="10" fill="#f2b632"/><path d="M16 68l30-40 30 40z" fill="#b5523b"/><path d="M46 28l30 40h20L66 30z" fill="#93412e"/><path d="M40 68l6-14 6 14z" fill="#3a1c14"/><path d="M84 58c6 2 10 6 12 10h-20c2-4 4-8 8-10z" fill="#fff"/></svg>`,
+ camel:`<svg viewBox="0 0 120 90"><rect x="0" y="70" width="120" height="20" fill="var(--sand)"/><path d="M30 44c4-16 14-16 18-6 4-12 16-12 20 2l10 2c4-12 14-14 18-6l6 2-4 4-6-2-4 12H34z" fill="#c8924f"/><rect x="38" y="50" width="6" height="22" fill="#b07d40"/><rect x="50" y="50" width="6" height="22" fill="#b07d40"/><rect x="72" y="50" width="6" height="22" fill="#b07d40"/><rect x="82" y="50" width="6" height="22" fill="#b07d40"/><circle cx="100" cy="36" r="1.6" fill="#1c2440"/></svg>`,
+ lamp:`<svg viewBox="0 0 120 90"><rect x="0" y="74" width="120" height="16" fill="var(--sand)"/><path d="M40 74h40l-4-30H44z" fill="#d6b06a"/><path d="M44 44h32l-16-22z" fill="#a7783a"/><rect x="50" y="52" width="20" height="16" rx="3" fill="#f2b632"/><circle cx="60" cy="18" r="4" fill="#a7783a"/></svg>`,
+ cave:`<svg viewBox="0 0 120 90"><rect x="0" y="0" width="120" height="90" fill="var(--sky-soft)"/><path d="M0 90l30-58 18 18 22-40 50 80z" fill="#8a6a4a"/><path d="M52 90c0-16 6-26 14-26s14 10 14 26z" fill="#2b1d12"/><circle cx="96" cy="16" r="2" fill="#f2b632"/><circle cx="20" cy="20" r="1.6" fill="#f2b632"/><path d="M88 30a8 8 0 1 0 6-14 7 7 0 1 1-6 14z" fill="#f2b632"/></svg>`,
+ stone:`<svg viewBox="0 0 120 90"><rect x="0" y="66" width="120" height="24" fill="var(--sand)"/><circle cx="94" cy="20" r="12" fill="#f2b632"/><path d="M28 70c0-14 12-22 30-22s32 8 32 22z" fill="#8f8a80"/><text x="60" y="38" text-anchor="middle" font-family="Noto Naskh Arabic,serif" font-size="22" font-weight="700" fill="#1c2440">أحد</text></svg>`,
+ mount:`<svg viewBox="0 0 120 90"><rect x="0" y="0" width="120" height="90" fill="var(--sky-soft)"/><path d="M0 90l36-50 20 24 24-36 40 62z" fill="#7c9a5a"/><path d="M80 28l10 14H70z" fill="#a3bd7d"/><circle cx="24" cy="22" r="10" fill="#f2b632"/><g fill="#c8924f"><circle cx="20" cy="80" r="3"/><circle cx="30" cy="84" r="2.6"/></g></svg>`,
+ moon:`<svg viewBox="0 0 120 90"><rect width="120" height="90" fill="#1c2a55"/><path d="M70 18a24 24 0 1 0 18 40 20 20 0 1 1-18-40z" fill="#f2d16b"/><g fill="#fff"><circle cx="20" cy="18" r="1.6"/><circle cx="34" cy="40" r="1.2"/><circle cx="100" cy="20" r="1.4"/><circle cx="104" cy="60" r="1.2"/><circle cx="16" cy="66" r="1.4"/></g><path d="M20 84h80l-6-14H26z" fill="#3b4a78"/><path d="M50 70a10 10 0 0 1 20 0z" fill="#d9a520"/></svg>`,
+ palm:`<svg viewBox="0 0 120 90"><rect x="0" y="70" width="120" height="20" fill="var(--sand)"/><path d="M58 72c2-18 4-30 2-44" stroke="#8a5a2b" stroke-width="5" fill="none"/><path d="M60 28c-14-10-28-6-34 2 12-4 22-2 34-2zM60 28c14-10 28-6 34 2-12-4-22-2-34-2zM60 28c-8-12-22-16-30-12 12 0 22 4 30 12zM60 28c8-12 22-16 30-12-12 0-22 4-30 12z" fill="#24946a"/><g fill="#a8521c"><circle cx="56" cy="34" r="2.4"/><circle cx="62" cy="35" r="2.4"/></g><path d="M86 72c8-4 18-4 24 0" stroke="#24946a" stroke-width="3" fill="none"/></svg>`,
+ mosque:`<svg viewBox="0 0 120 90"><rect x="0" y="74" width="120" height="16" fill="var(--sand)"/><rect x="26" y="46" width="68" height="28" fill="#f4f1ea"/><path d="M40 46a20 20 0 0 1 40 0z" fill="#24946a"/><rect x="96" y="22" width="8" height="52" fill="#f4f1ea"/><path d="M96 22l4-8 4 8z" fill="#24946a"/><path d="M54 74v-12a6 6 0 0 1 12 0v12z" fill="#8a5a2b"/><path d="M60 26v-6" stroke="#d9a520" stroke-width="2"/></svg>`,
+ hill:`<svg viewBox="0 0 120 90"><rect width="120" height="90" fill="var(--sky-soft)"/><path d="M0 90c20-40 50-50 70-30s40 10 50 30z" fill="#a17b52"/><path d="M0 90c14-14 40-20 60-10" stroke="#24946a" stroke-width="4" fill="none"/><path d="M84 38v-22l14 6-14 6" fill="#ee7a2b" stroke="#5b2a14" stroke-width="2"/><path d="M10 84h100" stroke="#5b2a14" stroke-width="3" stroke-dasharray="6 4"/></svg>`,
+ key:`<svg viewBox="0 0 120 90"><rect x="0" y="72" width="120" height="18" fill="var(--sand)"/><path d="M34 30l26-10 26 10v44H34z" fill="#1c1c22"/><rect x="34" y="40" width="52" height="6" fill="#d9a520"/><g fill="#f2b632"><circle cx="16" cy="18" r="2"/><circle cx="104" cy="14" r="2"/><circle cx="100" cy="40" r="1.6"/></g><path d="M8 60l14-6M112 60l-14-6" stroke="#f2b632" stroke-width="3" stroke-linecap="round"/></svg>`,
+ arafat:`<svg viewBox="0 0 120 90"><rect width="120" height="90" fill="var(--sky-soft)"/><path d="M14 90l46-56 46 56z" fill="#9b8a6c"/><rect x="57" y="22" width="6" height="16" fill="#f4f1ea"/><g fill="#fff"><circle cx="20" cy="86" r="3"/><circle cx="30" cy="84" r="3"/><circle cx="40" cy="86" r="3"/><circle cx="80" cy="86" r="3"/><circle cx="90" cy="84" r="3"/><circle cx="100" cy="86" r="3"/></g><circle cx="96" cy="18" r="9" fill="#f2b632"/></svg>`,
+ order:`<svg viewBox="0 0 120 90"><rect x="10" y="14" width="100" height="16" rx="6" fill="var(--fox-soft)"/><rect x="10" y="38" width="100" height="16" rx="6" fill="var(--palm-soft)"/><rect x="10" y="62" width="100" height="16" rx="6" fill="var(--sky-soft)"/><g font-family="Baloo 2,sans-serif" font-weight="800" font-size="13" fill="var(--ink)"><text x="18" y="27">1</text><text x="18" y="51">2</text><text x="18" y="75">3</text></g></svg>`,
+ map:`<svg viewBox="0 0 120 90"><rect width="120" height="90" rx="10" fill="var(--sea)"/><path d="M60 0h60v90H86c-6-20-14-40-20-60z" fill="var(--land)"/><path d="M0 0h36c6 24 12 50 20 90H0z" fill="var(--land)"/><circle cx="78" cy="56" r="5" fill="var(--fox)" stroke="#fff" stroke-width="2"/><circle cx="74" cy="34" r="5" fill="var(--fox)" stroke="#fff" stroke-width="2"/><path d="M78 56c-6-8-2-14-4-22" stroke="var(--fox)" stroke-width="2" stroke-dasharray="3 3" fill="none"/></svg>`,
+ tree:`<svg viewBox="0 0 120 90"><path d="M60 22v20M30 42h60M30 42v14M60 42v14M90 42v14" stroke="var(--muted)" stroke-width="3" fill="none"/><circle cx="60" cy="16" r="10" fill="var(--fox)"/><circle cx="30" cy="64" r="9" fill="var(--palm)"/><circle cx="60" cy="64" r="9" fill="var(--sky)"/><circle cx="90" cy="64" r="9" fill="var(--gold)"/></svg>`,
+ cards:`<svg viewBox="0 0 120 90"><rect x="18" y="16" width="44" height="60" rx="8" fill="var(--palm)" transform="rotate(-10 40 46)"/><rect x="40" y="12" width="44" height="60" rx="8" fill="var(--sky)"/><rect x="62" y="16" width="44" height="60" rx="8" fill="var(--fox)" transform="rotate(10 84 46)"/><path d="M84 36l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#fff"/></svg>`
+};
+
+// ---------- content ----------
+const ST=[
+ {id:"s1",t:"Das Jahr des Elefanten",yr:"um 570",ic:"elephant",cards:[
+   "Mekka ist eine Stadt in der Wüste. In ihrer Mitte steht die Kaaba – das Haus, das der Prophet Ibrahim und sein Sohn Ismail für Allah gebaut haben.",
+   "Ein König namens Abraha wollte die Kaaba zerstören. Er kam mit einer großen Armee und mit Elefanten. Doch Allah schickte Schwärme von Vögeln, die kleine Steine warfen. Davon erzählt die Sure Al-Fil – „Der Elefant“.",
+   "In genau diesem Jahr wurde in Mekka ein Junge geboren: Muhammad ﷺ. Sein Vater Abdullah war schon vor seiner Geburt gestorben. Seine Mutter hieß Amina."],
+  q:[["In welcher Stadt wurde der Prophet ﷺ geboren?","Mekka","Medina","Jerusalem"],["Wie hieß seine Mutter?","Amina","Khadija","Halima"],["Was schickte Allah gegen die Armee mit den Elefanten?","Schwärme von Vögeln","Einen Sturm","Ein Erdbeben"]],
+  fox:"Die Sure Al-Fil ist kurz – vielleicht kannst du sie schon auswendig?"},
+ {id:"s2",t:"Kindheit in der Wüste",yr:"Kindheit",ic:"tent",cards:[
+   "Damals gaben viele Familien in Mekka ihre Babys zu einer Amme in die Wüste. Dort war die Luft gesund und die Sprache besonders schön. Muhammad ﷺ kam zu Halima vom Stamm Banu Saʿd.",
+   "Seit der kleine Muhammad ﷺ bei ihr war, hatte Halimas Familie viel Segen: Ihre Tiere wurden satt und gaben wieder reichlich Milch.",
+   "Als er sechs Jahre alt war, starb seine Mutter Amina. Dann kümmerte sich sein Großvater Abd al-Muttalib um ihn – und als auch er starb, sein Onkel Abu Talib."],
+  q:[["Wie hieß seine Amme in der Wüste?","Halima","Aischa","Fatima"],["Wer kümmerte sich um ihn, nachdem sein Großvater gestorben war?","Sein Onkel Abu Talib","Abu Bakr","Umar"],["Wie alt war er, als seine Mutter starb?","6 Jahre","12 Jahre","20 Jahre"]],
+  fox:"Er wusste, wie es ist, ohne Eltern zu sein. Darum war er später immer besonders lieb zu Waisenkindern."},
+ {id:"s3",t:"Al-Amin – der Vertrauenswürdige",yr:"Jugend",ic:"camel",cards:[
+   "Als Junge hütete Muhammad ﷺ Schafe. Später reiste er mit seinem Onkel Abu Talib in Karawanen bis nach Syrien und lernte den Handel.",
+   "Er log nie und gab alles zurück, was man ihm anvertraute. Darum nannten ihn die Menschen in Mekka „al-Amin“ – der Vertrauenswürdige.",
+   "Als die Kaaba neu gebaut wurde, stritten die Stämme, wer den Schwarzen Stein an seinen Platz legen darf. Muhammad ﷺ legte den Stein auf ein Tuch – und alle Stämme trugen ihn gemeinsam. So endete der Streit."],
+  q:[["Was bedeutet „al-Amin“?","Der Vertrauenswürdige","Der Starke","Der Reiche"],["Wie löste er den Streit um den Schwarzen Stein?","Alle Stämme trugen ihn auf einem Tuch","Er legte ihn allein hin","Er ließ das Los entscheiden"],["Was hütete er als Junge?","Schafe","Pferde","Hühner"]],
+  fox:"Ehrlich sein macht stark. Wem vertraust du – und wer vertraut dir?"},
+ {id:"s4",t:"Khadija",yr:"mit 25 Jahren",ic:"lamp",unlock:["khadija"],cards:[
+   "Khadija war eine kluge und ehrliche Händlerin in Mekka. Sie schickte Muhammad ﷺ mit ihrer Ware nach Syrien – und er kam mit großem Gewinn zurück.",
+   "Sie bewunderte seine Ehrlichkeit und heiratete ihn. Er war damals 25 Jahre alt. Khadija war seine erste Ehefrau, und solange sie lebte, heiratete er keine andere Frau.",
+   "Sie bekamen sechs Kinder: die Söhne al-Qasim und Abdullah, die als kleine Kinder starben, und die Töchter Zaynab, Ruqayya, Umm Kulthum und Fatima."],
+  q:[["Wer war seine erste Ehefrau?","Khadija","Aischa","Sawda"],["Wie alt war er bei der Hochzeit?","25 Jahre","40 Jahre","15 Jahre"],["Wie viele Töchter hatten sie?","4","2","6"]],
+  fox:"Du hast eine Freunde-Karte bekommen: Khadija! Schau sie dir unter „Freunde“ an."},
+ {id:"s5",t:"Lies! – Die Höhle Hira",yr:"mit 40 Jahren",ic:"cave",unlock:["ali"],cards:[
+   "Muhammad ﷺ dachte oft über Allah nach. Dafür ging er in eine kleine Höhle auf dem Berg an-Nur bei Mekka: die Höhle Hira.",
+   "Als er 40 Jahre alt war, kam im Monat Ramadan der Engel Dschibril zu ihm und sagte: „Iqraʾ – Lies!“ So kamen die ersten Verse des Quran, aus der Sure Al-ʿAlaq.",
+   "Er eilte erschrocken nach Hause. Khadija tröstete ihn und glaubte ihm als Erste. Bald glaubten auch Abu Bakr, der junge Ali und Zayd ibn Haritha."],
+  q:[["Was war das erste Wort, das Dschibril sagte?","Iqraʾ – Lies!","Salam – Frieden!","Sabr – Geduld!"],["Welcher Engel brachte die Offenbarung?","Dschibril","Mikail","Israfil"],["Wie alt war der Prophet ﷺ damals?","40 Jahre","25 Jahre","63 Jahre"]],
+  fox:"Das erste Wort des Quran war „Lies!“ – darum lernen wir lesen. Genau wie du in „Harf für Harf“!"},
+ {id:"s6",t:"Standhaft in Mekka",yr:"die ersten Jahre",ic:"stone",unlock:["bilal","umar"],cards:[
+   "Der Prophet ﷺ rief die Menschen auf, nur Allah anzubeten. Viele Mächtige in Mekka wurden wütend und quälten die Muslime.",
+   "Bilal, ein Sklave, wurde in der Mittagshitze mit einem schweren Stein auf der Brust gequält. Doch er sagte immer nur: „Ahad, Ahad – Allah ist Einer!“ Abu Bakr kaufte ihn frei.",
+   "Eine Gruppe Muslime wanderte nach Abessinien (Habascha) aus, zu einem gerechten christlichen König, dem Nadschaschi. Er beschützte sie. Und in Mekka wurde sogar Umar, der zuerst ein Gegner war, Muslim."],
+  q:[["Was rief Bilal, als er gequält wurde?","Ahad, Ahad!","Hilfe, Hilfe!","Ich gebe auf!"],["Wer kaufte Bilal frei?","Abu Bakr","Abu Talib","Abraha"],["Wohin flohen die ersten Muslime?","Nach Abessinien","Nach Persien","Nach Rom"]],
+  fox:"Neue Freunde-Karten: Bilal und Umar!"},
+ {id:"s7",t:"Das Jahr der Trauer & Taif",yr:"um 619",ic:"mount",unlock:["zayd"],cards:[
+   "In einem Jahr starben Khadija und sein Onkel Abu Talib. Der Prophet ﷺ war sehr traurig – man nennt es das „Jahr der Trauer“.",
+   "Mit Zayd ibn Haritha ging er in die Stadt Taif, um dort von Allah zu erzählen. Doch die Leute jagten ihn fort und warfen Steine, bis seine Füße bluteten.",
+   "Trotzdem verfluchte er sie nicht. Er betete sogar, dass ihre Kinder einmal Allah anbeten würden. So groß war seine Barmherzigkeit."],
+  q:[["Wer starb im „Jahr der Trauer“?","Khadija und Abu Talib","Amina und Abdullah","Abu Bakr und Umar"],["In welche Stadt ging er danach?","Taif","Medina","Jerusalem"],["Was tat er, als man ihn mit Steinen bewarf?","Er betete für sie","Er verfluchte sie","Er warf zurück"]],
+  fox:"Wenn jemand gemein zu dir ist – kannst du trotzdem freundlich bleiben? Das ist echte Stärke."},
+ {id:"s8",t:"Die Nachtreise",yr:"vor der Hidschra",ic:"moon",unlock:["abubakr"],cards:[
+   "In einer Nacht reiste der Prophet ﷺ auf dem Reittier Buraq von Mekka bis zur Al-Aqsa-Moschee in Jerusalem. Das nennt man al-Isra.",
+   "Von dort stieg er durch die Himmel auf – das ist der Miʿradsch. Dort bekam er ein großes Geschenk für alle Muslime: fünf Gebete am Tag.",
+   "Viele in Mekka lachten über diese Geschichte. Doch Abu Bakr sagte sofort: „Wenn er es sagt, dann ist es wahr.“ Darum heißt er „as-Siddiq“ – der Wahrhaftige."],
+  q:[["Wohin reiste der Prophet ﷺ in der Nacht?","Zur Al-Aqsa-Moschee in Jerusalem","Nach Medina","Nach Abessinien"],["Welches Geschenk bekam er im Himmel?","Fünf Gebete am Tag","Den Ramadan","Die Kaaba"],["Warum heißt Abu Bakr „as-Siddiq“?","Er glaubte ihm sofort","Er war sehr reich","Er war sehr stark"]],
+  fox:"Jedes Mal, wenn du betest, denkst du an das Geschenk der Nachtreise."},
+ {id:"s9",t:"Die Hidschra",yr:"622",ic:"palm",unlock:["asma"],cards:[
+   "In Mekka wurde es zu gefährlich. Allah erlaubte den Muslimen, nach Yathrib auszuwandern – in eine Stadt mit vielen Palmen im Norden.",
+   "Der Prophet ﷺ ging mit seinem besten Freund Abu Bakr. Ali schlief in der Nacht in seinem Bett. Drei Tage versteckten sich die beiden in der Höhle Thawr. Asmaʾ, die Tochter von Abu Bakr, brachte ihnen heimlich Essen.",
+   "In Quba baute er die erste Moschee. Dann erreichte er Yathrib, und die Menschen sangen vor Freude. Die Stadt hieß von nun an Medina – „die Stadt des Propheten“. Mit der Hidschra beginnt der islamische Kalender."],
+  q:[["Wer begleitete ihn auf der Hidschra?","Abu Bakr","Umar","Bilal"],["In welcher Höhle versteckten sie sich?","Höhle Thawr","Höhle Hira","Höhle Uhud"],["Wo baute er die erste Moschee?","In Quba","In Mekka","In Taif"]],
+  fox:"Hidschra heißt Auswanderung. Unser Kalender zählt die Jahre seit diesem Tag!"},
+ {id:"s10",t:"Leben in Medina",yr:"ab 622",ic:"mosque",unlock:["abuayyub"],cards:[
+   "Zuerst wohnte der Prophet ﷺ im Haus von Abu Ayyub al-Ansari. Dann bauten alle Muslime gemeinsam seine Moschee: die Masdschid an-Nabawi. Er selbst trug Steine mit.",
+   "Die Muslime aus Mekka hatten alles verlassen – man nennt sie Muhadschirun. Der Prophet ﷺ machte jeden zum Bruder eines Muslims aus Medina – der Ansar –, der mit ihm teilte.",
+   "Bilal hatte eine schöne, laute Stimme. Er wurde der erste Muezzin und rief zum Gebet: den Adhan."],
+  q:[["Wer war der erste Muezzin?","Bilal","Ali","Zayd"],["Wie nennt man die Muslime aus Medina, die geholfen haben?","Ansar","Muhadschirun","Quraisch"],["Was tat der Prophet ﷺ beim Bau der Moschee?","Er trug selbst Steine","Er schaute nur zu","Er war verreist"]],
+  fox:"Teilen macht Freunde zu Geschwistern – wie die Ansar und die Muhadschirun."},
+ {id:"s11",t:"Badr, Uhud und der Graben",yr:"2–5 n. H.",ic:"hill",unlock:["hamza","salman"],cards:[
+   "Bei Badr trafen nur etwa 313 Muslime auf eine viel größere Armee aus Mekka. Mit Allahs Hilfe gewannen die Muslime.",
+   "Am Berg Uhud verließen einige Bogenschützen ihren Platz, obwohl der Prophet ﷺ gesagt hatte, sie sollen bleiben. Die Muslime lernten: Gehorsam ist wichtig. Hier starb sein Onkel Hamza, der „Löwe Allahs“.",
+   "Später zog eine riesige Armee gegen Medina. Salman al-Farisi hatte eine Idee: einen Graben um die Stadt. Die Armee kam nicht hinüber und zog wieder ab."],
+  q:[["Wie viele Muslime waren ungefähr bei Badr?","Etwa 313","Etwa 10.000","Etwa 50"],["Wer wurde „Löwe Allahs“ genannt?","Hamza","Abu Talib","Abraha"],["Wessen Idee war der Graben?","Salman al-Farisi","Abu Bakr","Bilal"]],
+  fox:"Neue Freunde-Karten: Hamza und Salman!"},
+ {id:"s12",t:"Zurück nach Mekka",yr:"8 n. H.",ic:"key",unlock:["uthman"],cards:[
+   "Acht Jahre nach der Hidschra kehrte der Prophet ﷺ mit etwa 10.000 Muslimen nach Mekka zurück – fast ohne Kampf.",
+   "Er reinigte die Kaaba von den Götzenbildern. Bilal stieg auf die Kaaba und rief den Adhan über Mekka.",
+   "Die Menschen, die ihn früher verfolgt hatten, hatten Angst. Doch er vergab ihnen und ließ sie frei gehen."],
+  q:[["Was machte er mit den Menschen, die ihn verfolgt hatten?","Er vergab ihnen","Er bestrafte alle","Er vertrieb sie"],["Was geschah mit der Kaaba?","Sie wurde von Götzenbildern gereinigt","Sie wurde abgerissen","Sie wurde verschlossen"],["Wer rief den Adhan von der Kaaba?","Bilal","Hamza","Salman"]],
+  fox:"Vergeben ist schwer – aber der Prophet ﷺ hat es uns vorgemacht."},
+ {id:"s13",t:"Der Abschied",yr:"10–11 n. H.",ic:"arafat",unlock:["aischa","fatima"],cards:[
+   "Im 10. Jahr nach der Hidschra machte der Prophet ﷺ seine Pilgerfahrt, den Hadsch. Am Berg Arafat hielt er die Abschiedspredigt.",
+   "Er sagte: Alle Menschen sind gleich – keiner ist besser als ein anderer, außer durch seine Gottesfurcht. Behandelt eure Familien gut und haltet euch an den Quran.",
+   "Kurz danach wurde er krank. Er starb in Medina mit 63 Jahren, im Zimmer seiner Frau Aischa, und wurde dort begraben. Heute liegt sein Grab in seiner Moschee."],
+  q:[["Wo hielt er die Abschiedspredigt?","Am Berg Arafat","In der Höhle Hira","In Taif"],["Was sagte er über die Menschen?","Alle Menschen sind gleich","Reiche sind besser","Starke sind besser"],["Wie alt wurde der Prophet ﷺ?","63 Jahre","40 Jahre","70 Jahre"]],
+  fox:"Du kennst jetzt sein ganzes Leben! Zum Schluss: Bring die Ereignisse in die richtige Reihenfolge."},
+ {id:"ord",t:"Was kam zuerst?",yr:"Spiel",ic:"order",order:true}
+];
+const EVENTS=["Das Jahr des Elefanten – Geburt in Mekka","Kindheit bei Halima in der Wüste","Hochzeit mit Khadija","Die erste Offenbarung in der Höhle Hira","Das Jahr der Trauer und Taif","Die Hidschra nach Medina","Die Schlacht von Badr","Die Rückkehr nach Mekka","Die Abschiedspredigt am Berg Arafat"];
+
+const FRIENDS={
+ khadija:{n:"Khadija bint Khuwaylid",a:"خديجة",tag:"Die Treue",f:1,c:["#c2557a","#8e2f55"],t:"Die erste Muslima überhaupt. Sie glaubte dem Propheten ﷺ sofort und half ihm mit ihrem Herzen und ihrem Vermögen. Er hat sie nie vergessen."},
+ ali:{n:"Ali ibn Abi Talib",a:"علي",tag:"Der Mutige",c:["#2f7fbf","#1d4f86"],t:"Cousin des Propheten ﷺ. Er glaubte schon als Junge. In der Nacht der Hidschra schlief er mutig im Bett des Propheten ﷺ. Er heiratete Fatima und wurde der vierte Kalif."},
+ bilal:{n:"Bilal ibn Rabah",a:"بلال",tag:"Die Stimme",c:["#24946a","#13644a"],t:"Er blieb unter schweren Qualen standhaft und rief „Ahad, Ahad!“. Er wurde der erste Muezzin des Islam."},
+ umar:{n:"Umar ibn al-Khattab",a:"عمر",tag:"Der Gerechte",c:["#7a5bbf","#4d3790"],t:"Zuerst war er ein Gegner, dann wurde er ein starker Muslim. Man nannte ihn al-Faruq – der Recht und Unrecht unterscheidet. Er war der zweite Kalif."},
+ zayd:{n:"Zayd ibn Haritha",a:"زيد",tag:"Der Treue Begleiter",c:["#d9822b","#a2551a"],t:"Der Prophet ﷺ nahm ihn auf wie einen Sohn. Er begleitete ihn nach Taif. Zayd ist der einzige Gefährte, der im Quran mit Namen genannt wird."},
+ abubakr:{n:"Abu Bakr as-Siddiq",a:"أبو بكر",tag:"Der Wahrhaftige",c:["#3a5bb0","#233a7a"],t:"Der beste Freund des Propheten ﷺ. Er glaubte ihm immer sofort, begleitete ihn auf der Hidschra und wurde der erste Kalif."},
+ asma:{n:"Asmaʾ bint Abi Bakr",a:"أسماء",tag:"Die Mutige Helferin",f:1,c:["#c2557a","#8e2f55"],t:"Sie brachte dem Propheten ﷺ und ihrem Vater heimlich Essen in die Höhle Thawr. Sie band es mit ihrem Gürtel fest, den sie in zwei Teile riss – darum heißt sie „die mit den zwei Gürteln“."},
+ abuayyub:{n:"Abu Ayyub al-Ansari",a:"أبو أيوب",tag:"Der Gastgeber",c:["#24946a","#13644a"],t:"Als der Prophet ﷺ in Medina ankam, wohnte er in seinem Haus, bis die Moschee fertig war. Er war ein gastfreundlicher Ansari."},
+ hamza:{n:"Hamza ibn Abd al-Muttalib",a:"حمزة",tag:"Der Löwe Allahs",c:["#d9822b","#a2551a"],t:"Ein Onkel des Propheten ﷺ, stark und mutig. Er beschützte die Muslime in Mekka und starb bei Uhud."},
+ salman:{n:"Salman al-Farisi",a:"سلمان",tag:"Der Wahrheitssucher",c:["#2f7fbf","#1d4f86"],t:"Er kam aus Persien und suchte viele Jahre nach der Wahrheit, bis er den Propheten ﷺ fand. Seine Idee mit dem Graben rettete Medina."},
+ uthman:{n:"Uthman ibn Affan",a:"عثمان",tag:"Der Großzügige",c:["#7a5bbf","#4d3790"],t:"Sehr großzügig und bescheiden. Er heiratete zwei Töchter des Propheten ﷺ – darum heißt er „der mit den zwei Lichtern“. Als dritter Kalif ließ er den Quran in einem Buch sammeln."},
+ aischa:{n:"Aischa bint Abi Bakr",a:"عائشة",tag:"Die Gelehrte",f:1,c:["#c2557a","#8e2f55"],t:"Ehefrau des Propheten ﷺ und Tochter von Abu Bakr. Sie war sehr klug, überlieferte viele Hadithe und lehrte viele Menschen."},
+ fatima:{n:"Fatima az-Zahra",a:"فاطمة",tag:"Die geliebte Tochter",f:1,c:["#24946a","#13644a"],t:"Die jüngste Tochter des Propheten ﷺ, die er sehr liebte. Sie heiratete Ali und war die Mutter von Hasan und Husain."}
+};
+
+const FAM=[
+ {sec:"Seine Eltern und seine Familie",ps:[["Abdullah","عبد الله","Vater","Starb vor der Geburt des Propheten ﷺ."],["Amina bint Wahb","آمنة","Mutter","Starb, als er sechs Jahre alt war."],["Abd al-Muttalib","عبد المطلب","Großvater","Kümmerte sich nach Amina um ihn und gab ihm den Namen Muhammad."],["Abu Talib","أبو طالب","Onkel","Zog ihn groß und beschützte ihn in Mekka."],["Hamza","حمزة","Onkel","Der „Löwe Allahs“."],["al-Abbas","العباس","Onkel","Ein weiterer Onkel, der später Muslim wurde."],["Halima as-Saʿdiyya","حليمة","Amme","Pflegte ihn als Baby in der Wüste."],["Umm Aiman","أم أيمن","Kinderfrau","Kümmerte sich um ihn als Kind; er nannte sie „meine Mutter nach meiner Mutter“."]]},
+ {sec:"Seine Frauen – die Mütter der Gläubigen",pr:"So werden die Ehefrauen des Propheten ﷺ im Quran genannt.",ps:[["Khadija bint Khuwaylid","خديجة","1. Ehefrau","Die erste Muslima; Mutter seiner Kinder außer Ibrahim."],["Sawda bint Zamʿa","سودة","Ehefrau","Heiratete ihn nach Khadijas Tod; fröhlich und großzügig."],["Aischa bint Abi Bakr","عائشة","Ehefrau","Tochter von Abu Bakr; sehr gelehrt."],["Hafsa bint Umar","حفصة","Ehefrau","Tochter von Umar; bei ihr wurde eine frühe Quran-Sammlung aufbewahrt."],["Zaynab bint Khuzayma","زينب","Ehefrau","Genannt „Mutter der Armen“, weil sie so viel gab."],["Umm Salama","أم سلمة","Ehefrau","Klug; gab dem Propheten ﷺ einen weisen Rat."],["Zaynab bint Dschahsch","زينب","Ehefrau","Arbeitete mit ihren Händen und spendete viel."],["Dschuwairiya bint al-Harith","جويرية","Ehefrau","Durch die Heirat wurden viele aus ihrem Stamm frei."],["Umm Habiba","أم حبيبة","Ehefrau","Tochter von Abu Sufyan; war nach Abessinien ausgewandert."],["Safiyya bint Huyayy","صفية","Ehefrau","Aus Khaybar; geduldig und edel."],["Maimuna bint al-Harith","ميمونة","Ehefrau","Die letzte Frau, die er heiratete."],["Mariya al-Qibtiyya","مارية","Mutter von Ibrahim","Kam aus Ägypten; Mutter seines Sohnes Ibrahim."]]},
+ {sec:"Seine Kinder",ps:[["al-Qasim","القاسم","Sohn","Starb als kleines Kind. Darum nannte man den Propheten ﷺ auch „Abu l-Qasim“."],["Zaynab","زينب","Tochter","Die älteste Tochter; heiratete Abu l-ʿAs."],["Ruqayya","رقية","Tochter","Heiratete Uthman."],["Umm Kulthum","أم كلثوم","Tochter","Heiratete nach Ruqayyas Tod ebenfalls Uthman."],["Fatima az-Zahra","فاطمة","Tochter","Heiratete Ali; lebte als einziges Kind noch nach dem Propheten ﷺ."],["Abdullah","عبد الله","Sohn","Starb als kleines Kind."],["Ibrahim","إبراهيم","Sohn","Sohn von Mariya; starb als Kleinkind in Medina."]]},
+ {sec:"Seine Enkel",ps:[["Hasan","الحسن","Enkel","Sohn von Fatima und Ali."],["Husain","الحسين","Enkel","Sohn von Fatima und Ali."],["Zaynab bint Ali","زينب","Enkelin","Tochter von Fatima und Ali."],["Umama","أمامة","Enkelin","Tochter von Zaynab; der Prophet ﷺ trug sie sogar beim Gebet."]]}
+];
+const FAMQ=[["Wer war die erste Ehefrau des Propheten ﷺ?","Khadija","Aischa","Hafsa"],["Welche Tochter heiratete Ali?","Fatima","Zaynab","Ruqayya"],["Wie hießen die Söhne von Fatima und Ali?","Hasan und Husain","Qasim und Abdullah","Ibrahim und Zayd"],["Wessen Tochter war Aischa?","Von Abu Bakr","Von Umar","Von Abu Talib"],["Wessen Tochter war Hafsa?","Von Umar","Von Abu Bakr","Von Hamza"],["Wer war sein Großvater?","Abd al-Muttalib","Abu Talib","Abdullah"],["Welches seiner Kinder lebte noch nach ihm?","Fatima","Zaynab","Ibrahim"],["Wer war die Mutter von Ibrahim?","Mariya","Khadija","Sawda"],["Warum heißt Uthman „der mit den zwei Lichtern“?","Er heiratete zwei Töchter des Propheten ﷺ","Er hatte zwei Lampen","Er betete zweimal so viel"],["Wie nennt man die Ehefrauen des Propheten ﷺ?","Mütter der Gläubigen","Töchter der Wüste","Freunde von Medina"]];
+
+// map: lon/lat → svg
+const MW=280,MH=300,LON0=32,LON1=47,LAT0=11.5,LAT1=34;
+const P=(lon,lat)=>[((lon-LON0)/(LON1-LON0)*MW).toFixed(1),((LAT1-lat)/(LAT1-LAT0)*MH).toFixed(1)];
+const poly=a=>"M"+a.map(([x,y])=>P(x,y).join(" ")).join("L")+"Z";
+const ARABIA=[[47,34],[47,12.4],[45,12.9],[43.4,12.7],[42.7,15],[41.5,17],[40.5,19],[39.2,21.5],[38.5,23.5],[37.2,25],[36.5,26.5],[35.2,28],[34.95,29.5],[34.6,29.4],[34.3,27.8],[33.6,28.3],[32.6,29.9],[32.3,31.2],[34.3,31.3],[34.8,32.3],[35.1,33.1],[35.5,34]];
+const AFRICA=[[32,11.5],[32,31.3],[32.6,29.9],[33.5,27],[34.5,25],[35.6,23],[37,21],[37.3,19],[38.5,17.5],[39.5,15.5],[41,14],[42.5,12.6],[43.2,11.5]];
+const PLACES=[
+ {id:"mekka",n:"Mekka",lon:39.83,lat:21.42,t:"Geburtsort des Propheten ﷺ. Hier stehen die Kaaba und in der Nähe die Höhlen Hira und Thawr und der Berg Arafat.",st:"s1"},
+ {id:"medina",n:"Medina",lon:39.61,lat:24.47,t:"Früher Yathrib. Hierhin wanderte er bei der Hidschra aus. Hier stehen seine Moschee und sein Grab. In der Nähe: Quba und der Berg Uhud.",st:"s9"},
+ {id:"taif",n:"Taif",lon:40.42,lat:21.27,t:"Stadt in den Bergen. Hier wurde er mit Steinen beworfen – und betete trotzdem für die Menschen.",st:"s7"},
+ {id:"badr",n:"Badr",lon:38.78,lat:23.73,t:"Hier gewannen etwa 313 Muslime mit Allahs Hilfe gegen eine viel größere Armee.",st:"s11"},
+ {id:"jerusalem",n:"Jerusalem",lon:35.23,lat:31.78,t:"Hier steht die Al-Aqsa-Moschee. Ziel der Nachtreise (al-Isra).",st:"s8"},
+ {id:"syrien",n:"Syrien (asch-Scham)",lon:36.5,lat:32.52,t:"Bis hierher reiste er als junger Mann mit Handelskarawanen.",st:"s3"},
+ {id:"abessinien",n:"Abessinien",lon:38.7,lat:14.1,t:"Hier beschützte der gerechte König Nadschaschi die ersten muslimischen Auswanderer.",st:"s6"}
+];
+
+// ---------- state ----------
+let S={stars:{},cards:[],fam:0,map:0};
+try{const o=JSON.parse(localStorage.getItem("fuffel-v1")||"null");if(o)S=Object.assign(S,o);}catch(e){}
+const save=()=>{try{localStorage.setItem("fuffel-v1",JSON.stringify(S))}catch(e){}};
+const total=()=>Object.values(S.stars).reduce((a,b)=>a+b,0)+(S.fam||0)+(S.map||0);
+const unlocked=i=>i===0||(S.stars[ST[i-1].id]||0)>0;
+const nextIdx=()=>{const i=ST.findIndex((s,k)=>unlocked(k)&&!(S.stars[s.id]>0));return i<0?0:i;};
+
+// ---------- sound ----------
+let AC=null;
+function beep(ok){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const t=AC.currentTime;(ok?[620,830]:[300,220]).forEach((f,i)=>{const o=AC.createOscillator(),g=AC.createGain();o.type=ok?"triangle":"sine";o.frequency.value=f;g.gain.setValueAtTime(0,t+i*.09);g.gain.linearRampToValueAtTime(.16,t+i*.09+.01);g.gain.exponentialRampToValueAtTime(.001,t+i*.09+.22);o.connect(g).connect(AC.destination);o.start(t+i*.09);o.stop(t+i*.09+.25);});}catch(e){}}
+function confetti(n){if(matchMedia("(prefers-reduced-motion: reduce)").matches)return;const cv=h("canvas",{class:"confetti"});document.body.append(cv);const dpr=Math.min(2,devicePixelRatio||1);cv.width=innerWidth*dpr;cv.height=innerHeight*dpr;const c=cv.getContext("2d");c.scale(dpr,dpr);const cols=["#f2b632","#ee7a2b","#24946a","#3a5bb0","#c2557a"];const ps=Array.from({length:40+n*30},()=>({x:innerWidth/2+(Math.random()-.5)*120,y:innerHeight*.35,vx:(Math.random()-.5)*12,vy:-Math.random()*12-4,s:Math.random()*8+5,r:Math.random()*6,vr:(Math.random()-.5)*.3,c:pick(cols)}));let t=0;(function f(){c.clearRect(0,0,innerWidth,innerHeight);ps.forEach(p=>{p.vy+=.35;p.x+=p.vx;p.y+=p.vy;p.r+=p.vr;c.save();c.translate(p.x,p.y);c.rotate(p.r);c.fillStyle=p.c;c.fillRect(-p.s/2,-p.s/4,p.s,p.s/2);c.restore();});if(++t<120)requestAnimationFrame(f);else cv.remove();})();}
+
+// ---------- navigation ----------
+const view=$("#view");
+function route(){
+  const r=location.hash.replace("#","");
+  if(!screen.hidden){screen.hidden=true;document.body.style.overflow="";R=null;}
+  $("#modal").hidden=true;
+  $("#starCount").textContent=total();
+  $("#backBtn").hidden=!r||r==="start";
+  view.innerHTML="";window.scrollTo(0,0);
+  if(r==="lebensweg")return showPath();
+  if(r==="karte")return showMap();
+  if(r==="familie")return showFamily();
+  if(r==="freunde")return showCards();
+  showHome();
+}
+function go(r){if(location.hash==="#"+r)route();else location.hash=r;}
+window.addEventListener("hashchange",route);
+$("#backBtn").onclick=()=>{try{history.replaceState(null,"",location.pathname+location.search);}catch(e){}route();};
+
+function showHome(){
+  const doneSt=ST.filter(s=>S.stars[s.id]>0).length;
+  view.append(h("section",{class:"hero"},h("span",{html:FOX.replace("<svg",'<svg class="fox"')}),h("div",null,
+    h("h1",null,rich("Lerne die Geschichte des Propheten ﷺ")),
+    h("p",{text:"Hallo, ich bin Fuffel! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden."}))));
+  view.querySelector(".hero p").replaceChildren(rich("Hallo, ich bin Fuffel! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden."));
+  const door=(r,ic,t,sub,pr)=>h("button",{class:"door",onclick:()=>go(r)},h("span",{html:IC[ic]}),h("span",null,h("h2",{text:t}),h("small",null,rich(sub)),pr!=null?h("div",{class:"bar prog"},h("i",{style:`width:${pr}%`})):null));
+  view.append(h("div",{class:"doors"},
+    door("lebensweg","camel","Sein Lebensweg",`${ST.length-1} Stationen von der Geburt bis zum Abschied`,Math.round(doneSt/ST.length*100)),
+    door("karte","map","Die Karte","Finde die Orte aus der Sira"),
+    door("familie","tree","Die Familie","Eltern, Frauen, Kinder und Enkel"),
+    door("freunde","cards","Freunde-Karten",`${S.cards.length} von ${Object.keys(FRIENDS).length} gesammelt`,Math.round(S.cards.length/Object.keys(FRIENDS).length*100))));
+}
+
+// ---------- Lebensweg ----------
+function showPath(){
+  view.append(h("h1",{style:"font-size:30px;margin-top:8px",text:"Sein Lebensweg"}));
+  const p=h("div",{class:"path"});const ni=nextIdx();
+  ST.forEach((s,i)=>{
+    const lock=!unlocked(i),stc=S.stars[s.id]||0,off=[50,74,50,26][i%4];
+    const node=h("button",{class:"node","aria-label":s.t+(lock?" (gesperrt)":""),html:IC[s.ic],onclick:()=>{if(!lock)startStation(i);}});
+    p.append(h("div",{class:"stop"+(lock?" locked":"")+(stc?" done":"")+(i===ni&&!lock?" next":""),style:`margin-left:calc(${off}% - 85px)`},node,h("span",{class:"yr",text:s.yr}),h("span",{class:"lb",text:s.t}),h("span",{class:"stars",html:[1,2,3].map(k=>star(k<=stc)).join("")})));
+  });
+  view.append(p);
+  requestAnimationFrame(()=>{const r=p.getBoundingClientRect();const pts=[...p.querySelectorAll(".node")].map(n=>{const b=n.getBoundingClientRect();return [b.left-r.left+b.width/2,b.top-r.top+b.height/2];});let d=`M${pts[0][0]} ${pts[0][1]}`;for(let i=1;i<pts.length;i++){const [x0,y0]=pts[i-1],[x1,y1]=pts[i],my=(y0+y1)/2;d+=`C${x0} ${my} ${x1} ${my} ${x1} ${y1}`;}const sv=document.createElementNS("http://www.w3.org/2000/svg","svg");sv.setAttribute("class","trail");sv.innerHTML=`<path d="${d}" fill="none" stroke="var(--sand)" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 16"/>`;p.prepend(sv);});
+}
+
+// ---------- lesson engine (stories + quiz) ----------
+let R=null;
+const screen=$("#screen"),sbox=$("#sbox"),fbox=$("#fbox"),foot=$("#foot");
+function openScreen(){screen.hidden=false;document.body.style.overflow="hidden";}
+function closeScreen(){screen.hidden=true;document.body.style.overflow="";R=null;route();}
+$("#quit").onclick=closeScreen;
+function setFoot(cls,fb,...btns){foot.className="foot"+(cls?" "+cls:"");fbox.innerHTML="";if(fb)fbox.append(fb);btns.forEach(b=>b&&fbox.append(b));}
+function prog(){$("#pfill").style.width=Math.min(100,R.pos/R.items.length*100)+"%";}
+function mcq(q,opts){return {type:"mc",q:q[0],opts:shuffle([{v:q[1],ok:true},{v:q[2]},{v:q[3]}].concat(opts||[]))};}
+function startStation(i){
+  const s=ST[i];
+  if(s.order)return startOrder(i);
+  const items=s.cards.map((c,k)=>({type:"story",s,text:c,k}));
+  if(s.fox)items.push({type:"fox",text:s.fox});
+  s.q.forEach(q=>items.push(mcq(q)));
+  R={kind:"station",i,s,items,pos:0,err:0};openScreen();show();
+}
+function startQuiz(name,qs,n,onDone){R={kind:name,items:shuffle(qs).slice(0,n).map(q=>mcq(q)),pos:0,err:0,onDone};openScreen();show();}
+function next(){R.pos++;if(R.pos>=R.items.length)return finish();show();}
+function show(){
+  prog();sbox.innerHTML="";sbox.parentElement.scrollTop=0;
+  const it=R.items[R.pos];
+  if(it.type==="story"){
+    const c=h("div",{class:"story"});
+    if(it.k===0)c.append(h("span",{class:"yr",text:it.s.yr}),h("h3",{text:it.s.t}));
+    c.append(h("span",{html:IC[it.s.ic].replace("<svg",'<svg class="scene"')}),h("p",null,rich(it.text)));
+    sbox.append(c);
+    setFoot("",h("div",{class:"fb"},h("span",{style:"color:var(--muted);font-weight:700",text:"Lies die Geschichte – dann kommen Fragen"})),R.pos>0?h("button",{class:"go ghost",text:"Zurück",onclick:()=>{R.pos--;show();}}):null,h("button",{class:"go",text:"Weiter",onclick:next}));
+    return;
+  }
+  if(it.type==="fox"){sbox.append(fuffelSays(it.text));setFoot("",null,h("button",{class:"go",text:"Zu den Fragen",onclick:next}));return;}
+  sbox.append(h("div",{class:"ask"},rich(it.q)));
+  const box=h("div",{class:"opts"});let done=false;
+  it.opts.forEach(o=>{const b=h("button",{class:"opt"},rich(o.v));b.onclick=()=>{if(done)return;done=true;box.querySelectorAll(".opt").forEach(x=>x.disabled=true);
+    if(o.ok){b.classList.add("ok");beep(true);setFoot("ok",h("div",{class:"fb"},h("b",{text:pick(["Richtig!","Super!","Mascha'Allah!","Genau!"])})),h("button",{class:"go ok",text:"Weiter",onclick:next}));}
+    else{b.classList.add("bad");beep(false);R.err++;box.querySelectorAll(".opt").forEach((x,k)=>{if(it.opts[k].ok)x.classList.add("ok");else if(x!==b)x.classList.add("dim");});
+      if(!it.again){R.items.push(Object.assign({},it,{opts:shuffle(it.opts),again:true}));}
+      const right=it.opts.find(x=>x.ok).v;
+      setFoot("bad",h("div",{class:"fb"},h("b",{text:"Nicht ganz."}),h("span",null,rich("Richtig ist: "+right))),h("button",{class:"go bad",text:"Verstanden",onclick:next}));}
+  };box.append(b);});
+  sbox.append(box);setFoot("",h("div",{class:"fb"},h("span",{style:"color:var(--muted)",text:"Wähle die richtige Antwort."})));
+}
+function starsFor(err){return err===0?3:err<=2?2:1;}
+function finish(){
+  $("#pfill").style.width="100%";
+  const st=starsFor(R.err);let fresh=[];
+  if(R.kind==="station"){S.stars[R.s.id]=Math.max(S.stars[R.s.id]||0,st);(R.s.unlock||[]).forEach(c=>{if(!S.cards.includes(c)){S.cards.push(c);fresh.push(c);}});}
+  if(R.onDone)R.onDone(st);
+  save();
+  sbox.innerHTML="";
+  const res=h("div",{class:"result"},h("span",{html:FOX.replace("<svg",'<svg style="width:96px;height:96px"')}),h("h2",{text:["Geschafft!","Gut gemacht!","Mascha'Allah!"][st-1]}),h("div",{class:"bigstars",html:[1,2,3].map(k=>star(k<=st).replace("<svg",`<svg class="${k<=st?"on":""}" style="animation-delay:${k*.18}s"`)).join("")}));
+  fresh.forEach(id=>{const f=FRIENDS[id];res.append(h("div",{class:"newcard"},h("b",{text:"Neue Freunde-Karte: "+f.n}),h("div",{text:f.tag})));});
+  if(st<3)res.append(h("p",{style:"margin:0;color:var(--muted)",text:"Für 3 Sterne: eine Runde ohne Fehler. Du kannst jederzeit wiederholen."}));
+  sbox.append(res);confetti(st);beep(true);
+  const btns=[h("button",{class:"go ghost",text:"Fertig",onclick:closeScreen})];
+  if(R.kind==="station"&&R.i+1<ST.length){const ni=R.i+1;btns.push(h("button",{class:"go ok",text:"Nächste Station",onclick:()=>startStation(ni)}));}
+  setFoot("",null,...btns);
+}
+
+// order game
+function startOrder(i){
+  R={kind:"station",i,s:ST[i],items:[{}],pos:0,err:0};openScreen();prog();
+  const ev=shuffle(EVENTS.map((t,k)=>({t,k})));let want=0;
+  sbox.innerHTML="";sbox.append(h("div",{class:"ask",text:"Tippe die Ereignisse in der richtigen Reihenfolge an!"}),fuffelSays("Was kam zuerst? Fang ganz am Anfang an – bei der Geburt."));
+  const box=h("div",{class:"order"});
+  ev.forEach(e=>{const num=h("span",{class:"num",text:"?"});const b=h("button",{class:"opt"},num,h("span",{text:e.t}));
+    b.onclick=()=>{if(b.classList.contains("ok"))return;if(e.k===want){b.classList.add("ok");num.textContent=want+1;want++;beep(true);$("#pfill").style.width=(want/EVENTS.length*100)+"%";
+        if(want===EVENTS.length)setFoot("ok",h("div",{class:"fb"},h("b",{text:"Alles in der richtigen Reihenfolge!"})),h("button",{class:"go ok",text:"Weiter",onclick:()=>{R.pos=1;finish();}}));}
+      else{R.err++;beep(false);b.classList.add("bad");setTimeout(()=>b.classList.remove("bad"),400);setFoot("bad",h("div",{class:"fb"},h("b",{text:"Noch nicht."}),h("span",{text:"Was passierte davor?"})));}};
+    box.append(b);});
+  sbox.append(box);setFoot("",h("div",{class:"fb"},h("span",{style:"color:var(--muted)",text:`${EVENTS.length} Ereignisse`})));
+}
+
+// ---------- map ----------
+function mapSVG(onTap,labels){
+  const NS="http://www.w3.org/2000/svg";const sv=document.createElementNS(NS,"svg");sv.setAttribute("viewBox",`0 0 ${MW} ${MH}`);sv.setAttribute("role","img");sv.setAttribute("aria-label","Karte von Arabien");
+  let html=`<rect class="sea" width="${MW}" height="${MH}"/><path class="land" d="${poly(AFRICA)}"/><path class="land" d="${poly(ARABIA)}"/>`;
+  html+=`<text x="${P(36.2,20)[0]}" y="${P(36.2,20)[1]}" font-size="7" font-weight="700" fill="color-mix(in srgb,var(--sea) 40%,#1c2440)" transform="rotate(62 ${P(36.2,20).join(" ")})">Rotes Meer</text>`;
+  const [mx,my]=P(39.83,21.42),[dx,dy]=P(39.61,24.47);
+  html+=`<path class="route" d="M${mx} ${my}C${+mx+8} ${(+my+ +dy)/2} ${+dx+6} ${+dy+10} ${dx} ${dy}"/>`;
+  sv.innerHTML=html;
+  PLACES.forEach(pl=>{const [x,y]=P(pl.lon,pl.lat);const g=document.createElementNS(NS,"g");g.setAttribute("class","pl");g.dataset.id=pl.id;
+    g.innerHTML=`<circle class="hit" cx="${x}" cy="${y}" r="13"/><circle class="dot" cx="${x}" cy="${y}" r="6.5"/>`+(labels?`<text x="${+x+(pl.id==="taif"?8:-8)}" y="${+y+(pl.id==="taif"?10:-8)}" text-anchor="${pl.id==="taif"?"start":"end"}">${pl.n}</text>`:"");
+    g.addEventListener("click",()=>onTap(pl,g));sv.append(g);});
+  return sv;
+}
+let mapMode="explore";
+function showMap(){
+  view.append(h("h1",{style:"font-size:30px;margin-top:8px",text:"Die Karte"}));
+  const seg=h("div",{class:"seg",style:"margin:10px 0"},h("button",{"aria-pressed":String(mapMode==="explore"),onclick:()=>{mapMode="explore";route();}},"Entdecken"),h("button",{"aria-pressed":String(mapMode==="quiz"),onclick:()=>{mapMode="quiz";route();}},"Finde den Ort"));
+  view.append(seg);
+  const wrap=h("div",{style:"display:grid;gap:12px;justify-items:center;padding-bottom:30px"});view.append(wrap);
+  if(mapMode==="explore"){
+    const info=h("div",{class:"info"},h("h3",{text:"Tippe auf einen Ort"}),h("p",{text:"Die gestrichelte Linie zeigt den Weg der Hidschra von Mekka nach Medina."}));
+    const sv=mapSVG((pl,g)=>{sv.querySelectorAll(".pl").forEach(x=>x.classList.remove("sel"));g.classList.add("sel");info.replaceChildren(h("h3",{text:pl.n}),h("p",null,rich(pl.t)));},true);
+    wrap.append(h("div",{class:"mapbox"},sv),info);
+  }else{
+    const qs=shuffle(PLACES);let qi=0,err=0;
+    const ask=h("div",{class:"info"});
+    const sv=mapSVG((pl,g)=>{if(qi>=qs.length)return;const want=qs[qi];
+      if(pl.id===want.id){g.classList.add("ok");beep(true);qi++;
+        if(qi>=qs.length){const st=starsFor(err);S.map=Math.max(S.map||0,st);save();$("#starCount").textContent=total();ask.replaceChildren(h("h3",{text:"Alle Orte gefunden!"}),h("p",{html:[1,2,3].map(k=>star(k<=st)).join("")}),h("p",{text:err?`${err} Fehler – versuch es nochmal für 3 Sterne.`:"Ohne Fehler – super!"}));confetti(st);sv.querySelectorAll(".pl").forEach(x=>x.classList.remove("ok"));return;}
+        setTimeout(()=>{g.classList.remove("ok");setAsk();},500);}
+      else{err++;g.classList.add("bad");beep(false);setTimeout(()=>g.classList.remove("bad"),500);}
+    },false);
+    const setAsk=()=>ask.replaceChildren(h("h3",{text:"Wo liegt "+qs[qi].n+"?"}),h("p",{style:"color:var(--muted)",text:`Ort ${qi+1} von ${qs.length} – tippe auf den richtigen Punkt.`}));
+    setAsk();wrap.append(ask,h("div",{class:"mapbox"},sv));
+  }
+}
+
+// ---------- family ----------
+function showFamily(){
+  view.append(h("h1",{style:"font-size:30px;margin-top:8px",text:"Die Familie"}));
+  const fam=h("div",{class:"fam"});
+  fam.append(h("div",{class:"person center",style:"justify-self:start"},h("span",{class:"ar",text:"مُحَمَّد ﷺ"}),h("b",null,rich("Der Prophet Muhammad ﷺ")),h("small",{text:"Tippe auf einen Namen für mehr"})));
+  FAM.forEach(sec=>{const g=h("div",{class:"fgrid"});
+    sec.ps.forEach(([n,a,role,info])=>{const b=h("button",{class:"person"},h("span",{class:"ar",text:a}),h("b",{text:n}),h("small",{text:role}));b.onclick=()=>openInfo(a,n,role,info);g.append(b);});
+    fam.append(h("section",{class:"fsec"},h("h3",{text:sec.sec}),sec.pr?h("p",{class:"pr"},rich(sec.pr)):null,g));});
+  fam.append(h("button",{class:"go",style:"justify-self:start;margin:6px 0 30px",text:"Familien-Quiz starten",onclick:()=>startQuiz("fam",FAMQ,8,st=>{S.fam=Math.max(S.fam||0,st);})}));
+  view.append(fam);
+}
+function openInfo(a,n,tag,t,extra){
+  const m=$("#modal");m.innerHTML="";
+  m.append(h("div",{class:"mcard",role:"dialog","aria-label":n},h("span",{class:"ar",text:a}),h("h3",{text:n}),h("span",{class:"tag",text:tag}),h("p",null,rich(t)),extra||null,h("button",{class:"go",text:"Schließen",onclick:()=>m.hidden=true})));
+  m.hidden=false;
+}
+$("#modal").addEventListener("click",e=>{if(e.target.id==="modal")e.target.hidden=true;});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#modal").hidden=true;});
+
+// ---------- cards ----------
+function showCards(){
+  view.append(h("h1",{style:"font-size:30px;margin-top:8px",text:"Freunde-Karten"}));
+  view.append(h("p",{style:"color:var(--muted);margin:4px 0 12px"},rich("Mit jeder Station auf dem Lebensweg sammelst du Karten von Menschen, die dem Propheten ﷺ nahe standen.")));
+  const g=h("div",{class:"cards"});
+  Object.entries(FRIENDS).forEach(([id,f])=>{const have=S.cards.includes(id);
+    const c=h("button",{class:"card"+(have?"":" locked"),style:`--c1:${f.c[0]};--c2:${f.c[1]}`},h("small",{text:have?f.tag:"?"}),h("span",{class:"ar",text:have?f.a:"؟"}),h("b",{text:have?f.n:"Noch gesperrt"}),h("span",{class:"orn",html:'<svg viewBox="0 0 100 100"><path d="M50 0l12 38h38L69 61l12 39-31-24-31 24 12-39L0 38h38z" fill="#fff"/></svg>'}));
+    c.onclick=()=>{if(!have){const st=ST.find(s=>(s.unlock||[]).includes(id));openInfo("؟","Noch gesperrt","Tipp",`Schaffe die Station „${st.t}“ auf dem Lebensweg, um diese Karte zu bekommen.`);return;}
+      openInfo(f.a,f.n,f.tag,f.t,h("span",{class:"ra",text:f.f?"raḍiya llāhu ʿanhā – Allah möge mit ihr zufrieden sein":"raḍiya llāhu ʿanhu – Allah möge mit ihm zufrieden sein"}));};
+    g.append(c);});
+  view.append(g);
+  if(S.cards.length>=4){
+    view.append(h("button",{class:"go",style:"margin:16px 0 30px",text:"Spiel: Wer bin ich?",onclick:()=>{
+      const own=S.cards.map(id=>FRIENDS[id]);
+      const qs=own.map(f=>{const w=shuffle(own.filter(x=>x!==f)).slice(0,2).map(x=>x.n);return ["Wer bin ich? „"+f.t.split(". ")[0].replace(/\.$/,"")+".“",f.n,w[0],w[1]];});
+      startQuiz("who",qs,Math.min(8,qs.length));}}));
+  }else view.append(h("p",{style:"color:var(--muted);padding-bottom:30px",text:"Ab 4 Karten kannst du „Wer bin ich?“ spielen."}));
+}
+
+route();
+})();
+</script>
