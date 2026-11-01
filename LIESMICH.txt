@@ -9,7 +9,7 @@ Ordner:
   buch/Abrar_Quran_Reading_2026.pdf   Das Buch als PDF zum Herunterladen
   spiel/index.html           Lernspiel „Harf für Harf“
   spiel/audio/               Eigene Aufnahmen (siehe LIESMICH.txt dort)
-  sira/index.html            Lernspiel „Sira mit Fuffel“
+  sira/index.html            Lernspiel „Sira mit Fuffl“
   urkunde/index.html         Urkunde online ausfüllen und drucken
   uebungsblaetter/           Malblätter zum Ausdrucken (PDF)
   downloads/                 Poster, Lernplan, Sternchen-Plan, Memory, Zahlen,

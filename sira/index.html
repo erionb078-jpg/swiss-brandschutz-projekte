@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#ee7a2b">
-<title>Sira mit Fuffel</title>
+<title>Sira mit Fuffl</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&display=swap">
 <style>
-/* Layout: a story app — header with stars, Fuffel the fox greets, four big doors (Lebensweg, Karte, Familie, Freunde); each opens a full-screen view. Desert night palette: deep indigo, warm fox orange, palm green. */
+/* Layout: a story app — header with stars, Fuffl the fox greets, four big doors (Lebensweg, Karte, Familie, Freunde); each opens a full-screen view. Desert night palette: deep indigo, warm fox orange, palm green. */
 :root{
   --bg:#eef2f8; --bg-2:#dde4f0; --card:#ffffff; --ink:#1c2440; --muted:#5b6582; --line:#cfd8e8;
   --fox:#ee7a2b; --fox-soft:#fde4d1; --palm:#24946a; --palm-soft:#d3efe2; --gold:#f2b632; --gold-soft:#fdf0cc;
@@ -179,7 +179,7 @@ canvas.confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
 
 <header class="top"><div class="wrap">
   <button class="back" id="backBtn" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>Start</button>
-  <div class="logo" id="logo">Sira mit <span>Fuffel</span></div>
+  <div class="logo" id="logo">Sira mit <span>Fuffl</span></div>
   <a class="chip" href="../index.html" title="Zur Startseite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Start</a>
   <div class="chip" title="Deine Sterne"><svg viewBox="0 0 24 24"><path fill="#f2b632" stroke="#d99a10" stroke-width="1.2" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><span id="starCount">0</span></div>
 </div></header>
@@ -204,7 +204,7 @@ function rich(t){const f=document.createDocumentFragment();t.split(SAW).forEach(
 const STAR='<svg viewBox="0 0 24 24"><path fill="F" stroke="S" stroke-width="1.2" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg>';
 const star=on=>STAR.replace("F",on?"#f2b632":"var(--lock)").replace("S",on?"#d99a10":"transparent");
 
-// ---------- Fuffel the fox ----------
+// ---------- Fuffl the fox ----------
 const FOX=`<svg viewBox="0 0 140 140" aria-hidden="true">
 <path d="M98 112c22 2 36-12 34-30-1-10-8-16-14-14 6 10 2 24-12 28z" fill="#ee7a2b"/><path d="M118 70c8 6 9 18 2 26 4-10 0-20-6-24z" fill="#fff"/>
 <ellipse cx="68" cy="104" rx="30" ry="26" fill="#ee7a2b"/><ellipse cx="68" cy="110" rx="16" ry="17" fill="#fff4ea"/>
@@ -400,8 +400,8 @@ function showHome(){
   const doneSt=ST.filter(s=>S.stars[s.id]>0).length;
   view.append(h("section",{class:"hero"},h("span",{html:FOX.replace("<svg",'<svg class="fox"')}),h("div",null,
     h("h1",null,rich("Lerne die Geschichte des Propheten ﷺ")),
-    h("p",{text:"Hallo, ich bin Fuffel! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden."}))));
-  view.querySelector(".hero p").replaceChildren(rich("Hallo, ich bin Fuffel! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden."));
+    h("p",{text:"Hallo, ich bin Fuffl! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden."}))));
+  view.querySelector(".hero p").replaceChildren(rich("Hallo, ich bin Fuffl! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden."));
   const door=(r,ic,t,sub,pr)=>h("button",{class:"door",onclick:()=>go(r)},h("span",{html:IC[ic]}),h("span",null,h("h2",{text:t}),h("small",null,rich(sub)),pr!=null?h("div",{class:"bar prog"},h("i",{style:`width:${pr}%`})):null));
   view.append(h("div",{class:"doors"},
     door("lebensweg","camel","Sein Lebensweg",`${ST.length-1} Stationen von der Geburt bis zum Abschied`,Math.round(doneSt/ST.length*100)),
