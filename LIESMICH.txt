@@ -18,3 +18,5 @@ Ordner:
 
 Zum Veröffentlichen den ganzen Ordner so wie er ist auf einen Webserver laden.
 Notizen und Spielstände werden im Browser des jeweiligen Geräts gespeichert.
+
+Englische Version: Startpunkt ist eine Kopie der deutschen Website (Stand 6.11.2026). Wird im neuen Chat übersetzt und angepasst.
