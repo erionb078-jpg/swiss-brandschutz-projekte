@@ -100,6 +100,12 @@ form.rf fieldset.two{grid-template-columns:1fr 1fr}
 .hlist b{font-family:var(--f-display)}.hlist span{color:var(--muted);font-size:15px}
 .sadaqa{grid-column:1/-1;max-width:760px;justify-self:center;width:100%;margin-top:26px;padding:18px 20px;border-radius:18px;background:color-mix(in srgb,var(--bg) 10%,transparent);border:1.5px solid color-mix(in srgb,currentColor 25%,transparent);text-align:center;line-height:1.6}
 .sadaqa .ar{display:block;font-size:24px;margin-bottom:4px}
+.hero{--ink:#2a1823;--muted:#6e5966;--plum:#6b2150;--plum-2:#4e1539;--bg:#fff;--line:#e8d9e1;--red:#d6303a;--rose-soft:#fbe3e5;background:#fef3f4;color:#2a1823}
+.hero .wrap{grid-template-columns:.9fr 1.1fr;padding-block:56px 56px}
+.heroimg{position:relative;display:block;margin-right:calc(-1*max(20px,(100vw - 1120px)/2 + 20px));align-self:center}
+.heroimg img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
+.heroimg .tag{position:absolute;left:0;top:4%;background:var(--gold);color:#2a1823;font-family:var(--f-display);font-weight:800;padding:8px 14px;border-radius:12px;transform:rotate(-6deg);box-shadow:0 6px 14px -6px rgba(0,0,0,.4)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 24px}.heroimg{margin:0 -20px}.heroimg img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 10%,#000 90%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 10%,#000 90%,transparent 100%)}}
 /* facts */
 .facts{border-block:1px solid var(--line)}
 .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-block:22px}
@@ -340,7 +346,7 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
 
 <main>
 <section class="hero">
-  <div class="bigar ar" aria-hidden="true">اقْرَأْ</div>
+  
   <div class="wrap">
     <div>
             <span class="eyebrow">Free for teachers worldwide</span>
@@ -353,67 +359,8 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
       </div>
       <p class="small">PDF · 116 pages · approx. 8 MB · Hafs ʿan ʿAsim reading, script as in the Madinah Mushaf</p>
     </div>
-    <a class="scene" href="buch/index.html" aria-label="Open the book online">
-<svg class="scene-svg" viewBox="0 0 600 470" role="img" aria-labelledby="scnT"><title id="scnT">The Abrar book on a computer, a tablet and a phone</title>
-<defs>
-<linearGradient id="dkTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9b48a"/><stop offset="1" stop-color="#c79a6b"/></linearGradient>
-<linearGradient id="dkFront" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a87a4f"/><stop offset="1" stop-color="#8d6440"/></linearGradient>
-<linearGradient id="glare" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".45" stop-color="#fff" stop-opacity=".04"/><stop offset=".46" stop-color="#fff" stop-opacity="0"/></linearGradient>
-<linearGradient id="frameG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c2a30"/><stop offset="1" stop-color="#17161a"/></linearGradient>
-<linearGradient id="standG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b9bcc4"/><stop offset=".5" stop-color="#e6e8ec"/><stop offset="1" stop-color="#a9acb4"/></linearGradient>
-<linearGradient id="leafG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e9e2e6"/></linearGradient>
-<clipPath id="cMon"><rect x="160" y="50" width="310" height="190" rx="3"/></clipPath>
-<clipPath id="cPad"><rect x="414" y="214" width="112" height="158" rx="6"/></clipPath>
-<clipPath id="cPhone"><rect x="96" y="244" width="64" height="134" rx="9"/></clipPath>
-<filter id="soft" x="-20%" y="-20%" width="140%" height="160%"><feGaussianBlur stdDeviation="6"/></filter>
-</defs>
-<circle cx="300" cy="215" r="225" fill="var(--tint-2)"/>
-<rect x="372" y="24" width="150" height="110" rx="10" fill="#fff" opacity=".55"/><path d="M447 24v110M372 79h150" stroke="#fff" stroke-width="5" opacity=".9"/>
-<g><animateTransform attributeName="transform" type="rotate" values="-1.2 70 330;1.2 70 330;-1.2 70 330" dur="7s" repeatCount="indefinite"/><path d="M70 330C58 300 40 286 26 282C40 300 50 312 62 332Z" fill="#2f8f6a"/><path d="M72 330C70 290 78 262 94 246C90 276 84 304 78 332Z" fill="#13877c"/><path d="M70 330C66 300 52 268 40 254C46 284 56 310 66 332Z" fill="#3aa57c"/><path d="M74 332C86 306 104 296 120 294C106 310 92 320 80 334Z" fill="#2f8f6a"/><path d="M71 330C72 296 66 270 58 250C70 266 78 294 76 332Z" fill="#4fb98f"/></g>
-<path d="M48 330h46l-6 44H54Z" fill="#e8ddd4"/><path d="M46 326h50v8H46Z" fill="#d9cbbf"/>
-<ellipse cx="300" cy="392" rx="300" ry="20" fill="#000" opacity=".08" filter="url(#soft)"/>
-<path d="M14 372H586L600 404H0Z" fill="url(#dkTop)"/><rect x="0" y="404" width="600" height="18" rx="2" fill="url(#dkFront)"/>
-<path d="M40 380h120M230 392h180M460 384h110" stroke="#b88a5c" stroke-width="1.4" opacity=".5" stroke-linecap="round"/>
-<ellipse cx="315" cy="374" rx="70" ry="6" fill="#000" opacity=".18" filter="url(#soft)"/>
-<path d="M300 250h30l6 104h-42Z" fill="url(#standG)"/><rect x="262" y="352" width="106" height="12" rx="6" fill="url(#standG)"/>
-<rect x="150" y="40" width="330" height="212" rx="12" fill="url(#frameG)"/>
-<g clip-path="url(#cMon)"><rect x="160" y="50" width="310" height="190" fill="#f6eff3"/>
-<rect x="160" y="50" width="310" height="16" fill="#fff"/><circle cx="170" cy="58" r="2.4" fill="#6b2150"/><rect x="178" y="55" width="54" height="6" rx="3" fill="#e8d9e1"/><rect x="395" y="54" width="34" height="8" rx="4" fill="#d6303a"/><rect x="433" y="54" width="30" height="8" rx="4" fill="#ee7a2b"/>
-<rect x="262" y="226" width="106" height="10" rx="5" fill="#fff" stroke="#e8d9e1"/>
-<g opacity="1"><animate attributeName="opacity" values="1;0;0;1" keyTimes="0;.333;.667;1" calcMode="discrete" dur="10.5s" repeatCount="indefinite"/><image href="buch/pages/001.webp" x="315" y="70" width="107" height="152" preserveAspectRatio="xMidYMid slice"/></g>
-<g opacity="0"><animate attributeName="opacity" values="0;1;0;0" keyTimes="0;.333;.667;1" calcMode="discrete" dur="10.5s" repeatCount="indefinite"/><image href="buch/pages/016.webp" x="196" y="70" width="107" height="152" preserveAspectRatio="xMidYMid slice"/><image href="buch/pages/017.webp" x="315" y="70" width="107" height="152" preserveAspectRatio="xMidYMid slice"/></g>
-<g opacity="0"><animate attributeName="opacity" values="0;0;1;0" keyTimes="0;.333;.667;1" calcMode="discrete" dur="10.5s" repeatCount="indefinite"/><image href="buch/pages/018.webp" x="196" y="70" width="107" height="152" preserveAspectRatio="xMidYMid slice"/><image href="buch/pages/019.webp" x="315" y="70" width="107" height="152" preserveAspectRatio="xMidYMid slice"/></g>
-<path d="M315 70v152" stroke="#000" stroke-opacity=".12"/>
-<g transform="translate(315 0)"><g opacity="0"><animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;.74;.75;.97;1" dur="3.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="scale" values="1 1;1 1;-1 1;-1 1" keyTimes="0;.75;.97;1" dur="3.5s" repeatCount="indefinite"/><rect x="0" y="70" width="107" height="152" fill="url(#leafG)" stroke="#e1d6dc"/></g></g>
-<path d="M330 150h64" stroke="#f5b400" stroke-width="7" stroke-opacity=".45" stroke-linecap="round" stroke-dasharray="64" stroke-dashoffset="64"><animate attributeName="stroke-dashoffset" values="64;64;0;0;64" keyTimes="0;.15;.3;.9;1" dur="3.5s" repeatCount="indefinite"/></path>
-<rect x="160" y="50" width="310" height="190" fill="url(#glare)"/></g>
-<circle cx="315" cy="246" r="1.6" fill="#55525a"/>
-<ellipse cx="566" cy="374" rx="22" ry="4" fill="#000" opacity=".14"/>
-<path d="M546 332h38v34a8 8 0 0 1-8 8h-22a8 8 0 0 1-8-8Z" fill="#6b2150"/><path d="M584 340c12 0 12 20 0 20" fill="none" stroke="#6b2150" stroke-width="5"/><ellipse cx="565" cy="332" rx="19" ry="4" fill="#4e1539"/><text x="565" y="360" text-anchor="middle" font-size="13" fill="#f3d9e6" font-family="Noto Naskh Arabic,serif" font-weight="700">اقرأ</text>
-<path d="M559 324c-5-8 5-12 0-20" fill="none" stroke="#b9a3af" stroke-width="2.4" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3s" begin="0.0s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 6;0 -10" dur="3s" begin="0.0s" repeatCount="indefinite"/></path>
-<path d="M569 324c-5-8 5-12 0-20" fill="none" stroke="#b9a3af" stroke-width="2.4" stroke-linecap="round" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3s" begin="1.5s" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="0 6;0 -10" dur="3s" begin="1.5s" repeatCount="indefinite"/></path>
-<ellipse cx="470" cy="388" rx="64" ry="5" fill="#000" opacity=".18" filter="url(#soft)"/>
-<path d="M452 372l-14 16h64l-14-16Z" fill="url(#standG)"/>
-<rect x="406" y="206" width="128" height="174" rx="12" fill="url(#frameG)"/>
-<g clip-path="url(#cPad)"><image href="buch/pages/017.webp" x="414" y="214" width="112" height="158" preserveAspectRatio="xMidYMid slice"/><path d="M486 284c10-10 28-4 26 8s-24 14-30 4" fill="none" stroke="#d11a5f" stroke-width="2.6" stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="80"><animate attributeName="stroke-dashoffset" values="80;80;0;0;80" keyTimes="0;.2;.5;.92;1" dur="5s" repeatCount="indefinite"/></path><path d="M432 330h40" stroke="#1b2a6b" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="40" stroke-dashoffset="40"><animate attributeName="stroke-dashoffset" values="40;40;0;0;40" keyTimes="0;.55;.7;.92;1" dur="5s" repeatCount="indefinite"/></path><rect x="414" y="214" width="112" height="158" fill="url(#glare)"/></g>
-<circle cx="470" cy="210" r="1.4" fill="#55525a"/>
-<g transform="rotate(-6 470 396)"><rect x="420" y="393" width="92" height="5.5" rx="2.75" fill="#f4f4f6"/><path d="M512 393l9 2.75-9 2.75Z" fill="#c9cbd1"/><rect x="420" y="393" width="92" height="2" rx="1" fill="#fff"/></g>
-<ellipse cx="128" cy="388" rx="44" ry="4" fill="#000" opacity=".18" filter="url(#soft)"/>
-<path d="M112 376l-10 12h52l-10-12Z" fill="url(#standG)"/>
-<rect x="90" y="238" width="76" height="146" rx="14" fill="url(#frameG)"/>
-<g clip-path="url(#cPhone)"><rect x="96" y="244" width="64" height="134" fill="#f6eff3"/>
-<g><animateTransform attributeName="transform" type="translate" values="0 0;0 0;0 -94;0 -94;0 -188;0 -188;0 0" keyTimes="0;.25;.33;.58;.66;.92;1" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 1 1;.45 0 .2 1;0 0 1 1;.45 0 .2 1;0 0 1 1;.45 0 .2 1"/>
-<image href="buch/pages/001.webp" x="100" y="252" width="56" height="80" preserveAspectRatio="xMidYMid slice"/>
-<rect x="100" y="252" width="56" height="80" fill="none" stroke="#e1d6dc"/>
-<image href="buch/pages/016.webp" x="100" y="346" width="56" height="80" preserveAspectRatio="xMidYMid slice"/>
-<rect x="100" y="346" width="56" height="80" fill="none" stroke="#e1d6dc"/>
-<image href="buch/pages/024.webp" x="100" y="440" width="56" height="80" preserveAspectRatio="xMidYMid slice"/>
-<rect x="100" y="440" width="56" height="80" fill="none" stroke="#e1d6dc"/>
-<image href="buch/pages/001.webp" x="100" y="534" width="56" height="80" preserveAspectRatio="xMidYMid slice"/>
-<rect x="100" y="534" width="56" height="80" fill="none" stroke="#e1d6dc"/>
-</g><rect x="96" y="244" width="64" height="8" fill="#f6eff3"/><rect x="117" y="246" width="22" height="4" rx="2" fill="#17161a"/>
-<rect x="96" y="244" width="64" height="134" fill="url(#glare)"/></g>
-</svg>
+    <a class="heroimg" href="buch/index.html" aria-label="Open the book online">
+      <img src="hero.webp" width="1423" height="793" alt="The Abrar book “Quran Reading – Step by Step” on a tablet, a computer, in print and projected for a class" fetchpriority="high">
       <span class="tag">100% free</span>
     </a>
   </div>
@@ -691,7 +638,6 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
   });
 })();
 </script>
-<script>try{if(matchMedia('(prefers-reduced-motion: reduce)').matches){var sv=document.querySelector('.scene-svg');sv&&sv.pauseAnimations&&sv.pauseAnimations()}}catch(e){}</script>
 <script>
 (function(){
   var f=document.getElementById('hf'),st=document.getElementById('hstatus'),addr='info@abrarlearning.com';
