@@ -101,11 +101,8 @@ form.rf fieldset.two{grid-template-columns:1fr 1fr}
 .sadaqa{grid-column:1/-1;max-width:760px;justify-self:center;width:100%;margin-top:26px;padding:18px 20px;border-radius:18px;background:color-mix(in srgb,var(--bg) 10%,transparent);border:1.5px solid color-mix(in srgb,currentColor 25%,transparent);text-align:center;line-height:1.6}
 .sadaqa .ar{display:block;font-size:24px;margin-bottom:4px}
 .hero{--ink:#2a1823;--muted:#6e5966;--plum:#6b2150;--plum-2:#4e1539;--bg:#fff;--line:#e8d9e1;--red:#d6303a;--rose-soft:#fbe3e5;background:#fef3f4;color:#2a1823}
-.hero .wrap{grid-template-columns:.9fr 1.1fr;padding-block:56px 56px}
-.heroimg{position:relative;display:block;margin-right:calc(-1*max(20px,(100vw - 1120px)/2 + 20px));align-self:center}
-.heroimg img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
-.heroimg .tag{position:absolute;left:0;top:4%;background:var(--gold);color:#2a1823;font-family:var(--f-display);font-weight:800;padding:8px 14px;border-radius:12px;transform:rotate(-6deg);box-shadow:0 6px 14px -6px rgba(0,0,0,.4)}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 24px}.heroimg{margin:0 -20px}.heroimg img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 10%,#000 90%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 10%,#000 90%,transparent 100%)}}
+
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 24px}}
 .wplaces{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
 .wpl{display:flex;gap:12px;align-items:center;background:var(--bg);border:2px solid var(--line);border-radius:18px;padding:14px 16px}
 .wpl b{display:block;font-family:var(--f-display)}.wpl span{color:var(--muted);font-size:14.5px}
@@ -374,8 +371,9 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
       </div>
       <p class="small">PDF · 116 pages · approx. 8 MB · Hafs ʿan ʿAsim reading, script as in the Madinah Mushaf</p>
     </div>
-    <a class="heroimg" href="buch/index.html" aria-label="Open the book online">
-      <img src="hero.webp" width="1423" height="793" alt="The Abrar book “Quran Reading – Step by Step” on a tablet, a computer, in print and projected for a class" fetchpriority="high">
+    <a class="cover" href="buch/index.html" aria-label="Open the book online">
+      <span class="back" style="background-image:url(buch/pages/017.webp)"></span>
+      <span class="front" style="background-image:url(buch/pages/001.webp)"></span>
       <span class="tag">100% free</span>
     </a>
   </div>
