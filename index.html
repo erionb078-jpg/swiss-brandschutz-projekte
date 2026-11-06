@@ -106,6 +106,18 @@ form.rf fieldset.two{grid-template-columns:1fr 1fr}
 .heroimg img{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 14%),linear-gradient(180deg,transparent 0,#000 12%,#000 88%,transparent 100%);mask-composite:intersect}
 .heroimg .tag{position:absolute;left:0;top:4%;background:var(--gold);color:#2a1823;font-family:var(--f-display);font-weight:800;padding:8px 14px;border-radius:12px;transform:rotate(-6deg);box-shadow:0 6px 14px -6px rgba(0,0,0,.4)}
 @media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-block:36px 24px}.heroimg{margin:0 -20px}.heroimg img{-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 10%,#000 90%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0,#000 10%,#000 90%,transparent 100%)}}
+.wplaces{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}
+.wpl{display:flex;gap:12px;align-items:center;background:var(--bg);border:2px solid var(--line);border-radius:18px;padding:14px 16px}
+.wpl b{display:block;font-family:var(--f-display)}.wpl span{color:var(--muted);font-size:14.5px}
+.wpi{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--teal-soft);color:var(--teal)}.wpi svg{width:22px;height:22px}
+.fbgrid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px;margin-top:16px}
+.fb1{display:flex;flex-direction:column;gap:12px;background:var(--bg);border:2px solid var(--line);border-radius:22px;padding:24px;text-decoration:none;color:inherit}
+.fb1 p{margin:0;font-size:18px;line-height:1.55}
+.fbh{display:flex;gap:12px;align-items:center}.fbh b{display:block;font-family:var(--f-display);font-size:18px}.fbh div span{color:var(--muted);font-size:14.5px}
+.av{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:var(--plum);color:#fff;font-family:var(--f-display);font-weight:800;font-size:20px}
+.fb1.you{border-style:dashed}.fb1.you .av{background:var(--teal)}.fb1.you p{font-size:16px;color:var(--muted)}.fb1.you em{font-style:normal;font-weight:800;color:var(--plum);margin-top:auto}
+.fb1.you:hover{border-color:var(--plum)}
+@media (max-width:860px){.wplaces{grid-template-columns:1fr 1fr}.fbgrid{grid-template-columns:1fr}}
 /* facts */
 .facts{border-block:1px solid var(--line)}
 .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-block:22px}
@@ -444,6 +456,24 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
   <div class="tknote"><span class="tki"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><p><b>Free for every teacher, everywhere.</b> Print as many worksheets and posters as your class needs and share the book with your students. Please don't sell any of the materials.</p></div>
 </div></section>
 
+<section class="block world" id="feedback"><div class="wrap">
+  <span class="kicker">Used around the world</span>
+  <h2>Teachers and schools already teach with it</h2>
+  <p class="intro">From New York to Australia, from Indonesia to London – teachers, madrasas and schools use “Quran Reading – Step by Step” with their students.</p>
+  <div class="wplaces"><div class="wpl"><span class="wpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>New York, USA</b><span>A teacher</span></div></div><div class="wpl"><span class="wpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>Australia</b><span>A madrasa</span></div></div><div class="wpl"><span class="wpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>Indonesia</b><span>A madrasa</span></div></div><div class="wpl"><span class="wpi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><div><b>London, UK</b><span>A school</span></div></div></div>
+  <div class="fbgrid">
+    <article class="fb1">
+      <div class="fbh"><span class="av">L</span><div><b>Liri</b><span>Teacher · New York, USA</span></div></div>
+      <p>Liri has been teaching with the book for years and is very happy with it.</p>
+    </article>
+    <a class="fb1 you" href="#help" onclick="var t=document.getElementById('h-topic');if(t)t.value='Feedback on the book'">
+      <div class="fbh"><span class="av">+</span><div><b>Your class or school?</b><span>We would love to hear from you</span></div></div>
+      <p>Do you teach with the book? Tell us how it works for you – with your permission we will add your feedback here.</p>
+      <em>Send us your feedback →</em>
+    </a>
+  </div>
+</div></section>
+
 <section class="block" id="buch"><div class="wrap">
   <span class="kicker">The Book</span>
   <h2>A book you can flip through and write in</h2>
@@ -576,7 +606,7 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
       <label class="f" for="h-mail">Email<input type="email" id="h-mail" autocomplete="email" required></label>
       <label class="f" for="h-role">I am<select id="h-role"><option>A teacher</option><option>A school or madrasa</option><option>A parent</option><option>Other</option></select></label>
       <label class="f" for="h-country">Country<input type="text" id="h-country" autocomplete="country-name"></label>
-      <label class="f full" for="h-topic">Topic<select id="h-topic"><option>Question about the book</option><option>Help with the materials</option><option>Using it in our school</option><option>Mistake or correction</option><option>Something else</option></select></label>
+      <label class="f full" for="h-topic">Topic<select id="h-topic"><option>Question about the book</option><option>Help with the materials</option><option>Using it in our school</option><option>Feedback on the book</option><option>Mistake or correction</option><option>Something else</option></select></label>
       <label class="f full" for="h-msg">Your message<textarea id="h-msg" placeholder="How can we help?"></textarea></label>
       <div class="full send"><button class="btn pri" type="submit">Send message</button><p class="note">Your email app opens with the message ready to send.</p></div>
       <p class="rstatus" id="hstatus" role="status" hidden></p>
