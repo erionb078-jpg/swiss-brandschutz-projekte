@@ -14,5 +14,5 @@ Die Skripte enthalten noch Pfade aus der alten Arbeitsumgebung. Vor dem Ausführ
 
 - `uebersetzung-en/` – Übersetzungslisten (Deutsch → Englisch) je Seite; `apply.py <datei> <liste>` wendet sie an
 - `generatoren-en/` – englische Übungsblätter und Downloads (`printables.py`, `sheets.py`, Ausgabe mit `render.py`), Arbeitsordner `/tmp/sp` mit Schriften, Logo, Qalam/Fuffl-SVG und `glyphs.json`/`strokes.json` aus dem Spiel
-- `generatoren-en/header_scene.py` – animierte Header-Szene (Lehrer mit Buch und vier Kindern)
+- `generatoren-en/header_desk.py` – Header-Szene: Schreibtisch mit Monitor, iPad und Handy, die das Buch zeigen (`header_scene.py` = alte Lehrer-Szene, nicht mehr verwendet)
 - Buchseiten `buch/pages/` aus `Abrar_Quran_Reading_2026.pdf` mit `pdftoppm -r 110` und WebP (Qualität 80) erzeugt
