@@ -9,3 +9,10 @@ Hilfsdateien, mit denen die Abrar-Website gebaut wurde. Die fertige Website lieg
 - `lehrer/` – Skripte, die den Bereich „Lernen mit Lehrer“ in die Startseite eingefügt haben
 
 Die Skripte enthalten noch Pfade aus der alten Arbeitsumgebung. Vor dem Ausführen anpassen.
+
+## Englische Version (Zweig `abrar-website-en`)
+
+- `uebersetzung-en/` – Übersetzungslisten (Deutsch → Englisch) je Seite; `apply.py <datei> <liste>` wendet sie an
+- `generatoren-en/` – englische Übungsblätter und Downloads (`printables.py`, `sheets.py`, Ausgabe mit `render.py`), Arbeitsordner `/tmp/sp` mit Schriften, Logo, Qalam/Fuffl-SVG und `glyphs.json`/`strokes.json` aus dem Spiel
+- `generatoren-en/header_scene.py` – animierte Header-Szene (Lehrer mit Buch und vier Kindern)
+- Buchseiten `buch/pages/` aus `Abrar_Quran_Reading_2026.pdf` mit `pdftoppm -r 110` und WebP (Qualität 80) erzeugt
