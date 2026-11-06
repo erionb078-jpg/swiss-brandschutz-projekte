@@ -135,10 +135,10 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
   <div>
     <span class="kicker">Free · for all ages</span>
     <h1>Learn short surahs</h1>
-    <p>20 short surahs in 5 levels, from the Fatiha to Al-Alaq. Listen to each surah by Sheikh al-Minshawi, repeat it verse by verse and tick off what you know by heart. Then recite it to our teacher for free.</p>
+    <p>20 short surahs in 5 levels, from the Fatiha to Al-Alaq. Listen to each surah by Sheikh al-Minshawi, repeat it verse by verse and tick off what you know by heart. Then recite it for free to a male or female teacher from our team.</p>
     <div class="how">
       <div><b>1. Listen and repeat</b><span>The sheikh recites, you repeat.</span></div>
-      <div><b>2. Recite to a teacher</b><span>Free, online.</span></div>
+      <div><b>2. Recite to a teacher</b><span>Free, online, with our team.</span></div>
       <div><b>3. Get your certificate</b><span>For every level you complete.</span></div>
     </div>
   </div>
@@ -151,7 +151,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
 <main><div class="wrap" id="stages"></div>
 <div class="wrap">
   <div class="tip"><b>Tip from the teacher</b><p>Learn a small piece every day and repeat it in your prayer. What you say in prayer, you don't forget so quickly.</p></div>
-  <div class="cta"><div><h3>Finished a surah?</h3><p>Recite it to our certified teacher. He listens, corrects and tells you whether everything is right. It's free.</p></div><a href="../index.html?angebot=sure#anfrage">Request a recitation session</a></div>
+  <div class="cta"><div><h3>Finished a surah?</h3><p>Recite it to a male or female teacher from our team. They listen, correct and tell you whether everything is right. It's free.</p></div><a href="../index.html?angebot=sure#anfrage">Request a recitation session</a></div>
 </div></main>
 
 <footer><div class="wrap">“Quran Reading – Step by Step” · Abrar · <a href="../index.html" style="color:inherit">Home</a></div></footer>
@@ -217,7 +217,7 @@ async function togglePractice(n,lt,row){
     <div class="pstat" aria-live="polite"></div>
     <div class="qtext"><div class="loadmsg">Loading the surah …</div></div>
     <div class="pfoot"><p>Recitation: Sheikh Muhammad Siddiq al-Minshawi (Murattal), played via the open audio service of Islamic Network. Quran text: alquran.cloud. Tap a verse to start there.</p>
-    <a href="../index.html?sure=${encodeURIComponent(lt)}#anfrage">Know it well? Recite it to the teacher</a></div>`;
+    <a href="../index.html?sure=${encodeURIComponent(lt)}#anfrage">Know it well? Recite it to a teacher</a></div>`;
   panel.querySelectorAll("[data-o]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.o;P.o[k]=+b.dataset.v;saveOpts(P.o);
     panel.querySelectorAll(`[data-o="${k}"]`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)))}));
   panel.querySelector('[data-a="play"]').addEventListener("click",()=>{P.on?pauseP():startP(P.i)});
