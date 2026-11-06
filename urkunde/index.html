@@ -55,6 +55,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--plum)}
    <option value="3">Die Sira mit Fuffl</option>
    <option value="4">Den 12-Wochen-Lernplan</option>
    <option value="5">Das Buch „Quran lesen lernen – Schritt für Schritt“</option>
+   <option value="7">Kurze Suren (Stufe 1–5)</option>
    <option value="6">Eigener Text …</option></select></label>
   <label id="ownl" hidden>Eigener Text<textarea id="own" rows="2" maxlength="140" placeholder="z. B. hat die Sure Al-Fatiha schön gelesen"></textarea></label>
   <label>Datum<input id="date" type="date"></label>
@@ -116,7 +117,8 @@ const TXT=[["hat alle <b>28 Buchstaben</b> des arabischen Alphabets gelernt – 
 ["hat alle Welten in <b>„Harf für Harf“</b> geschafft.",Q],
 ["hat mit Fuffl das <b>Leben des Propheten Muhammad ﷺ</b> entdeckt.",F],
 ["hat den <b>12-Wochen-Lernplan</b> fleißig geschafft.",Q],
-["hat das Lehrbuch <b>„Quran lesen lernen – Schritt für Schritt“</b> von Abrar abgeschlossen.",Q]];
+["hat das Lehrbuch <b>„Quran lesen lernen – Schritt für Schritt“</b> von Abrar abgeschlossen.",Q],null,["hat <b>kurze Suren aus dem Quran</b> auswendig gelernt.",Q]];
+try{const m=/^#suren-(\d)$/.exec(location.hash);if(m){TXT[7][0]="hat <b>Stufe "+m[1]+" der kurzen Suren</b> auswendig gelernt.";setTimeout(()=>{document.getElementById("what").value="7";document.getElementById("what").dispatchEvent(new Event("input"))},0)}}catch(e){}
 const $=id=>document.getElementById(id);
 const d=new Date();$("date").value=d.toISOString().slice(0,10);
 try{const s=JSON.parse(localStorage.getItem("harf-v1")||"{}");if(s.name)$("name").value=s.name;}catch(e){}
