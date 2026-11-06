@@ -55,7 +55,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--plum)}
    <option value="3">The Seerah with Fuffl</option>
    <option value="4">The 12-week learning plan</option>
    <option value="5">The book “Quran Reading – Step by Step”</option>
-   <option value="7">Short surahs (levels 1–5)</option>
+   <option value="7">All of Juz Amma</option>
    <option value="6">Your own text …</option></select></label>
   <label id="ownl" hidden>Your own text<textarea id="own" rows="2" maxlength="140" placeholder="e.g. for reading Surah Al-Fatiha beautifully"></textarea></label>
   <label>Date<input id="date" type="date"></label>
@@ -117,8 +117,8 @@ const TXT=[["for learning all <b>28 letters</b> of the Arabic alphabet – readi
 ["for completing all worlds in <b>“Harf by Harf”</b>.",Q],
 ["for discovering the <b>life of the Prophet Muhammad ﷺ</b> with Fuffl.",F],
 ["for working hard through the <b>12-week learning plan</b>.",Q],
-["for completing Abrar's textbook <b>“Quran Reading – Step by Step”</b>.",Q],null,["for memorising <b>short surahs of the Quran</b>.",Q]];
-try{const m=/^#suren-(\d)$/.exec(location.hash);if(m){TXT[7][0]="for memorising <b>level "+m[1]+" of the short surahs</b>.";setTimeout(()=>{document.getElementById("what").value="7";document.getElementById("what").dispatchEvent(new Event("input"))},0)}}catch(e){}
+["for completing Abrar's textbook <b>“Quran Reading – Step by Step”</b>.",Q],null,["for memorising <b>all of Juz Amma</b> – the 37 surahs from An-Naba' to An-Nas.",Q]];
+try{if(/^#(juz-amma|suren-\d)$/.test(location.hash)){setTimeout(()=>{document.getElementById("what").value="7";document.getElementById("what").dispatchEvent(new Event("input"))},0)}}catch(e){}
 const $=id=>document.getElementById(id);
 const d=new Date();$("date").value=d.toISOString().slice(0,10);
 try{const s=JSON.parse(localStorage.getItem("harf-v1")||"{}");if(s.name)$("name").value=s.name;}catch(e){}

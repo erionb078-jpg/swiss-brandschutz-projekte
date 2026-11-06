@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#6b2150">
-<title>Learn Short Surahs – Abrar</title>
-<meta name="description" content="20 short surahs in 5 levels: tick them off, recite them to a teacher for free and make a certificate for every level.">
+<title>Learn Juz Amma – Abrar</title>
+<meta name="description" content="Learn all of Juz Amma – 37 surahs with recitation and English meaning. Recite them to a teacher for free and get a certificate when you complete it.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700;800&family=Nunito+Sans:wght@400;600;700;800&family=Noto+Naskh+Arabic:wght@500;700&family=Amiri+Quran&display=swap">
@@ -104,6 +104,8 @@ main{padding-block:24px 64px}
 .qtext{direction:rtl;border-radius:18px;background:var(--tint);padding:14px 16px;display:grid;gap:4px;max-height:420px;overflow:auto}
 .qtext .bsm{text-align:center;font-family:"Amiri Quran",var(--f-ar);font-size:24px;line-height:2;color:var(--muted)}
 .ay{font:inherit;text-align:right;direction:rtl;font-family:"Amiri Quran",var(--f-ar);font-size:clamp(23px,3vw,29px);line-height:2.1;color:var(--ink);background:transparent;border:0;border-radius:12px;padding:2px 10px;cursor:pointer}
+.ay .en{display:block;direction:ltr;text-align:left;font-family:var(--f-body);font-size:15px;line-height:1.5;color:var(--muted);margin:-4px 0 6px}
+.award.juz{margin:8px 0 6px;padding:18px 22px;font-size:18px}
 .ay:hover{background:var(--bg)}
 .ay.on{background:var(--teal-soft);box-shadow:inset -4px 0 0 var(--teal)}
 .ay i{font-style:normal;display:inline-grid;place-items:center;min-width:30px;height:30px;margin-inline-start:8px;border-radius:50%;border:2px solid var(--teal);color:var(--teal);font-family:var(--f-ar);font-size:15px;line-height:1;vertical-align:middle}
@@ -134,21 +136,22 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
 <section class="hero"><div class="wrap">
   <div>
     <span class="kicker">Free · for all ages</span>
-    <h1>Learn short surahs</h1>
-    <p>20 short surahs in 5 levels, from the Fatiha to Al-Alaq. Listen to each surah by Sheikh al-Minshawi, repeat it verse by verse and tick off what you know by heart. Then recite it for free to a male or female teacher from our team.</p>
+    <h1>Learn Juz Amma</h1>
+    <p>All 37 surahs of Juz Amma, from An-Nas to An-Naba'. Listen to each surah by Sheikh al-Minshawi, read its meaning in English, repeat it verse by verse and tick off what you know by heart. Then recite it for free to a male or female teacher from our team.</p>
     <div class="how">
       <div><b>1. Listen and repeat</b><span>The sheikh recites, you repeat.</span></div>
       <div><b>2. Recite to a teacher</b><span>Free, online, with our team.</span></div>
-      <div><b>3. Get your certificate</b><span>For every level you complete.</span></div>
+      <div><b>3. Get your certificate</b><span>When you have completed all of Juz Amma.</span></div>
     </div>
   </div>
   <div class="ring" role="img" aria-label="Progress">
     <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" fill="none" stroke="var(--line)" stroke-width="12"/><circle id="arc" cx="60" cy="60" r="52" fill="none" stroke="var(--teal)" stroke-width="12" stroke-linecap="round" stroke-dasharray="326.7" stroke-dashoffset="326.7" style="transition:stroke-dashoffset .5s"/></svg>
-    <div class="in"><b id="cnt">0</b><span>of 20 surahs</span></div>
+    <div class="in"><b id="cnt">0</b><span>of 37 surahs</span></div>
   </div>
 </div></section>
 
 <main><div class="wrap" id="stages"></div>
+<div class="wrap"><div class="award juz" id="juzAward" hidden><p>You have completed all of Juz Amma. MashaAllah!</p><a href="../urkunde/index.html#juz-amma">Make your certificate</a></div></div>
 <div class="wrap">
   <div class="tip"><b>Tip from the teacher</b><p>Learn a small piece every day and repeat it in your prayer. What you say in prayer, you don't forget so quickly.</p></div>
   <div class="cta"><div><h3>Finished a surah?</h3><p>Recite it to a male or female teacher from our team. They listen, correct and tell you whether everything is right. It's free.</p></div><a href="../index.html?angebot=sure#anfrage">Request a recitation session</a></div>
@@ -157,7 +160,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
 <footer><div class="wrap">“Quran Reading – Step by Step” · Abrar · <a href="../index.html" style="color:inherit">Home</a></div></footer>
 
 <script>
-const ST=[["Level 1", "The foundation for prayer", [[1, "الفاتحة", "Al-Fatiha", "The Opening", 7], [114, "الناس", "An-Nas", "Mankind", 6], [113, "الفلق", "Al-Falaq", "The Daybreak", 5], [112, "الإخلاص", "Al-Ikhlas", "Sincerity", 4]]], ["Level 2", "Short and often heard", [[111, "المسد", "Al-Masad", "The Palm Fibre", 5], [110, "النصر", "An-Nasr", "The Help", 3], [109, "الكافرون", "Al-Kafirun", "The Disbelievers", 6], [108, "الكوثر", "Al-Kawthar", "Abundance", 3]]], ["Level 3", "Five small steps", [[107, "الماعون", "Al-Maun", "Small Kindnesses", 7], [106, "قريش", "Quraysh", "Quraysh", 4], [105, "الفيل", "Al-Fil", "The Elephant", 5], [104, "الهمزة", "Al-Humaza", "The Slanderer", 9], [103, "العصر", "Al-Asr", "Time", 3]]], ["Level 4", "Slightly longer surahs", [[102, "التكاثر", "At-Takathur", "Rivalry in Increase", 8], [101, "القارعة", "Al-Qaria", "The Striking Calamity", 11], [100, "العاديات", "Al-Adiyat", "The Chargers", 11], [99, "الزلزلة", "Az-Zalzala", "The Earthquake", 8]]], ["Level 5", "The way to Juz Amma", [[98, "البينة", "Al-Bayyina", "The Clear Proof", 8], [97, "القدر", "Al-Qadr", "The Night of Decree", 5], [96, "العلق", "Al-Alaq", "The Clinging Clot", 19]]]];
+const ST=[["Part 1", "The shortest surahs", [[114, "الناس", "An-Nas", "Mankind", 6], [113, "الفلق", "Al-Falaq", "The Daybreak", 5], [112, "الإخلاص", "Al-Ikhlas", "Sincerity", 4], [111, "المسد", "Al-Masad", "The Palm Fibre", 5], [110, "النصر", "An-Nasr", "The Help", 3], [109, "الكافرون", "Al-Kafirun", "The Disbelievers", 6], [108, "الكوثر", "Al-Kawthar", "Abundance", 3]]], ["Part 2", "Short and often heard", [[107, "الماعون", "Al-Maun", "Small Kindnesses", 7], [106, "قريش", "Quraysh", "Quraysh", 4], [105, "الفيل", "Al-Fil", "The Elephant", 5], [104, "الهمزة", "Al-Humaza", "The Slanderer", 9], [103, "العصر", "Al-Asr", "Time", 3], [102, "التكاثر", "At-Takathur", "Rivalry in Increase", 8], [101, "القارعة", "Al-Qaria", "The Striking Calamity", 11]]], ["Part 3", "A little longer", [[100, "العاديات", "Al-Adiyat", "The Chargers", 11], [99, "الزلزلة", "Az-Zalzala", "The Earthquake", 8], [98, "البينة", "Al-Bayyina", "The Clear Proof", 8], [97, "القدر", "Al-Qadr", "The Night of Decree", 5], [96, "العلق", "Al-Alaq", "The Clinging Clot", 19], [95, "التين", "At-Tin", "The Fig", 8], [94, "الشرح", "Ash-Sharh", "The Relief", 8], [93, "الضحى", "Ad-Duha", "The Morning Brightness", 11]]], ["Part 4", "Growing stronger", [[92, "الليل", "Al-Layl", "The Night", 21], [91, "الشمس", "Ash-Shams", "The Sun", 15], [90, "البلد", "Al-Balad", "The City", 20], [89, "الفجر", "Al-Fajr", "The Dawn", 30], [88, "الغاشية", "Al-Ghashiya", "The Overwhelming", 26], [87, "الأعلى", "Al-A'la", "The Most High", 19], [86, "الطارق", "At-Tariq", "The Night Comer", 17], [85, "البروج", "Al-Buruj", "The Constellations", 22]]], ["Part 5", "The beginning of Juz Amma", [[84, "الانشقاق", "Al-Inshiqaq", "The Splitting Open", 25], [83, "المطففين", "Al-Mutaffifin", "Those Who Give Short Measure", 36], [82, "الانفطار", "Al-Infitar", "The Cleaving", 19], [81, "التكوير", "At-Takwir", "The Folding Up", 29], [80, "عبس", "'Abasa", "He Frowned", 42], [79, "النازعات", "An-Nazi'at", "Those Who Pull Out", 46], [78, "النبأ", "An-Naba'", "The Tidings", 40]]]];
 const KEY="suren-v1";let done={};
 try{done=JSON.parse(localStorage.getItem(KEY)||"{}")||{}}catch(e){done={}}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(done))}catch(e){}};
@@ -166,7 +169,7 @@ const tick='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-wi
 const root=document.getElementById("stages");
 ST.forEach((st,si)=>{
   const sec=document.createElement("section");sec.className="stage";sec.id="stufe-"+(si+1);
-  sec.innerHTML=`<div class="shead"><h2>${st[0]}<small>${st[1]} · ${st[2].length} surahs</small></h2><div class="sbar"><i><u></u></i><span class="sc">0/${st[2].length}</span></div></div><div class="list"></div><div class="award" hidden><p>Level ${si+1} complete. MashaAllah!</p><a href="../urkunde/index.html#suren-${si+1}">Make a certificate</a></div>`;
+  sec.innerHTML=`<div class="shead"><h2>${st[0]}<small>${st[1]} · ${st[2].length} surahs</small></h2><div class="sbar"><i><u></u></i><span class="sc">0/${st[2].length}</span></div></div><div class="list"></div>`;
   const list=sec.querySelector(".list");
   st[2].forEach(([n,ar,lt,de,v])=>{
     const r=document.createElement("div");r.className="row";r.dataset.n=n;
@@ -184,7 +187,7 @@ ST.forEach((st,si)=>{
 });
 
 /* ---------- Üben mit Scheich al-Minshawi ---------- */
-const G1={1:1,114:6231,113:6226,112:6222,111:6217,110:6214,109:6208,108:6205,107:6198,106:6194,105:6189,104:6180,103:6177,102:6169,101:6158,100:6147,99:6139,98:6131,97:6126,96:6107};
+const G1={"78": 5673, "79": 5713, "80": 5759, "81": 5801, "82": 5830, "83": 5849, "84": 5885, "85": 5910, "86": 5932, "87": 5949, "88": 5968, "89": 5994, "90": 6024, "91": 6044, "92": 6059, "93": 6080, "94": 6091, "95": 6099, "96": 6107, "97": 6126, "98": 6131, "99": 6139, "100": 6147, "101": 6158, "102": 6169, "103": 6177, "104": 6180, "105": 6189, "106": 6194, "107": 6198, "108": 6205, "109": 6208, "110": 6214, "111": 6217, "112": 6222, "113": 6226, "114": 6231};
 const VERSES={};ST.forEach(s=>s[2].forEach(x=>VERSES[x[0]]=x[4]));
 const AU=g=>`https://cdn.islamic.network/quran/audio/128/ar.minshawi/${g}.mp3`;
 const AR="٠١٢٣٤٥٦٧٨٩",an=k=>String(k).replace(/\d/g,d=>AR[d]);
@@ -195,10 +198,10 @@ function opts(){let s={rep:3,echo:1,bism:1,loop:0};try{Object.assign(s,JSON.pars
 function saveOpts(o){try{localStorage.setItem("suren-opt",JSON.stringify(o))}catch(e){}}
 async function getText(n){
   if(TXT[n])return TXT[n];
-  const r=await fetch(`https://api.alquran.cloud/v1/surah/${n}/quran-uthmani`);if(!r.ok)throw new Error("http");
-  const j=await r.json();let ay=j.data.ayahs.map(a=>a.text.trim());
+  const r=await fetch(`https://api.alquran.cloud/v1/surah/${n}/editions/quran-uthmani,en.sahih`);if(!r.ok)throw new Error("http");
+  const j=await r.json();let ay=j.data[0].ayahs.map(a=>a.text.trim());const en=(j.data[1]&&j.data[1].ayahs||[]).map(a=>a.text.trim());
   if(n!==1){const w=ay[0].split(/\s+/);if(w.length>4&&w[0].replace(/[ً-ْٰۡؐ-ؚ]/g,"").startsWith("بسم"))ay[0]=w.slice(4).join(" ")}
-  return TXT[n]=ay;
+  return TXT[n]={ar:ay,en};
 }
 function seg(name,vals,cur,lab){return `<div class="opt"><span>${lab}</span><div class="segs" role="group" aria-label="${lab}">${vals.map(v=>`<button type="button" data-o="${name}" data-v="${v[0]}" aria-pressed="${String(v[0]==cur)}">${v[1]}</button>`).join("")}</div></div>`}
 function closePractice(){if(!P)return;stopP();P.panel.hidden=true;P.panel.innerHTML="";P.btn.setAttribute("aria-expanded","false");P.btn.textContent="▶ Listen & practise";P=null}
@@ -216,16 +219,16 @@ async function togglePractice(n,lt,row){
     </div>
     <div class="pstat" aria-live="polite"></div>
     <div class="qtext"><div class="loadmsg">Loading the surah …</div></div>
-    <div class="pfoot"><p>Recitation: Sheikh Muhammad Siddiq al-Minshawi (Murattal), played via the open audio service of Islamic Network. Quran text: alquran.cloud. Tap a verse to start there.</p>
+    <div class="pfoot"><p>Recitation: Sheikh Muhammad Siddiq al-Minshawi (Murattal), played via the open audio service of Islamic Network. Quran text and English meaning (Saheeh International): alquran.cloud. Tap a verse to start there.</p>
     <a href="../index.html?sure=${encodeURIComponent(lt)}#anfrage">Know it well? Recite it to a teacher</a></div>`;
   panel.querySelectorAll("[data-o]").forEach(b=>b.addEventListener("click",()=>{const k=b.dataset.o;P.o[k]=+b.dataset.v;saveOpts(P.o);
     panel.querySelectorAll(`[data-o="${k}"]`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)))}));
   panel.querySelector('[data-a="play"]').addEventListener("click",()=>{P.on?pauseP():startP(P.i)});
   panel.querySelector('[data-a="stop"]').addEventListener("click",()=>{stopP();P.i=0;mark(-1)});
   try{
-    const ay=await getText(n);if(!P||P.n!==n)return;
+    const tx=await getText(n);if(!P||P.n!==n)return;const ay=tx.ar;
     const box=panel.querySelector(".qtext");
-    box.innerHTML=(n!==1?`<div class="bsm" lang="ar">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>`:"")+ay.map((t,k)=>`<button type="button" class="ay" lang="ar" data-k="${k}">${t} <i>${an(k+1)}</i></button>`).join("");
+    box.innerHTML=(n!==1?`<div class="bsm" lang="ar">بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</div>`:"")+ay.map((t,k)=>`<button type="button" class="ay" lang="ar" data-k="${k}">${t} <i>${an(k+1)}</i><span class="en" lang="en">${k+1}. ${tx.en[k]||""}</span></button>`).join("");
     box.querySelectorAll(".ay").forEach(b=>b.addEventListener("click",()=>startP(+b.dataset.k,true)));
   }catch(e){const box=panel.querySelector(".qtext");box.innerHTML=`<div class="loadmsg">The text could not be loaded right now. The recitation still works: tap Start.</div>`}
   panel.scrollIntoView({behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth",block:"nearest"});
@@ -262,9 +265,9 @@ function upd(){
     rows.forEach(r=>{const ok=!!done[r.dataset.n];r.classList.toggle("done",ok);if(ok)c++});
     all+=c;sec.querySelector(".sc").textContent=c+"/"+rows.length;
     sec.querySelector(".sbar u").style.width=(c/rows.length*100)+"%";
-    sec.querySelector(".award").hidden=c<rows.length;
+    
   });
-  document.getElementById("cnt").textContent=all;
+  document.getElementById("cnt").textContent=all;document.getElementById("juzAward").hidden=all<TOTAL;
   document.getElementById("arc").style.strokeDashoffset=326.7*(1-all/TOTAL);
 }
 upd();
