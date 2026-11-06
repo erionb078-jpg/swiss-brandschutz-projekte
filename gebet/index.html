@@ -80,6 +80,17 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden}
 .bar u{display:block;height:100%;background:var(--teal);width:0;transition:width .4s}
 
+.aurow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:4px}
+.aurow button{font:inherit;font-family:var(--f-display);font-weight:700;font-size:15px;border:0;border-radius:12px;padding:10px 16px;cursor:pointer;background:var(--teal);color:#fff;box-shadow:0 3px 0 var(--teal-2)}
+.aurow button[aria-pressed="true"]{background:var(--teal-2)}
+.aurow button:focus-visible{outline:2px solid var(--plum);outline-offset:2px}
+.aupos{font-weight:800;font-size:14px;color:var(--teal);font-variant-numeric:tabular-nums}
+.aunote{font-size:14px;font-weight:700;color:var(--muted);border:2px dashed var(--line);border-radius:10px;padding:6px 10px}
+#sound[aria-pressed="true"]{border-color:var(--teal);color:var(--teal)}
+.credit{margin:18px 0 0;font-size:13px;color:var(--muted)}
+.credit a{color:inherit}
+.steps li.grp{grid-column:1/-1;font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin-top:8px;padding-bottom:2px;border-bottom:2px solid var(--line)}
+.steps li.grp:first-child{margin-top:0}
 /* Schritte-Liste */
 .all{margin-top:44px}
 .all h3{font-size:22px;margin:0 0 14px}
@@ -141,7 +152,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
   <p>Von der Gebetswaschung bis zum Salam: Jeder Schritt ist animiert und zeigt dir, was du tust und was du sagst, auf Arabisch, in Umschrift und mit Bedeutung.</p>
   <nav class="tabs" aria-label="Teile">
     <a href="#wudu" id="tab-wudu"><span class="n">1</span><span><b>Die Gebetswaschung</b><small>Wudu · 10 Schritte</small></span></a>
-    <a href="#gebet" id="tab-gebet"><span class="n">2</span><span><b>Das Gebet</b><small>am Beispiel des Morgengebets</small></span></a>
+    <a href="#gebet" id="tab-gebet"><span class="n">2</span><span><b>Das Gebet</b><small>Morgengebet (Fadschr) · 2 Rakat</small></span></a>
   </nav>
   </div>
   <img class="herofig" src="figur.webp" alt="" width="1024" height="1536">
@@ -163,6 +174,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
         <p class="ar" lang="ar" id="sAr"></p>
         <p class="tr" id="sTr"></p>
         <p class="de" id="sDe"></p>
+        <div class="aurow" id="auRow" hidden><button type="button" id="play" aria-pressed="false">▶ Rezitation anhören</button><span class="aupos" id="aupos" aria-live="polite"></span><span class="aunote" id="aunote">Aufnahme vom Lehrer folgt</span></div>
       </div>
       <p class="hint" id="stHint"></p>
       <div class="bar"><u id="bar"></u></div>
@@ -170,11 +182,13 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
         <button type="button" id="prev">← Zurück</button>
         <button type="button" class="pri" id="next">Weiter →</button>
         <button type="button" id="auto" aria-pressed="false">▶ Automatisch</button>
+        <button type="button" id="sound" aria-pressed="false">🔈 Ton aus</button>
         <span class="pos" id="pos"></span>
       </div>
     </div>
   </div>
 
+  <p class="credit">Rezitation der Quran-Verse: Mishary Rashid Alafasy, abgespielt über das offene Audio-Angebot von <a href="https://alquran.cloud/cdn" target="_blank" rel="noopener">Islamic Network (alquran.cloud)</a>.</p>
   <div class="all"><h3 id="allTitle">Alle Schritte</h3><ol class="steps" id="list"></ol></div>
 </div>
 
@@ -216,6 +230,7 @@ const TX={
  thana:{ar:["سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، وَتَبَارَكَ اسْمُكَ،","وَتَعَالَى جَدُّكَ، وَلَا إِلَٰهَ غَيْرُكَ"],tr:"Subhanakallahumma wa bihamdika, wa tabarakasmuka, wa ta'ala dschadduka, wa la ilaha ghairuk.",de:"Gepriesen bist Du, o Allah, und Dir gebührt das Lob. Gesegnet ist Dein Name, erhaben ist Deine Herrlichkeit, und es gibt keinen Gott außer Dir."},
  auudhu:{ar:["أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ","بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"],tr:"A'udhu billahi minasch-schaitanir-radschim. Bismillahir-rahmanir-rahim.",de:"Ich suche Schutz bei Allah vor dem verfluchten Satan. Im Namen Allahs, des Allerbarmers, des Barmherzigen."},
  fatiha:{ar:["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (٢) الرَّحْمَٰنِ الرَّحِيمِ (٣) مَالِكِ يَوْمِ الدِّينِ (٤)","إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥) اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (٦)","صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ (٧) آمِين"],tr:"Al-hamdu lillahi rabbil-alamin. Ar-rahmanir-rahim. Maliki yaumid-din. Iyyaka na'budu wa iyyaka nasta'in. Ihdinas-siratal-mustaqim. Siratal-ladhina an'amta alaihim, ghairil-maghdubi alaihim wa lad-dallin. Amin.",de:"Alles Lob gehört Allah, dem Herrn der Welten, dem Allerbarmer, dem Barmherzigen, dem Herrscher am Tag des Gerichts. Dir allein dienen wir, und Dich allein bitten wir um Hilfe. Führe uns den geraden Weg, den Weg derer, denen Du Gnade erwiesen hast, nicht derer, die Deinen Zorn erregt haben, und nicht der Irregehenden. Amin."},
+ fatiha_b:{ar:["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ (١)"],tr:"Bismillahir-rahmanir-rahim. ",de:"Im Namen Allahs, des Allerbarmers, des Barmherzigen. "},
  kauthar:{ar:["إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ (١) فَصَلِّ لِرَبِّكَ وَانْحَرْ (٢)","إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ (٣)"],tr:"Inna a'tainakal-kauthar. Fa salli li rabbika wanhar. Inna schani'aka huwal-abtar.",de:"Wir haben dir die Fülle gegeben. So bete zu deinem Herrn und opfere. Wer dich hasst, der ist es, der abgeschnitten ist."},
  ichlas:{ar:["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","قُلْ هُوَ اللَّهُ أَحَدٌ (١) اللَّهُ الصَّمَدُ (٢) لَمْ يَلِدْ وَلَمْ يُولَدْ (٣)","وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ (٤)"],tr:"Bismillahir-rahmanir-rahim. Qul huwallahu ahad. Allahus-samad. Lam yalid wa lam yulad. Wa lam yakun lahu kufuwan ahad.",de:"Sag: Er ist Allah, der Eine. Allah, der Ewige, auf den alle angewiesen sind. Er zeugt nicht und wurde nicht gezeugt. Und keiner ist Ihm gleich."},
  ruku:{ar:["سُبْحَانَ رَبِّيَ الْعَظِيمِ"],tr:"Subhana rabbiyal-azim",de:"Gepriesen ist mein Herr, der Gewaltige."},
@@ -228,6 +243,7 @@ const TX={
  salam:{ar:["السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ"],tr:"As-salamu alaikum wa rahmatullah",de:"Friede sei mit euch und die Barmherzigkeit Allahs."}
 };
 
+function sayOf(k){const ks=k.split("+").map(x=>TX[x]);return{ar:[].concat(...ks.map(x=>x.ar)),tr:ks.map(x=>x.tr.trim()).join(" "),de:ks.map(x=>x.de.trim()).join(" ")}}
 /* ---------- Schritte ---------- */
 const WUDU=[
  {t:"Absicht und Bismillah",a:"heart",say:"bism",d:"Fasse im Herzen die Absicht, die Gebetswaschung für Allah zu machen. Sprich dann „Bismillah“.",h:"Die Absicht ist im Herzen. Du musst sie nicht laut aussprechen."},
@@ -241,26 +257,34 @@ const WUDU=[
  {t:"Füße waschen",a:"feet",n:3,d:"Wasche den rechten Fuß bis einschließlich Knöchel, auch zwischen den Zehen, danach den linken Fuß."},
  {t:"Glaubensbekenntnis danach",a:"heart",say:"schahada",d:"Fertig! Sprich nach der Waschung das Glaubensbekenntnis. Jetzt bist du bereit für das Gebet."}
 ];
+const CDN=n=>`https://cdn.islamic.network/quran/audio/128/ar.alafasy/${n}.mp3`;
+const R=(a,b)=>Array.from({length:b-a+1},(_,i)=>CDN(a+i));
 const GEBET=[
- {t:"Absicht",p:"down",heart:1,d:"Stell dich auf den Gebetsteppich, das Gesicht zur Qibla, der Richtung der Kaaba in Mekka. Fasse im Herzen die Absicht: Ich bete die 2 Rakat Fard des Morgengebets.",h:"Dein Blick ruht auf der Stelle, an die bei der Niederwerfung deine Stirn kommt."},
- {t:"Eröffnungs-Takbir",p:"takbir",say:"takbir",d:"Hebe die Hände bis zu den Ohren, die Handflächen zur Qibla, und sprich „Allahu akbar“. Damit beginnt dein Gebet.",h:"Frauen heben die Hände bis zu den Schultern."},
- {t:"Stehen und Lobpreis",p:"stand",say:"thana",d:"Lege die rechte Hand auf die linke, unterhalb des Bauchnabels, und sprich leise den Lobpreis.",h:"Frauen legen die Hände auf die Brust."},
- {t:"Schutz suchen und Basmala",p:"stand",say:"auudhu",d:"Sprich leise die Bitte um Schutz und danach die Basmala."},
- {t:"Al-Fatiha",p:"stand",say:"fatiha",d:"Lies die Fatiha. Am Ende sagst du leise „Amin“.",h:"Die Fatiha gehört in jede Raka. Lass sie kostenlos von unserem Lehrer prüfen."},
- {t:"Eine kurze Sure",p:"stand",say:"kauthar",d:"Lies nach der Fatiha eine kurze Sure oder mindestens drei kurze Verse, zum Beispiel Al-Kauthar."},
- {t:"Verbeugung (Ruku)",p:"ruku",n:3,say:"ruku",d:"Sprich „Allahu akbar“ und beuge dich: Rücken gerade, Hände auf den Knien, Blick auf die Füße. Sprich dann dreimal:"},
- {t:"Aufrichten",p:"itidal",say:"qauma",d:"Richte dich auf und sprich dabei den ersten Satz. Wenn du gerade stehst, sprich den zweiten."},
- {t:"Niederwerfung (Sudschud)",p:"sujud",n:3,say:"sudschud",d:"Sprich „Allahu akbar“ und geh nieder: zuerst die Knie, dann die Hände, dann Nase und Stirn. Sprich dreimal:",h:"Sieben Körperteile berühren den Boden: Stirn mit Nase, beide Hände, beide Knie und die Zehen beider Füße."},
- {t:"Kurzes Sitzen",p:"sit",say:"jalsa",d:"Richte dich mit „Allahu akbar“ auf und setz dich kurz ruhig hin."},
- {t:"Zweite Niederwerfung",p:"sujud",n:3,say:"sudschud",d:"Geh mit „Allahu akbar“ wieder nieder und sprich dreimal:",h:"Damit ist die erste Raka fertig."},
- {t:"Die zweite Raka",p:"stand",say:"ichlas",d:"Steh mit „Allahu akbar“ auf. Lies wieder die Fatiha und danach eine kurze Sure, zum Beispiel Al-Ichlas.",h:"Den Lobpreis vom Anfang sprichst du nur in der ersten Raka."},
- {t:"Verbeugung und Niederwerfungen",seq:["ruku","itidal","sujud","sit","sujud"],d:"Mach alles wie in der ersten Raka: Verbeugung, Aufrichten und zwei Niederwerfungen mit denselben Worten."},
- {t:"Sitzen: At-Tahiyyat",p:"sit",finger:1,say:"tahiyyat",d:"Bleib nach der zweiten Niederwerfung sitzen, die Hände auf den Oberschenkeln, und sprich At-Tahiyyat.",h:"Bei „la ilaha“ hebst du den rechten Zeigefinger, bei „illallah“ senkst du ihn wieder."},
- {t:"Segen für den Propheten ﷺ",p:"sit",say:"salawat",d:"Sprich im Sitzen den Segenswunsch für den Propheten ﷺ."},
- {t:"Bittgebet",p:"sit",say:"dua",d:"Bitte Allah um Gutes, zum Beispiel mit diesem Bittgebet aus dem Quran."},
- {t:"Salam nach rechts",p:"sit",turn:1,say:"salam",d:"Dreh den Kopf nach rechts und sprich den Friedensgruß.",h:"Die Figur schaut dich an: Ihre rechte Seite ist für dich links."},
- {t:"Salam nach links",p:"sit",turn:-1,say:"salam",d:"Dreh den Kopf nach links und sprich den Friedensgruß noch einmal. Dein Gebet ist fertig. Masha Allah!"}
+ {r:1,t:"Absicht",p:"down",heart:1,d:"Stell dich auf den Gebetsteppich, das Gesicht zur Qibla, der Richtung der Kaaba in Mekka. Fasse im Herzen die Absicht: Ich bete die 2 Rakat Fard des Morgengebets (Fadschr).",h:"Dein Blick ruht auf der Stelle, an die bei der Niederwerfung deine Stirn kommt."},
+ {r:1,t:"Eröffnungs-Takbir",p:"takbir",say:"takbir",d:"Hebe die Hände bis zu den Ohren, die Handflächen zur Qibla, und sprich „Allahu akbar“. Damit beginnt dein Gebet.",h:"Frauen heben die Hände bis zu den Schultern."},
+ {r:1,t:"Stehen und Lobpreis",p:"stand",say:"thana",d:"Lege die rechte Hand auf die linke, unterhalb des Bauchnabels, und sprich leise den Lobpreis.",h:"Frauen legen die Hände auf die Brust."},
+ {r:1,t:"Schutz suchen und Basmala",p:"stand",say:"auudhu",d:"Sprich leise die Bitte um Schutz und danach die Basmala."},
+ {r:1,t:"Al-Fatiha",p:"stand",say:"fatiha",au:R(2,7),d:"Lies die Fatiha. Am Ende sagst du „Amin“.",h:"Im Morgengebet liest der Imam die Fatiha und die Sure laut. Betest du allein, darfst du sie laut oder leise lesen."},
+ {r:1,t:"Kurze Sure: Al-Kauthar",p:"stand",say:"kauthar",au:R(6205,6207),d:"Lies nach der Fatiha eine kurze Sure oder mindestens drei kurze Verse, hier Al-Kauthar."},
+ {r:1,t:"Verbeugung (Ruku)",p:"ruku",n:3,say:"ruku",d:"Sprich „Allahu akbar“ und beuge dich: Rücken gerade, Hände auf den Knien, Blick auf die Füße. Sprich dann dreimal:"},
+ {r:1,t:"Aufrichten",p:"itidal",say:"qauma",d:"Richte dich auf und sprich dabei den ersten Satz. Wenn du gerade stehst, sprich den zweiten."},
+ {r:1,t:"Erste Niederwerfung",p:"sujud",n:3,say:"sudschud",d:"Sprich „Allahu akbar“ und geh nieder: zuerst die Knie, dann die Hände, dann Nase und Stirn. Sprich dreimal:",h:"Sieben Körperteile berühren den Boden: Stirn mit Nase, beide Hände, beide Knie und die Zehen beider Füße."},
+ {r:1,t:"Sitzen zwischen den Niederwerfungen",p:"sit",say:"jalsa",d:"Richte dich mit „Allahu akbar“ auf und setz dich ruhig hin, bis der Körper zur Ruhe kommt. Die Hände liegen auf den Oberschenkeln."},
+ {r:1,t:"Zweite Niederwerfung",p:"sujud",n:3,say:"sudschud",d:"Geh mit „Allahu akbar“ wieder nieder und sprich dreimal:",h:"Damit ist die erste Raka fertig."},
+ {r:2,t:"Aufstehen: Basmala und Fatiha",p:"stand",say:"fatiha_b+fatiha",au:R(1,7),d:"Steh mit „Allahu akbar“ auf und leg die Hände wieder zusammen. Lies die Basmala und die Fatiha.",h:"Den Lobpreis und die Bitte um Schutz sprichst du nur in der ersten Raka."},
+ {r:2,t:"Kurze Sure: Al-Ichlas",p:"stand",say:"ichlas",au:R(6222,6225),d:"Lies nach der Fatiha wieder eine kurze Sure, hier Al-Ichlas."},
+ {r:2,t:"Verbeugung (Ruku)",p:"ruku",n:3,say:"ruku",d:"Sprich „Allahu akbar“, beuge dich und sprich dreimal:"},
+ {r:2,t:"Aufrichten",p:"itidal",say:"qauma",d:"Richte dich auf und sprich dabei den ersten Satz, im Stehen den zweiten."},
+ {r:2,t:"Erste Niederwerfung",p:"sujud",n:3,say:"sudschud",d:"Geh mit „Allahu akbar“ nieder und sprich dreimal:"},
+ {r:2,t:"Sitzen zwischen den Niederwerfungen",p:"sit",say:"jalsa",d:"Setz dich mit „Allahu akbar“ kurz und ruhig hin."},
+ {r:2,t:"Zweite Niederwerfung",p:"sujud",n:3,say:"sudschud",d:"Geh mit „Allahu akbar“ wieder nieder und sprich dreimal:",h:"Danach stehst du nicht auf, sondern bleibst sitzen."},
+ {r:3,t:"Sitzen: At-Tahiyyat",p:"sit",finger:1,say:"tahiyyat",d:"Setz dich nach der zweiten Niederwerfung hin, die Hände auf den Oberschenkeln, und sprich At-Tahiyyat.",h:"Bei „la ilaha“ hebst du den rechten Zeigefinger, bei „illallah“ senkst du ihn wieder."},
+ {r:3,t:"Segen für den Propheten ﷺ",p:"sit",say:"salawat",d:"Sprich im Sitzen den Segenswunsch für den Propheten ﷺ."},
+ {r:3,t:"Bittgebet",p:"sit",say:"dua",d:"Bitte Allah um Gutes, zum Beispiel mit diesem Bittgebet aus dem Quran."},
+ {r:3,t:"Salam nach rechts",p:"sit",turn:1,say:"salam",d:"Dreh den Kopf nach rechts und sprich den Friedensgruß.",h:"Die Figur schaut dich an: Ihre rechte Seite ist für dich links."},
+ {r:3,t:"Salam nach links",p:"sit",turn:-1,say:"salam",d:"Dreh den Kopf nach links und sprich den Friedensgruß noch einmal. Dein Gebet ist fertig. Masha Allah!"}
 ];
+const RNAME={1:"1. Raka",2:"2. Raka",3:"Abschluss"};
 const COURSES={wudu:{steps:WUDU,title:"Die Gebetswaschung: alle Schritte",scene:"wudu"},gebet:{steps:GEBET,title:"Das Morgengebet: alle Schritte",scene:"gebet"}};
 
 /* ---------- Gebets-Figur: Bilder je Haltung, weich überblendet ---------- */
@@ -320,7 +344,8 @@ function setCourse(c,keep){
   $("allTitle").textContent=COURSES[course].title;
   
   const L=$("list");L.innerHTML="";
-  COURSES[course].steps.forEach((s,i)=>{const li=document.createElement("li");
+  let lastR=null;
+  COURSES[course].steps.forEach((s,i)=>{if(s.r&&s.r!==lastR){lastR=s.r;const h=document.createElement("li");h.className="grp";h.textContent=RNAME[s.r];L.appendChild(h)}const li=document.createElement("li");
     li.innerHTML=`<button type="button" id="st-${course}-${i}"><span class="n">${i+1}</span><span><b>${s.t}</b>${s.n?`<small>${s.n}×</small>`:""}</span></button>`;
     li.firstChild.addEventListener("click",()=>{show(i);document.getElementById("stage").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"})});L.appendChild(li)});
   if(course==="gebet"){if(vbAnim)cancelAnimationFrame(vbAnim);setVB([0,0,300,300]);buildGebet()}else{vbCur=FULL.slice();setVB(vbCur)}
@@ -328,14 +353,14 @@ function setCourse(c,keep){
 }
 function show(i,first){
   const S=COURSES[course].steps;idx=Math.max(0,Math.min(S.length-1,i));const s=S[idx];
-  $("stNo").textContent=(course==="wudu"?"Waschung":"Gebet")+" · Schritt "+(idx+1)+" von "+S.length;
+  $("stNo").textContent=(course==="wudu"?"Waschung":"Morgengebet"+(s.r?" · "+RNAME[s.r]:""))+" · Schritt "+(idx+1)+" von "+S.length;
   $("stTitle").textContent=s.t;$("stDo").textContent=s.d;
-  const sy=s.say&&TX[s.say];$("stSay").hidden=!sy;
+  const sy=s.say&&sayOf(s.say);$("stSay").hidden=!sy;
   if(sy){$("sAr").innerHTML=sy.ar.join("<br>");$("sTr").textContent=sy.tr;$("sDe").textContent=sy.de}
   $("stHint").hidden=!s.h;if(s.h)$("stHint").innerHTML="<b>Tipp:</b>&nbsp;"+s.h;
   $("prev").disabled=idx===0;$("next").textContent=idx===S.length-1?(course==="wudu"?"Weiter zum Gebet →":"Von vorn ↺"):"Weiter →";
   $("pos").textContent=(idx+1)+" / "+S.length;$("bar").style.width=((idx+1)/S.length*100)+"%";
-  document.querySelectorAll("#list button").forEach((b,k)=>b.setAttribute("aria-current",String(k===idx)));
+  document.querySelectorAll("#list button").forEach((b,k)=>b.setAttribute("aria-current",String(k===idx)));audioFor(s);
   clearInterval(seqT);clearInterval(cntT);
   if(course==="wudu")drawWudu(s.a,first);
   else if(s.seq){let k=0;poseTo(s.seq[0],{},first?0:700);if(!reduce)seqT=setInterval(()=>{k=(k+1)%s.seq.length;poseTo(s.seq[k],{},700)},1500)}
@@ -346,8 +371,20 @@ function show(i,first){
     if(reduce)I.forEach(e=>e.classList.add("on"));else{I.forEach(e=>e.classList.remove("on"));let n=0;cntT=setInterval(()=>{I.forEach((e,j)=>e.classList.toggle("on",j<n));n=n>=s.n?0:n+1},900)}}
   if(auto)schedule();
 }
+/* ---------- Ton ---------- */
+const player=new Audio();player.preload="none";let plist=[],pi=0,soundOn=false,playing=false;
+function setPlay(v){playing=v;const b=$("play");b.textContent=v?"❚❚ Anhalten":"▶ Rezitation anhören";b.setAttribute("aria-pressed",String(v))}
+function stopAudio(){player.pause();setPlay(false);$("aupos").textContent=""}
+function playList(){if(!plist.length)return;pi=0;playOne()}
+function playOne(){player.src=plist[pi];$("aupos").textContent=plist.length>1?"Vers "+(pi+1)+" von "+plist.length:"";player.play().then(()=>setPlay(true)).catch(()=>{setPlay(false);$("aupos").textContent="Ton konnte nicht starten. Tippe auf „Rezitation anhören“."})}
+player.addEventListener("ended",()=>{if(pi<plist.length-1){pi++;playOne()}else{setPlay(false);$("aupos").textContent="";if(auto){clearTimeout(autoT);autoT=setTimeout(()=>{const S=COURSES[course].steps;if(idx<S.length-1)show(idx+1);else setAuto(false)},1200)}}});
+player.addEventListener("error",()=>{setPlay(false);$("aupos").textContent="Die Aufnahme ist gerade nicht erreichbar."});
+function audioFor(s){stopAudio();plist=s.au||[];const has=plist.length>0;$("auRow").hidden=course!=="gebet"||!s.say;$("play").hidden=!has;$("aunote").hidden=has;
+  if(has&&soundOn)playList()}
+$("play").addEventListener("click",()=>{if(playing){stopAudio()}else playList()});
+$("sound").addEventListener("click",()=>{soundOn=!soundOn;$("sound").setAttribute("aria-pressed",String(soundOn));$("sound").textContent=soundOn?"🔊 Ton an":"🔈 Ton aus";if(soundOn&&plist.length&&!playing)playList();if(!soundOn)stopAudio()});
 function next(){const S=COURSES[course].steps;if(idx<S.length-1)show(idx+1);else if(course==="wudu"){location.hash="gebet"}else show(0)}
-function schedule(){clearTimeout(autoT);const s=COURSES[course].steps[idx];const sy=s.say&&TX[s.say];const ms=Math.min(16000,5000+(sy?sy.tr.length*45:0));
+function schedule(){clearTimeout(autoT);const s=COURSES[course].steps[idx];if(soundOn&&s.au&&s.au.length)return;const sy=s.say&&sayOf(s.say);const ms=Math.min(16000,5000+(sy?sy.tr.length*45:0));
   autoT=setTimeout(()=>{const S=COURSES[course].steps;if(idx<S.length-1)show(idx+1);else setAuto(false)},ms)}
 function setAuto(v){auto=v;$("auto").setAttribute("aria-pressed",String(v));$("auto").textContent=v?"❚❚ Pause":"▶ Automatisch";clearTimeout(autoT);if(v)schedule()}
 $("prev").addEventListener("click",()=>show(idx-1));
