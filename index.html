@@ -90,6 +90,10 @@ form.rf fieldset.two{grid-template-columns:1fr 1fr}
 .tknote{display:flex;gap:16px;align-items:center;margin-top:22px;background:var(--bg);border-radius:22px;padding:18px 22px;border:2px dashed var(--line)}
 .tknote p{margin:0;color:var(--muted)}.tknote b{color:var(--ink)}
 .tknote .tki{flex:none;background:var(--teal-soft);color:var(--teal)}
+.hero .eyebrow{margin-bottom:14px}
+.hchips{display:flex;flex-wrap:wrap;gap:8px;margin:-8px 0 24px}
+.hchips a{text-decoration:none;font-weight:700;font-size:14px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:999px;padding:6px 12px}
+.hchips a:hover{border-color:var(--plum);color:var(--plum)}
 /* facts */
 .facts{border-block:1px solid var(--line)}
 .facts .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding-block:22px}
@@ -333,8 +337,10 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
   <div class="bigar ar" aria-hidden="true">اقْرَأْ</div>
   <div class="wrap">
     <div>
-            <h1>Quran Reading – <em>Step by Step</em></h1>
-      <p class="lead">A free Quran reading course for children – and a helping hand for every teacher worldwide: the textbook online and as a PDF, worksheets, posters and certificates to print, and two learning games.</p>
+            <span class="eyebrow">Free for teachers worldwide</span>
+      <h1>Quran Reading – <em>Step by Step</em></h1>
+      <p class="lead">Everything a Quran teacher needs, in one place and free: the textbook online and as a PDF, worksheets, posters and certificates to print – and two learning games for the children.</p>
+      <div class="hchips"><a href="buch/index.html">📖 Textbook</a><a href="uebungsblaetter/Harf-Uebungsblaetter.pdf" download>✏️ 35 worksheets</a><a href="downloads/Lernplan-12-Wochen.pdf" download>🗓️ Lesson plan</a><a href="#basteln">🖨️ Posters &amp; printables</a><a href="urkunde/index.html">🏅 Certificates</a><a href="#spiele">🎮 Games</a></div>
       <div class="ctas">
         <a class="btn pri" href="buch/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>Read the book online</a>
         <a class="btn sec" href="buch/Abrar_Quran_Reading_2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download PDF</a>
