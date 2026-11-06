@@ -9,7 +9,6 @@ Folders:
   buch/Abrar_Quran_Reading_2026.pdf  The book "Quran Reading – Step by Step" (PDF)
   spiel/index.html                 Learning game "Harf by Harf"
   sira/index.html                  Learning game "Seerah with Fuffl"
-  gebet/index.html                 Learn the prayer (wudu + Fajr)
   suren/index.html                 Learn short surahs
   urkunde/index.html               Fill in and print a certificate
   uebungsblaetter/                 Colouring / tracing worksheets (PDF)
