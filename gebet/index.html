@@ -114,6 +114,7 @@ tr:last-child td{border-bottom:0}
 footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--muted);font-size:14px}
 
 /* Animationen */
+.pz{transition:opacity .5s ease}
 .drop{animation:drop 1.1s ease-in infinite}
 @keyframes drop{0%{transform:translateY(-26px);opacity:0}25%{opacity:1}100%{transform:translateY(22px);opacity:0}}
 .glow{animation:glow 1.6s ease-in-out infinite}
@@ -124,7 +125,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
 @keyframes sway{0%,100%{transform:translateX(0)}50%{transform:translateX(8px)}}
 
 @media (max-width:860px){.player{grid-template-columns:1fr}.stage{max-width:520px;width:100%;justify-self:center}.box{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.drop,.glow,.pulse,.arrowR{animation:none}.bar u{transition:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.pz{transition:none}.drop,.glow,.pulse,.arrowR{animation:none}.bar u{transition:none}}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -150,7 +151,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 36px;color:var(--mute
   <div class="player">
     <div class="stage" id="stage">
       <div class="count" id="count" aria-hidden="true"></div>
-      <span class="qibla" id="qibla">Qibla →</span>
+      <span class="qibla" id="qibla" hidden>Qibla</span>
       <svg viewBox="0 0 300 300" id="svg" role="img" aria-labelledby="stTitle"></svg>
     </div>
     <div class="info" aria-live="polite">
@@ -248,64 +249,40 @@ const GEBET=[
  {t:"Al-Fatiha",p:"stand",say:"fatiha",d:"Lies die Fatiha. Am Ende sagst du leise „Amin“.",h:"Die Fatiha gehört in jede Raka. Lass sie kostenlos von unserem Lehrer prüfen."},
  {t:"Eine kurze Sure",p:"stand",say:"kauthar",d:"Lies nach der Fatiha eine kurze Sure oder mindestens drei kurze Verse, zum Beispiel Al-Kauthar."},
  {t:"Verbeugung (Ruku)",p:"ruku",n:3,say:"ruku",d:"Sprich „Allahu akbar“ und beuge dich: Rücken gerade, Hände auf den Knien, Blick auf die Füße. Sprich dann dreimal:"},
- {t:"Aufrichten",p:"down",say:"qauma",d:"Richte dich auf und sprich dabei den ersten Satz. Wenn du gerade stehst, sprich den zweiten."},
+ {t:"Aufrichten",p:"itidal",say:"qauma",d:"Richte dich auf und sprich dabei den ersten Satz. Wenn du gerade stehst, sprich den zweiten."},
  {t:"Niederwerfung (Sudschud)",p:"sujud",n:3,say:"sudschud",d:"Sprich „Allahu akbar“ und geh nieder: zuerst die Knie, dann die Hände, dann Nase und Stirn. Sprich dreimal:",h:"Sieben Körperteile berühren den Boden: Stirn mit Nase, beide Hände, beide Knie und die Zehen beider Füße."},
  {t:"Kurzes Sitzen",p:"sit",say:"jalsa",d:"Richte dich mit „Allahu akbar“ auf und setz dich kurz ruhig hin."},
  {t:"Zweite Niederwerfung",p:"sujud",n:3,say:"sudschud",d:"Geh mit „Allahu akbar“ wieder nieder und sprich dreimal:",h:"Damit ist die erste Raka fertig."},
  {t:"Die zweite Raka",p:"stand",say:"ichlas",d:"Steh mit „Allahu akbar“ auf. Lies wieder die Fatiha und danach eine kurze Sure, zum Beispiel Al-Ichlas.",h:"Den Lobpreis vom Anfang sprichst du nur in der ersten Raka."},
- {t:"Verbeugung und Niederwerfungen",seq:["ruku","down","sujud","sit","sujud"],d:"Mach alles wie in der ersten Raka: Verbeugung, Aufrichten und zwei Niederwerfungen mit denselben Worten."},
+ {t:"Verbeugung und Niederwerfungen",seq:["ruku","itidal","sujud","sit","sujud"],d:"Mach alles wie in der ersten Raka: Verbeugung, Aufrichten und zwei Niederwerfungen mit denselben Worten."},
  {t:"Sitzen: At-Tahiyyat",p:"sit",finger:1,say:"tahiyyat",d:"Bleib nach der zweiten Niederwerfung sitzen, die Hände auf den Oberschenkeln, und sprich At-Tahiyyat.",h:"Bei „la ilaha“ hebst du den rechten Zeigefinger, bei „illallah“ senkst du ihn wieder."},
  {t:"Segen für den Propheten ﷺ",p:"sit",say:"salawat",d:"Sprich im Sitzen den Segenswunsch für den Propheten ﷺ."},
  {t:"Bittgebet",p:"sit",say:"dua",d:"Bitte Allah um Gutes, zum Beispiel mit diesem Bittgebet aus dem Quran."},
- {t:"Salam nach rechts",p:"sit",turn:1,say:"salam",d:"Dreh den Kopf nach rechts und sprich den Friedensgruß."},
+ {t:"Salam nach rechts",p:"sit",turn:1,say:"salam",d:"Dreh den Kopf nach rechts und sprich den Friedensgruß.",h:"Die Figur schaut dich an: Ihre rechte Seite ist für dich links."},
  {t:"Salam nach links",p:"sit",turn:-1,say:"salam",d:"Dreh den Kopf nach links und sprich den Friedensgruß noch einmal. Dein Gebet ist fertig. Masha Allah!"}
 ];
 const COURSES={wudu:{steps:WUDU,title:"Die Gebetswaschung: alle Schritte",scene:"wudu"},gebet:{steps:GEBET,title:"Das Morgengebet: alle Schritte",scene:"gebet"}};
 
-/* ---------- Gebets-Figur (Seitenansicht, schaut nach rechts) ---------- */
-const P={
- down:  {H:[140,150],N:[142,88],C:[146,66],Y:[154,63],E:[144,124],W:[146,156],K:[141,199],A:[140,246],T:[162,248]},
- stand: {H:[140,150],N:[142,88],C:[146,66],Y:[154,63],E:[150,124],W:[166,142],K:[141,199],A:[140,246],T:[162,248]},
- takbir:{H:[140,150],N:[142,88],C:[146,66],Y:[154,63],E:[166,108],W:[160,72],K:[141,199],A:[140,246],T:[162,248]},
- ruku:  {H:[140,150],N:[196,148],C:[219,148],Y:[224,155],E:[172,170],W:[150,194],K:[141,199],A:[140,246],T:[162,248]},
- sujud: {H:[132,198],N:[192,226],C:[212,235],Y:[219,241],E:[180,234],W:[204,248],K:[152,246],A:[106,244],T:[94,249]},
- sit:   {H:[118,226],N:[128,162],C:[132,140],Y:[140,137],E:[142,198],W:[178,232],K:[190,246],A:[112,246],T:[98,249]}
-};
-const KEYS=Object.keys(P.down);
-let cur=JSON.parse(JSON.stringify(P.down)),anim=null,gopts={};
-const lerp=(a,b,t)=>[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t];
-function drawGebet(Q,o){
-  const sh=lerp(Q.N,Q.H,.12);
+/* ---------- Gebets-Figur: Bilder je Haltung, weich überblendet ---------- */
+const POSE={"stand_down": {"x": 111.5, "y": 24.0, "w": 77.0, "h": 228.0, "mx": 150.0, "my": 58.2}, "takbir": {"x": 108.3, "y": 24.0, "w": 83.5, "h": 228.0, "mx": 150.0, "my": 58.2}, "stand_fold": {"x": 113.9, "y": 24.0, "w": 72.3, "h": 228.0, "mx": 150.0, "my": 58.2}, "ruku": {"x": 86.6, "y": 100.1, "w": 126.8, "h": 151.9, "mx": 203.2, "my": 130.5}, "itidal": {"x": 121.5, "y": 24.2, "w": 57.1, "h": 227.8, "mx": 156.8, "my": 53.8}, "sujud": {"x": 79.9, "y": 169.8, "w": 140.2, "h": 82.2, "mx": 210.3, "my": 229.0}, "sit": {"x": 102.6, "y": 73.8, "w": 94.7, "h": 178.2, "mx": 150.0, "my": 107.6}, "salam_r": {"x": 102.2, "y": 74.2, "w": 95.6, "h": 177.8, "mx": 147.1, "my": 108.0}, "salam_l": {"x": 101.3, "y": 73.8, "w": 97.3, "h": 178.2, "mx": 152.9, "my": 107.6}};
+const ALIAS={down:"stand_down",stand:"stand_fold",takbir:"takbir",ruku:"ruku",itidal:"itidal",sujud:"sujud",sit:"sit"};
+function buildGebet(){
   let s=`<rect x="26" y="250" width="248" height="10" rx="5" fill="var(--mat)"/><rect x="26" y="258" width="248" height="4" rx="2" fill="var(--mat-2)"/>`;
   for(let i=0;i<9;i++)s+=`<line x1="${30+i*30}" y1="262" x2="${30+i*30}" y2="270" stroke="var(--mat-2)" stroke-width="2" stroke-linecap="round"/>`;
-  if(o.heart)s+=`<circle class="glow" cx="${(Q.N[0]+Q.H[0])/2+12}" cy="${(Q.N[1]+Q.H[1])/2-6}" r="18" fill="var(--teal)" opacity=".6"/><path d="M${(Q.N[0]+Q.H[0])/2+12} ${(Q.N[1]+Q.H[1])/2+2}l-8-8a5 5 0 0 1 8-6a5 5 0 0 1 8 6z" fill="#fff"/>`;
-  const OL="#5f544e",KU="#f2ebe5",TR="#7a6960",SO="#f6f6f6",SK="#f3c8a4",HA="#2f241f";
-  const hem=lerp(Q.H,Q.K,.38);
-  s+=`<path d="M${Q.H} L${Q.K} L${Q.A}" fill="none" stroke="${OL}" stroke-width="23" stroke-linecap="round" stroke-linejoin="round"/><path d="M${Q.H} L${Q.K} L${Q.A}" fill="none" stroke="${TR}" stroke-width="19" stroke-linecap="round" stroke-linejoin="round"/>`;
-  s+=`<path d="M${Q.A} L${Q.T}" fill="none" stroke="${OL}" stroke-width="13" stroke-linecap="round"/><path d="M${Q.A} L${Q.T}" fill="none" stroke="${SO}" stroke-width="10" stroke-linecap="round"/>`;
-  s+=`<path d="M${hem} L${Q.H} L${Q.N}" fill="none" stroke="${OL}" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/><path d="M${hem} L${Q.H} L${Q.N}" fill="none" stroke="${KU}" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>`;
-  s+=`<path d="M${sh} L${Q.E} L${Q.W}" fill="none" stroke="${OL}" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/><path d="M${sh} L${Q.E} L${Q.W}" fill="none" stroke="${KU}" stroke-width="12.5" stroke-linecap="round" stroke-linejoin="round"/>`;
-  s+=`<circle cx="${Q.W[0]}" cy="${Q.W[1]}" r="6.5" fill="${SK}" stroke="${OL}" stroke-width="1.5"/>`;
-  if(o.finger)s+=`<line class="pulse" x1="${Q.W[0]}" y1="${Q.W[1]}" x2="${Q.W[0]+4}" y2="${Q.W[1]-14}" stroke="${SK}" stroke-width="4" stroke-linecap="round"/><circle class="glow" cx="${Q.W[0]+4}" cy="${Q.W[1]-16}" r="7" fill="none" stroke="var(--teal)" stroke-width="2.5"/>`;
-  s+=`<circle cx="${Q.C[0]}" cy="${Q.C[1]}" r="16" fill="${SK}" stroke="${OL}" stroke-width="1.5"/>`;
-  const turn=o.turn||0;
-  if(turn>0){s+=`<circle cx="${Q.C[0]-5}" cy="${Q.C[1]-2}" r="2.2" fill="#2f241f"/><circle cx="${Q.C[0]+5}" cy="${Q.C[1]-2}" r="2.2" fill="#2f241f"/><path d="M${Q.C[0]-5} ${Q.C[1]+6}q5 4 10 0" fill="none" stroke="#2f241f" stroke-width="2" stroke-linecap="round"/><path d="M${Q.C[0]-16} ${Q.C[1]-4}a16 16 0 0 1 32 0q-16-10-32 0z" fill="#2f241f"/>`;}
-  else if(turn<0){s+=`<path d="M${Q.C[0]-16} ${Q.C[1]+2}a16 16 0 0 1 32 0q-2 10-16 12q-14-2-16-12z" fill="#2f241f"/>`;}
-  else{s+=`<circle cx="${Q.Y[0]}" cy="${Q.Y[1]}" r="2.3" fill="#2f241f"/>`;const th=Math.atan2(Q.Y[1]-Q.C[1],Q.Y[0]-Q.C[0]),R=12.5,a1=th-1.25,a2=th-3.5;
-    s+=`<path d="M${Q.C[0]+R*Math.cos(a1)} ${Q.C[1]+R*Math.sin(a1)} A${R} ${R} 0 0 0 ${Q.C[0]+R*Math.cos(a2)} ${Q.C[1]+R*Math.sin(a2)}" fill="none" stroke="#2f241f" stroke-width="10" stroke-linecap="round"/>`;}
-  if(o.talk&&!turn){const vx=Q.Y[0]-Q.C[0],vy=Q.Y[1]-Q.C[1],L=Math.hypot(vx,vy)||1,ux=vx/L,uy=vy/L;
-    for(let i=1;i<=2;i++){const r=6+i*7,cx=Q.C[0]+ux*(14),cy=Q.C[1]+uy*14+6;s+=`<path class="glow" style="animation-delay:${i*.3}s" d="M${cx+ux*r-uy*r*.6} ${cy+uy*r+ux*r*.6} Q${cx+ux*(r+5)} ${cy+uy*(r+5)} ${cx+ux*r+uy*r*.6} ${cy+uy*r-ux*r*.6}" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"/>`;}}
-  if(turn){const x=Q.C[0],y=Q.C[1]-34;s+=`<g class="arrowR"><path d="M${x-22} ${y}q22-14 44 0" fill="none" stroke="var(--teal)" stroke-width="3.5" stroke-linecap="round"/><path d="${turn>0?`M${x+22} ${y}l-9-1 4-8`:`M${x-22} ${y}l9-1-4-8`}" fill="none" stroke="var(--teal)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g><text x="${x}" y="${y-14}" text-anchor="middle" font-family="Lexend,system-ui,sans-serif" font-weight="700" font-size="14" fill="var(--teal)">${turn>0?"rechts":"links"}</text>`;}
-  $("svg").innerHTML=s;
+  for(const n in POSE){const q=POSE[n];s+=`<image class="pz" data-p="${n}" href="${n}.webp" x="${q.x}" y="${q.y}" width="${q.w}" height="${q.h}" opacity="0"/>`}
+  s+=`<g id="ov"></g>`;$("svg").innerHTML=s;
 }
+let curPose=null;
 function poseTo(name,o,dur){
-  const from=JSON.parse(JSON.stringify(cur)),to=P[name];gopts=o||{};
-  if(anim)cancelAnimationFrame(anim);
-  if(reduce||!dur){KEYS.forEach(k=>cur[k]=to[k].slice());drawGebet(cur,gopts);return}
-  const t0=performance.now();
-  const step=now=>{let t=Math.min(1,(now-t0)/dur);t=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
-    KEYS.forEach(k=>cur[k]=lerp(from[k],to[k],t));drawGebet(cur,gopts);if(t<1)anim=requestAnimationFrame(step)};
-  anim=requestAnimationFrame(step);
+  o=o||{};let n=ALIAS[name]||name;if(o.turn>0)n="salam_r";if(o.turn<0)n="salam_l";
+  if(!$("svg").querySelector(".pz"))buildGebet();
+  $("svg").querySelectorAll(".pz").forEach(im=>im.setAttribute("opacity",im.dataset.p===n?"1":"0"));
+  curPose=n;const q=POSE[n];let s="";
+  if(o.heart)s+=`<circle class="glow" cx="${q.x+q.w*.5}" cy="${q.y+q.h*.3}" r="16" fill="var(--teal)" opacity=".6"/><path d="M${q.x+q.w*.5} ${q.y+q.h*.3+7}l-8-8a5 5 0 0 1 8-6a5 5 0 0 1 8 6z" fill="#fff"/>`;
+  if(o.talk&&!o.turn){const cx=q.mx+16,cy=q.my;for(let i=1;i<=2;i++){const r=4+i*6;s+=`<path class="glow" style="animation-delay:${i*.3}s" d="M${cx+r*.5} ${cy-r} Q${cx+r*1.1} ${cy} ${cx+r*.5} ${cy+r}" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"/>`}}
+  if(o.finger){const fx=q.x+q.w*.3,fy=q.y+q.h*.8;s+=`<circle class="glow" cx="${fx}" cy="${fy}" r="13" fill="none" stroke="var(--teal)" stroke-width="3"/><path class="pulse" d="M${fx} ${fy-6}v-22" stroke="var(--teal)" stroke-width="3" stroke-linecap="round"/><path d="M${fx-6} ${fy-24}l6-8 6 8" fill="none" stroke="var(--teal)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`}
+  if(o.turn){const x=q.mx,y=q.y-12,t=o.turn;s+=`<g class="arrowR"><path d="M${x-22} ${y}q22-14 44 0" fill="none" stroke="var(--teal)" stroke-width="3.5" stroke-linecap="round"/><path d="${t>0?`M${x-22} ${y}l9-1-4-8`:`M${x+22} ${y}l-9-1 4-8`}" fill="none" stroke="var(--teal)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></g><text x="${x}" y="${y-14}" text-anchor="middle" font-family="Lexend,system-ui,sans-serif" font-weight="700" font-size="14" fill="var(--teal)">${t>0?"nach rechts":"nach links"}</text>`}
+  $("ov").innerHTML=s;
 }
 
 /* ---------- Waschungs-Figur (Bild, Vorderansicht, Koordinaten in Bildpixeln 1024×1536) ---------- */
@@ -341,12 +318,12 @@ function setCourse(c,keep){
   course=COURSES[c]?c:"wudu";
   ["wudu","gebet"].forEach(k=>$("tab-"+k).setAttribute("aria-current",String(k===course)));
   $("allTitle").textContent=COURSES[course].title;
-  $("qibla").hidden=course!=="gebet";
+  
   const L=$("list");L.innerHTML="";
   COURSES[course].steps.forEach((s,i)=>{const li=document.createElement("li");
     li.innerHTML=`<button type="button" id="st-${course}-${i}"><span class="n">${i+1}</span><span><b>${s.t}</b>${s.n?`<small>${s.n}×</small>`:""}</span></button>`;
     li.firstChild.addEventListener("click",()=>{show(i);document.getElementById("stage").scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"})});L.appendChild(li)});
-  if(course==="gebet"){KEYS.forEach(k=>cur[k]=P.down[k].slice());if(vbAnim)cancelAnimationFrame(vbAnim);setVB([0,0,300,300])}else{vbCur=FULL.slice();setVB(vbCur)}
+  if(course==="gebet"){if(vbAnim)cancelAnimationFrame(vbAnim);setVB([0,0,300,300]);buildGebet()}else{vbCur=FULL.slice();setVB(vbCur)}
   show(keep?idx:0,true);
 }
 function show(i,first){
