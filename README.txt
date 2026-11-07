@@ -7,8 +7,6 @@ Folders:
   index.html                       Home page (book, teacher offers, games, printables)
   buch/index.html                  The Abrar online book to flip through and write in
   buch/Abrar_Quran_Reading_2026.pdf  The book "Quran Reading – Step by Step" (PDF)
-  stories/ice-hockey-game/        Comic story "Ibrahim & Junaid – The Ice Hockey Game"
-                                   (online reader + PDF)
   spiel/index.html                 Learning game "Harf by Harf"
   sira/index.html                  Learning game "Seerah with Fuffl"
   suren/index.html                 Learn short surahs
