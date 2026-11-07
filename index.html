@@ -368,6 +368,43 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
 .wmap .inset .link{fill:none;stroke:var(--logo);stroke-width:1.2;stroke-dasharray:4 4;opacity:.7}
 .wmap .inset .uk{fill:var(--map-land)}
 @media (prefers-reduced-motion:reduce){.wmap .ring{animation:none;opacity:0}}
+
+/* Hero-Vorschau: Klick auf Chip zeigt Inhalt rechts */
+.hchips button{font:inherit;cursor:pointer;font-weight:700;font-size:14px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:999px;padding:6px 12px}
+.hchips button:hover{border-color:var(--plum);color:var(--plum)}
+.hchips button[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff}
+.hchips button:focus-visible{outline:2px solid var(--plum);outline-offset:2px}
+.hpanel{justify-self:center;width:min(440px,100%);min-width:0}
+.hp{display:flex;flex-direction:column;align-items:center}
+.hp.on{animation:hpIn .35s ease-out}
+@keyframes hpIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hp[data-pane]:not([data-pane="book"]){background:var(--bg);border:2px solid var(--line);border-radius:26px;padding:20px;align-items:stretch;gap:10px;box-shadow:0 20px 40px -24px rgba(60,10,40,.35)}
+.hp h3{font-family:var(--f-display);font-size:22px;margin:4px 0 0}
+.hp p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.5}
+.hpbtn{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.hpbtn .btn.sm{font-size:14px;padding:9px 14px}
+.hpvis{border-radius:18px;background:var(--tint);padding:14px;display:flex;justify-content:center;align-items:center;gap:10px;min-height:200px}
+.hpvis img{max-width:100%;height:auto;border-radius:6px;box-shadow:0 8px 20px -10px rgba(60,10,40,.4);background:#fff}
+.hpvis.two img{width:46%}
+.hpvis.two img:first-child{transform:rotate(-3deg)}.hpvis.two img:last-child{transform:rotate(3deg)}
+.hpvis img.wide{width:100%}
+.hpvis.grid4{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hpvis.grid4 img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top}
+.mcert{background:#fff;color:#2a1823;border:6px double #c79a3a;border-radius:10px;padding:16px 18px;text-align:center;display:grid;gap:2px;width:100%;max-width:320px}
+.mcert .mc-k{font-family:var(--f-display);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:#6b2150}
+.mcert .mc-ar{font-family:var(--f-ar);font-size:20px;color:#6b2150}
+.mcert b{font-family:"Caveat",var(--f-display);font-size:34px;line-height:1.1}
+.mcert .mc-t{font-size:13.5px}
+.mcert .mc-s{color:#e8a821;letter-spacing:.2em}
+.mcert small{font-size:11px;color:#8a7380}
+.gtiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:stretch}
+.gt{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;background:var(--bg);border-radius:16px;padding:14px 10px;text-decoration:none;color:var(--ink);border:2px solid var(--line)}
+.gt:hover{border-color:var(--plum)}
+.gt .gi{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;background:var(--teal-soft);color:var(--teal);font-size:34px;line-height:1}
+.gt.fox .gi{background:var(--fox-soft)}
+.gt b{font-family:var(--f-display);font-size:15px}
+.gt span:last-child{font-size:12.5px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){.hp.on{animation:none}}
 </style>
 </head>
 <body>
@@ -386,18 +423,59 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
       <h1>Quran Reading – <em>Step by Step</em></h1>
       <p class="since"><span>Since 2018</span> One of the simplest books for learning to read the Quran in English</p>
       <p class="lead">Everything a Quran teacher needs, in one place and free: the textbook online and as a PDF, worksheets, posters and certificates to print – and two learning games for the children.</p>
-      <div class="hchips"><a href="buch/index.html">📖 Textbook</a><a href="uebungsblaetter/Harf-Uebungsblaetter.pdf" download>✏️ 35 worksheets</a><a href="downloads/Lernplan-12-Wochen.pdf" download>🗓️ Lesson plan</a><a href="#basteln">🖨️ Posters &amp; printables</a><a href="urkunde/index.html">🏅 Certificates</a><a href="#spiele">🎮 Games</a></div>
+      <div class="hchips" role="group" aria-label="What you get">
+        <button type="button" data-show="book" aria-pressed="true">📖 Textbook</button>
+        <button type="button" data-show="sheets" aria-pressed="false">✏️ 35 worksheets</button>
+        <button type="button" data-show="plan" aria-pressed="false">🗓️ Lesson plan</button>
+        <button type="button" data-show="print" aria-pressed="false">🖨️ Posters &amp; printables</button>
+        <button type="button" data-show="cert" aria-pressed="false">🏅 Certificates</button>
+        <button type="button" data-show="games" aria-pressed="false">🎮 Games</button>
+      </div>
       <div class="ctas">
         <a class="btn pri" href="buch/index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5C5.5 4 9 4 12 6c3-2 6.5-2 9-.5V19c-2.5-1.5-6-1.5-9 .5-3-2-6.5-2-9-.5z"/><path d="M12 6v13.5"/></svg>Read the book online</a>
         <a class="btn sec" href="buch/Abrar_Quran_Reading_2026.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>Download PDF</a>
       </div>
       <p class="small">PDF · 116 pages · approx. 8 MB · Hafs ʿan ʿAsim reading, script as in the Madinah Mushaf</p>
     </div>
+    <div class="hpanel" id="hpanel" aria-live="polite">
+      <div class="hp on" data-pane="book">
     <a class="cover" href="buch/index.html" aria-label="Open the book online">
       <span class="back" style="background-image:url(buch/pages/017.webp)"></span>
       <span class="front" style="background-image:url(buch/pages/001.webp)"></span>
       <span class="tag">100% free</span>
     </a>
+      </div>
+      <div class="hp" data-pane="sheets" hidden>
+        <div class="hpvis two"><img src="uebungsblaetter/vorschau-1.png" alt="Worksheet preview" loading="lazy"><img src="uebungsblaetter/vorschau-2.png" alt="Worksheet preview" loading="lazy"></div>
+        <h3>35 worksheets</h3>
+        <p>Tracing and colouring sheets for every letter: children write the letter forms, colour them in and learn them by heart. Print as many as you need for your class.</p>
+        <div class="hpbtn"><a class="btn pri sm" href="uebungsblaetter/Harf-Uebungsblaetter.pdf" download>Download worksheets (PDF)</a><a class="btn sec sm" href="spiel/index.html">Practise in the game</a></div>
+      </div>
+      <div class="hp" data-pane="plan" hidden>
+        <div class="hpvis"><img class="wide" src="downloads/vorschau/Lernplan-12-Wochen.png" alt="12-week lesson plan preview" loading="lazy"></div>
+        <h3>12-week lesson plan</h3>
+        <p>Week by week: which pages of the book, which game world, which worksheet and which Seerah station. Tick off each week together with your students.</p>
+        <div class="hpbtn"><a class="btn pri sm" href="downloads/Lernplan-12-Wochen.pdf" download>Download lesson plan (PDF)</a></div>
+      </div>
+      <div class="hp" data-pane="print" hidden>
+        <div class="hpvis grid4"><img src="downloads/vorschau/Alphabet-Poster-A3.png" alt="Alphabet poster" loading="lazy"><img src="downloads/vorschau/Memory-Karten.png" alt="Memory cards" loading="lazy"><img src="downloads/vorschau/Stickerbogen.png" alt="Sticker sheet" loading="lazy"><img src="downloads/vorschau/Bastelboegen.png" alt="Craft sheets" loading="lazy"></div>
+        <h3>Posters &amp; printables</h3>
+        <p>An alphabet poster for the classroom wall, memory cards, sticker sheets, craft sheets and more. All free to print.</p>
+        <div class="hpbtn"><a class="btn pri sm" href="#basteln">See all printables</a></div>
+      </div>
+      <div class="hp" data-pane="cert" hidden>
+        <div class="hpvis"><div class="mcert"><span class="mc-k">Certificate</span><span class="mc-ar">شَهَادَة</span><b>Yusuf</b><span class="mc-t">has learned all 28 letters of the Arabic alphabet</span><span class="mc-s">★ ★ ★ ★ ★</span><small>Example</small></div></div>
+        <h3>Certificates</h3>
+        <p>Make a certificate with the child's name, the date and your name as teacher, for the alphabet, the book, the short surahs and more. Then print it and hand it over.</p>
+        <div class="hpbtn"><a class="btn pri sm" href="urkunde/index.html">Create a certificate</a></div>
+      </div>
+      <div class="hp" data-pane="games" hidden>
+        <div class="hpvis gtiles"><a href="spiel/index.html" class="gt"><span class="gi ar">ب</span><b>Harf by Harf</b><span>Letters, forms and vowels</span></a><a href="sira/index.html" class="gt fox"><span class="gi">🦊</span><b>Seerah with Fuffl</b><span>The life of the Prophet ﷺ</span></a></div>
+        <h3>Two learning games</h3>
+        <p>Children practise the letters with Qalam in “Harf by Harf” and discover the life of the Prophet ﷺ with Fuffl the fox. Free, in the browser, on phone and tablet.</p>
+        <div class="hpbtn"><a class="btn pri sm" href="spiel/index.html">Play Harf by Harf</a><a class="btn sec sm" href="sira/index.html">Play Seerah with Fuffl</a></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -714,6 +792,18 @@ form.rf fieldset.five{grid-template-columns:repeat(3,1fr)}
     st.querySelector('pre').textContent='Subject: '+subj+'\n\n'+body;
     location.href='mailto:'+addr+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(body);
   });
+})();
+</script>
+
+<script>
+(function(){
+  var chips=document.querySelectorAll('.hchips [data-show]'),panes=document.querySelectorAll('#hpanel .hp');
+  function show(k,scroll){
+    chips.forEach(function(c){c.setAttribute('aria-pressed',String(c.dataset.show===k))});
+    panes.forEach(function(p){var on=p.dataset.pane===k;p.hidden=!on;p.classList.toggle('on',on)});
+    if(scroll&&window.matchMedia('(max-width: 860px)').matches){var el=document.getElementById('hpanel');el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'})}
+  }
+  chips.forEach(function(c){c.addEventListener('click',function(){show(c.dataset.show,true)})});
 })();
 </script>
 </body>
