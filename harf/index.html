@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#13877c">
-<title>Harf për Harf</title>
+<title>Shkronjë për shkronjë</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -255,7 +255,7 @@ canvas.confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
 
 <header class="top">
   <div class="wrap">
-    <div class="logo"><span class="ar" lang="ar">حَرْف</span><b>Harf për Harf</b></div>
+    <div class="logo"><span class="ar" lang="ar">حَرْف</span><b>Shkronjë për shkronjë</b></div>
     <div class="chip" title="Yjet e tu"><svg viewBox="0 0 24 24"><path fill="#ffc23d" stroke="#e0a106" stroke-width="1.2" d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z"/></svg><span id="starCount">0</span></div>
     <a class="chip" href="../index.html#kids" style="text-decoration:none;color:inherit" title="Te faqja kryesore"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>Fillimi</a>
     <button class="avatar" id="profBtn" aria-label="Profili im">?</button>
@@ -477,7 +477,7 @@ const BADGES=[
  {id:"w5",bi:"🌗",t:"Hell-Dunkel-Profi",d:"Bota 5 u përfundua",test:s=>done(s,"w5")},
  {id:"w6",bi:"🔢",t:"Zahlen-Profi",d:"Bota 6 u përfundua",test:s=>done(s,"w6")},
  {id:"s30",bi:"⭐",t:"Mbledhës yjesh",d:"30 yje të mbledhur",test:s=>total(s)>=30},
- {id:"all",bi:"🏆",t:"Harf-Champion",d:"Të gjitha mësimet me 3 yje",test:s=>ALL.every(l=>(s.stars[l.id]||0)>=3)}
+ {id:"all",bi:"🏆",t:"Kampion i shkronjave",d:"Të gjitha mësimet me 3 yje",test:s=>ALL.every(l=>(s.stars[l.id]||0)>=3)}
 ];
 function done(s,wid){return WORLDS.find(w=>w.id===wid).lessons.every(l=>(s.stars[l.id]||0)>0);}
 function total(s){return Object.values(s.stars).reduce((a,b)=>a+b,0);}
