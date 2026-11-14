@@ -7,6 +7,7 @@ Maskottchen: Luani (Löwe), Schreibstift Kalemi.
 index.html        Startseite, Kurse, Lehrkräfte, Buchung, Këndi i Luanit, Über uns, Kontakt, Team-Bereich
 harf/             Spiel „Harf për Harf“ (aus Abrar übernommen, TILAWA-Farben)
 sira/             Spiel „Sira me Luanin“ (aus „Sira me Fufflin“)
+buch/             Abrar-Buch „Mëso të lexosh Kuranin“ online lesen (Notizen, Markieren, Zoom) + PDF
 suren/            20 kurze Suren in 5 Stufen, Rezitation Minshawi (cdn.islamic.network), Text von api.alquran.cloud
 urkunde/          Zertifikat erstellen und drucken
 printo/           9 Druckvorlagen (PDF) + Vorschaubilder; erzeugt mit den Abrar-Generatoren (Zweig abrar-quellen), auf Luani/TILAWA umgestellt

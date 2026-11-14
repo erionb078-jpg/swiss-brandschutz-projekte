@@ -208,6 +208,10 @@ form.bk{max-width:720px}
 .hero2 .wave{z-index:3}
 @media(max-width:900px){.hero2{flex-direction:column;align-items:stretch;min-height:0;padding:0 0 56px}.hero2::before{display:none}
 .hero2>img{position:relative;order:2;height:auto;aspect-ratio:16/10;object-position:80% center}.hwrap{order:1;padding:32px 16px 24px}.hcopy{max-width:none}}
+.bookbar{margin-top:16px;background:var(--plum);color:var(--cream);border-radius:28px;padding:clamp(18px,3vw,28px);display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:20px;align-items:center}
+.bookbar h3{margin:0 0 4px}.bookbar p{margin:0;color:#e8e0f5}.bkic{width:84px;height:84px;border-radius:22px;background:rgba(255,255,255,.08);display:grid;place-items:center}.bkb{display:flex;flex-wrap:wrap;gap:10px}
+.bookbar .ghost{color:var(--cream)}
+@media(max-width:800px){.bookbar{grid-template-columns:1fr}.bkic{display:none}}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -393,11 +397,11 @@ ${games()}<section class="band" style="padding-top:0"><div class="wrap"><h2>Prin
 const games=(home)=>`<section class="band" style="padding-top:0"><div class="wrap"><div class="head"><h2>Lojëra për fëmijë</h2>${home?`<a class="btn ghost sm" href="#kids">Këndi i Luanit →</a>`:""}</div><div class="gcards">
 <a class="gcard" href="harf/index.html"><span class="ar gbig">حَرْف</span><div><h3>Harf për Harf</h3><p>Mëso shkronjat arabe një nga një me Kalemin – gjashtë botë: shkronjat, format, zanoret, sukuni, shkronjat e rënda dhe të lehta, numrat. Me dëgjim, shkrim, kuize, yje dhe medalje.</p><span class="btn lime sm">Fillo lojën →</span></div></a>
 <a class="gcard l" href="sira/index.html"><span class="gl">${luani()}</span><div><h3>Sira me Luanin</h3><p>Udhëto me Luanin nëpër jetën e Pejgamberit <bdi>ﷺ</bdi> – 13 stacione nga Meka në Medinë, me hartë, familjen e tij dhe kartat e sahabëve.</p><span class="btn plumb sm">Fillo udhëtimin →</span></div></a>
-</div><p style="margin-top:14px"><a class="btn ghost sm" href="urkunde/index.html">Krijo certifikatë për fëmijën →</a></p><p class="small" style="margin-top:12px">Për moshën rreth 8–14 vjeç. Përparimi ruhet në këtë pajisje.</p></div></section>`;
+</div><p style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn ghost sm" href="buch/index.html">Lexo librin online →</a><a class="btn ghost sm" href="urkunde/index.html">Krijo certifikatë për fëmijën →</a></p><p class="small" style="margin-top:12px">Për moshën rreth 8–14 vjeç. Përparimi ruhet në këtë pajisje.</p></div></section>`;
 const pricing=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("prH")}</h2><p>${k("prT")}</p><div class="prices">
 <div class="pcard main"><h3>${k("prName")}</h3><p class="big"><b>${PRICE}</b> <span>${k("per")}</span></p><ul>${k("feats").map(f=>`<li>${f}</li>`).join("")}</ul><a class="btn lime" href="#teachers">${t("cta1")}</a></div>
 <div class="pcard free"><div class="lumini">${luani()}</div><h3>${k("freeName")}</h3><p>${k("freeT")}</p><a class="btn plumb" href="#book-${TEACHERS[0].id}" data-free="1">${k("prCta")}</a></div></div></div></section>`;
-const abrar=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("abH")}</h2><p>${k("abP")}</p><div class="steps">${k("ab").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div><p class="small" style="margin-top:10px">${k("abNote")}</p></div></section>`;
+const abrar=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("abH")}</h2><p>${k("abP")}</p><div class="steps">${k("ab").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div><div class="bookbar"><div class="bkic"><svg viewBox="0 0 44 26" width="64"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg></div><div><h3>Libri „Mëso të lexosh Kuranin“</h3><p>Lexoje online faqe pas faqe – me shënime, theksime dhe zmadhim – ose shkarkoje si PDF.</p></div><div class="bkb"><a class="btn lime" href="buch/index.html">Lexo librin online</a><a class="btn ghost" href="buch/Meso-te-lexosh-Kuranin.pdf" target="_blank" rel="noopener">Shkarko PDF-në</a></div></div><p class="small" style="margin-top:10px">${k("abNote")}</p></div></section>`;
 const kidsTeaser=()=>`<section class="band" style="padding-top:0"><div class="wrap"><div class="kteaser"><div class="lumid">${luani()}</div><div><h2>${k("kH")}</h2><p>${k("kTeaser")}</p><a class="btn plumb" href="#kids">${k("kCta")}</a></div></div></div></section>`;
 async function dl(blank){CP.msg="";const name=blank?`tilawa-${CP.p+1}-ngjyros.svg`:`tilawa-${CP.p+1}-vizatimi-im.svg`;let data=blank?PAGES[CP.p]():document.querySelector("#canvas svg").outerHTML;
  try{await DL.save({filename:name,data})}catch(e){try{await DL.save({filename:name,data:new Blob([data],{type:"image/svg+xml"})})}catch(e2){CP.msg=k("dlFail");render()}}}
@@ -592,7 +596,7 @@ function render(){
  app.innerHTML=html;
  document.getElementById("nav").innerHTML=ROUTES.map((r,i)=>`<a href="#${r}"${r===cur?' aria-current="page"':""}>${t("nav")[i]}</a>`).join("");
  document.getElementById("foot").innerHTML=`<div class="band wrap"><div><a class="logo" href="#home"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilawa<span class="ar" style="color:#C6B5FF">تلاوة</span></a><p class="small" style="color:#cfc4e0;margin-top:8px">${t("tag")}</p></div>
-<nav>${ROUTES.map((r,i)=>`<a href="#${r}">${t("nav")[i]}</a>`).join("")}<a href="suren/index.html">Suret e shkurtra</a><a href="urkunde/index.html">Krijo certifikatë</a><a href="#team">${t("teamL")}</a></nav><p class="small" style="color:#cfc4e0;width:100%;margin:0">${t("demo")}</p></div>`;
+<nav>${ROUTES.map((r,i)=>`<a href="#${r}">${t("nav")[i]}</a>`).join("")}<a href="buch/index.html">Libri online</a><a href="suren/index.html">Suret e shkurtra</a><a href="urkunde/index.html">Krijo certifikatë</a><a href="#team">${t("teamL")}</a></nav><p class="small" style="color:#cfc4e0;width:100%;margin:0">${t("demo")}</p></div>`;
  if(h!==lastRoute){window.scrollTo(0,0);lastRoute=h}
  if(h==="team"&&db&&TEAM===null)loadTeam();
  if(h==="quran")bindAudio();
