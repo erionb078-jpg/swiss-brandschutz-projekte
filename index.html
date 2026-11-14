@@ -221,6 +221,7 @@ form.bk{max-width:720px}
 .yt:hover .ytp svg,.yt:focus-visible .ytp svg{transform:scale(1.08)}.ytp svg{transition:transform .15s}
 .yt:focus-visible{outline:3px solid #8d74f0;outline-offset:-3px}
 .ytf{width:100%;height:100%;border:0;display:block}
+.av.ph{background:var(--lav);padding:0}.av.ph img{width:100%;height:100%;object-fit:cover;display:block}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -256,14 +257,11 @@ const MODES={online:{sq:"Online",de:"Online"},onsite:{sq:"Me prani fizike",de:"V
 const TZ="Europe/Zurich";
 /* Lehrkräfte – Namen und Abschlüsse von TILAWA; Fächer, Zeiten und Preise vorläufig (Beispieldaten). w: 0=So … 6=Sa */
 const TEACHERS=[
- {id:"blerim",n:"Hoxhë Blerim Musliu",ini:"BM",c:"#C6B5FF",subj:["islam","quran","arabic"],langs:["sq","de"],ages:["kids","teens","adults"],lvl:["beg","int","adv"],mode:["online","onsite"],price:30,
+ {id:"blerim",n:"Hoxhë Blerim Musliu",ini:"BM",photo:"img/blerim.webp",c:"#C6B5FF",subj:["islam","quran","arabic"],langs:["sq","de"],ages:["kids","teens","adults"],lvl:["beg","int","adv"],mode:["online","onsite"],price:30,
   slots:[{w:1,t:"17:00"},{w:3,t:"18:30"},{w:6,t:"10:00"}],bio:{sq:"Mëson edukimin islam dhe Kuranin për fëmijë, të rinj dhe të rritur.",de:"Unterrichtet islamische Bildung und Koran für Kinder, Jugendliche und Erwachsene."},
   q:{sq:["I diplomuar në Universitetin Islamik të Medinës"],de:["Absolvent der Islamischen Universität Medina"]}},
- {id:"bajram",n:"Hafiz Bajram Hasanaj",ini:"BH",c:"#D7EF91",subj:["quran","tajwid"],langs:["sq","de"],ages:["kids","teens","adults"],lvl:["beg","int","adv"],mode:["online"],price:28,
+ {id:"bajram",n:"Hafiz Bajram Hasanaj",ini:"BH",photo:"img/bajram.webp",c:"#D7EF91",subj:["quran","tajwid"],langs:["sq","de"],ages:["kids","teens","adults"],lvl:["beg","int","adv"],mode:["online"],price:28,
   slots:[{w:2,t:"16:00"},{w:4,t:"19:00"},{w:0,t:"11:00"}],bio:{sq:"Hafiz i Kuranit. Mëson leximin, recitimin dhe texhvidin hap pas hapi.",de:"Hafiz des Korans. Unterrichtet Lesen, Rezitation und Tadschwīd Schritt für Schritt."},
-  q:{sq:["Hafiz i Kuranit","I diplomuar në Universitetin e Kasimit (Qassim)"],de:["Hafiz des Korans","Absolvent der Qassim-Universität"]}},
- {id:"besnik",n:"Hafiz Besnik Foniqi",ini:"BF",c:"#C6B5FF",subj:["quran","tajwid","islam"],langs:["sq","de"],ages:["kids","teens","adults"],lvl:["beg","int","adv"],mode:["online","onsite"],price:null,
-  slots:[{w:5,t:"18:00"},{w:6,t:"14:00"}],bio:{sq:"Hafiz i Kuranit. Mëson Kuranin, texhvidin dhe edukimin islam.",de:"Hafiz des Korans. Unterrichtet Koran, Tadschwīd und islamische Bildung."},
   q:{sq:["Hafiz i Kuranit","I diplomuar në Universitetin e Kasimit (Qassim)"],de:["Hafiz des Korans","Absolvent der Qassim-Universität"]}}
 ];
 
@@ -479,7 +477,7 @@ const ICONS={book:'<svg width="30" height="30" viewBox="0 0 30 30"><path d="M3 9
  wave:'<svg width="30" height="30" viewBox="0 0 30 30"><path d="M3 15q3-8 6 0t6 0t6 0t6 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>',
  dome:'<svg width="30" height="30" viewBox="0 0 30 30"><path d="M6 24v-6q0-8 9-10q9 2 9 10v6z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 3v5M3 24h24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'};
 const icon=c=>ICONS[c.ic]||`<span class="ar">${c.ic}</span>`;
-const avatar=tc=>`<div class="av" style="background:${tc.c}"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M-5 78Q25 58 50 76Q75 58 105 78V105H-5Z" fill="rgba(42,32,59,.12)"/><path d="M-5 88Q25 70 50 86Q75 70 105 88" fill="none" stroke="rgba(42,32,59,.18)" stroke-width="2"/></svg><span>${tc.ini}</span><small>${t("photo")}</small></div>`;
+const avatar=tc=>tc.photo?`<div class="av ph"><img src="${tc.photo}" alt="${tc.n}" loading="lazy"></div>`:`<div class="av" style="background:${tc.c}"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M-5 78Q25 58 50 76Q75 58 105 78V105H-5Z" fill="rgba(42,32,59,.12)"/><path d="M-5 88Q25 70 50 86Q75 70 105 88" fill="none" stroke="rgba(42,32,59,.18)" stroke-width="2"/></svg><span>${tc.ini}</span><small>${t("photo")}</small></div>`;
 const HERO=`<svg viewBox="0 0 520 400" aria-hidden="true">
 <circle cx="270" cy="190" r="170" fill="#3a2d52"/>
 <path d="M40 330Q150 280 260 320Q370 280 490 330" fill="none" stroke="#D7EF91" stroke-width="3" opacity=".5"/>
