@@ -428,7 +428,7 @@ async function dl(blank){CP.msg="";const name=blank?`tilava-${CP.p+1}-ngjyros.sv
  try{await DL.save({filename:name,data})}catch(e){try{await DL.save({filename:name,data:new Blob([data],{type:"image/svg+xml"})})}catch(e2){CP.msg=k("dlFail");render()}}}
 /* ---------- strings ---------- */
 const L={
- sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Lexo Kuranin. Mëso gjuhë. Kupto Islamin.",sub:"Mëso me mësues të diplomuar në Medinë dhe në Kasim – kërko një orë mësimi te TILAVA.",cta1:"Kërko një orë mësimi",cta2:"Shiko kurset",
+ sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Mëso Kuranin, kudo që jeton.",sub:"Kurse online të Kuranit, texhvidit, gjuhës arabe dhe edukimit islam, me mësues të kualifikuar nën mbikëqyrjen e themeluesve.",cta1:"Kërko një orë mësimi",cta2:"Shiko kurset",
   demo:"Faqe në ndërtim: kërkesat për orë ende nuk dërgohen.",coursesH:"Kurset tona",allC:"Të gjitha kurset",findFor:"Kërko një orë",howH:"Si funksionon",
   steps:[["Zgjidh kursin","Kuran, texhvid, arabisht ose edukim islam – për fëmijë, të rinj dhe të rritur."],["Kërko një orë","Na trego kursin, gjuhën dhe kohën që të përshtatet – online ose me prani fizike."],["Ne e konfirmojmë","Ekipi i TILAVA të shkruan, cakton mësuesin dhe konfirmon orën."]],
   teachH:"Mësuesit tanë",allT:"Të gjithë mësuesit",parH:"Për prindërit",parT:"Mësimin e japin themeluesit e TILAVA – Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj. Për nxënësit nën 18 vjeç, kërkesa dërgohet me të dhënat e prindit ose kujdestarit.",
@@ -521,7 +521,7 @@ const welcomeText=()=>`<section class="band wtext"><div class="wrap wtgrid"><div
 const courseCard=c=>`<button class="course" data-course="${c.id}"><span class="ic">${icon(c)}</span><h3>${nm(c.name)}</h3><p>${nm(c.desc)}</p><span class="go">${t("findFor")} →</span></button>`;
 const tCard=tc=>`<article class="fcard">${avatar(tc)}<div><span class="fbadge">Themelues</span><h3>${tc.n}</h3><ul class="fexp">${nm(tc.q).map(x=>`<li>${x}</li>`).join("")}</ul><p class="meta" style="margin:0">${nm(tc.bio)}</p></div></article>`;
 function vHome(){return `<section class="hero2"><img src="hero.webp" srcset="hero-1000.webp 1000w, hero.webp 1672w" sizes="100vw" width="1672" height="941" alt="Fëmijë që mësojnë me tablet, laptop dhe telefon; në tavolinë Kurani në rahle" fetchpriority="high">
-<div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAVA</b>·<span class="ar">تلاوة</span>·<span>${t("tag")}</span></div>
+<div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAVA</b> | <span class="ar">تلاوة</span></div>
 <h1>${t("h1")}</h1><p class="lead">${t("sub")}</p>
 <div class="cta"><a class="btn lime" href="#book">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
 ${welcomeText()}
