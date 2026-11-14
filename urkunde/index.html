@@ -54,7 +54,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--plum)}
    <option value="2">Të gjitha botët në „Harf për Harf“</option>
    <option value="3">Sira me Fufflin</option>
    <option value="4">Planin mësimor 12-javor</option>
-   <option value="5">Librin „Quran Reading – Step by Step“</option>
+   <option value="5">Librin „Mëso të lexosh Kuranin – hap pas hapi“</option>
    <option value="7">Suret e shkurtra (niveli 1–5)</option>
    <option value="6">Tekst i vetë …</option></select></label>
   <label id="ownl" hidden>Tekst i vetë<textarea id="own" rows="2" maxlength="140" placeholder="p.sh. e ka lexuar bukur suren El-Fatiha"></textarea></label>
@@ -117,7 +117,7 @@ const TXT=[["ka mësuar të <b>28 shkronjat</b> e alfabetit arab – t'i lexojë
 ["ka përfunduar të gjitha botët në <b>„Harf për Harf“</b>.",Q],
 ["me Fufflin ka zbuluar <b>jetën e Pejgamberit Muhammed ﷺ</b>.",F],
 ["e ka përfunduar me zell <b>planin mësimor 12-javor</b>.",Q],
-["e ka përfunduar librin <b>„Quran Reading – Step by Step“</b> të Abrarit.",Q],null,["i ka mësuar përmendsh <b>suret e shkurtra nga Kurani</b>.",Q]];
+["e ka përfunduar librin <b>„Mëso të lexosh Kuranin – hap pas hapi“</b> të Abrarit.",Q],null,["i ka mësuar përmendsh <b>suret e shkurtra nga Kurani</b>.",Q]];
 try{const m=/^#suren-(\d)$/.exec(location.hash);if(m){TXT[7][0]="e ka mësuar përmendsh <b>nivelin "+m[1]+" të sureve të shkurtra</b>.";setTimeout(()=>{document.getElementById("what").value="7";document.getElementById("what").dispatchEvent(new Event("input"))},0)}}catch(e){}
 const $=id=>document.getElementById(id);
 const d=new Date();$("date").value=d.toISOString().slice(0,10);
