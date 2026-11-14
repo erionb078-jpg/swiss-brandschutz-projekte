@@ -212,6 +212,15 @@ form.bk{max-width:720px}
 .bookbar h3{margin:0 0 4px}.bookbar p{margin:0;color:#e8e0f5}.bkic{width:84px;height:84px;border-radius:22px;background:rgba(255,255,255,.08);display:grid;place-items:center}.bkb{display:flex;flex-wrap:wrap;gap:10px}
 .bookbar .ghost{color:var(--cream)}
 @media(max-width:800px){.bookbar{grid-template-columns:1fr}.bkic{display:none}}
+.welcome{padding-top:clamp(20px,3vw,40px)}
+.wgrid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);align-items:center}
+@media(max-width:800px){.wgrid{grid-template-columns:1fr}}
+.wvid{border-radius:24px;overflow:hidden;background:var(--plum);aspect-ratio:16/9;box-shadow:0 10px 0 var(--lav)}
+.yt{all:unset;cursor:pointer;display:block;position:relative;width:100%;height:100%}.yt img{width:100%;height:100%;object-fit:cover;display:block}
+.yt .ytp{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(0deg,rgba(42,32,59,.35),transparent 60%)}
+.yt:hover .ytp svg,.yt:focus-visible .ytp svg{transform:scale(1.08)}.ytp svg{transition:transform .15s}
+.yt:focus-visible{outline:3px solid #8d74f0;outline-offset:-3px}
+.ytf{width:100%;height:100%;border:0;display:block}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -490,6 +499,10 @@ const HERO=`<svg viewBox="0 0 520 400" aria-hidden="true">
 <g fill="#D7EF91"><circle cx="80" cy="90" r="5"/><circle cx="470" cy="80" r="4"/><circle cx="490" cy="220" r="6" fill="#C6B5FF"/></g>
 </svg>`;
 const WAVE=`<svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60Q360 0 720 50T1440 30V100H0Z" fill="#C6B5FF"/><path d="M0 80Q400 30 760 72T1440 52V100H0Z" fill="#D7EF91"/><path d="M0 92Q420 60 780 90T1440 74V100H0Z" fill="var(--bg)"/></svg>`;
+/* ---------- Willkommensvideo (YouTube, lädt erst nach Klick) ---------- */
+const YT="R0wS_VozjTI";
+const ytBox=()=>`<button class="yt" data-yt="${YT}" aria-label="Luaj videon e mirëseardhjes"><img src="https://i.ytimg.com/vi/${YT}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="ytp"><svg viewBox="0 0 68 48" width="68"><path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6C4 2.3 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 2.5 5.4 5.4 6.2C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c2.9-.8 4.6-3.3 5.4-6.2C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#2A203B"/><path d="M45 24 27 14v20" fill="#D7EF91"/></svg></span></button>`;
+const welcome=()=>`<section class="band welcome"><div class="wrap wgrid"><div class="wvid">${ytBox()}</div><div><span class="samp">Video</span><h2>Mirë se vini në TILAWA</h2><p>Një përshëndetje nga Hafiz Bajram Hasanaj për prindërit dhe nxënësit – njihuni me mësuesin para orës së parë.</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#book-bajram" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#t-bajram">Profili i tij</a></div></div></div></section>`;
 /* ---------- views ---------- */
 const courseCard=c=>`<button class="course" data-course="${c.id}"><span class="ic">${icon(c)}</span><h3>${nm(c.name)}</h3><p>${nm(c.desc)}</p><span class="go">${t("findFor")} →</span></button>`;
 const tCard=tc=>`<article class="tcard">${avatar(tc)}<div><span class="samp">${t("sample")}</span><h3>${tc.n}</h3>
@@ -499,6 +512,7 @@ function vHome(){return `<section class="hero2"><img src="hero.webp" srcset="her
 <div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAWA</b>·<span class="ar">تلاوة</span>·<span>${t("tag")}</span></div>
 <h1>${t("h1")}</h1><p class="lead">${t("sub")}</p>
 <div class="cta"><a class="btn lime" href="#teachers">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
+${welcome()}
 <section class="band"><div class="wrap"><div class="head"><h2>${t("coursesH")}</h2><a class="btn ghost sm" href="#courses">${t("allC")}</a></div><div class="grid">${COURSES.map(courseCard).join("")}</div></div></section>
 ${games(1)}
 <section class="band" style="padding-top:0"><div class="wrap"><h2>${t("howH")}</h2><div class="steps">${t("steps").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div></div></section>
@@ -521,7 +535,7 @@ function vTeachers(){const list=TEACHERS.filter(x=>(!F.subj||x.subj.includes(F.s
 ${list.length?`<div class="tlist">${list.map(tCard).join("")}</div>`:`<div class="empty"><p style="margin:0 auto 12px">${t("empty")}</p><button class="btn lime sm" id="reset2">${t("reset")}</button></div>`}</div></section>`}
 function vProfile(tc){const sl=slots(tc);return `<section class="band"><div class="wrap"><a class="back" href="#teachers">← ${t("back")}</a>
 <div class="prof"><div>${avatar(tc)}<p class="samp" style="margin-top:12px">${t("sample")}</p></div><div>
-<h1>${tc.n}</h1><p style="font-size:18px">${nm(tc.bio)}</p><p class="note"><b>${teachLine(tc)}</b></p>
+<h1>${tc.n}</h1>${tc.id==="bajram"?`<div class="wvid" style="margin-bottom:16px">${ytBox()}</div>`:""}<p style="font-size:18px">${nm(tc.bio)}</p><p class="note"><b>${teachLine(tc)}</b></p>
 <div class="box"><dl class="kv">
 <dt>${t("subjH")}</dt><dd>${tc.subj.map(s=>`<span class="pill l">${nm(C(s).name)}</span>`).join("")}</dd>
 <dt>${t("langH")}</dt><dd>${tc.langs.map(l=>`<span class="pill g">${LANGS[l][lang]}</span>`).join("")}</dd>
@@ -637,6 +651,7 @@ app.addEventListener("click",e=>{
  const su=e.target.closest("[data-sura]");if(su){QS.s=+su.dataset.sura;QS.a=-1;render();const b=document.querySelector(".sura[aria-selected=true]");b&&b.scrollIntoView({block:"nearest",inline:"center"});return}
  const ay=e.target.closest("[data-ay]");if(ay){const i=+ay.dataset.ay;setAyah(i);const au=document.getElementById("qa"),tt=SURAHS[QS.s].t;if(au&&tt[i]!=null){au.currentTime=tt[i];au.play().catch(()=>{})}return}
  if(e.target.closest("#qnext")){setAyah(QS.a+1);return}if(e.target.closest("#qprev")){setAyah(QS.a<0?0:QS.a-1);return}
+ const yb=e.target.closest("[data-yt]");if(yb){yb.outerHTML=`<iframe class="ytf" src="https://www.youtube-nocookie.com/embed/${yb.dataset.yt}?autoplay=1&rel=0&modestbranding=1" title="Video e mirëseardhjes – Hafiz Bajram Hasanaj" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;return}
  const fr=e.target.closest("[data-free]");if(fr){BK=null;PKG0="free";return}
  const pg=e.target.closest("[data-page]");if(pg){CP.p=+pg.dataset.page;CP.msg="";render();return}
  const sw=e.target.closest("[data-col]");if(sw){CP.c=sw.dataset.col;document.querySelectorAll(".sw").forEach(b=>{const on=b===sw;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});return}
