@@ -511,16 +511,12 @@ const HERO=`<svg viewBox="0 0 520 400" aria-hidden="true">
 <g fill="#D7EF91"><circle cx="80" cy="90" r="5"/><circle cx="470" cy="80" r="4"/><circle cx="490" cy="220" r="6" fill="#C6B5FF"/></g>
 </svg>`;
 const WAVE=`<svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60Q360 0 720 50T1440 30V100H0Z" fill="#C6B5FF"/><path d="M0 80Q400 30 760 72T1440 52V100H0Z" fill="#D7EF91"/><path d="M0 92Q420 60 780 90T1440 74V100H0Z" fill="var(--bg)"/></svg>`;
-/* ---------- Willkommensvideo (YouTube, lädt erst nach Klick) ---------- */
-const YT="R0wS_VozjTI";
-const ytBox=()=>`<button class="yt" data-yt="${YT}" aria-label="Luaj videon e mirëseardhjes"><img src="https://i.ytimg.com/vi/${YT}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="ytp"><svg viewBox="0 0 68 48" width="68"><path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6C4 2.3 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 2.5 5.4 5.4 6.2C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c2.9-.8 4.6-3.3 5.4-6.2C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#2A203B"/><path d="M45 24 27 14v20" fill="#D7EF91"/></svg></span></button>`;
 const welcomeText=()=>`<section class="band wtext"><div class="wrap wtgrid"><div class="wtic" aria-hidden="true"><svg viewBox="0 0 44 26"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg></div><div>
 <h2>Mirë se vini në TILAWA!</h2>
 <p class="wlead">TILAWA lindi nga dëshira për t’u hapur familjeve shqiptare në diasporë një derë drejt mësimit të Kuranit dhe njohjes së Islamit, kudo që jetojnë.</p>
 <p>Me mbi dhjetë vjet përvojë në mësimdhënie, themeluesit tanë e sollën këtë mundësi online. Mësimet zhvillohen nga mësues e mësuese të kualifikuar, nën mbikëqyrjen e themeluesve të TILAWA-s.</p>
 <p>Fëmijët dhe të rriturit mund të mësojnë të lexojnë e të recitojnë Kuranin, të ushtrojnë texhvidin dhe të njohin bazat e fesë islame. Mësimet ofrohen në shqip dhe përshtaten me nivelin e secilit.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px"><a class="btn lime" href="#book" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#teachers">Themeluesit</a></div></div></div></section>`;
-const welcome=()=>`<section class="band welcome"><div class="wrap wgrid"><div class="wvid">${ytBox()}</div><div><span class="samp">Video</span><h2>Mirë se vini në TILAWA</h2><p>Një përshëndetje nga Hafiz Bajram Hasanaj për prindërit dhe nxënësit – njihuni me mësuesin para orës së parë.</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#book" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#teachers">Mësuesit tanë</a></div></div></div></section>`;
 /* ---------- views ---------- */
 const courseCard=c=>`<button class="course" data-course="${c.id}"><span class="ic">${icon(c)}</span><h3>${nm(c.name)}</h3><p>${nm(c.desc)}</p><span class="go">${t("findFor")} →</span></button>`;
 const tCard=tc=>`<article class="fcard">${avatar(tc)}<div><span class="fbadge">Themelues</span><h3>${tc.n}</h3><ul class="fexp">${nm(tc.q).map(x=>`<li>${x}</li>`).join("")}</ul><p class="meta" style="margin:0">${nm(tc.bio)}</p></div></article>`;
@@ -544,7 +540,7 @@ const founders=(page)=>`<section class="band"${page?"":' style="padding-top:0"'}
 <p>Përmes TILAWA-s, fëmijët dhe të rriturit mund të mësojnë online leximin dhe recitimin e Kuranit, texhvidin dhe bazat e fesë islame, kudo që jetojnë.</p>
 <ul class="fexp"><li><b>Hoxhë Blerim Musliu</b> – i diplomuar në Universitetin Islamik të Medinës</li><li><b>Hafiz Bajram Hasanaj</b> – hafiz i Kuranit dhe i diplomuar në Universitetin e Kasimit</li></ul>
 <a class="btn lime" href="#book">${t("cta1")}</a></div></div></div></section>`;
-function vTeachers(){return `${founders(1)}<section class="band" style="padding-top:0"><div class="wrap"><h2>Një përshëndetje nga Hafiz Bajram Hasanaj</h2><div class="wvid" style="max-width:820px">${ytBox()}</div></div></section>`}
+function vTeachers(){return founders(1)}
 function newBK(course){return {pkg:PKG0||"sub",course:C(course)?course:COURSES[0].id,tlang:"sq",mode:"online",wd:"",wt:"",minor:false,name:"",email:"",pname:"",pmail:"",msg:""}}
 const er=k=>ERR[k]?`<span class="err" id="e-${k}">${ERR[k]}</span>`:"";
 const inp=(k,label,type,req)=>`<label class="f">${label}${req?" *":""}<input id="i-${k}" data-b="${k}" type="${type||"text"}" value="${esc(BK[k])}"${ERR[k]?` aria-invalid="true" aria-describedby="e-${k}"`:""}${type==="email"?' autocomplete="email"':""}>${er(k)}</label>`;
@@ -646,7 +642,6 @@ app.addEventListener("click",e=>{
  const su=e.target.closest("[data-sura]");if(su){QS.s=+su.dataset.sura;QS.a=-1;render();const b=document.querySelector(".sura[aria-selected=true]");b&&b.scrollIntoView({block:"nearest",inline:"center"});return}
  const ay=e.target.closest("[data-ay]");if(ay){const i=+ay.dataset.ay;setAyah(i);const au=document.getElementById("qa"),tt=SURAHS[QS.s].t;if(au&&tt[i]!=null){au.currentTime=tt[i];au.play().catch(()=>{})}return}
  if(e.target.closest("#qnext")){setAyah(QS.a+1);return}if(e.target.closest("#qprev")){setAyah(QS.a<0?0:QS.a-1);return}
- const yb=e.target.closest("[data-yt]");if(yb){yb.outerHTML=`<iframe class="ytf" src="https://www.youtube-nocookie.com/embed/${yb.dataset.yt}?autoplay=1&rel=0&modestbranding=1" title="Video e mirëseardhjes – Hafiz Bajram Hasanaj" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>`;return}
  const fr=e.target.closest("[data-free]");if(fr){BK=null;PKG0="free";return}
  const pg=e.target.closest("[data-page]");if(pg){CP.p=+pg.dataset.page;CP.msg="";render();return}
  const sw=e.target.closest("[data-col]");if(sw){CP.c=sw.dataset.col;document.querySelectorAll(".sw").forEach(b=>{const on=b===sw;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});return}
