@@ -2,7 +2,7 @@ import json,math,base64,re,os,random,html
 SP='/tmp/claude-0/-home-claude/133ba4ae-4316-560e-9041-7dc80082bb1c/scratchpad'
 W=SP+'/fontwork';F=W+'/f2'
 G=json.load(open(W+'/glyphs.json'));STK=json.load(open(W+'/strokes.json'))
-LOGO='data:image/png;base64,'+base64.b64encode(open(SP+'/logo/l-002.png','rb').read()).decode()
+LOGO='data:image/png;base64,'+base64.b64encode(open(SP+'/ikra/logo_s.png','rb').read()).decode()
 QALAM=open(SP+'/qalam.svg').read().replace('class="nuri"','class="mas"')
 FOX=open(SP+'/fox.svg').read().replace('<svg','<svg class="mas"',1)
 def colorme(svg):
@@ -51,7 +51,7 @@ h1,h2,h3{{font-family:Lexend,sans-serif;margin:0;line-height:1.1;letter-spacing:
 '''
 def bar(title,sub="",name=True,logo=True):
     return f'<div class="bar">{f"<img src={LOGO!r}>" if logo else ""}<div class="tt"><h1>{title}</h1>{f"<p>{sub}</p>" if sub else ""}</div>{"<div class=nm>Emri: ________________</div>" if name else ""}</div>'
-FT='<div class="ft"><b>abrar</b> · Harf për Harf · falas për printim – jo për shitje</div>'
+FT='<div class="ft"><b>Akademia Ikra</b> · Harf për Harf · falas për printim – jo për shitje</div>'
 DOCS=[]
 def doc(fname,size,w,h,pages,extra=""):
     body="".join(f'<section class="page" style="width:{w}mm;height:{h}mm;padding:{p.get("pad","12mm 13mm 14mm")}">{p["html"]}{"" if p.get("noft") else FT}</section>' for p in pages)
@@ -281,7 +281,7 @@ doc("Bastelboegen.pdf","A4",210,297,[
 {"html":bar("Fletë pune: Xhamia","Një xhami që qëndron në këmbë dhe një minare për ta mbështjellë – ngjyros, prej, vendos!",False)+f'<div class="mwrap">{moschee}</div><div class="cwrap">{cone}<div class="how"><ol><li>Ngjyros gjithçka me ngjyra.</li><li>Prej xhaminë dhe palose mbrapa shiritin e çelët poshtë – dhe ajo qëndron në këmbë.</li><li>Prej minaren, mbështille si tub dhe ngjite me pjesën e çelët.</li><li>Prej majën, ngjite si kon dhe vendose sipër minares.</li></ol></div></div>'},
 *pen_pages,
 {"html":bar("Figura në këmbë: Kalemi & Fuffli","Ngjyrosi, preji, palosi në mes dhe ngjit këmbëzën – kështu qëndrojnë në tavolinën tënde",False)+f'<div class="sug">{standup(colorme(QALAM),"Qalam","#13877c")}{standup(colorme(FOX),"Fuffl","#ee7a2b")}</div>'},
-{"html":bar("Shënues libri","Katër shënues libri për t'i prerë – për librin tënd Abrar",False)+f'<div class="bmg">{"".join(bm)}</div><div class="hint">{SCI} Prej përgjatë vijave me ndërprerje. Me film ngjitës bëhen më të fortë.</div>'}],
+{"html":bar("Shënues libri","Katër shënues libri për t'i prerë – për librin tënd",False)+f'<div class="bmg">{"".join(bm)}</div><div class="hint">{SCI} Prej përgjatë vijave me ndërprerje. Me film ngjitës bëhen më të fortë.</div>'}],
 '''.netwrap{display:flex;justify-content:center}.netsvg{width:186mm;height:auto}
 .how{font-size:12pt;background:var(--tint);border-radius:5mm;padding:3mm 6mm}.how ol{margin:0;padding-left:6mm;display:grid;gap:1.5mm}
 .hint{display:flex;gap:2mm;align-items:center;justify-content:center;font-size:10pt;color:var(--muted);margin-top:4mm}

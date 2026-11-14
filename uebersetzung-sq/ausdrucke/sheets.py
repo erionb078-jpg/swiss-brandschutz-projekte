@@ -37,11 +37,11 @@ def color_me(svg):
     svg=re.sub(r'stroke="[^"]*"','stroke="#1d1d1d"',svg)
     return svg.replace('<svg','<svg style="--x:1" ',1).replace('class="mascot"','class="mascot cm"')
 import base64
-LOGO='data:image/png;base64,'+base64.b64encode(open('logo/l-002.png','rb').read()).decode()
-LG=f'<img class="lg" src="{LOGO}" alt="Abrar Institute">'
+LOGO='data:image/png;base64,'+base64.b64encode(open('ikra/logo_s.png','rb').read()).decode()
+LG=f'<img class="lg" src="{LOGO}" alt="Akademia Ikra">'
 pages=[]
 def page(body,cls=""):
-    pages.append(f'<section class="page {cls}">{body}<div class="foot"><b style=\"color:#6b2150\">abrar</b> · Harf për Harf · fletë pune · falas për printim – jo për shitje</div></section>')
+    pages.append(f'<section class="page {cls}">{body}<div class="foot"><b style=\"color:#6b2150\">Akademia Ikra</b> · Harf për Harf · fletë pune · falas për printim – jo për shitje</div></section>')
 # cover
 page(f'''<div class="cover">{LG}<div class="cvq">{color_me(qalam)}</div><h1>Harf për Harf</h1><h2>Fletë pune për ngjyrosje,<br>ndjekje me laps dhe mësim</h2>
 <div class="arbig">حُرُوف</div><p class="nm">Ky libër është i: ______________________________</p>
