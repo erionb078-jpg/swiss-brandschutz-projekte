@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TILAWA · تلاوة</title>
+<title>TILAVA · تلاوة</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet">
 <style>
@@ -246,7 +246,7 @@ footer .logo{color:var(--cream)}
 <body>
 <div class="demo" id="demo"></div>
 <header><div class="hd">
-  <a class="logo" href="#home" aria-label="tilawa"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilawa<span class="ar">تلاوة</span></a>
+  <a class="logo" href="#home" aria-label="tilava"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilava<span class="ar">تلاوة</span></a>
   <nav class="main" id="nav"></nav>
   
   <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M3 6h16M3 11h16M3 16h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
@@ -269,7 +269,7 @@ const LEVELS={beg:{sq:"Fillestar",de:"Anfänger"},int:{sq:"Mesatar",de:"Mittelst
 const AVAIL={wd:{sq:"Ditëve të javës, pasdite",de:"Werktags nachmittags"},ev:{sq:"Mbrëmjeve (nga 18:00)",de:"Abends (ab 18 Uhr)"},we:{sq:"Fundjavë",de:"Wochenende"}};
 const MODES={online:{sq:"Online",de:"Online"},onsite:{sq:"Me prani fizike",de:"Vor Ort"}};
 const TZ="Europe/Zurich";
-/* Lehrkräfte – Namen und Abschlüsse von TILAWA; Fächer, Zeiten und Preise vorläufig (Beispieldaten). w: 0=So … 6=Sa */
+/* Lehrkräfte – Namen und Abschlüsse von TILAVA; Fächer, Zeiten und Preise vorläufig (Beispieldaten). w: 0=So … 6=Sa */
 const TEACHERS=[
  {id:"blerim",n:"Hoxhë Blerim Musliu",ini:"BM",photo:"img/blerim.webp",c:"#C6B5FF",subj:["islam","quran","arabic"],langs:["sq","de"],ages:["kids","teens","adults"],lvl:["beg","int","adv"],mode:["online","onsite"],price:30,
   slots:[{w:1,t:"17:00"},{w:3,t:"18:30"},{w:6,t:"10:00"}],bio:{sq:"Mëson edukimin islam dhe Kuranin për fëmijë, të rinj dhe të rritur.",de:"Unterrichtet islamische Bildung und Koran für Kinder, Jugendliche und Erwachsene."},
@@ -293,15 +293,15 @@ const SURAHS=[
  {n:105,ar:"الفيل",sq:"El-Fil",sqm:"Elefanti",de:"Al-Fīl",dem:"Der Elefant",audio:"",t:[],v:["أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ","أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ","وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ","تَرْمِيهِمْ بِحِجَارَةٍ مِنْ سِجِّيلٍ","فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ"]},
  {n:103,ar:"العصر",sq:"El-Asr",sqm:"Koha",de:"Al-ʿAsr",dem:"Die Zeit",audio:"",t:[],v:["وَالْعَصْرِ","إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ","إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ"]}
 ];
-/* Übersetzungen je Sure und Vers, z. B. TR.sq[1]=["…","…"] – von TILAWA aus freigegebener Quelle */
+/* Übersetzungen je Sure und Vers, z. B. TR.sq[1]=["…","…"] – von TILAVA aus freigegebener Quelle */
 const TR={sq:{},de:{}};
 const RULES={g:{sq:"Gunne",de:"Ghunna"},q:{sq:"Kalkale",de:"Qalqala"},i:{sq:"Ihfa",de:"Ikhfāʾ"},d:{sq:"Idgam",de:"Idghām"},m:{sq:"Med (zgjatje)",de:"Madd (Dehnung)"},l:{sq:"Shkronjë që nuk shqiptohet",de:"Stummer Buchstabe"}};
 const Q={sq:{h:"Dëgjo dhe ndiq",sub:"10 sure të shkurtra me ngjyrat e texhvidit – lexo në arabisht dhe ndiq ajet pas ajeti.",rec:"Recitues: Muhammed Sidik el-Minshavi",prev:"Ajeti i mëparshëm",next:"Ajeti tjetër",
-  noAudio:"Incizimet e Minshavit do t'i shtojë TILAWA. Deri atëherë: ndiq ajet pas ajeti me shigjetat ose prek një ajet.",colors:"Ngjyrat e texhvidit",trans:"Përkthimi",trNote:"Përkthimin e ajeteve e shton TILAWA nga një burim i miratuar.",
-  auto:"Ngjyrosje automatike e rregullave bazë – mësuesit e TILAWA duhet ta kontrollojnë.",homeT:"Mëso suret e shkurtra",homeP:"20 sure të shkurtra në 5 nivele – dëgjo, përsërit ajet pas ajeti, shëno çfarë di përmendsh dhe merr certifikatë për çdo nivel.",homeB:"Te suret",verses:n=>n+" ajete"},
+  noAudio:"Incizimet e Minshavit do t'i shtojë TILAVA. Deri atëherë: ndiq ajet pas ajeti me shigjetat ose prek një ajet.",colors:"Ngjyrat e texhvidit",trans:"Përkthimi",trNote:"Përkthimin e ajeteve e shton TILAVA nga një burim i miratuar.",
+  auto:"Ngjyrosje automatike e rregullave bazë – mësuesit e TILAVA duhet ta kontrollojnë.",homeT:"Mëso suret e shkurtra",homeP:"20 sure të shkurtra në 5 nivele – dëgjo, përsërit ajet pas ajeti, shëno çfarë di përmendsh dhe merr certifikatë për çdo nivel.",homeB:"Te suret",verses:n=>n+" ajete"},
  de:{h:"Hören und mitlesen",sub:"10 kurze Suren mit Tadschwīd-Farben – auf Arabisch lesen und Vers für Vers mitverfolgen.",rec:"Rezitator: Muhammad Siddiq al-Minschawi",prev:"Vorheriger Vers",next:"Nächster Vers",
-  noAudio:"Die Minschawi-Aufnahmen fügt TILAWA noch ein. Bis dahin: mit den Pfeilen Vers für Vers folgen oder einen Vers antippen.",colors:"Tadschwīd-Farben",trans:"Übersetzung",trNote:"Die Übersetzung der Verse fügt TILAWA aus einer freigegebenen Quelle ein.",
-  auto:"Automatische Färbung der Grundregeln – die TILAWA-Lehrkräfte sollten sie prüfen.",homeT:"Suren hören und mitlesen",homeP:"Arabischer Text mit Tadschwīd-Farben, Vers für Vers – zum Üben zu Hause.",homeB:"Zum Mitlesen",verses:n=>n+" Verse"}};
+  noAudio:"Die Minschawi-Aufnahmen fügt TILAVA noch ein. Bis dahin: mit den Pfeilen Vers für Vers folgen oder einen Vers antippen.",colors:"Tadschwīd-Farben",trans:"Übersetzung",trNote:"Die Übersetzung der Verse fügt TILAVA aus einer freigegebenen Quelle ein.",
+  auto:"Automatische Färbung der Grundregeln – die TILAVA-Lehrkräfte sollten sie prüfen.",homeT:"Suren hören und mitlesen",homeP:"Arabischer Text mit Tadschwīd-Farben, Vers für Vers – zum Üben zu Hause.",homeB:"Zum Mitlesen",verses:n=>n+" Verse"}};
 const q=k=>Q[lang][k];
 const QS={s:0,a:-1,col:true,tr:true};
 const arNum=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
@@ -341,11 +341,11 @@ const quranTeaser=()=>`<section class="band" style="padding-top:0"><div class="w
 const PRICE="29,99 €";
 const PKGS={free:{sq:"Fatiha – ora e parë falas",de:"Fatiha – erste Stunde gratis"},sub:{sq:"Abonim mujor – 29,99 € për 6 orë",de:"Monatsabo – 29,99 € für 6 Stunden"}};
 const K={sq:{nav:"Këndi i Luanit",perM:"në muaj · 6 orë",priceL:"Çmimi",pkgL:"Paketa",
-  prH:"Abonimi",prT:"Një çmim i qartë – pa surpriza.",prName:"Abonimi mujor",per:"/ muaj",feats:["6 orë mësimi në muaj (≈ 5 € për orë)","Mësim me librin Abrar","Me mësuesit e TILAWA","Fletë ngjyrosjeje, lojëra dhe „Dëgjo dhe ndiq“"],
+  prH:"Abonimi",prT:"Një çmim i qartë – pa surpriza.",prName:"Abonimi mujor",per:"/ muaj",feats:["6 orë mësimi në muaj (≈ 5 € për orë)","Mësim me librin Abrar","Me mësuesit e TILAVA","Fletë ngjyrosjeje, lojëra dhe „Dëgjo dhe ndiq“"],
   freeName:"Fillo falas",freeT:"Ora e parë: mësojmë Fatihanë bashkë – falas.",prCta:"Kërko orën e parë",
   abH:"Mësojmë me librin Abrar",abP:"Çdo orë ndjek librin Abrar hap pas hapi – nga shkronjat e para deri te leximi i sureve.",
   ab:[["Shkronjat arabe","Elifbaja: forma dhe shqiptimi i çdo shkronje."],["Harekete dhe rrokje","Zanoret e shkurtra, sukuni, shedda dhe tenvini."],["Lidhja e shkronjave","Shkronjat në fillim, mes dhe fund – leximi i fjalëve."],["Suret e shkurtra","Leximi i sureve me rregullat bazë të texhvidit."]],
-  abNote:"Ndarjen e saktë sipas kapitujve të librit Abrar e plotëson TILAWA.",
+  abNote:"Ndarjen e saktë sipas kapitujve të librit Abrar e plotëson TILAVA.",
   kH:"Këndi i Luanit",kHi:"Es-selamu alejkum! Unë jam Luani. Eja të mësojmë shkronjat me Kalemin, të udhëtojmë nëpër Sirë dhe të ngjyrosim bashkë!",kTeaser:"Lojërat „Harf për Harf“ dhe „Sira me Luanin“, fletë ngjyrosjeje dhe sure për të dëgjuar – për fëmijët.",kCta:"Hyr te Luani",
   colH:"Fletë ngjyrosjeje",colP:"Zgjidh një ngjyrë dhe prek një pjesë të vizatimit.",pages:["Luani","Libri në rahle","Fanari","Hëna dhe yjet"],clear:"Fillo nga e para",eraser:"Gomë",
   dlBlank:"Shkarko për printim",dlMine:"Shkarko vizatimin tim",dlNo:"Shkarkimi funksionon kur faqja hapet në Claude.",dlFail:"Shkarkimi nuk u krye.",
@@ -357,7 +357,7 @@ const K={sq:{nav:"Këndi i Luanit",perM:"në muaj · 6 orë",priceL:"Çmimi",pkg
   freeName:"Gratis starten",freeT:"Erste Stunde: Wir lernen gemeinsam die Fatiha – kostenlos.",prCta:"Erste Stunde anfragen",
   abH:"Wir lernen mit dem Abrar-Buch",abP:"Jede Stunde folgt dem Abrar-Buch Schritt für Schritt – von den ersten Buchstaben bis zum Lesen der Suren.",
   ab:[["Arabische Buchstaben","Das Alphabet: Form und Aussprache jedes Buchstabens."],["Vokalzeichen und Silben","Kurze Vokale, Sukūn, Schadda und Tanwīn."],["Buchstaben verbinden","Anfangs-, Mittel- und Endform – Wörter lesen."],["Kurze Suren","Suren lesen mit den Grundregeln des Tadschwīd."]],
-  abNote:"Die genaue Einteilung nach den Kapiteln des Abrar-Buchs ergänzt TILAWA.",
+  abNote:"Die genaue Einteilung nach den Kapiteln des Abrar-Buchs ergänzt TILAVA.",
   kH:"Luanis Ecke",kHi:"Es-selamu alaikum! Ich bin Luani. Komm, wir malen, spielen und lernen zusammen die Buchstaben!",kTeaser:"Malblätter, Spiele mit arabischen Buchstaben und Suren zum Anhören – für Kinder, mit Luani.",kCta:"Zu Luani",
   colH:"Malblätter",colP:"Wähle eine Farbe und tippe auf eine Fläche.",pages:["Luani","Das Buch auf dem Ständer","Die Laterne","Mond und Sterne"],clear:"Neu anfangen",eraser:"Radierer",
   dlBlank:"Zum Ausdrucken herunterladen",dlMine:"Mein Bild herunterladen",dlNo:"Herunterladen funktioniert, wenn die Seite in Claude geöffnet ist.",dlFail:"Herunterladen hat nicht geklappt.",
@@ -424,27 +424,27 @@ const pricing=()=>`<section class="band" style="padding-top:0"><div class="wrap"
 <div class="pcard free"><div class="lumini">${luani()}</div><h3>${k("freeName")}</h3><p>${k("freeT")}</p><a class="btn plumb" href="#book" data-free="1">${k("prCta")}</a></div></div></div></section>`;
 const abrar=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("abH")}</h2><p>${k("abP")}</p><div class="steps">${k("ab").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div><div class="bookbar"><div class="bkic"><svg viewBox="0 0 44 26" width="64"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg></div><div><h3>Libri „Mëso të lexosh Kuranin“</h3><p>Lexoje online faqe pas faqe – me shënime, theksime dhe zmadhim – ose shkarkoje si PDF.</p></div><div class="bkb"><a class="btn lime" href="buch/index.html">Lexo librin online</a><a class="btn ghost" href="buch/Meso-te-lexosh-Kuranin.pdf" target="_blank" rel="noopener">Shkarko PDF-në</a></div></div><p class="small" style="margin-top:10px">${k("abNote")}</p></div></section>`;
 const kidsTeaser=()=>`<section class="band" style="padding-top:0"><div class="wrap"><div class="kteaser"><div class="lumid">${luani()}</div><div><h2>${k("kH")}</h2><p>${k("kTeaser")}</p><a class="btn plumb" href="#kids">${k("kCta")}</a></div></div></div></section>`;
-async function dl(blank){CP.msg="";const name=blank?`tilawa-${CP.p+1}-ngjyros.svg`:`tilawa-${CP.p+1}-vizatimi-im.svg`;let data=blank?PAGES[CP.p]():document.querySelector("#canvas svg").outerHTML;
+async function dl(blank){CP.msg="";const name=blank?`tilava-${CP.p+1}-ngjyros.svg`:`tilava-${CP.p+1}-vizatimi-im.svg`;let data=blank?PAGES[CP.p]():document.querySelector("#canvas svg").outerHTML;
  try{await DL.save({filename:name,data})}catch(e){try{await DL.save({filename:name,data:new Blob([data],{type:"image/svg+xml"})})}catch(e2){CP.msg=k("dlFail");render()}}}
 /* ---------- strings ---------- */
 const L={
- sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Lexo Kuranin. Mëso gjuhë. Kupto Islamin.",sub:"Mëso me mësues të diplomuar në Medinë dhe në Kasim – kërko një orë mësimi te TILAWA.",cta1:"Kërko një orë mësimi",cta2:"Shiko kurset",
+ sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Lexo Kuranin. Mëso gjuhë. Kupto Islamin.",sub:"Mëso me mësues të diplomuar në Medinë dhe në Kasim – kërko një orë mësimi te TILAVA.",cta1:"Kërko një orë mësimi",cta2:"Shiko kurset",
   demo:"Faqe në ndërtim: kërkesat për orë ende nuk dërgohen.",coursesH:"Kurset tona",allC:"Të gjitha kurset",findFor:"Kërko një orë",howH:"Si funksionon",
-  steps:[["Zgjidh kursin","Kuran, texhvid, arabisht ose edukim islam – për fëmijë, të rinj dhe të rritur."],["Kërko një orë","Na trego kursin, gjuhën dhe kohën që të përshtatet – online ose me prani fizike."],["Ne e konfirmojmë","Ekipi i TILAWA të shkruan, cakton mësuesin dhe konfirmon orën."]],
-  teachH:"Mësuesit tanë",allT:"Të gjithë mësuesit",parH:"Për prindërit",parT:"Mësimin e japin themeluesit e TILAWA – Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj. Për nxënësit nën 18 vjeç, kërkesa dërgohet me të dhënat e prindit ose kujdestarit.",
+  steps:[["Zgjidh kursin","Kuran, texhvid, arabisht ose edukim islam – për fëmijë, të rinj dhe të rritur."],["Kërko një orë","Na trego kursin, gjuhën dhe kohën që të përshtatet – online ose me prani fizike."],["Ne e konfirmojmë","Ekipi i TILAVA të shkruan, cakton mësuesin dhe konfirmon orën."]],
+  teachH:"Mësuesit tanë",allT:"Të gjithë mësuesit",parH:"Për prindërit",parT:"Mësimin e japin themeluesit e TILAVA – Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj. Për nxënësit nën 18 vjeç, kërkesa dërgohet me të dhënat e prindit ose kujdestarit.",
   fSubj:"Lënda",fLang:"Gjuha e mësimit",fAge:"Mosha",fLvl:"Niveli",fAv:"Disponueshmëria",all:"Të gjitha",reset:"Pastro filtrat",count:n=>n+" mësues",empty:"Asnjë mësues nuk përputhet me këta filtra.",
   prof:"Shiko profilin",book:"Kërko një orë mësimi",back:"Kthehu te mësuesit",teaches:"Mëson",in:"në",or:"ose",and:"dhe",perH:"në orë",onReq:"Çmimi sipas marrëveshjes",sample:"Oraret: shembull",photo:"Foto së shpejti",
-  subjH:"Lëndët",langH:"Gjuhët e mësimit",ageH:"Për kë",lvlH:"Niveli",modeH:"Forma e mësimit",qualH:"Kualifikimet dhe përvoja",exp:n=>n+" vjet përvojë në mësimdhënie",qualNote:"Lëndët dhe oraret do t'i konfirmojë TILAWA.",
+  subjH:"Lëndët",langH:"Gjuhët e mësimit",ageH:"Për kë",lvlH:"Niveli",modeH:"Forma e mësimit",qualH:"Kualifikimet dhe përvoja",exp:n=>n+" vjet përvojë në mësimdhënie",qualNote:"Lëndët dhe oraret do t'i konfirmojë TILAVA.",
   timesH:"Termine të lira",priceH:"Çmimi për orë",noSlots:"Ende pa termine të publikuara – shkruaj një termin që të përshtatet.",sv:"Lënda = çfarë mësohet. Gjuha e mësimit = në cilën gjuhë shpjegohet mësimi.",
   bkH:"Kërko një orë mësimi",s1:"1. Kursi dhe koha",s2:"2. Të dhënat e kontaktit",teacher:"Mësuesi",course:"Kursi",choose:"Zgjidh",slotsL:"Termine të lira",wish:"Propozo një termin tjetër",date:"Data",time:"Ora",
   tz:(a,b)=>"Oraret janë sipas zonës kohore "+a+". Zona jote kohore: "+b+".",name:"Emri dhe mbiemri",email:"E-mail",msg:"Mesazh (opsional)",minor:"Nxënësi ose nxënësja është nën 18 vjeç",
   minorHint:"Për nxënësit nën 18 vjeç, kontaktojmë prindin ose kujdestarin.",child:"Emri i nxënësit ose nxënëses",pName:"Emri i prindit ose kujdestarit",pMail:"E-maili i prindit ose kujdestarit",send:"Dërgo kërkesën",sending:"Duke dërguar…",
   eReq:"Plotëso këtë fushë.",eMail:"Shkruaj një adresë e-maili të vlefshme.",eSlot:"Zgjidh një termin ose propozo një termin tjetër.",ePast:"Zgjidh një datë në të ardhmen.",eFix:"Kontrollo fushat e shënuara.",
-  okH:"Kërkesa u dërgua",okT:"Termini është i sigurt vetëm pasi ekipi i TILAWA ta konfirmojë. Përgjigjen do ta marrësh në adresën e e-mailit që dhe.",okLive:"Kërkesa u ruajt me statusin „e hapur“.",
+  okH:"Kërkesa u dërgua",okT:"Termini është i sigurt vetëm pasi ekipi i TILAVA ta konfirmojë. Përgjigjen do ta marrësh në adresën e e-mailit që dhe.",okLive:"Kërkesa u ruajt me statusin „e hapur“.",
   okDemo:"Faqja është ende në ndërtim: kjo kërkesë nuk u dërgua. Na kontakto drejtpërdrejt derisa formulari të jetë aktiv.",more:"Kthehu në ballinë",when:"Termini",contactP:"Kontakti",
-  aboutH:"Rreth nesh",aboutT:"TILAWA është një institut arsimor për Kuranin, gjuhët dhe edukimin islam. Mësojmë fëmijë, të rinj dhe të rritur – online dhe me prani fizike, në shqip dhe në gjermanisht.",
+  aboutH:"Rreth nesh",aboutT:"TILAVA është një institut arsimor për Kuranin, gjuhët dhe edukimin islam. Mësojmë fëmijë, të rinj dhe të rritur – online dhe me prani fizike, në shqip dhe në gjermanisht.",
   vals:[["Transparencë për prindërit","Çdo profil tregon lëndët, gjuhën e mësimit dhe grupmoshat."],["Mësim në gjuhën tënde","Shqip, gjermanisht ose arabisht – sipas mësuesit."],["Rezervim i qartë","Kërkesa → konfirmimi nga ekipi → ora e parë."]],
-  aboutNote:"Tekst hyrës – TILAWA mund ta përshtatë.",contH:"Kontakti",contT:"Ke pyetje për kurset ose për regjistrimin? Na shkruaj.",addr:"Adresa",phone:"Telefoni / WhatsApp",tbd:"do të plotësohet",contNote:"Të dhënat e kontaktit do t'i japë TILAWA.",
+  aboutNote:"Tekst hyrës – TILAVA mund ta përshtatë.",contH:"Kontakti",contT:"Ke pyetje për kurset ose për regjistrimin? Na shkruaj.",addr:"Adresa",phone:"Telefoni / WhatsApp",tbd:"do të plotësohet",contNote:"Të dhënat e kontaktit do t'i japë TILAVA.",
   teamL:"Për ekipin",teamH:"Paneli i ekipit",teamT:"Kërkesat e hyra. Konfirmo, refuzo ose propozo një termin tjetër.",noDb:"Paneli funksionon vetëm kur faqja hapet në Claude me backend.",teamEmpty:"Ende nuk ka kërkesa – ose nuk ke qasje si pjesë e ekipit.",loading:"Duke ngarkuar…",timeout:"Të dhënat nuk po arrihen tani.",
   st:{open:"e hapur",confirmed:"e konfirmuar",declined:"e refuzuar",alt:"termin alternativ"},conf:"Konfirmo",decl:"Refuzo",alt:"Propozo termin",parent:"Prindi/kujdestari",asked:"Kërkuar",proposed:"Propozuar",saveErr:"Ndryshimi nuk u ruajt.",wishShort:"termin i propozuar"},
  de:{nav:["Startseite","Kurse","Lehrkräfte","Luanis Ecke","Über uns","Kontakt"],tag:"Koran · Sprachen · Islamische Bildung",h1:"Koran lesen. Sprachen lernen. Den Islam verstehen.",sub:"Finde eine passende Lehrkraft und frage eine Unterrichtsstunde an.",cta1:"Lehrkraft finden",cta2:"Kurse ansehen",
@@ -453,17 +453,17 @@ const L={
   teachH:"Unsere Lehrkräfte",allT:"Alle Lehrkräfte",parH:"Für Eltern",parT:"Jedes Profil zeigt klar, was die Lehrkraft unterrichtet, in welcher Sprache und für welches Alter. Bei Kindern unter 18 läuft die Anfrage über die Kontaktdaten eines Elternteils oder einer erziehungsberechtigten Person.",
   fSubj:"Fach",fLang:"Unterrichtssprache",fAge:"Altersgruppe",fLvl:"Niveau",fAv:"Verfügbarkeit",all:"Alle",reset:"Filter zurücksetzen",count:n=>n+(n===1?" Lehrkraft":" Lehrkräfte"),empty:"Keine Lehrkraft passt zu diesen Filtern.",
   prof:"Profil ansehen",book:"Stunde anfragen",back:"Zurück zu den Lehrkräften",teaches:"Unterrichtet",in:"auf",or:"oder",and:"und",perH:"pro Stunde",onReq:"Preis auf Anfrage",sample:"Zeiten: Beispieldaten",photo:"Foto folgt",
-  subjH:"Fächer",langH:"Unterrichtssprachen",ageH:"Zielgruppen",lvlH:"Niveau",modeH:"Unterrichtsform",qualH:"Qualifikationen und Erfahrung",exp:n=>n+" Jahre Unterrichtserfahrung",qualNote:"Fächer und Zeiten bestätigt TILAWA noch.",
+  subjH:"Fächer",langH:"Unterrichtssprachen",ageH:"Zielgruppen",lvlH:"Niveau",modeH:"Unterrichtsform",qualH:"Qualifikationen und Erfahrung",exp:n=>n+" Jahre Unterrichtserfahrung",qualNote:"Fächer und Zeiten bestätigt TILAVA noch.",
   timesH:"Verfügbare Zeiten",priceH:"Preis pro Stunde",noSlots:"Noch keine Zeiten hinterlegt – gib einfach einen Wunschtermin an.",sv:"Fach = was gelernt wird. Unterrichtssprache = in welcher Sprache erklärt wird.",
   bkH:"Stunde anfragen",s1:"1. Lehrkraft, Kurs und Termin",s2:"2. Kontaktdaten",teacher:"Lehrkraft",course:"Kurs",choose:"Bitte wählen",slotsL:"Freie Termine",wish:"Wunschtermin angeben",date:"Datum",time:"Uhrzeit",
   tz:(a,b)=>"Zeiten in der Zeitzone "+a+". Deine Zeitzone: "+b+".",name:"Vor- und Nachname",email:"E-Mail",msg:"Nachricht (optional)",minor:"Die teilnehmende Person ist unter 18",
   minorHint:"Bei Kindern unter 18 kontaktieren wir ein Elternteil oder eine erziehungsberechtigte Person.",child:"Name des Kindes",pName:"Name des Elternteils / der erziehungsberechtigten Person",pMail:"E-Mail des Elternteils / der erziehungsberechtigten Person",send:"Anfrage senden",sending:"Wird gesendet…",
   eReq:"Bitte füll dieses Feld aus.",eMail:"Bitte gib eine gültige E-Mail-Adresse ein.",eSlot:"Bitte wähle einen Termin oder gib einen Wunschtermin an.",ePast:"Bitte wähle ein Datum in der Zukunft.",eFix:"Bitte prüf die markierten Felder.",
-  okH:"Anfrage gesendet",okT:"Der Termin steht erst fest, wenn das TILAWA-Team ihn bestätigt. Die Antwort kommt an die angegebene E-Mail-Adresse.",okLive:"Die Anfrage wurde mit dem Status „offen“ gespeichert. Zeiten sind weiterhin Beispieldaten.",
+  okH:"Anfrage gesendet",okT:"Der Termin steht erst fest, wenn das TILAVA-Team ihn bestätigt. Die Antwort kommt an die angegebene E-Mail-Adresse.",okLive:"Die Anfrage wurde mit dem Status „offen“ gespeichert. Zeiten sind weiterhin Beispieldaten.",
   okDemo:"Demo: Diese Anfrage wurde weder gesendet noch gespeichert. Zeiten sind Beispieldaten.",more:"Weitere Lehrkräfte ansehen",when:"Termin",contactP:"Kontakt",
-  aboutH:"Über uns",aboutT:"TILAWA ist ein Bildungsinstitut für Koranunterricht, Sprachen und islamische Bildung. Wir unterrichten Kinder, Jugendliche und Erwachsene – online und vor Ort, auf Albanisch und Deutsch.",
+  aboutH:"Über uns",aboutT:"TILAVA ist ein Bildungsinstitut für Koranunterricht, Sprachen und islamische Bildung. Wir unterrichten Kinder, Jugendliche und Erwachsene – online und vor Ort, auf Albanisch und Deutsch.",
   vals:[["Transparenz für Eltern","Jedes Profil zeigt Fächer, Unterrichtssprache und Altersgruppen."],["Unterricht in deiner Sprache","Albanisch, Deutsch oder Arabisch – je nach Lehrkraft."],["Klare Buchung","Anfrage → Bestätigung durch das Team → erste Stunde."]],
-  aboutNote:"Einstiegstext – TILAWA kann ihn anpassen.",contH:"Kontakt",contT:"Fragen zu Kursen oder zur Anmeldung? Schreib uns.",addr:"Adresse",phone:"Telefon / WhatsApp",tbd:"wird ergänzt",contNote:"Die Kontaktdaten liefert TILAWA nach.",
+  aboutNote:"Einstiegstext – TILAVA kann ihn anpassen.",contH:"Kontakt",contT:"Fragen zu Kursen oder zur Anmeldung? Schreib uns.",addr:"Adresse",phone:"Telefon / WhatsApp",tbd:"wird ergänzt",contNote:"Die Kontaktdaten liefert TILAVA nach.",
   teamL:"Für das Team",teamH:"Team-Bereich",teamT:"Eingegangene Anfragen. Bestätigen, ablehnen oder einen Ersatztermin vorschlagen.",noDb:"Der Bereich funktioniert nur, wenn die Seite in Claude mit Backend geöffnet ist.",teamEmpty:"Noch keine Anfragen – oder kein Team-Zugriff.",loading:"Wird geladen…",timeout:"Die Daten sind gerade nicht erreichbar.",
   st:{open:"offen",confirmed:"bestätigt",declined:"abgelehnt",alt:"Ersatztermin vorgeschlagen"},conf:"Bestätigen",decl:"Ablehnen",alt:"Ersatztermin vorschlagen",parent:"Elternteil",asked:"Angefragt",proposed:"Vorgeschlagen",saveErr:"Änderung nicht gespeichert.",wishShort:"Wunschtermin"}
 };
@@ -512,16 +512,16 @@ const HERO=`<svg viewBox="0 0 520 400" aria-hidden="true">
 </svg>`;
 const WAVE=`<svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60Q360 0 720 50T1440 30V100H0Z" fill="#C6B5FF"/><path d="M0 80Q400 30 760 72T1440 52V100H0Z" fill="#D7EF91"/><path d="M0 92Q420 60 780 90T1440 74V100H0Z" fill="var(--bg)"/></svg>`;
 const welcomeText=()=>`<section class="band wtext"><div class="wrap wtgrid"><div class="wtic" aria-hidden="true"><svg viewBox="0 0 44 26"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg></div><div>
-<h2>Mirë se vini në TILAWA!</h2>
-<p class="wlead">TILAWA lindi nga dëshira për t’u hapur familjeve shqiptare në diasporë një derë drejt mësimit të Kuranit dhe njohjes së Islamit, kudo që jetojnë.</p>
-<p>Me mbi dhjetë vjet përvojë në mësimdhënie, themeluesit tanë e sollën këtë mundësi online. Mësimet zhvillohen nga mësues e mësuese të kualifikuar, nën mbikëqyrjen e themeluesve të TILAWA-s.</p>
+<h2>Mirë se vini në TILAVA!</h2>
+<p class="wlead">TILAVA lindi nga dëshira për t’u hapur familjeve shqiptare në diasporë një derë drejt mësimit të Kuranit dhe njohjes së Islamit, kudo që jetojnë.</p>
+<p>Me mbi dhjetë vjet përvojë në mësimdhënie, themeluesit tanë e sollën këtë mundësi online. Mësimet zhvillohen nga mësues e mësuese të kualifikuar, nën mbikëqyrjen e themeluesve të TILAVA-s.</p>
 <p>Fëmijët dhe të rriturit mund të mësojnë të lexojnë e të recitojnë Kuranin, të ushtrojnë texhvidin dhe të njohin bazat e fesë islame. Mësimet ofrohen në shqip dhe përshtaten me nivelin e secilit.</p>
 <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px"><a class="btn lime" href="#book" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#teachers">Themeluesit</a></div></div></div></section>`;
 /* ---------- views ---------- */
 const courseCard=c=>`<button class="course" data-course="${c.id}"><span class="ic">${icon(c)}</span><h3>${nm(c.name)}</h3><p>${nm(c.desc)}</p><span class="go">${t("findFor")} →</span></button>`;
 const tCard=tc=>`<article class="fcard">${avatar(tc)}<div><span class="fbadge">Themelues</span><h3>${tc.n}</h3><ul class="fexp">${nm(tc.q).map(x=>`<li>${x}</li>`).join("")}</ul><p class="meta" style="margin:0">${nm(tc.bio)}</p></div></article>`;
 function vHome(){return `<section class="hero2"><img src="hero.webp" srcset="hero-1000.webp 1000w, hero.webp 1672w" sizes="100vw" width="1672" height="941" alt="Fëmijë që mësojnë me tablet, laptop dhe telefon; në tavolinë Kurani në rahle" fetchpriority="high">
-<div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAWA</b>·<span class="ar">تلاوة</span>·<span>${t("tag")}</span></div>
+<div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAVA</b>·<span class="ar">تلاوة</span>·<span>${t("tag")}</span></div>
 <h1>${t("h1")}</h1><p class="lead">${t("sub")}</p>
 <div class="cta"><a class="btn lime" href="#book">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
 ${welcomeText()}
@@ -534,10 +534,10 @@ ${kidsTeaser()}${quranTeaser()}
 function vCourses(){return `<section class="band"><div class="wrap"><h1>${t("coursesH")}</h1>${Object.keys(GROUPS).map(g=>{const cs=COURSES.filter(c=>c.group===g);return cs.length?`<h2 style="font-size:24px;margin-top:28px">${nm(GROUPS[g])}</h2><div class="grid">${cs.map(courseCard).join("")}</div>`:""}).join("")}</div></section>${abrar()}${pricing()}${kidsTeaser()}${quranTeaser()}`}
 function opts(map,sel,lab){return `<option value="">${t("all")}</option>`+Object.entries(map).map(([k,v])=>`<option value="${k}"${sel===k?" selected":""}>${lab?lab(k,v):nm(v)}</option>`).join("")}
 const founders=(page)=>`<section class="band"${page?"":' style="padding-top:0"'}><div class="wrap">${page?`<h1>${t("teachH")}</h1>`:""}<div class="fgrid">
-<figure class="fimg"><img src="img/themeluesit.webp" srcset="img/themeluesit-900.webp 900w, img/themeluesit.webp 1536w" sizes="(max-width:800px) 100vw, 55vw" width="1536" height="1024" alt="Hafiz Bajram Hasanaj (majtas) dhe Hoxhë Blerim Musliu (djathtas), themeluesit e TILAWA" loading="lazy"><figcaption><span>Hafiz Bajram Hasanaj</span><span>Hoxhë Blerim Musliu</span></figcaption></figure>
-<div><h2>Themeluesit e TILAWA-s</h2>
-<p>Me mbi dhjetë vjet përvojë në mësimdhënie dhe pas përfundimit të studimeve në Universitetin Islamik të Medinës dhe në Universitetin e Kasimit, Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj themeluan TILAWA-n për t’u hapur familjeve shqiptare në diasporë një derë drejt mësimit të Kuranit.</p>
-<p>Përmes TILAWA-s, fëmijët dhe të rriturit mund të mësojnë online leximin dhe recitimin e Kuranit, texhvidin dhe bazat e fesë islame, kudo që jetojnë.</p>
+<figure class="fimg"><img src="img/themeluesit.webp" srcset="img/themeluesit-900.webp 900w, img/themeluesit.webp 1536w" sizes="(max-width:800px) 100vw, 55vw" width="1536" height="1024" alt="Hafiz Bajram Hasanaj (majtas) dhe Hoxhë Blerim Musliu (djathtas), themeluesit e TILAVA" loading="lazy"><figcaption><span>Hafiz Bajram Hasanaj</span><span>Hoxhë Blerim Musliu</span></figcaption></figure>
+<div><h2>Themeluesit e TILAVA-s</h2>
+<p>Me mbi dhjetë vjet përvojë në mësimdhënie dhe pas përfundimit të studimeve në Universitetin Islamik të Medinës dhe në Universitetin e Kasimit, Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj themeluan TILAVA-n për t’u hapur familjeve shqiptare në diasporë një derë drejt mësimit të Kuranit.</p>
+<p>Përmes TILAVA-s, fëmijët dhe të rriturit mund të mësojnë online leximin dhe recitimin e Kuranit, texhvidin dhe bazat e fesë islame, kudo që jetojnë.</p>
 <ul class="fexp"><li><b>Hoxhë Blerim Musliu</b> – i diplomuar në Universitetin Islamik të Medinës</li><li><b>Hafiz Bajram Hasanaj</b> – hafiz i Kuranit dhe i diplomuar në Universitetin e Kasimit</li></ul>
 <a class="btn lime" href="#book">${t("cta1")}</a></div></div></div></section>`;
 function vTeachers(){return founders(1)}
@@ -545,7 +545,7 @@ function newBK(course){return {pkg:PKG0||"sub",course:C(course)?course:COURSES[0
 const er=k=>ERR[k]?`<span class="err" id="e-${k}">${ERR[k]}</span>`:"";
 const inp=(k,label,type,req)=>`<label class="f">${label}${req?" *":""}<input id="i-${k}" data-b="${k}" type="${type||"text"}" value="${esc(BK[k])}"${ERR[k]?` aria-invalid="true" aria-describedby="e-${k}"`:""}${type==="email"?' autocomplete="email"':""}>${er(k)}</label>`;
 function vBook(){
- return `<section class="band"><div class="wrap"><a class="back" href="#home">← Ballina</a><h1>${t("bkH")}</h1><p>Na trego çfarë dëshiron të mësosh dhe kur të përshtatet. Ekipi i TILAWA të shkruan dhe konfirmon orën.</p>
+ return `<section class="band"><div class="wrap"><a class="back" href="#home">← Ballina</a><h1>${t("bkH")}</h1><p>Na trego çfarë dëshiron të mësosh dhe kur të përshtatet. Ekipi i TILAVA të shkruan dhe konfirmon orën.</p>
 <form class="bk" id="bk" novalidate>
 <div class="sec"><h3>${t("s1")}</h3>
 <label class="f">${k("pkgL")}<select data-b="pkg">${Object.entries(PKGS).map(([kk,v])=>`<option value="${kk}"${BK.pkg===kk?" selected":""}>${v[lang]}</option>`).join("")}</select></label>
@@ -600,7 +600,7 @@ function render(){
  else{cur=ROUTES.includes(h)?h:"home";html={home:vHome,courses:vCourses,teachers:vTeachers,kids:vKids,about:vAbout,contact:vContact}[cur]()}
  app.innerHTML=html;
  document.getElementById("nav").innerHTML=ROUTES.map((r,i)=>`<a href="#${r}"${r===cur?' aria-current="page"':""}>${t("nav")[i]}</a>`).join("");
- document.getElementById("foot").innerHTML=`<div class="band wrap"><div><a class="logo" href="#home"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilawa<span class="ar" style="color:#C6B5FF">تلاوة</span></a><p class="small" style="color:#cfc4e0;margin-top:8px">${t("tag")}</p></div>
+ document.getElementById("foot").innerHTML=`<div class="band wrap"><div><a class="logo" href="#home"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilava<span class="ar" style="color:#C6B5FF">تلاوة</span></a><p class="small" style="color:#cfc4e0;margin-top:8px">${t("tag")}</p></div>
 <nav>${ROUTES.map((r,i)=>`<a href="#${r}">${t("nav")[i]}</a>`).join("")}<a href="buch/index.html">Libri online</a><a href="suren/index.html">Suret e shkurtra</a><a href="urkunde/index.html">Krijo certifikatë</a><a href="#team">${t("teamL")}</a></nav><p class="small" style="color:#cfc4e0;width:100%;margin:0">${t("demo")}</p></div>`;
  if(h!==lastRoute){window.scrollTo(0,0);lastRoute=h}
  if(h==="team"&&db&&TEAM===null)loadTeam();

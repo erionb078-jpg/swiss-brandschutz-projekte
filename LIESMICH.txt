@@ -1,16 +1,16 @@
-TILAWA · تلاوة – Website (nur Albanisch)
+TILAVA · تلاوة – Website (nur Albanisch)
 
 Lehrkräfte: Hoxhë Blerim Musliu (Medina), Hafiz Bajram Hasanaj (Qassim)
 Abo: 29,99 € / Monat für 6 Stunden; erste Stunde (Fatiha) gratis. Lernen mit dem Abrar-Buch.
 Maskottchen: Luani (Löwe), Schreibstift Kalemi.
 
 index.html        Startseite, Kurse, Lehrkräfte, Buchung, Këndi i Luanit, Über uns, Kontakt, Team-Bereich
-harf/             Spiel „Harf për Harf“ (aus Abrar übernommen, TILAWA-Farben)
+harf/             Spiel „Harf për Harf“ (aus Abrar übernommen, TILAVA-Farben)
 sira/             Spiel „Sira me Luanin“ (aus „Sira me Fufflin“)
 buch/             Abrar-Buch „Mëso të lexosh Kuranin“ online lesen (Notizen, Markieren, Zoom) + PDF
 suren/            20 kurze Suren in 5 Stufen, Rezitation Minshawi (cdn.islamic.network), Text von api.alquran.cloud
 urkunde/          Zertifikat erstellen und drucken
-printo/           9 Druckvorlagen (PDF) + Vorschaubilder; erzeugt mit den Abrar-Generatoren (Zweig abrar-quellen), auf Luani/TILAWA umgestellt
+printo/           9 Druckvorlagen (PDF) + Vorschaubilder; erzeugt mit den Abrar-Generatoren (Zweig abrar-quellen), auf Luani/TILAVA umgestellt
 
 Hinweis: Buchungsanfragen werden nur in der Claude-Version gespeichert. Auf Vercel laufen sie als Demo,
 bis ein Formular-Backend (z. B. Vercel-Funktion + E-Mail oder Datenbank) angebunden ist.
