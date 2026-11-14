@@ -236,6 +236,7 @@ form.bk{max-width:720px}
 .wtic{width:clamp(72px,10vw,120px);aspect-ratio:1;border-radius:28px;background:var(--plum);display:grid;place-items:center}.wtic svg{width:70%}
 .wtext h2{margin-bottom:12px}.wtext p{font-size:17px}.wtext .wlead{font-size:clamp(19px,2vw,22px);font-weight:500}
 @media(max-width:600px){.wtgrid{grid-template-columns:1fr}.wtic{width:64px;border-radius:18px}}
+.motto{margin-top:14px;max-width:420px;display:grid;gap:4px}.motto>span{font-size:13px;font-weight:700;color:var(--lav)}.motto .ar{color:var(--lime)}.motto b{font-size:20px;line-height:1.2;color:var(--cream)}.motto p{margin:0;font-size:14px;color:#cfc4e0}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -601,7 +602,7 @@ function render(){
  else{cur=ROUTES.includes(h)?h:"home";html={home:vHome,courses:vCourses,teachers:vTeachers,kids:vKids,about:vAbout,contact:vContact}[cur]()}
  app.innerHTML=html;
  document.getElementById("nav").innerHTML=ROUTES.map((r,i)=>`<a href="#${r}"${r===cur?' aria-current="page"':""}>${t("nav")[i]}</a>`).join("");
- document.getElementById("foot").innerHTML=`<div class="band wrap"><div><a class="logo" href="#home"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilava<span class="ar" style="color:#C6B5FF">تلاوة</span></a><p class="small" style="color:#cfc4e0;margin-top:8px">${t("tag")}</p></div>
+ document.getElementById("foot").innerHTML=`<div class="band wrap"><div><a class="logo" href="#home"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilava<span class="ar" style="color:#C6B5FF">تلاوة</span></a><div class="motto"><span>TILAVA | <span class="ar">تلاوة</span></span><b>Mëso Kuranin, kudo që jeton.</b><p>Kurse online të Kuranit, texhvidit, gjuhës arabe dhe edukimit islam, me mësues të kualifikuar nën mbikëqyrjen e themeluesve.</p></div></div>
 <nav>${ROUTES.map((r,i)=>`<a href="#${r}">${t("nav")[i]}</a>`).join("")}<a href="buch/index.html">Libri online</a><a href="suren/index.html">Suret e shkurtra</a><a href="urkunde/index.html">Krijo certifikatë</a><a href="#team">${t("teamL")}</a></nav><p class="small" style="color:#cfc4e0;width:100%;margin:0">${t("demo")}</p></div>`;
  if(h!==lastRoute){window.scrollTo(0,0);lastRoute=h}
  if(h==="team"&&db&&TEAM===null)loadTeam();
