@@ -240,6 +240,9 @@ form.bk{max-width:720px}
 .abgrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));margin-top:24px}.abgrid .box{margin:0}
 .ptab{width:100%;border-collapse:collapse;margin:6px 0 14px;font-size:17px}.ptab th{text-align:left;font-size:13px;font-weight:500;color:var(--lav);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.2)}.ptab th:last-child,.ptab td:last-child{text-align:right;white-space:nowrap}.ptab td:nth-child(2){font-size:14px;color:#cfc4e0;padding:0 10px}.ptab th:nth-child(2){padding:6px 10px}@media(max-width:480px){.ptab th:nth-child(2),.ptab td:nth-child(2){display:none}}.ptab td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}.ptab td b{font-size:22px;color:var(--lime)}
 .pcard.main p{color:#e8e0f5}.pside{display:grid;gap:16px}.pcard.fam{background:var(--lav);color:var(--plum)}.pcard.fam h3{margin-top:0}.pcard.fam p{margin:0 0 8px}.pcard.fam .ex{margin:0;background:rgba(255,255,255,.55);border-radius:12px;padding:8px 12px}
+.sale{display:flex;align-items:center;gap:10px;background:#E5383B;color:#fff;border-radius:14px;padding:10px 14px;margin:4px 0 16px;font-weight:600;box-shadow:0 4px 0 #a8202a;transform:rotate(-1deg)}
+.sale b{font-weight:800}.sale i{flex:none;width:10px;height:10px;border-radius:50%;background:#fff}
+@media(prefers-reduced-motion:no-preference){.sale i{animation:pulse 1.2s ease-in-out infinite}@keyframes pulse{50%{opacity:.25;transform:scale(.7)}}}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -432,6 +435,7 @@ const pricing=()=>`<section class="band" style="padding-top:0"><div class="wrap"
 <tr><td>Fëmijë (6–12 vjeç)</td><td>Mësim individual</td><td><b>39,99 €</b></td></tr>
 <tr><td>Të rinj (13–17 vjeç)</td><td>Mësim individual</td><td><b>44,99 €</b></td></tr>
 <tr><td>Të rritur (18 vjeç e lart)</td><td>Mësim individual</td><td><b>49,99 €</b></td></tr></tbody></table>
+<div class="sale" role="note"><i aria-hidden="true"></i><span>Vendet janë të kufizuara. <b>Rezervo vendin tënd!</b></span></div>
 <a class="btn lime" href="#book"><b>Zgjidh abonimin tënd</b></a></div>
 <div class="pside"><div class="pcard fam"><h3>Zbritje familjare për fëmijët (6–12 vjeç)</h3><p>Nëse dy fëmijë të së njëjtës familje kanë nivel të përafërt, mund të mësojnë së bashku me të njëjtin mësues. Abonimi i fëmijës së parë kushton <b>39,99 €</b>, ndërsa fëmija i dytë merr pjesë në të njëjtat seanca për <b>9,99 € shtesë në muaj</b>. Seanca zgjat <b>25 minuta gjithsej për të dy fëmijët</b>. Çmimi për dy fëmijë është <b>49,98 € në muaj</b>.</p></div>
 <div class="pcard free"><div class="lumini">${luani()}</div><h3>${k("freeName")}</h3><p>${k("freeT")}</p><a class="btn plumb" href="#book" data-free="1">${k("prCta")}</a></div></div></div></div></section>`;
