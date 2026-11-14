@@ -232,6 +232,10 @@ form.bk{max-width:720px}
 .fimg figcaption{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-around;gap:8px;padding:10px 12px 12px;color:var(--cream);font-weight:700;font-size:clamp(12px,1.6vw,15px);text-align:center}
 .fimg figcaption span{background:rgba(42,32,59,.72);border-radius:999px;padding:4px 12px}
 .fgrid .fbadge{margin-bottom:8px}.fgrid h2{margin-top:6px}
+.wtgrid{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(18px,4vw,48px);align-items:start;max-width:980px}
+.wtic{width:clamp(72px,10vw,120px);aspect-ratio:1;border-radius:28px;background:var(--plum);display:grid;place-items:center}.wtic svg{width:70%}
+.wtext h2{margin-bottom:12px}.wtext p{font-size:17px}.wtext .wlead{font-size:clamp(19px,2vw,22px);font-weight:500}
+@media(max-width:600px){.wtgrid{grid-template-columns:1fr}.wtic{width:64px;border-radius:18px}}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -510,6 +514,12 @@ const WAVE=`<svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" 
 /* ---------- Willkommensvideo (YouTube, lädt erst nach Klick) ---------- */
 const YT="R0wS_VozjTI";
 const ytBox=()=>`<button class="yt" data-yt="${YT}" aria-label="Luaj videon e mirëseardhjes"><img src="https://i.ytimg.com/vi/${YT}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="ytp"><svg viewBox="0 0 68 48" width="68"><path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6C4 2.3 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 2.5 5.4 5.4 6.2C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c2.9-.8 4.6-3.3 5.4-6.2C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#2A203B"/><path d="M45 24 27 14v20" fill="#D7EF91"/></svg></span></button>`;
+const welcomeText=()=>`<section class="band wtext"><div class="wrap wtgrid"><div class="wtic" aria-hidden="true"><svg viewBox="0 0 44 26"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg></div><div>
+<h2>Mirë se vini në TILAWA!</h2>
+<p class="wlead">TILAWA lindi nga dëshira për t’u hapur familjeve shqiptare në diasporë një derë drejt mësimit të Kuranit dhe njohjes së Islamit, kudo që jetojnë.</p>
+<p>Me mbi dhjetë vjet përvojë në mësimdhënie, themeluesit tanë e sollën këtë mundësi online. Mësimet zhvillohen nga mësues e mësuese të kualifikuar, nën mbikëqyrjen e themeluesve të TILAWA-s.</p>
+<p>Fëmijët dhe të rriturit mund të mësojnë të lexojnë e të recitojnë Kuranin, të ushtrojnë texhvidin dhe të njohin bazat e fesë islame. Mësimet ofrohen në shqip dhe përshtaten me nivelin e secilit.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:6px"><a class="btn lime" href="#book" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#teachers">Themeluesit</a></div></div></div></section>`;
 const welcome=()=>`<section class="band welcome"><div class="wrap wgrid"><div class="wvid">${ytBox()}</div><div><span class="samp">Video</span><h2>Mirë se vini në TILAWA</h2><p>Një përshëndetje nga Hafiz Bajram Hasanaj për prindërit dhe nxënësit – njihuni me mësuesin para orës së parë.</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#book" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#teachers">Mësuesit tanë</a></div></div></div></section>`;
 /* ---------- views ---------- */
 const courseCard=c=>`<button class="course" data-course="${c.id}"><span class="ic">${icon(c)}</span><h3>${nm(c.name)}</h3><p>${nm(c.desc)}</p><span class="go">${t("findFor")} →</span></button>`;
@@ -518,7 +528,7 @@ function vHome(){return `<section class="hero2"><img src="hero.webp" srcset="her
 <div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAWA</b>·<span class="ar">تلاوة</span>·<span>${t("tag")}</span></div>
 <h1>${t("h1")}</h1><p class="lead">${t("sub")}</p>
 <div class="cta"><a class="btn lime" href="#book">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
-${welcome()}
+${welcomeText()}
 <section class="band"><div class="wrap"><div class="head"><h2>${t("coursesH")}</h2><a class="btn ghost sm" href="#courses">${t("allC")}</a></div><div class="grid">${COURSES.map(courseCard).join("")}</div></div></section>
 ${games(1)}
 <section class="band" style="padding-top:0"><div class="wrap"><h2>${t("howH")}</h2><div class="steps">${t("steps").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div></div></section>
