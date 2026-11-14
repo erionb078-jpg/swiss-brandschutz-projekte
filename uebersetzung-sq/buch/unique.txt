@@ -1,0 +1,425 @@
+0	[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111]	Abrar Quranreading - Step by Step
+1	[2]	In the name of Allah, Most Gracious, Most Merciful!
+2	[2]	This free PDF can be forwarded and used by everyone in sha Allah
+3	[2]	It is NOT permitted to sell it, printed or as a softcopy.
+4	[3]	Impressum
+5	[3]	© Abrar, 2026
+6	[3]	3rd Edition
+7	[3]	Quranreading – Step by Step
+8	[3]	This publication is a free e-book provided by Abrar Online Ltd. It may be used and shared in the PDF version without the prior written permission of the publisher. It can be printed with permission of the author or for private use. The book may not be sold in any form – printed or as an e-book.
+9	[3]	Abrar Online Ltd. Solihull, Birmingham United Kingdom info@abrarlearning.com www.abrarlearning.com
+10	[3]	Facebook: @abrarlearning
+11	[3]	Instagram: @abrarlearning
+12	[3]	Youtube: @abrarlearning
+13	[3]	In Cooperation with:
+14	[3]	Circles of Light, Florida, USA
+15	[3]	Picture rights © Shutterstock
+16	[4]	Content
+17	[4]	Introduction ..................................................................................................................................................................... 5
+18	[4]	The Letters of the Arabic Alphabet with English transcription ................................................................................ 6
+19	[4]	The Letters of the Arabic Alphabet with Arabic Names ........................................................................................... 7
+20	[4]	The letters in mixed order ............................................................................................................................................. 8
+21	[4]	The forms of the letters .............................................................................................................................................. 10
+22	[4]	The Numbers ................................................................................................................................................................ 14
+23	[4]	Now play a game with your teacher: ......................................................................................................................... 14
+24	[4]	Fatha .............................................................................................................................................................................. 15
+25	[4]	Kasra .............................................................................................................................................................................. 24
+26	[4]	Dhamma ........................................................................................................................................................................ 31
+27	[4]	Sukoon .......................................................................................................................................................................... 38
+28	[4]	Qalqala .......................................................................................................................................................................... 40
+29	[4]	Calligraphy-Connected Letters .................................................................................................................................. 43
+30	[4]	Madd Alif ...................................................................................................................................................................... 46
+31	[4]	Madd Ya ........................................................................................................................................................................ 51
+32	[4]	Madd Waw ................................................................................................................................................................... 55
+33	[4]	Shadda ........................................................................................................................................................................... 62
+34	[4]	Tanween Fatha ............................................................................................................................................................. 66
+35	[4]	Tanween Dhamma ....................................................................................................................................................... 69
+36	[4]	Tanween Kasra ............................................................................................................................................................. 72
+37	[4]	Hamzatul Wasl ............................................................................................................................................................. 76
+38	[4]	Heavy and light letters ................................................................................................................................................ 81
+39	[4]	Lam Qamariyah (The Moon-Lam) .............................................................................................................................. 86
+40	[4]	Lam Shamsiyah (The Sun-Lam) ................................................................................................................................... 87
+41	[4]	The rules of Nun and Tanween .................................................................................................................................. 90
+42	[4]	The rules of Meem Sakinah ........................................................................................................................................ 96
+43	[4]	Other Idgham Letters .................................................................................................................................................. 97
+44	[4]	Stopping ........................................................................................................................................................................ 98
+45	[4]	Letters above each other ............................................................................................................................................ 99
+46	[4]	Sifr (round and oval zero) .......................................................................................................................................... 100
+47	[4]	Longer Mudud ............................................................................................................................................................ 102
+48	[4]	Huruf Muqataa ........................................................................................................................................................... 104
+49	[4]	Stopping Signs ............................................................................................................................................................ 105
+50	[4]	Iltiqa As-Sakinayn ....................................................................................................................................................... 107
+51	[5]	Introduction All praise is due to Allah, Lord of the worlds. I testify that there is no God worthy of worship except for Allah and that Mohammed (peace and blessings upon him) is the final messenger of Allah.
+52	[5]	This book is to learn Quran reading in the reading style
+53	[5]	Hafs an Asim (By the way of Ash-Shatibiyah)
+54	[5]	which is often only called “Hafs”. The writing is like in the Medina edition. This Reading-Style and this print are the most common worldwide and the most common for non-Arabs to learn.
+55	[5]	There are several common books to learn the reading of the noble Quran. Despite this, we at Abrar have decided to make a new one. The reasons for this are the following:
+56	[5]	Many of those books are completely in Arabic. This makes it difficult for the foreign reader to
+57	[5]	navigate through the book and even more difficult to understand the explanation of the rules. The reader often does not even know what the reading text is or what the explanation is.
+58	[5]	Many of the common Qaida books have mistakes or are in illogical order.
+59	[5]	The writing of many common Qaida books is not the writing of the Medina edition of the
+60	[5]	Quran Book (Mushaf). This makes it difficult for the student to switch from the Qaida to the Quran.
+61	[5]	The use of such books is often not free. This is why we make this book free of charge, and
+62	[5]	the PDF may be used and shared freely. For those who like to have printed books, we plan to have printed copies for sale in sha Allah, so keep an eye out for those. You can print the book out for yourself or for your students if you wish.
+63	[5]	For the student: You should take care not to write English letters in the book in order to speed up the reading and remember the pronunciation. Years of experience as teachers have shown us that students who do this are not making progress in reading and need twice as long as others to practise the same content.
+64	[5]	For the teacher: If you find mistakes in this book while working with it, we are more than happy to hear about your suggestions and corrections. We will, in sha Allah, regularly update this book and work with your constructive feedback. Please message your suggestions/corrections to info@abrarlearning.com.
+65	[5]	Even if this book has English explanations, those are only meant to help, and it is still necessary to read this book with a qualified teacher.
+66	[5]	May Allah, the Almighty, accept from us and from all Readers and Teachers. May this book be useful for many generations of Muslims. May He, Exalted is He, reunite us in His highest paradise and forgive our sins, mistakes and shortcomings.
+67	[5]	Andrea Amina A. Mühlbauer (M.A., MSc) for Abrar Online Ltd.
+68	[6]	The Letters of the Arabic Alphabet with English transcription1
+69	[6]	ṭā (thā) ṯā bā alif2 hamza
+70	[6]	ḫā (khā) ḥā ǧīm
+71	[6]	zāy/zā rā ḏāl (dhāl) dāl
+72	[6]	ḍād ṣād shīn sīn
+73	[6]	ġain ʿain ẓā ṭā
+74	[6]	lām kāf qāf fā
+75	[6]	yā hā wāw nūn mīm
+76	[6]	1 This transcription into the Latin alphabet is taken from the DIN-Norm of DMG (Deutsche Morgenländische Gesellschaft 1935), adopted by the International Convention of Orientalist Scholars in Rome (find in brackets common popular transcription forms) 2 The first letter of the Alphabet is either Alif or Hamza. Alif itself has no pronunciation and is only used to prolong letters.
+77	[7]	The Letters of the Arabic Alphabet with Arabic Names Letters in blue are read heavily by raising the backside of the tongue to the roof of the mouth.
+78	[7]	* Letter ⟪AR⟫ is special. It is mostly a heavy letter but sometimes it is read lightly. We will learn these exceptions as we proceed through the book in sha Allah.
+79	[8]	The letters in mixed order
+80	[8]	Say the names of the letters:
+81	[8]	Tip: Practise at home by writing letters on cards, mixing them and reading them aloud!
+82	[9, 13, 20, 29, 36, 42, 45, 50, 61, 65, 75, 80, 83, 89, 95, 108]	Exercise or Homework Page
+83	[9]	Exercise 1: Write the letters of the Alphabet:
+84	[10]	The forms of the letters The Arabic letters are written in different forms, depending on whether they stand at the beginning, in the middle, or at the end of the word or if they stand alone. So each letter has four different forms. We already learned the form of the letter standing alone. Here is how they look in other positions of the word.
+85	[10]	Take care! Letters in purple do not connect with the next letter! In the middle of the word, they look like they do at the end of the word. The first letter, Hamza is very special. When standing on its own, it doesn’t connect to any side.
+86	[10]	End Middle Beginning Alone ⟪AR⟫ ⟪AR⟫ ⟪AR⟫ ⟪AR⟫
+87	[12]	The letters in different forms
+88	[12]	Practise recognising the letters quickly, even if they appear in their various shapes:
+89	[13]	Exercise 2: Practise writing the letters in the different forms by tracing them. Read them aloud as you trace:
+90	[13]	Which ones do not connect? Colour the fields with the non-connecting letters!
+91	[14]	The Numbers
+92	[14]	The Arabic Numbers are 1 2 3 4 5 6 7 8 9 0
+93	[14]	However, in the Quran Mushaf it is common to find the Indian Numbers: ⟪AR⟫ This is why we need to study them in order to read the Page- and Ayah-Numbers in the Quran.
+94	[14]	Exercise 3: Write the Indian Numbers to practise them:
+95	[14]	Read the Numbers:
+96	[14]	Now play a game with your teacher:
+97	[14]	Your teacher tells you the number of a Quran page. You find this page in an all-Arabic Mushaf (Quran print) and tell your teacher the first letter that is written on that page. How many can you get right?
+98	[15]	Fatha
+99	[15]	The Arabic language has 3 short vowels (Harakāt): Fatha (⟪AR⟫), Kasra (⟪AR⟫) and Dhamma (⟪AR⟫).
+100	[15]	“Haraka” means “movement” because it shows how the lips are moved after the letter. Make sure you practise the movements correctly because it will make your recitation more correct and beautiful.
+101	[15]	“Fatha” means “opening”. For the Fatha, you open your mouth wide. When the Fatha is written over the letter, it is pronounced with a short “a” at the end. This “a” is pronounced lightly (comparable to the word “hat”) if it is standing after a light letter and heavily (similar to the word “saw” in American English or the word “car” in British English) if it is following a heavy letter. Make sure that your tongue is relaxed and flat after the light letters and your tongue is raised to the roof of the mouth after the heavy letters.
+102	[15]	* Letter ⟪AR⟫ with Fatha is heavy.
+103	[16]	Read the letters with Fatha:
+104	[17]	Read the Letter-combinations with Fatha
+105	[18]	Practise to read the words with Fatha:
+106	[19]	Read the words and Letter-combinations with Fatha
+107	[20]	Exercise 4: Explain in your own words what “Fatha” means:
+108	[20]	Exercise 5: What is the translation of the Arabic word Harakah (⟪AR⟫)? Why is it called Harakah?
+109	[20]	To check your answers, you can look at page 15!
+110	[20]	Exercise 6: Let us now write some Fatha words for one line each to practise the forms of the letters further. If you can, try to say them aloud as you write:
+111	[22]	Read the sentences with Fatha:
+112	[23]	Compare the blue letters and make the difference clear:
+113	[23]	Tip: Practise the Fatha pages until you are fluent in reading them; only then continue to Kasra.
+114	[24]	Kasra
+115	[24]	Kasra (⟪AR⟫) is the second Haraka in the Arabic language. When it is written under a letter, it is pronounced like a short “i” after the letter, like in the word “bit”.
+116	[24]	“Kasra” means “breaking”. For Kasra, you lower your jaw and raise the middle of the tongue. Kasra is not pronounced by “smiling”.
+117	[24]	* Letter ⟪AR⟫ with Kasra is light.
+118	[25]	Read the Letter-combinations with Kasra
+119	[26, 27]	Read the Letter-combinations with Fatha and Kasra
+120	[28]	Practise reading the words with Fatha and Kasra:
+121	[29]	Exercise 7: Explain in your own words what “Kasra” means:
+122	[29]	Exercise 8: What is the tongue doing for the Fatha, and what does it do for the Kasra?
+123	[29]	Exercise 9: Let us now write some mixed Fatha and Kasra words for one line each to practise the forms of the letters further. If you can, try to say them aloud as you write:
+124	[30]	Read the words with Fatha and Kasra
+125	[31]	Dhamma
+126	[31]	Dhamma (⟪AR⟫) is the third and last Haraka in the Arabic language. When it is written over a letter, it is pronounced like a short “oo” after the letter, like in the word “put” or “book”.
+127	[31]	“Dhamma” means “rounding”. For Dhamma, you make your lips round like a circle. In the middle, you leave a round space which is big enough that your little pinkie finger would fit inside.
+128	[31]	* Letter ⟪AR⟫ with Dhamma is heavy.
+129	[32]	Read the Letter-combinations with Dhamma
+130	[33, 34]	Read the Letter-combinations with Fatha, Kasra and Dhamma
+131	[35]	Practise reading the words with Dhamma, Fatha and Kasra
+132	[36]	Exercise 10: Explain in your own words what “Dhamma” means:
+133	[36]	Exercise 11: What are the 3 Harakāt, and what is the difference between them?
+134	[36]	Exercise 12: Let us now write some mixed Harakāt words for one line each to practise the forms of the letters and Harakāt further. If you can, try to say them aloud as you write:
+135	[37]	Read the words and sentences with Fatha, Kasra and Dhamma
+136	[38]	Sukoon
+137	[38]	A letter may come without Haraka. In this case, it always has a Sukoon (no matter if Sukoon is written or not). If a letter has Sukoon, we call it a “sakin (silent) letter”. This means that this letter comes without a vowel. In handwriting, we write the Sukoon like a circle. Take care: The round circle in the Quran is not a Sukoon! On this page, you see how Sukoon is written in the Quran.
+138	[38]	Keep in Mind: In High Arabic, we can never start reading with a Sukoon! This is why we will practise reading the Sukoon letters with a voweled letter in front.
+139	[38]	The letters which are left out are read in a special way. We will practise them later on!
+140	[38]	Be careful with the letter ⟪AR⟫! When it is sakin, it is read in a special way too: With Istitala (lengthening) by trapping the air in the mouth with the tongue and then letting the air push the tongue slightly forward. Practise this with your teacher. Letter ⟪AR⟫ is pronounced heavy when it is sakin AFTER a fatha!
+141	[39]	Read the Letter-combinations and words with short vowels and Sukoon.
+142	[40]	Qalqala
+143	[40]	There are some letters which are pronounced in a special way when they are sakin. Because of their “Shidda” (strength/closure), they cannot be heard when we read them with a normal Sukoon. This is why we give them Qalqala: It’s a bouncing sound of opening the Articulation point after closing it. We open the mouth and say a kind of undefined vowel after the letter without forming the lips in a certain shape. The Qalqala letters can be memorised by keeping this sentence in mind:
+144	[40, 42]	Qalqala Letters:
+145	[40]	(Be strong, Qutb)
+146	[40]	Practise the Qalqala-Words:
+147	[40]	Tip: Qalqala letters have Qalqala only when they are sakin (or when we stop on them – we will learn this later, in sha Allah) If they are read with a haraka, we cannot hear any Qalqala!
+148	[41]	Read the words with Sukoon and take care of which have Qalqala and which do not
+149	[42]	Exercise 13: Trace the words, draw the sukoon over all the empty letters. Then mark all the Qalqala letters in colour! Practise reading the words aloud!
+150	[42]	Exercise 14: What is the sentence to remember all Qalqala letters?
+151	[42]	How do you pronounce them?
+152	[43]	Calligraphy-Connected Letters
+153	[43]	Sometimes we still find letters which look unfamiliar to us.
+154	[43]	This is because if a “hook-Letter” ⟪AR⟫ meets a “wave-letter“ ⟪AR⟫, they become connected and merge with each other for reasons of calligraphy. Also, some other letters merge, e.g. ⟪AR⟫ and ⟪AR⟫. Practise recognising them:
+155	[43]	* This is used only in other Quran scripts; therefore, the change of fonts.
+156	[44]	Practise everything we learned so far by reading these words from the Quran
+157	[44]	Tip: Only go to the next chapter if you can read this page fluently!
+158	[45]	Exercise 15: Now, without looking back: What are these letter combinations? Write them separated as in the example
+159	[46]	Madd Alif
+160	[46]	We are going to start the chapter of Mudud now. Keep these words in Mind:
+161	[46]	Madd (Lengthening)
+162	[46]	Mudud (Lengthenings)
+163	[46]	There are three lengthening Letters in the Arabic Language: Alif (⟪AR⟫), Ya (⟪AR⟫) and Waw (⟪AR⟫). They prolong the three different Harakāt. Alif is used to prolong a Fatha. We say: Fatha is the daughter of Alif. Fatha and Alif fit together – If Alif is preceded by Fatha, we speak a long “a”– light after a light letter and heavy after a heavy letter! You read the following letters double as long as you would read a Letter with Fatha:
+164	[46]	When Alif comes after a Lam, they become the letter “Lam-Alif”, so Alif is written diagonally into the Lam.
+165	[47]	Practise reading the words with Madd Alif. Make sure you make it twice as long as a Haraka:
+166	[48]	Baby Madd Alif
+167	[48]	Alif Madd can also be written as a “Baby-Madd”. Then it is just read exactly like a normal Alif Madd. The reason why the scholars wrote it like this is that it was not written but spoken in the original word. So the scholars added it in order for us to know that it is spoken with Alif.
+168	[49]	Special ways to write Madd Alif
+169	[49]	Sometimes Madd Alif is written like a “Ya” without dots. This is called “Alif Maksura”. It is spoken like a normal Alif Madd.
+170	[49]	Sometimes a Baby Madd Alif is written over a “Ya” without dots or over a “Waw“. This shows that the original word was written with “Ya” or “Waw” but spoken with “Alif”. We follow the rule: When we find two letters on top of each other, we can always read the top letter! Just ignore the letter below and read a normal Madd Alif.
+171	[50]	Exercise 16: In the first 4 Ayat of Surah Al-Qari'yah, there are 9 Madd-Alifs. Can you find and circle them all?
+172	[50]	Exercise 17: Rewrite these words with a Madd-Alif after the purple letter(s), as in the example. Do not forget that the Alif does not connect. So every letter after it looks as if it would stand at the beginning.
+173	[51]	Madd Ya
+174	[51]	Ya (⟪AR⟫) is the second letter to prolong a Haraka. It is used to prolong the Kasra. – If Ya is preceded by a Kasra, we speak a long “ee”, again similar to the word “bee”! You read the following letters double as long as a Letter with Kasra:
+175	[51]	Note: The two dots underneath the Ya can be written or left out.
+176	[52]	Practise reading the words with Madd Ya. Make sure you make it twice as long as a Haraka:
+177	[53]	Baby Madd Ya
+178	[53]	Baby Ya Madd is not as common as Baby Alif Madd. It comes mostly at the end of a word following a “Ha” of the male singular 3rd person pronoun (“his…”)
+179	[53]	Special writings for Madd Ya
+180	[53]	If Ya is written without its dots, it looks exactly like the Alif Maksura. In this case, we only know that it is a Ya because it is preceded by Kasra.
+181	[54]	Practise reading: Alif or Ya?
+182	[54]	Practise everything we learned so far by reading these words from the Quran:
+183	[55]	Madd Waw
+184	[55]	Waw (⟪AR⟫) is the third and last letter that can prolong a Haraka. It is used to prolong the Dhamma. – If Waw is preceded by a Dhamma, we speak a long “oo” similar to the word “moon” in American English or “school” in British English or the sound “moo“ that a cow makes! You read the following letters double as long as a Letter with Dhamma:
+185	[56]	Practise reading the letters in all of their forms:
+186	[58]	Practise reading the words with Madd Waw. Make sure you make it twice as long as a Haraka:
+187	[59]	Baby Madd Waw
+188	[59]	Baby Waw Madd like Baby Ya Madd comes mostly at the end of a word following a “ha” of the male singular 3rd person pronoun (“his…”)
+189	[59]	Keep practising everything we learned so far with these words from Surah Al-Kahf (18)
+190	[61]	Exercise 18: Find and mark all the Mudud in Surah Al-Adiyat.
+191	[61]	(Madd Alif in red, Madd Ya in yellow, Madd Waw in blue)
+192	[61]	Exercise 19: What is the difference between a Short vowel (Harakah) and a Madd?
+193	[61]	Exercise 20: Complete the table:
+194	[61]	A Fatha is followed by
+195	[61]	Madd-Letter
+196	[61]	A Kasra is followed by
+197	[61]	A Dhamma is followed by
+198	[61]	Madd-letter ⟪AR⟫
+199	[62]	Shadda
+200	[62]	Shadda (⟪AR⟫) makes a consonant double. It is like reading a Sakin letter followed by a Mutaharrik letter, which are written as one letter only.
+201	[62]	Practise reading the Shadda:
+202	[63]	Meem (⟪AR⟫) and Nun (⟪AR⟫) are special when they wear a Shadda: They are read with Ghunna (Nasalization), and this extends their length to more than 2 Harakāt. Practise reading Meem and Nun with Shadda:
+203	[63]	Practise reading the words with Shadda:
+204	[65]	Exercise 21: Write the letters as Shadda letters as in the examples:
+205	[66]	Tanween Fatha Tanween means “Nunation”. It is the addition of the letter Nun after an indefinite form of a noun3. This nun is spoken but not written. We write two Fathas on top of each other instead.
+206	[66]	Important: After Tanween Fatha there is mostly written an Alif after the Tanween. This Alif is not pronounced if we read the Tanween.
+207	[66]	3 Tanween can normally only be found in nouns. But in the Quran there are 2 exceptions: There are two Verbs with Tanween in the Noble Quran. We call this a light, emphasized Nun: ⟪AR⟫ (Surah Alaq, Verse 15) and ⟪AR⟫ (Surah Yusuf, Verse 32)
+208	[67]	Practise reading the words with Tanween Fatha:
+209	[68]	Take care: If a word ends with a “Closed Ta”, then there is no Alif following the Tanween Fatha! If a word ends with Alif Hamza, there is also no further Alif written.
+210	[69]	Tanween Dhamma Tanween exists also for the other two Harakāt. Tanween Dhamma is like a Dhamma with an unwritten Nun Sakina, which is not written but spoken.
+211	[69]	Important: After Tanween Dhamma there is no letter Waw written, unlike the Alif after Tanween Fatha.
+212	[70]	Practise reading the words with Tanween Dhamma:
+213	[72]	Tanween Kasra Like Fatha and Dhamma, Tanween also exists as two Kasra. Like the others, it is spoken with an unwritten Nun Sakina.
+214	[72]	Important: After Tanween Kasra there is no letter Ya written, unlike the Alif after Tanween Fatha.
+215	[73]	Practise reading the words with Tanween Kasra:
+216	[75]	Exercise 22: Find all Tanween Fatha (red), Tanween Kasra (yellow), and Tanween Dhamma (blue) in Surah Al-Balad and mark them with their colours.
+217	[76]	Hamzatul Wasl
+218	[76]	Hamzatul Wasl occurs so often in the Quran. It is written as an Alif without Hamza at the beginning of the word. On top, you find a little ⟪AR⟫ (for ⟪AR⟫). Hamzatul Wasl means “Connecting Alif”.
+219	[76]	If we read something before this Alif, then we drop it! We just skip the letter and go directly to the next one:
+220	[76]	Practise reading those words and drop the Connecting Hamza:
+221	[76]	Hamzatul Wasl is only at the beginning of words. But sometimes a preposition is attached in front, so that it looks like one word:
+222	[76]	However, if we want to start reading at a Hamzatul Wasl, we need to give it a Harakah. On the next pages, you can learn which Harakah to put on the Hamzatul Wasl.
+223	[77]	1. Hamzatul Wasl with Fatha This happens if we have Hamzatul Wasl in the Article ⟪AR⟫. The Article has the meaning of “the” and stands in front of Nouns. In the article, Hamzatul Wasl is always read with Fatha!
+224	[77]	Practise reading those words with the article and read the Hamzatul Wasl with Fatha:
+225	[77]	Keep in Mind: If something is written before the Article and you connect the words, you need to drop the Hamzatul Wasl. Read and practise which one is read and which one is not:
+226	[78]	2. Hamzatul Wasl with Kasra It is read with Kasra when it’s the first letter of an irregular Noun. There are only 7 irregular nouns in the Quran, so they are easy to keep in mind. All other nouns are in the form of ⟪AR⟫, and that’s why they are also easy to recognize.
+227	[78]	Hamzatul Wasl is also read with Kasra at the beginning of most verbs. If the third letter of the verb carries a Fatha or a Kasra, then we start reading the verb with Kasra:
+228	[78]	Practise reading those words with Hamzatul Wasl with Kasra or with dropped Hamzatul Wasl:
+229	[79]	3. Hamzatul Wasl with Dhamma When we find verbs starting with Hamzatul Wasl in which the third letter carries a Dhamma, then we start the verb with Dhamma:
+230	[79]	Practise reading those words with Hamzatul Wasl with Dhamma or with dropped Hamzatul Wasl:
+231	[79]	Exception!!! The following words look like they are read with a Dhamma, but actually they are read with a Kasra. This is because, in the history of the Arabic language, the third letter had a Kasra. The good thing is: These 6 words occur only 7 times in the whole Quran, and we can just memorise them or mark them in the Mushaf. (Careful: the letter Alif at the end of these words is not read! This will be discussed later in the book!)
+232	[80]	Exercise 23: How do you read Hamzatul Wasl in these examples?
+233	[80]	Fatha (Article) ⟪AR⟫
+234	[80]	Kasra (Noun)⟪AR⟫
+235	[81]	Heavy and light letters
+236	[81]	At the beginning of the book, we have marked the heavy letters in the Alphabet. There is a sentence from a famous Tajweed poem for us to memorise the heavy letters. They are the letters in the sentence:
+237	[81]	Heavy Letters:
+238	[81]	(Spend the summer in a narrow hut)
+239	[81]	Read the letter pairs, making sure to raise the tongue for the heavy letters and lower it for the light letters:
+240	[82]	Heavy and light Ra
+241	[82]	Apart from those letters, there are other letters which are sometimes read heavy and sometimes light. The first of them is the letter Ra (⟪AR⟫)
+242	[82]	Letter Ra is Heavy or light – depending on whether Fatha, Dhamma or Kasra influences it4:
+243	[82]	Read these words with heavy Ra:
+244	[82]	Read these words with light Ra:
+245	[82]	4 These are simplified rules of heavy and light Ra. They have exceptions and can be discussed in more detail, which is not done in this book. To learn the rules of Ra in more detail we recommend the book “Abrar Quranreading Part 2”. 5 There are 5 words in the Quran where the Ra after a Kasra is light. This happens when Ra sakin is preceeded by a Kasra but followed by a heavy letter.
+246	[83]	Exercise 24: Read these words and decide whether Ra is spoken light or heavy. Read again and mark the heavy Ra in a dark colour and the light Ra in a light colour.
+247	[84]	Heavy and light Lam
+248	[84]	The second letter that can be read light or heavy is the Lam in Allah's name (⟪AR⟫). Apart from this, all Lam in the Quran are light. The same rules apply for ⟪AR⟫ (oh Allah)
+249	[84]	Like with the Ra, also for the Lam in Allah's Name, we need to check which Harakah precedes it. After Fatha, Dhamma and when we start the Reading with Allah’s name, we pronounce the Lam heavy. After a Kasra, we pronounce it light.
+250	[84]	Important Note:
+251	[84]	Allahs Name and the Form “Oh Allah” are written without Alif in the Quran, but spoken with prolonged Alif!
+252	[84]	Decide whether the Lam is heavy or light here:
+253	[85]	Heavy and light Alif
+254	[85]	The third and last letter, which can be read heavy or light, is the Madd Alif. This is very simple, and you surely did it right already: After a heavy letter, Alif is pronounced heavy, and after a light letter it is light.
+255	[85]	Read the words and decide whether Alif is heavy or light and practise all we learned so far:
+256	[86]	Lam Qamariyah (The Moon-Lam) We have two kinds of Articles depending on the first letter of the word they are attached to. In some articles, the Lam is read normally and clearly (Idhhar). We call the Lam in this Article the Moon-Lam. The letters before which a Moon-Lam occurs we call “Moon-Letters”. We can keep them in mind with this sentence or by just practising with the letters until our tongue becomes familiar with them:
+257	[86]	Moon-Letters:
+258	[86]	(Fulfil your pilgrimage and hope for its acceptance.)
+259	[86]	Read the Articles preceding the Moon-letters. Make sure you speak the Lam clearly.
+260	[87]	Lam Shamsiyah (The Sun-Lam) Half of the Alphabet are Moon letters. The other 14 letters are Sun-letters. How perfectly balanced is the Arabic language! All the Sun letters are very close to the Articulation point of the Lam. That means that two very close letters are meeting each other. This is why they melt together. The Lam becomes hidden (Idgham), and the first letter of the word becomes doubled (Shadda) because the Lam melted into it. This sentence is to memorise the Sun letters:
+261	[87]	Sun-Letters:
+262	[87]	(Be good, then join the family relations and you will be successful. Be hospitable to the
+263	[87]	possessor of bounties. Leave the evil thought. Visit the illustrious for generosity.)
+264	[87]	Read the Articles preceding the Sun letters. Make sure you don’t read the Lam, but rather melt it into the first letter of the word.
+265	[88]	Practise reading the Articles and remember to melt the Sun-Lam and to read the Moon-Lam clearly.
+266	[88]	A Note: The preposition “⟪AR⟫”, which means “for” is “eating” the Hamzatul Wasl of the Article. We still have an article there, but the Hamzatul Wasl is not written anymore:
+267	[89]	Exercise 25: Practise reading these words. Take care to drop the Hamzatul Wasl if there is a word before that you connect with. Read again and mark every Sun-Lam in orange and every Moon-Lam in blue.
+268	[89]	Tip: The last (purple) example is not an article. It is a Verb which begins with Hamzatul Wasl and Lam. This is why the Ta, which is normally a sun-letter, has no Shadda here!
+269	[90]	The rules of Nun and Tanween Idhhar
+270	[90]	When we find a Nun with Sukoon or a Tanween, they are not always pronounced like a “normal” Nun. In front of those letters, the Nun is spoken "normally” (Idhhar), because all of those letters are from the throat, which is far away from the articulation point of the Nun.
+271	[90]	Practise reading these Nun and Tanween with Idhhar:
+272	[91, 92, 94]	The rules of Nun and Tanween
+273	[91]	Iqlab
+274	[91]	The second rule of Nun and Tanween is the Iqlab. Iqlab means “changing”. It means that we exchange the Nun with a Meem every time a Ba follows. In order to remember the rule, the Tanween and Sukoon for Iqlab have a special writing in the Mushaf: They are written with a little Meem! When you read the Meem of Iqlab, it is read with Ghunna. That means we read it through the nose and make it long.
+275	[91]	Practise reading these Nun and Tanween with Iqlab:
+276	[91]	⟪AR⟫T⟪AR⟫T⟪AR⟫
+277	[91, 95]	⟪AR⟫T⟪AR⟫
+278	[91]	⟪AR⟫U⟪AR⟫
+279	[92]	Idgham
+280	[92]	The third rule of Nun and Tanween is the Idgham. It means “Melting”. The nun becomes merged into the next letter. Sometimes the Nun is completely gone, and sometimes the Nasality (Ghunna) of the Nun will stay. Take care: Again, the Tanween is written differently, or the Nun stands without any sign if this rule occurs.
+281	[92]	When merging it into Meem or Nun, our Nun will be gone completely. Keep in mind to prolong the Ghunna of the Meeim and Nun Mushaddada:
+282	[92]	When merging it into Lam or Ra, our Nun is also merged completely. Lam and Ra are now read with Shadda. Make sure you don’t give them any Ghunna.
+283	[92]	When merging it into Ya or Waw, our Nun is not completely merged. We do not read a Nun anymore, but now Ya and Waw get Ghunna and are prolonged. Because Ya and Waw don’t have any Ghunna from themselves this comes from the Nun.
+284	[93]	Practise reading these Nun and Tanween with Idgham:
+285	[93]	Note: Idgham never happens within one word – only between two words.
+286	[94]	Ikhfa
+287	[94]	The fourth and last rule of Nun and Tanween is Ikhfa. Ikhfa means “hiding”. When pronouncing Nun in front of an Ikhfa letter, we do not touch the articulation point of the Nun with the tongue, but rather we go to the articulation point of the following letter. Note that the Tanween signs and the Nun without any Harakah for Ikhfa look the same as for Idgham.
+288	[94]	Ikhfa-letters:
+289	[94]	(Describe the possessor of praise. How generous is a person who has attained status? Always be
+290	[94]	good. Increase in piety. Leave an oppressor.)
+291	[94]	When a Nun is hidden into a light Ikhfa letter, then we speak our Ghunna lightly:
+292	[94]	When we hide it into a heavy letter, then the Ghunna is heavy:
+293	[95]	Exercise 26: Practise reading the mixed rules of Nun and Tanween. Mark in different colours:
+294	[95]	Idhhar yellow, Iqlab blue, Idgham green, Ikhfa red
+295	[95]	⟪AR⟫ ⟪AR⟫b⟪AR⟫
+296	[96]	The rules of Meem Sakinah Apart from the Nun, other letters can also be read in a special way or melted. One of them is the Meem. The rules of Meem are easier than the Rules of Nun Sakinah. Just for two letters, Meem is read in a special way.
+297	[96]	When a Meem Sakinah is followed by another Meem, they merge into each other (Idgham), and Meem Shadda is read with Ghunna. In the Mushaf, we find the first Meem empty when this rule occurs.
+298	[96]	When Meem Sakinah is followed by a Ba, we read it Ikhfa. That means the Meem is hidden into the Ba. We read the Meem hidden with Ghunna6. The Meem is standing empty, as in Idgham.
+299	[96]	When a Meem Sakinah is followed by any other letter, we always read it “normal” and without Ghunna (Idhhar). The Meem in the Mushaf is written with a Sukoon when this rule occurs.
+300	[96]	6 A difference in opinion is here whether the Ikhfa Shafawi is read with a small gap in between the lips or not. Ask your teacher about which one is better to read for you.
+301	[97]	Other Idgham Letters
+302	[97]	We learned that Meem, Nun, Tanween and the Lam of the Article can melt into other letters. Apart from those, other Letters can merge too. This happens when letters that are the same (Mutamathilayn) or very close in their Articulation point (Mutajanisayn) meet each other without Harakah in between.
+303	[97]	It can happen, for example, with Lam before Ra (but not with Ra before Lam!), and it happens if the Lam is in a particle, like in:
+304	[97]	It can happen with two equal letters (Mutamathilayn)
+305	[97]	It can happen with ⟪AR⟫ or with ⟪AR⟫.
+306	[97]	Careful: when the heavy letter melts into the light one, then the heaviness stays!
+307	[97]	Once in the Quran, the Ba is melting into the Meem:
+308	[98]	Stopping Whenever we pause our recitation to breathe, or at the end of the recitation, we need to drop the last Harakah.
+309	[98]	Remember:
+310	[98]	We never start with Sukoon. We never stop with Harakah!
+311	[98]	Tip: Don’t forget to apply Qalqala if you stop on a Qalqala letter!
+312	[98]	When we stop on Ta Marbuta (⟪AR⟫), then the points are also dropped, and we read it as a ⟪AR⟫.
+313	[98]	When we stop on a Tanween Fatha with Alif, then the Harakāt are dropped, and the Alif is read like a natural Madd (2 Harakāt).
+314	[98]	When we stop on a letter which is followed by a Baby Madd, we drop the Madd.
+315	[98]	Read those ayat and stop correctly at the end:
+316	[99]	Letters above each other
+317	[99]	Sometimes we find two letters above each other in the Quran. This can have different reasons. Normally, it is written by the scholars to show us that this word is pronounced differently from how it is written. If you follow this general rule, then you will always read it right7:
+318	[99]	If you find two letters over each other, read the one on top!
+319	[99]	Sometimes you find Alif over a letter, to show that Alif is read here.
+320	[99]	Sometimes you find Sin under or over Sad.
+321	[99]	It can also happen that the letter Nun is added in a word – above the word.
+322	[99]	Read those Ayat. Remember to stop without Harakah at the End.
+323	[99]	7 There can be cases in which the bottom letter may also be read. This can be learned in a more detailed Tajweed-course.
+324	[100]	Sifr (round and oval zero)
+325	[100]	There are two types of Zero in the Quran.
+326	[100]	The first one is the Round Zero (Sifr Mustadir). It always deletes the letter which is under it. These letters are written but not spoken; the scholars showed us this by putting the Sifr Mustadir on top:
+327	[100]	The second one is the Oval Zero or Standing Zero (Sifr Mustatil). It is only found on the letter Alif and only at the end of a word. When the Alif carries a Sifr Mustatil, then we read the Alif when stopping on this word, but we drop the letter when continuing to read and joining it with the next word:
+328	[100]	Read these Ayat. Do you need to read the letter with Sifr or not?
+329	[101, 104, 106]	Read these Ayat and practise everything we learned so far.
+330	[102]	Longer Mudud We learned already in the Beginning that a natural Madd has 2 Harakāt. There are many Mudud in the Quran which we make longer than this. Mostly (but not always), they are marked by a wave over the Madd.
+331	[102]	Please note that most of the Mudud can be read with different lengths, but here we want to keep it as simple as possible to make your reading correct.
+332	[102]	Mudud that you should read with 4 Harakāt8:
+333	[102]	A similar Madd (Madd Leen) happens if the letter before the last letter is a Waw or Ya sakinah, preceded by Fatha, like in the last two examples of the table.
+334	[102]	Read these words with Arid Li-s-Sukoon (or Madd Leen):
+335	[102]	Read these words with Madd Muttasil and Madd Munfasil (or Madd Silah Kubra, which is very similar):
+336	[102]	8 Please note that other lengths are possible for these Mudud. 4 Harakāt are just to simplify it and get it right!
+337	[103]	Mudud that you should read with 6 Harakāt:
+338	[103]	Read these words with Madd Lazim:
+339	[103]	Read those words. Take care with how long you read the Mudud. Remember to stop on Sukoon.
+340	[104]	Huruf Muqataa
+341	[104]	At the beginning of some Surahs, we find Huruf Al-Muqataa (separated letters) ⟪AR⟫⟪AR⟫⟪AR⟫
+342	[104]	Huruf Al-Muqataa are read separately with the name of the letter.
+343	[104]	We need to go back to page 7 of this book. There are the letters with their names. This is how we speak the Huruf Al-Muqataa. Take care – if the wave is over the letter, we need to prolong the Madd in the letter to 6 counts (Madd Lazim)!
+344	[105]	Stopping Signs
+345	[105]	Sometimes you find over the text in your mushaf several signs which show you where you can stop, cannot stop or where you must stop. They help you, especially in longer Ayat, to divide the Ayah and breathe. Here is what they mean:
+346	[105]	(Sila) You can stop but it is better to go on reading.
+347	[105]	(Qila) You can go on reading but it is better to stop.
+348	[105]	(Jeem) You can stop or go on reading, both are fine.
+349	[105]	(Meem) You must stop here.
+350	[105]	(Lam-Alif) You should not stop here and you should not read from here.
+351	[105]	(Sakt) Make a short break without breathing.
+352	[105]	You find them after each other. You need to stop on one of them.
+353	[105]	(Flower) It shows the end of a Rub´ (⟪AR⟫) ( ⅛ of a Juz). You find this sign every 2⅟2 pages)
+354	[106]	Other special signs
+355	[106]	These signs occur only once in the Medina-Print of the Quran:
+356	[106]	⟪AR⟫ý⟪AR⟫ (Fussilat: 44) Tasheel: Reading of Hamza between Alif and Hamza.
+357	[106]	(Yusuf: 11) Ishmam: Rounding of the Lips to a Dhamma without pronouncing a Dhamma.
+358	[106]	(Hud: 41) Imalah: Speaking the Harakah of the Ra between Fatha and Kasra.
+359	[107]	Iltiqa As-Sakinayn
+360	[107]	The meeting of two Sukoon.
+361	[107]	If in the Arabic language two Sukoon meet each other at the border of two words, we need to find a way to avoid it.
+362	[107]	The following rules are simplified, and only those which affect the reading will be discussed here.
+363	[107]	Read these Ayat and practise what we learned so far.
+364	[108]	Exercise 27: Revise the stopping signs: What do they mean? Use a Quran Mushaf to find examples for every sign and note on which page you found it.
+365	[108]	Sign Name and explanation Example Quran page ⟪AR⟫
+366	[108]	(Sila) You can stop but it is better to go on reading. ⟪AR⟫
+367	[108]	(Qila) ___________________________________________________________.
+368	[108]	(Jeem) __________________________________________________________.
+369	[108]	(Meem) _________________________________________________________.
+370	[108]	(Lam-Alif) _______________________________________________________.
+371	[108]	(Sakt) ___________________________________________________________.
+372	[108]	⟪AR⟫ (Flower) _________________________________________________________.
+373	[109]	Read the Surahs:
+374	[110]	With the permission of Allah, this is the End of this book.
+375	[110]	Congratulations! If you practised everything well, you should be able to read the Quran (almost) without mistakes now J!
+376	[110]	All praise is due to Allah, Lord of the Worlds.
+377	[110]	I thank my sister and friend Laila Shahin for her help in finding examples.
+378	[110]	I thank our beloved teacher Hanaa Salah for her corrections, suggestions and help.
+379	[110]	I thank my dear teacher Umm Rawda for her suggestions and help.
+380	[110]	I thank my dear sister Mai Mahmoud for her support and encouragement.
+381	[110]	And I thank my friends Ghazwa Ibrahim and Lina Arellano for their trust and encouragement.
+382	[110]	May Allah reward you all with the highest paradise!
+383	[110]	A. A. Mühlbauer
+384	[115]	The Prophet Mohammed (Peace be upon him) said: “The best among you are those who learn the Quran and teach it.”
+385	[115]	(Sahih Al‐Bukhari)
+386	[115]	info@abrarlearning.com
+387	[115]	S I N C E 2 0 1 4
+388	[115]	F O L L O W U S & S T A Y C O N N E C T E D
+389	[115]	Updates, news and more from Abrar Institute
+390	[77]	The praise The house The moon
+391	[78]	son daughter man
+392	[78]	woman name
+393	[78]	two (female form) two (male form)
+394	[78]	seeking of refuge pride
+395	[78]	fear him! seek refuge! guide us!
+396	[79]	invoke/call! serve/worship! run!
+397	[79]	Surah Yunus: 71 Surah Kahf: 21 Surah Hijr: 65 $%⟪AR⟫ $%⟪AR⟫ $%⟪AR⟫
+398	[79]	Surah Sad: 6 Surah Ahqaf: 4 Surah Taha: 64, Surah Jathiya: 25
+399	[82]	mostly light5 heavy
+400	[84]	⟪AR⟫ ⟪AR⟫ ⟪AR⟫ light heavy
+401	[85]	⟪AR⟫+ light letter ⟪AR⟫+ heavy letter
+402	[85]	light heavy
+403	[86]	⟪AR⟫⟪AR⟫⟪AR⟫⟪AR⟫ (The Moon)
+404	[87]	⟪AR⟫⟪AR⟫⟪AR⟫⟪AR⟫ (The Sun)
+405	[96]	Idhhar Shafawi Ikhfa Shafawi Idgham Shafawi
+406	[96]	all other letters + ⟪AR⟫ ⟪AR⟫+ ⟪AR⟫ ⟪AR⟫+ ⟪AR⟫
+407	[97]	⟪AR⟫⟪AR⟫ ⟪AR⟫⟪AR⟫ (Surah Hud, 42)
+408	[100]	Sifr Mustadir
+409	[100]	56⟪AR⟫6⟪AR⟫ ⟪AR⟫ always deletes the letter
+410	[100]	Sifr Mustatil
+411	[100]	deletes the letter when joining
+412	[100]	it to the next word
+413	[102]	Madd Arid Li-s-Sukoon
+414	[102]	If a Madd is before the letter on which
+415	[102]	you stop.
+416	[102]	Madd Muttasil and
+417	[102]	Madd Munfasil
+418	[102]	A letter Hamza is following after your Madd. (Muttasil: Madd and Hamza are
+419	[102]	in the same word / Munfasil: Madd and Hamza are in separated words)
+420	[103]	Madd Lazim
+421	[103]	After your Madd is a Sukoon or
+422	[103]	Shadda.
+423	[107]	⟪AR⟫Î⟪AR⟫# Sukoon + Madd Sukoon + Tanween We drop the Madd
+424	[107]	We add a Kasra after our Tanween

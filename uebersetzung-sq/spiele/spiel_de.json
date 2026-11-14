@@ -1,0 +1,3206 @@
+[
+{
+"s": 161,
+"e": 174,
+"t": "Harf für Harf",
+"k": "html"
+},
+{
+"s": 19489,
+"e": 19502,
+"t": "Harf für Harf",
+"k": "html"
+},
+{
+"s": 19542,
+"e": 19554,
+"t": "Deine Sterne",
+"k": "attr"
+},
+{
+"s": 19853,
+"e": 19867,
+"t": "Zur Startseite",
+"k": "attr"
+},
+{
+"s": 20049,
+"e": 20054,
+"t": "Start",
+"k": "html"
+},
+{
+"s": 20111,
+"e": 20122,
+"t": "Mein Profil",
+"k": "attr"
+},
+{
+"s": 21744,
+"e": 21791,
+"t": "Lerne den Quran lesen – Buchstabe für Buchstabe",
+"k": "html"
+},
+{
+"s": 21806,
+"e": 22014,
+"t": "Ich bin Qalam, deine Schreibfeder. Zusammen gehen wir durch sechs Welten: Buchstaben, Formen, kurze Vokale, Sukun, schwere & leichte Buchstaben und die Zahlen. Für jede Lektion bekommst du bis zu drei Sterne.",
+"k": "html"
+},
+{
+"s": 22054,
+"e": 22066,
+"t": "Weiterlernen",
+"k": "html"
+},
+{
+"s": 22141,
+"e": 22252,
+"t": "Tipp: Lies jede Silbe laut. Die richtige Aussprache lernst du am besten mit deinem Lehrer oder deiner Lehrerin.",
+"k": "html"
+},
+{
+"s": 22393,
+"e": 22408,
+"t": "Lektion beenden",
+"k": "attr"
+},
+{
+"s": 22612,
+"e": 22623,
+"t": "Fortschritt",
+"k": "attr"
+},
+{
+"s": 23017,
+"e": 23036,
+"t": "As-salāmu ʿalaikum!",
+"k": "html"
+},
+{
+"s": 23049,
+"e": 23097,
+"t": "Wie heißt du? Dann weiß Qalam, mit wem er lernt.",
+"k": "html"
+},
+{
+"s": 23165,
+"e": 23177,
+"t": "Dein Vorname",
+"k": "attr"
+},
+{
+"s": 23235,
+"e": 23245,
+"t": "Los geht's",
+"k": "html"
+},
+{
+"s": 23295,
+"e": 23305,
+"t": "use strict",
+"k": "js"
+},
+{
+"s": 24001,
+"e": 24159,
+"t": "<svg viewBox=\"0 0 24 24\"><path fill=\"F\" stroke=\"S\" stroke-width=\"1.2\" d=\"M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z\"/></svg>",
+"k": "js"
+},
+{
+"s": 24357,
+"e": 24361,
+"t": "Alif",
+"k": "js"
+},
+{
+"s": 24368,
+"e": 24461,
+"t": "Alif verlängert ein „a“. Trägt es eine Hamza (أ), ist es ein kurzer Stopp wie in „be-achten“.",
+"k": "js"
+},
+{
+"s": 24466,
+"e": 24476,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 24487,
+"e": 24489,
+"t": "Ba",
+"k": "js"
+},
+{
+"s": 24496,
+"e": 24517,
+"t": "Wie das deutsche „b“.",
+"k": "js"
+},
+{
+"s": 24522,
+"e": 24535,
+"t": "1 Punkt unten",
+"k": "js"
+},
+{
+"s": 24546,
+"e": 24548,
+"t": "Ta",
+"k": "js"
+},
+{
+"s": 24555,
+"e": 24576,
+"t": "Wie das deutsche „t“.",
+"k": "js"
+},
+{
+"s": 24581,
+"e": 24594,
+"t": "2 Punkte oben",
+"k": "js"
+},
+{
+"s": 24605,
+"e": 24608,
+"t": "Tha",
+"k": "js"
+},
+{
+"s": 24616,
+"e": 24689,
+"t": "Wie „th“ im englischen „think“ – die Zunge kommt kurz zwischen die Zähne.",
+"k": "js"
+},
+{
+"s": 24694,
+"e": 24707,
+"t": "3 Punkte oben",
+"k": "js"
+},
+{
+"s": 24718,
+"e": 24724,
+"t": "Dschim",
+"k": "js"
+},
+{
+"s": 24734,
+"e": 24760,
+"t": "Wie „dsch“ in „Dschungel“.",
+"k": "js"
+},
+{
+"s": 24765,
+"e": 24785,
+"t": "1 Punkt in der Mitte",
+"k": "js"
+},
+{
+"s": 24805,
+"e": 24885,
+"t": "Ein gehauchtes „h“ aus der Mitte des Halses – wie wenn du eine Brille anhauchst.",
+"k": "js"
+},
+{
+"s": 24890,
+"e": 24900,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 24911,
+"e": 24914,
+"t": "Kha",
+"k": "js"
+},
+{
+"s": 24922,
+"e": 24941,
+"t": "Wie „ch“ in „Bach“.",
+"k": "js"
+},
+{
+"s": 24946,
+"e": 24958,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 24969,
+"e": 24972,
+"t": "Dal",
+"k": "js"
+},
+{
+"s": 24979,
+"e": 25000,
+"t": "Wie das deutsche „d“.",
+"k": "js"
+},
+{
+"s": 25005,
+"e": 25015,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 25026,
+"e": 25030,
+"t": "Dhal",
+"k": "js"
+},
+{
+"s": 25038,
+"e": 25068,
+"t": "Wie „th“ im englischen „this“.",
+"k": "js"
+},
+{
+"s": 25073,
+"e": 25085,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 25096,
+"e": 25098,
+"t": "Ra",
+"k": "js"
+},
+{
+"s": 25105,
+"e": 25144,
+"t": "Ein gerolltes „r“ mit der Zungenspitze.",
+"k": "js"
+},
+{
+"s": 25149,
+"e": 25159,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 25170,
+"e": 25173,
+"t": "Zay",
+"k": "js"
+},
+{
+"s": 25180,
+"e": 25213,
+"t": "Ein summendes „s“ wie in „Sonne“.",
+"k": "js"
+},
+{
+"s": 25218,
+"e": 25230,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 25241,
+"e": 25244,
+"t": "Sin",
+"k": "js"
+},
+{
+"s": 25251,
+"e": 25281,
+"t": "Ein scharfes „s“ wie in „Fuß“.",
+"k": "js"
+},
+{
+"s": 25286,
+"e": 25296,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 25307,
+"e": 25312,
+"t": "Schin",
+"k": "js"
+},
+{
+"s": 25321,
+"e": 25343,
+"t": "Wie „sch“ in „Schule“.",
+"k": "js"
+},
+{
+"s": 25348,
+"e": 25361,
+"t": "3 Punkte oben",
+"k": "js"
+},
+{
+"s": 25382,
+"e": 25408,
+"t": "Ein schweres, dunkles „s“.",
+"k": "js"
+},
+{
+"s": 25413,
+"e": 25423,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 25444,
+"e": 25496,
+"t": "Ein schweres „d“, gesprochen mit dem Rand der Zunge.",
+"k": "js"
+},
+{
+"s": 25501,
+"e": 25513,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 25533,
+"e": 25559,
+"t": "Ein schweres, dunkles „t“.",
+"k": "js"
+},
+{
+"s": 25564,
+"e": 25574,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 25594,
+"e": 25626,
+"t": "Ein schweres „th“ wie in „this“.",
+"k": "js"
+},
+{
+"s": 25631,
+"e": 25643,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 25665,
+"e": 25705,
+"t": "Kommt gepresst aus der Mitte des Halses.",
+"k": "js"
+},
+{
+"s": 25710,
+"e": 25720,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 25731,
+"e": 25736,
+"t": "Ghain",
+"k": "js"
+},
+{
+"s": 25744,
+"e": 25775,
+"t": "Wie ein gegurgeltes Rachen-„r“.",
+"k": "js"
+},
+{
+"s": 25780,
+"e": 25792,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 25803,
+"e": 25805,
+"t": "Fa",
+"k": "js"
+},
+{
+"s": 25812,
+"e": 25833,
+"t": "Wie das deutsche „f“.",
+"k": "js"
+},
+{
+"s": 25838,
+"e": 25850,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 25861,
+"e": 25864,
+"t": "Qaf",
+"k": "js"
+},
+{
+"s": 25871,
+"e": 25899,
+"t": "Ein „k“ ganz hinten im Hals.",
+"k": "js"
+},
+{
+"s": 25904,
+"e": 25917,
+"t": "2 Punkte oben",
+"k": "js"
+},
+{
+"s": 25928,
+"e": 25931,
+"t": "Kaf",
+"k": "js"
+},
+{
+"s": 25938,
+"e": 25959,
+"t": "Wie das deutsche „k“.",
+"k": "js"
+},
+{
+"s": 25964,
+"e": 25974,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 25985,
+"e": 25988,
+"t": "Lam",
+"k": "js"
+},
+{
+"s": 25995,
+"e": 26016,
+"t": "Wie das deutsche „l“.",
+"k": "js"
+},
+{
+"s": 26021,
+"e": 26031,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 26042,
+"e": 26045,
+"t": "Mim",
+"k": "js"
+},
+{
+"s": 26052,
+"e": 26073,
+"t": "Wie das deutsche „m“.",
+"k": "js"
+},
+{
+"s": 26078,
+"e": 26088,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 26099,
+"e": 26102,
+"t": "Nun",
+"k": "js"
+},
+{
+"s": 26109,
+"e": 26130,
+"t": "Wie das deutsche „n“.",
+"k": "js"
+},
+{
+"s": 26135,
+"e": 26147,
+"t": "1 Punkt oben",
+"k": "js"
+},
+{
+"s": 26158,
+"e": 26160,
+"t": "Ha",
+"k": "js"
+},
+{
+"s": 26167,
+"e": 26189,
+"t": "Wie das „h“ in „Haus“.",
+"k": "js"
+},
+{
+"s": 26194,
+"e": 26204,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 26215,
+"e": 26218,
+"t": "Waw",
+"k": "js"
+},
+{
+"s": 26225,
+"e": 26258,
+"t": "Wie das englische „w“ in „water“.",
+"k": "js"
+},
+{
+"s": 26263,
+"e": 26273,
+"t": "kein Punkt",
+"k": "js"
+},
+{
+"s": 26284,
+"e": 26286,
+"t": "Ya",
+"k": "js"
+},
+{
+"s": 26293,
+"e": 26322,
+"t": "Wie das deutsche „j“ in „ja“.",
+"k": "js"
+},
+{
+"s": 26327,
+"e": 26341,
+"t": "2 Punkte unten",
+"k": "js"
+},
+{
+"s": 26851,
+"e": 26860,
+"t": "am Anfang",
+"k": "js"
+},
+{
+"s": 26867,
+"e": 26879,
+"t": "in der Mitte",
+"k": "js"
+},
+{
+"s": 26886,
+"e": 26893,
+"t": "am Ende",
+"k": "js"
+},
+{
+"s": 26918,
+"e": 26923,
+"t": "Fatha",
+"k": "js"
+},
+{
+"s": 26930,
+"e": 26934,
+"t": "über",
+"k": "js"
+},
+{
+"s": 26949,
+"e": 26954,
+"t": "Kasra",
+"k": "js"
+},
+{
+"s": 26981,
+"e": 26987,
+"t": "Dhamma",
+"k": "js"
+},
+{
+"s": 26994,
+"e": 26998,
+"t": "über",
+"k": "js"
+},
+{
+"s": 28013,
+"e": 28035,
+"t": "Welcher Buchstabe ist ",
+"k": "js"
+},
+{
+"s": 28078,
+"e": 28113,
+"t": "${x.c} heißt ${x.name} (${x.dots}).",
+"k": "tpl"
+},
+{
+"s": 28178,
+"e": 28205,
+"t": "Wie heißt dieser Buchstabe?",
+"k": "js"
+},
+{
+"s": 28256,
+"e": 28274,
+"t": "Das ist ${x.name}.",
+"k": "tpl"
+},
+{
+"s": 28496,
+"e": 28502,
+"t": "Finde ",
+"k": "js"
+},
+{
+"s": 28525,
+"e": 28552,
+"t": "Schau genau auf die Punkte.",
+"k": "js"
+},
+{
+"s": 28713,
+"e": 28739,
+"t": "Welcher Buchstabe ist das?",
+"k": "js"
+},
+{
+"s": 28747,
+"e": 28759,
+"t": "So sieht er ",
+"k": "js"
+},
+{
+"s": 28775,
+"e": 28793,
+"t": " eines Wortes aus.",
+"k": "js"
+},
+{
+"s": 28820,
+"e": 28864,
+"t": "${f} ist ${x.name} (${x.c}) ${POSNAME[pos]}.",
+"k": "tpl"
+},
+{
+"s": 28987,
+"e": 29020,
+"t": "Welcher Buchstabe verbindet sich ",
+"k": "js"
+},
+{
+"s": 29035,
+"e": 29053,
+"t": " mit dem nächsten?",
+"k": "js"
+},
+{
+"s": 29068,
+"e": 29153,
+"t": "${byC[nc].name} (${nc}) gehört zu den 6, die nicht nach links verbinden: ا د ذ ر ز و.",
+"k": "tpl"
+},
+{
+"s": 29271,
+"e": 29288,
+"t": "Wie liest du das?",
+"k": "js"
+},
+{
+"s": 29312,
+"e": 29406,
+"t": "${syl(x.c,v)} = ${sylT(x.c,v)} – ${V[v].n} ${V[v].pos} dem Buchstaben macht ein kurzes „${v}“.",
+"k": "tpl"
+},
+{
+"s": 29606,
+"e": 29631,
+"t": "Fatha, Kasra oder Dhamma?",
+"k": "js"
+},
+{
+"s": 29639,
+"e": 29667,
+"t": "Schau, wo das Zeichen steht.",
+"k": "js"
+},
+{
+"s": 29690,
+"e": 29758,
+"t": "${V[v].n} ${V[v].pos} dem Buchstaben = „${v}“. Also: ${sylT(x.c,v)}.",
+"k": "tpl"
+},
+{
+"s": 29890,
+"e": 29915,
+"t": "Wie liest du dieses Wort?",
+"k": "js"
+},
+{
+"s": 29923,
+"e": 29954,
+"t": "Der kleine Kreis ist ein Sukun.",
+"k": "js"
+},
+{
+"s": 29968,
+"e": 30026,
+"t": "${w} = ${t}. Den Buchstaben mit Sukun liest du ohne Vokal.",
+"k": "tpl"
+},
+{
+"s": 30643,
+"e": 30671,
+"t": "Jeder Buchstabe hat 4 Formen",
+"k": "js"
+},
+{
+"s": 30679,
+"e": 30860,
+"t": "Im Wort verbinden sich die Buchstaben. Je nachdem, ob ein Buchstabe allein, am Anfang, in der Mitte oder am Ende steht, sieht er etwas anders aus. Gelesen wird er aber immer gleich.",
+"k": "js"
+},
+{
+"s": 30900,
+"e": 30926,
+"t": "Die 6, die nicht verbinden",
+"k": "js"
+},
+{
+"s": 30934,
+"e": 31061,
+"t": "Diese Buchstaben verbinden sich nur mit dem Buchstaben davor, nie mit dem danach. Nach ihnen beginnt der nächste Buchstabe neu.",
+"k": "js"
+},
+{
+"s": 31147,
+"e": 31168,
+"t": "Fatha – das kurze „a“",
+"k": "js"
+},
+{
+"s": 31176,
+"e": 31331,
+"t": "Die Fatha ist ein kleiner schräger Strich über dem Buchstaben. Sie macht ein kurzes „a“. Bei den schweren (blauen) Buchstaben klingt das „a“ etwas dunkler.",
+"k": "js"
+},
+{
+"s": 31364,
+"e": 31385,
+"t": "Kasra – das kurze „i“",
+"k": "js"
+},
+{
+"s": 31393,
+"e": 31510,
+"t": "Die Kasra ist ein kleiner schräger Strich unter dem Buchstaben. Sie macht ein kurzes „i“. Merke: Kasra – unten – „i“.",
+"k": "js"
+},
+{
+"s": 31543,
+"e": 31565,
+"t": "Dhamma – das kurze „u“",
+"k": "js"
+},
+{
+"s": 31573,
+"e": 31694,
+"t": "Die Dhamma sieht aus wie ein kleines Waw (و) über dem Buchstaben. Sie macht ein kurzes „u“, dabei werden die Lippen rund.",
+"k": "js"
+},
+{
+"s": 31852,
+"e": 31866,
+"t": "Lies die Tafel",
+"k": "js"
+},
+{
+"s": 31874,
+"e": 31945,
+"t": "Lies jede Silbe laut. Tippe darauf, um zu prüfen, ob du richtig liegst.",
+"k": "js"
+},
+{
+"s": 32042,
+"e": 32060,
+"t": "Sukun – kein Vokal",
+"k": "js"
+},
+{
+"s": 32068,
+"e": 32221,
+"t": "Der kleine Kreis über einem Buchstaben heißt Sukun. Er bedeutet: hier kommt kein Vokal. Den Buchstaben liest du direkt zusammen mit dem Buchstaben davor.",
+"k": "js"
+},
+{
+"s": 32267,
+"e": 32285,
+"t": "Qalqala – das Echo",
+"k": "js"
+},
+{
+"s": 32293,
+"e": 32421,
+"t": "Fünf Buchstaben „springen“, wenn sie ein Sukun haben: ق ط ب ج د. Du sprichst sie mit einem kleinen Echo. Merksatz: قُطْبُ جَدٍّ.",
+"k": "js"
+},
+{
+"s": 32467,
+"e": 32482,
+"t": "Lies die Wörter",
+"k": "js"
+},
+{
+"s": 32490,
+"e": 32539,
+"t": "Lies jedes Wort laut. Tippe darauf, um zu prüfen.",
+"k": "js"
+},
+{
+"s": 32904,
+"e": 32916,
+"t": "Ra mit Fatha",
+"k": "js"
+},
+{
+"s": 32939,
+"e": 32952,
+"t": "Ra mit Dhamma",
+"k": "js"
+},
+{
+"s": 32975,
+"e": 32987,
+"t": "Ra mit Kasra",
+"k": "js"
+},
+{
+"s": 33011,
+"e": 33023,
+"t": "Ra mit Kasra",
+"k": "js"
+},
+{
+"s": 33048,
+"e": 33071,
+"t": "Ra mit Sukun nach Fatha",
+"k": "js"
+},
+{
+"s": 33095,
+"e": 33119,
+"t": "Ra mit Sukun nach Dhamma",
+"k": "js"
+},
+{
+"s": 33146,
+"e": 33169,
+"t": "Ra mit Sukun nach Kasra",
+"k": "js"
+},
+{
+"s": 33194,
+"e": 33217,
+"t": "Ra mit Sukun nach Fatha",
+"k": "js"
+},
+{
+"s": 33239,
+"e": 33252,
+"t": "Ra mit Dhamma",
+"k": "js"
+},
+{
+"s": 33274,
+"e": 33286,
+"t": "Ra mit Kasra",
+"k": "js"
+},
+{
+"s": 33331,
+"e": 33357,
+"t": "vor Allah steht eine Fatha",
+"k": "js"
+},
+{
+"s": 33388,
+"e": 33415,
+"t": "vor Allah steht eine Dhamma",
+"k": "js"
+},
+{
+"s": 33447,
+"e": 33473,
+"t": "vor Allah steht eine Fatha",
+"k": "js"
+},
+{
+"s": 33504,
+"e": 33531,
+"t": "vor Allah steht eine Dhamma",
+"k": "js"
+},
+{
+"s": 33562,
+"e": 33588,
+"t": "vor Allah steht eine Kasra",
+"k": "js"
+},
+{
+"s": 33612,
+"e": 33640,
+"t": "vor dem Lam steht eine Kasra",
+"k": "js"
+},
+{
+"s": 33666,
+"e": 33692,
+"t": "vor Allah steht eine Kasra",
+"k": "js"
+},
+{
+"s": 33901,
+"e": 33920,
+"t": "Schwer oder leicht?",
+"k": "js"
+},
+{
+"s": 33991,
+"e": 34052,
+"t": "${x.name} gehört zu den 7 schweren Buchstaben: خ ص ض غ ط ق ظ.",
+"k": "tpl"
+},
+{
+"s": 34055,
+"e": 34109,
+"t": "${x.name} ist ein leichter Buchstabe – er klingt hell.",
+"k": "tpl"
+},
+{
+"s": 34276,
+"e": 34295,
+"t": "Klingt diese Silbe ",
+"k": "js"
+},
+{
+"s": 34407,
+"e": 34478,
+"t": "${byC[c].name} ist schwer – der Mund wird voll, der Laut klingt dunkel.",
+"k": "tpl"
+},
+{
+"s": 34481,
+"e": 34550,
+"t": "${byC[c].name} ist leicht – sein Partner ${byC[hv].name} wäre schwer.",
+"k": "tpl"
+},
+{
+"s": 34629,
+"e": 34637,
+"t": "Ist das ",
+"k": "js"
+},
+{
+"s": 34643,
+"e": 34645,
+"t": "Ra",
+"k": "js"
+},
+{
+"s": 34649,
+"e": 34669,
+"t": " schwer oder leicht?",
+"k": "js"
+},
+{
+"s": 34822,
+"e": 34830,
+"t": "Ist das ",
+"k": "js"
+},
+{
+"s": 34836,
+"e": 34839,
+"t": "Lam",
+"k": "js"
+},
+{
+"s": 34843,
+"e": 34874,
+"t": " in „Allah“ schwer oder leicht?",
+"k": "js"
+},
+{
+"s": 34928,
+"e": 34984,
+"t": "${why[0].toUpperCase()+why.slice(1)} → das Lam ist ${a}.",
+"k": "tpl"
+},
+{
+"s": 35035,
+"e": 35062,
+"t": "Helle und dunkle Buchstaben",
+"k": "js"
+},
+{
+"s": 35070,
+"e": 35338,
+"t": "Manche Buchstaben klingen dunkel und voll – das sind die schweren Buchstaben. Dabei hebt sich der hintere Teil der Zunge zum Gaumen, der Mund wird „voll“. Alle anderen klingen hell und dünn – das sind die leichten Buchstaben. Im Buch sind die schweren Buchstaben blau.",
+"k": "js"
+},
+{
+"s": 35357,
+"e": 35372,
+"t": "schwer · leicht",
+"k": "js"
+},
+{
+"s": 35398,
+"e": 35423,
+"t": "Die 7 schweren Buchstaben",
+"k": "js"
+},
+{
+"s": 35431,
+"e": 35534,
+"t": "Diese sieben sind immer schwer, egal welcher Vokal darauf steht. Merksatz zum Lernen: خُصَّ ضَغْطٍ قِظْ",
+"k": "js"
+},
+{
+"s": 35640,
+"e": 35675,
+"t": "Tipp: Alif nach schweren Buchstaben",
+"k": "js"
+},
+{
+"s": 35683,
+"e": 35822,
+"t": "Kommt nach einem schweren Buchstaben ein Alif (langes a), wird auch das Alif dunkel gelesen. Nach einem leichten Buchstaben bleibt es hell.",
+"k": "js"
+},
+{
+"s": 35845,
+"e": 35868,
+"t": "ṭā (dunkel) · tā (hell)",
+"k": "js"
+},
+{
+"s": 35921,
+"e": 35948,
+"t": "Ra – mal schwer, mal leicht",
+"k": "js"
+},
+{
+"s": 35956,
+"e": 36151,
+"t": "Ra ist schwer, wenn es eine Fatha oder Dhamma hat. Ra ist leicht, wenn es eine Kasra hat. Hat Ra ein Sukun, schau auf den Buchstaben davor: Fatha oder Dhamma davor → schwer, Kasra davor → leicht.",
+"k": "js"
+},
+{
+"s": 36176,
+"e": 36200,
+"t": "schwer · schwer · leicht",
+"k": "js"
+},
+{
+"s": 36226,
+"e": 36244,
+"t": "Lies die Ra-Wörter",
+"k": "js"
+},
+{
+"s": 36252,
+"e": 36318,
+"t": "Tippe auf ein Wort, um zu sehen, ob das Ra schwer oder leicht ist.",
+"k": "js"
+},
+{
+"s": 36375,
+"e": 36398,
+"t": "Das Lam im Namen Allahs",
+"k": "js"
+},
+{
+"s": 36406,
+"e": 36538,
+"t": "Steht vor dem Namen Allah eine Fatha oder Dhamma, wird das Lam schwer und voll gesprochen. Steht davor eine Kasra, bleibt es leicht.",
+"k": "js"
+},
+{
+"s": 36566,
+"e": 36586,
+"t": "schwer – Fatha davor",
+"k": "js"
+},
+{
+"s": 36612,
+"e": 36629,
+"t": "Leicht nach Kasra",
+"k": "js"
+},
+{
+"s": 36637,
+"e": 36714,
+"t": "Bei „Bismillah“ steht vor Allah eine Kasra – deshalb ist das Lam hier leicht.",
+"k": "js"
+},
+{
+"s": 36743,
+"e": 36763,
+"t": "leicht – Kasra davor",
+"k": "js"
+},
+{
+"s": 37102,
+"e": 37122,
+"t": "Welche Zahl ist das?",
+"k": "js"
+},
+{
+"s": 37206,
+"e": 37228,
+"t": "${AD[n]} ist die ${n}.",
+"k": "tpl"
+},
+{
+"s": 37238,
+"e": 37286,
+"t": " Achtung: Die 5 sieht aus wie ein kleiner Kreis!",
+"k": "js"
+},
+{
+"s": 37295,
+"e": 37328,
+"t": " Die 0 ist nur ein kleiner Punkt.",
+"k": "js"
+},
+{
+"s": 37423,
+"e": 37433,
+"t": "Finde die ",
+"k": "js"
+},
+{
+"s": 37531,
+"e": 37562,
+"t": "Die ${n} schreibt man ${AD[n]}.",
+"k": "tpl"
+},
+{
+"s": 37785,
+"e": 37806,
+"t": "Wie heißt diese Zahl?",
+"k": "js"
+},
+{
+"s": 37814,
+"e": 37877,
+"t": "Arabische Zahlen liest man von links nach rechts – wie bei uns!",
+"k": "js"
+},
+{
+"s": 38019,
+"e": 38040,
+"t": "Die arabischen Zahlen",
+"k": "js"
+},
+{
+"s": 38048,
+"e": 38213,
+"t": "Im Quran stehen die Seiten- und Ayah-Nummern in diesen Zahlen. Die Wörter liest man von rechts nach links – die Zahlen aber von links nach rechts, genau wie bei uns.",
+"k": "js"
+},
+{
+"s": 38258,
+"e": 38280,
+"t": "Die Zahlen von 0 bis 9",
+"k": "js"
+},
+{
+"s": 38288,
+"e": 38336,
+"t": "Tippe auf eine Zahl, um zu sehen, welche es ist.",
+"k": "js"
+},
+{
+"s": 38402,
+"e": 38432,
+"t": "Vorsicht, Verwechslungsgefahr!",
+"k": "js"
+},
+{
+"s": 38440,
+"e": 38572,
+"t": "Die arabische ٥ ist eine 5 – auch wenn sie wie eine 0 aussieht. Die Null ist nur ein kleiner Punkt: ٠. Und ٦ ist die 6, nicht die 7!",
+"k": "js"
+},
+{
+"s": 38640,
+"e": 38654,
+"t": "Die Buchstaben",
+"k": "js"
+},
+{
+"s": 38710,
+"e": 38722,
+"t": "Das Alphabet",
+"k": "js"
+},
+{
+"s": 38729,
+"e": 38735,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 38777,
+"e": 38797,
+"t": "Finde den Buchstaben",
+"k": "js"
+},
+{
+"s": 38804,
+"e": 38808,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 38865,
+"e": 38878,
+"t": "Wie heißt er?",
+"k": "js"
+},
+{
+"s": 38885,
+"e": 38889,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 38969,
+"e": 38973,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 39025,
+"e": 39037,
+"t": "Paare finden",
+"k": "js"
+},
+{
+"s": 39044,
+"e": 39049,
+"t": "Spiel",
+"k": "js"
+},
+{
+"s": 39120,
+"e": 39130,
+"t": "Die Formen",
+"k": "js"
+},
+{
+"s": 39186,
+"e": 39197,
+"t": "Vier Formen",
+"k": "js"
+},
+{
+"s": 39204,
+"e": 39210,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 39256,
+"e": 39271,
+"t": "Formen erkennen",
+"k": "js"
+},
+{
+"s": 39278,
+"e": 39282,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 39339,
+"e": 39348,
+"t": "Die Sechs",
+"k": "js"
+},
+{
+"s": 39355,
+"e": 39359,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 39414,
+"e": 39426,
+"t": "Kurze Vokale",
+"k": "js"
+},
+{
+"s": 39484,
+"e": 39489,
+"t": "Fatha",
+"k": "js"
+},
+{
+"s": 39496,
+"e": 39502,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 39549,
+"e": 39560,
+"t": "Fatha lesen",
+"k": "js"
+},
+{
+"s": 39567,
+"e": 39571,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 39626,
+"e": 39631,
+"t": "Kasra",
+"k": "js"
+},
+{
+"s": 39638,
+"e": 39644,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 39691,
+"e": 39702,
+"t": "Kasra lesen",
+"k": "js"
+},
+{
+"s": 39709,
+"e": 39713,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 39768,
+"e": 39774,
+"t": "Dhamma",
+"k": "js"
+},
+{
+"s": 39781,
+"e": 39787,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 39834,
+"e": 39846,
+"t": "Dhamma lesen",
+"k": "js"
+},
+{
+"s": 39853,
+"e": 39857,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 39929,
+"e": 39933,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 40009,
+"e": 40014,
+"t": "Spiel",
+"k": "js"
+},
+{
+"s": 40078,
+"e": 40083,
+"t": "Sukun",
+"k": "js"
+},
+{
+"s": 40137,
+"e": 40142,
+"t": "Sukun",
+"k": "js"
+},
+{
+"s": 40149,
+"e": 40155,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 40199,
+"e": 40211,
+"t": "Wörter lesen",
+"k": "js"
+},
+{
+"s": 40218,
+"e": 40222,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 40277,
+"e": 40288,
+"t": "Großer Test",
+"k": "js"
+},
+{
+"s": 40295,
+"e": 40302,
+"t": "Prüfung",
+"k": "js"
+},
+{
+"s": 40347,
+"e": 40362,
+"t": "Schwer & leicht",
+"k": "js"
+},
+{
+"s": 40415,
+"e": 40428,
+"t": "Hell & dunkel",
+"k": "js"
+},
+{
+"s": 40435,
+"e": 40441,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 40482,
+"e": 40501,
+"t": "Schwer oder leicht?",
+"k": "js"
+},
+{
+"s": 40508,
+"e": 40513,
+"t": "Spiel",
+"k": "js"
+},
+{
+"s": 40568,
+"e": 40581,
+"t": "Hör genau hin",
+"k": "js"
+},
+{
+"s": 40588,
+"e": 40592,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 40646,
+"e": 40656,
+"t": "Ra & Allah",
+"k": "js"
+},
+{
+"s": 40663,
+"e": 40669,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 40714,
+"e": 40727,
+"t": "Ra & Lam üben",
+"k": "js"
+},
+{
+"s": 40734,
+"e": 40738,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 40803,
+"e": 40813,
+"t": "Die Zahlen",
+"k": "js"
+},
+{
+"s": 40866,
+"e": 40879,
+"t": "Zahlen lernen",
+"k": "js"
+},
+{
+"s": 40886,
+"e": 40892,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 40931,
+"e": 40943,
+"t": "Welche Zahl?",
+"k": "js"
+},
+{
+"s": 40950,
+"e": 40954,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 41015,
+"e": 41027,
+"t": "Große Zahlen",
+"k": "js"
+},
+{
+"s": 41034,
+"e": 41038,
+"t": "Quiz",
+"k": "js"
+},
+{
+"s": 41190,
+"e": 41204,
+"t": "Erste Schritte",
+"k": "js"
+},
+{
+"s": 41209,
+"e": 41238,
+"t": "Deine erste Lektion geschafft",
+"k": "js"
+},
+{
+"s": 41306,
+"e": 41317,
+"t": "Volltreffer",
+"k": "js"
+},
+{
+"s": 41322,
+"e": 41342,
+"t": "Ein Quiz ohne Fehler",
+"k": "js"
+},
+{
+"s": 41405,
+"e": 41425,
+"t": "Welt 1 abgeschlossen",
+"k": "js"
+},
+{
+"s": 41489,
+"e": 41509,
+"t": "Welt 2 abgeschlossen",
+"k": "js"
+},
+{
+"s": 41569,
+"e": 41589,
+"t": "Welt 3 abgeschlossen",
+"k": "js"
+},
+{
+"s": 41649,
+"e": 41669,
+"t": "Welt 4 abgeschlossen",
+"k": "js"
+},
+{
+"s": 41736,
+"e": 41756,
+"t": "Welt 5 abgeschlossen",
+"k": "js"
+},
+{
+"s": 41818,
+"e": 41838,
+"t": "Welt 6 abgeschlossen",
+"k": "js"
+},
+{
+"s": 41884,
+"e": 41898,
+"t": "Sternensammler",
+"k": "js"
+},
+{
+"s": 41903,
+"e": 41922,
+"t": "30 Sterne gesammelt",
+"k": "js"
+},
+{
+"s": 41986,
+"e": 42014,
+"t": "Alle Lektionen mit 3 Sternen",
+"k": "js"
+},
+{
+"s": 42753,
+"e": 42824,
+"t": "Aus dem leeren Raum von Mund und Hals – die Luft fließt einfach heraus.",
+"k": "js"
+},
+{
+"s": 42857,
+"e": 42897,
+"t": "Ganz tief unten im Hals, nahe der Brust.",
+"k": "js"
+},
+{
+"s": 42922,
+"e": 42947,
+"t": "Aus der Mitte des Halses.",
+"k": "js"
+},
+{
+"s": 42972,
+"e": 43019,
+"t": "Aus dem oberen Teil des Halses, nahe beim Mund.",
+"k": "js"
+},
+{
+"s": 43044,
+"e": 43099,
+"t": "Hinterster Teil der Zunge drückt an den weichen Gaumen.",
+"k": "js"
+},
+{
+"s": 43123,
+"e": 43181,
+"t": "Hintere Zunge am Gaumen – etwas weiter vorne als beim Qaf.",
+"k": "js"
+},
+{
+"s": 43208,
+"e": 43256,
+"t": "Die Mitte der Zunge hebt sich zum harten Gaumen.",
+"k": "js"
+},
+{
+"s": 43280,
+"e": 43332,
+"t": "Der Rand der Zunge drückt an die oberen Backenzähne.",
+"k": "js"
+},
+{
+"s": 43355,
+"e": 43407,
+"t": "Der vordere Zungenrand berührt das Zahnfleisch oben.",
+"k": "js"
+},
+{
+"s": 43430,
+"e": 43499,
+"t": "Die Zungenspitze am Zahnfleisch oben – der Ton klingt durch die Nase.",
+"k": "js"
+},
+{
+"s": 43528,
+"e": 43598,
+"t": "Die Zungenspitze, etwas weiter hinten als beim Nun – sie rollt leicht.",
+"k": "js"
+},
+{
+"s": 43622,
+"e": 43685,
+"t": "Die Zungenspitze tippt an die Wurzeln der oberen Schneidezähne.",
+"k": "js"
+},
+{
+"s": 43713,
+"e": 43760,
+"t": "Die Zungenspitze kommt kurz zwischen die Zähne.",
+"k": "js"
+},
+{
+"s": 43788,
+"e": 43849,
+"t": "Die Zungenspitze liegt hinter den unteren Zähnen – es zischt.",
+"k": "js"
+},
+{
+"s": 43878,
+"e": 43926,
+"t": "Die Unterlippe berührt die oberen Schneidezähne.",
+"k": "js"
+},
+{
+"s": 43951,
+"e": 43982,
+"t": "Beide Lippen arbeiten zusammen.",
+"k": "js"
+},
+{
+"s": 44343,
+"e": 44373,
+"t": " Die Lippen werden dabei rund.",
+"k": "js"
+},
+{
+"s": 44380,
+"e": 44422,
+"t": " Der Ton klingt dabei auch durch die Nase.",
+"k": "js"
+},
+{
+"s": 44429,
+"e": 44472,
+"t": " Die Lippen gehen fest zu und springen auf.",
+"k": "js"
+},
+{
+"s": 44713,
+"e": 44744,
+"t": "Seitenansicht von Mund und Hals",
+"k": "js"
+},
+{
+"s": 44771,
+"e": 44802,
+"t": "<path d=\"${d}\" class=\"${cls}\"/>",
+"k": "tpl"
+},
+{
+"s": 45926,
+"e": 46054,
+"t": "<rect class=\"tooth\" x=\"47\" y=\"101\" width=\"8\" height=\"9\" rx=\"2\"/><rect class=\"tooth\" x=\"49\" y=\"117\" width=\"8\" height=\"8\" rx=\"2\"/>",
+"k": "tpl"
+},
+{
+"s": 46062,
+"e": 46200,
+"t": "<text class=\"lbl\" x=\"84\" y=\"74\">Nasenraum</text><text class=\"lbl\" x=\"166\" y=\"150\">Hals</text><text class=\"lbl\" x=\"86\" y=\"146\">Zunge</text>",
+"k": "tpl"
+},
+{
+"s": 46216,
+"e": 46329,
+"t": "<ellipse class=\"zone\" cx=\"110\" cy=\"112\" rx=\"46\" ry=\"16\"/><ellipse class=\"zone\" cx=\"150\" cy=\"150\" rx=\"9\" ry=\"44\"/>",
+"k": "tpl"
+},
+{
+"s": 46341,
+"e": 46371,
+"t": "<path class=\"air\" d=\"${air}\"/>",
+"k": "tpl"
+},
+{
+"s": 46379,
+"e": 46483,
+"t": "<circle class=\"ring\" cx=\"${p.x}\" cy=\"${p.y}\" r=\"7\"/><circle class=\"spot\" cx=\"${p.x}\" cy=\"${p.y}\" r=\"5\"/>",
+"k": "tpl"
+},
+{
+"s": 46642,
+"e": 46674,
+"t": "(prefers-reduced-motion: reduce)",
+"k": "js"
+},
+{
+"s": 48275,
+"e": 48321,
+"t": "Auf diesem Gerät gibt es keine Vorlese-Stimme.",
+"k": "js"
+},
+{
+"s": 48631,
+"e": 48677,
+"t": "Computerstimme – vergleiche mit deinem Lehrer.",
+"k": "js"
+},
+{
+"s": 48680,
+"e": 48760,
+"t": "Computerstimme (keine arabische Stimme auf diesem Gerät gefunden – evtl. stumm).",
+"k": "js"
+},
+{
+"s": 49285,
+"e": 49312,
+"t": "Aufnahme von deinem Lehrer.",
+"k": "js"
+},
+{
+"s": 50295,
+"e": 50372,
+"t": "Lehrer: Lade kurze Aufnahmen hoch (1–3 Sekunden, z. B. Sprachmemo vom Handy).",
+"k": "js"
+},
+{
+"s": 50587,
+"e": 50613,
+"t": "Die Aufnahme ist zu groß (",
+"k": "js"
+},
+{
+"s": 50640,
+"e": 50687,
+"t": " KB). Bitte kürzer aufnehmen (max. ca. 170 KB).",
+"k": "js"
+},
+{
+"s": 50720,
+"e": 50738,
+"t": "Wird gespeichert …",
+"k": "js"
+},
+{
+"s": 50895,
+"e": 50951,
+"t": "“ gespeichert – alle Schüler hören jetzt deine Aufnahme.",
+"k": "js"
+},
+{
+"s": 50987,
+"e": 51041,
+"t": "Speichern hat nicht geklappt. Bitte nochmal versuchen.",
+"k": "js"
+},
+{
+"s": 51107,
+"e": 51116,
+"t": "say ghost",
+"k": "js"
+},
+{
+"s": 51160,
+"e": 51169,
+"t": "say ghost",
+"k": "js"
+},
+{
+"s": 51194,
+"e": 51204,
+"t": "Aufnahme „",
+"k": "js"
+},
+{
+"s": 51211,
+"e": 51222,
+"t": "“ entfernen",
+"k": "js"
+},
+{
+"s": 51314,
+"e": 51324,
+"t": "Aufnahme „",
+"k": "js"
+},
+{
+"s": 51331,
+"e": 51342,
+"t": "“ entfernt.",
+"k": "js"
+},
+{
+"s": 51378,
+"e": 51407,
+"t": "Entfernen hat nicht geklappt.",
+"k": "js"
+},
+{
+"s": 51871,
+"e": 51889,
+"t": "Buchstaben anhören",
+"k": "js"
+},
+{
+"s": 51897,
+"e": 52141,
+"t": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9v6h4l5 4V5L8 9z\" fill=\"currentColor\"/><path d=\"M16 8.5a5 5 0 010 7M18.5 6a8.5 8.5 0 010 12\"/></svg>Anhören",
+"k": "js"
+},
+{
+"s": 52246,
+"e": 52255,
+"t": "say ghost",
+"k": "js"
+},
+{
+"s": 52263,
+"e": 52277,
+"t": "Nochmal zeigen",
+"k": "js"
+},
+{
+"s": 52452,
+"e": 52473,
+"t": "Wo entsteht der Laut?",
+"k": "js"
+},
+{
+"s": 52635,
+"e": 52644,
+"t": "Buchstabe",
+"k": "js"
+},
+{
+"s": 52806,
+"e": 73957,
+"t": "[{\"c\":\"\\\\u0627\",\"p\":[\"M121 -9Q116 -112 111 -190Q106 -268 101 -334Q96 -399 90 -461Q84 -523 77 -595Q74 -620 88 -639Q103 -658 128 -669Q154 -680 184 -680Q192 -649 202 -618Q213 -587 225 -557L190 -531Q192 -476 192 -400Q192 -323 190 -227Q189 -131 185 -17Z\"],\"bb\":[76,-680,225,-9]},{\"c\":\"\\\\u0628\",\"p\":[\"M314 0Q193 0 132 -55Q70 -110 70 -213Q70 -256 89 -323H134Q133 -319 132 -301Q131 -283 131 -273Q131 -215 154 -184Q176 -152 224 -135Q248 -128 280 -124Q312 -119 351 -119Q438 -119 522 -135Q606 -151 675 -182Q665 -205 650 -234Q634 -262 625 -278Q615 -298 608 -314Q601 -329 601 -342Q601 -366 628 -395Q655 -424 692 -443Q708 -368 716 -321Q725 -274 729 -248Q733 -223 733 -211Q733 -188 722 -154Q710 -119 694 -90Q650 -63 588 -43Q527 -23 456 -12Q386 0 314 0Z\",\"M379 223Q328 181 302 151Q325 128 344 108Q362 89 377 71Q388 83 406 101Q424 119 449 143Q437 160 420 180Q402 200 379 223Z\"],\"bb\":[70,-443,733,223]},{\"c\":\"\\\\u062a\",\"p\":[\"M314 0Q193 0 132 -55Q70 -110 70 -213Q70 -256 89 -323H134Q133 -319 132 -301Q131 -283 131 -273Q131 -215 154 -184Q176 -152 224 -135Q248 -128 280 -124Q312 -119 351 -119Q438 -119 522 -135Q606 -151 675 -182Q665 -205 650 -234Q634 -262 625 -278Q615 -298 608 -314Q601 -329 601 -342Q601 -366 628 -395Q655 -424 692 -443Q708 -368 716 -321Q725 -274 729 -248Q733 -223 733 -211Q733 -188 722 -154Q710 -119 694 -90Q650 -63 588 -43Q527 -23 456 -12Q386 0 314 0Z\",\"M430 -356Q409 -373 392 -388Q375 -403 361 -418Q380 -435 396 -452Q413 -470 428 -488Q437 -478 453 -463Q469 -448 491 -426Q464 -389 430 -356Z\",\"M296 -341Q274 -358 257 -374Q240 -390 227 -404Q244 -421 261 -438Q278 -456 295 -473Q304 -463 320 -447Q335 -431 357 -411Q344 -393 329 -376Q314 -358 296 -341Z\"],\"bb\":[70,-488,733,0]},{\"c\":\"\\\\u062b\",\"p\":[\"M314 0Q193 0 132 -55Q70 -110 70 -213Q70 -256 89 -323H134Q133 -319 132 -301Q131 -283 131 -273Q131 -215 154 -184Q176 -152 224 -135Q248 -128 280 -124Q312 -119 351 -119Q438 -119 522 -135Q606 -151 675 -182Q665 -205 650 -234Q634 -262 625 -278Q615 -298 608 -314Q601 -329 601 -342Q601 -366 628 -395Q655 -424 692 -443Q708 -368 716 -321Q725 -274 729 -248Q733 -223 733 -211Q733 -188 722 -154Q710 -119 694 -90Q650 -63 588 -43Q527 -23 456 -12Q386 0 314 0Z\",\"M436 -352Q415 -369 398 -384Q381 -400 367 -415Q382 -429 399 -446Q416 -463 434 -484Q440 -477 456 -462Q472 -447 497 -423Q484 -404 468 -386Q453 -369 436 -352Z\",\"M364 -438Q343 -455 328 -470Q313 -484 303 -495Q324 -514 338 -528Q353 -541 361 -551Q372 -538 386 -524Q401 -510 419 -495Q398 -472 384 -458Q370 -443 364 -438Z\",\"M297 -338Q275 -355 258 -370Q241 -386 229 -401Q246 -418 263 -436Q280 -453 297 -470Q305 -460 320 -444Q336 -428 358 -408Q343 -388 328 -370Q313 -352 297 -338Z\"],\"bb\":[70,-551,733,0]},{\"c\":\"\\\\u062c\",\"p\":[\"M373 288Q246 288 176 224Q105 159 105 44Q105 -21 132 -80Q160 -140 212 -187Q235 -208 261 -226Q287 -245 318 -260Q295 -269 275 -276Q255 -283 236 -287Q218 -291 199 -291Q170 -291 148 -282Q126 -274 91 -252Q82 -261 75 -278Q68 -296 68 -312Q68 -357 104 -384Q140 -410 201 -410Q234 -410 270 -402Q306 -394 361 -374Q415 -354 456 -345Q497 -336 535 -336L626 -338L585 -226Q572 -224 550 -223Q527 -222 504 -222Q481 -223 464 -224Q431 -219 392 -205Q353 -191 316 -172Q279 -152 249 -128Q205 -93 180 -53Q156 -13 156 29Q156 74 184 106Q212 138 262 156Q311 173 375 173Q426 173 486 166Q546 158 616 142L630 184Q575 215 524 238Q473 262 434 275Q394 288 373 288Z\",\"M386 71Q335 29 309 -1Q332 -24 350 -44Q369 -63 384 -81Q395 -69 413 -51Q431 -33 456 -9Q444 8 426 28Q409 48 386 71Z\"],\"bb\":[68,-410,630,288]},{\"c\":\"\\\\u062d\",\"p\":[\"M373 288Q246 288 176 224Q105 159 105 44Q105 -21 132 -80Q160 -140 212 -187Q235 -208 261 -226Q287 -245 318 -260Q295 -269 275 -276Q255 -283 236 -287Q218 -291 199 -291Q170 -291 148 -282Q126 -274 91 -252Q82 -261 75 -278Q68 -296 68 -312Q68 -357 104 -384Q140 -410 201 -410Q234 -410 270 -402Q306 -394 361 -374Q415 -354 456 -345Q497 -336 535 -336L626 -338L585 -226Q572 -224 550 -223Q527 -222 504 -222Q481 -223 464 -224Q431 -219 392 -205Q353 -191 316 -172Q279 -152 249 -128Q205 -93 180 -53Q156 -13 156 29Q156 74 184 106Q212 138 262 156Q311 173 375 173Q426 173 486 166Q546 158 616 142L630 184Q575 215 524 238Q473 262 434 275Q394 288 373 288Z\"],\"bb\":[68,-410,630,288]},{\"c\":\"\\\\u062e\",\"p\":[\"M373 288Q246 288 176 224Q105 159 105 44Q105 -21 132 -80Q160 -140 212 -187Q235 -208 261 -226Q287 -245 318 -260Q295 -269 275 -276Q255 -283 236 -287Q218 -291 199 -291Q170 -291 148 -282Q126 -274 91 -252Q82 -261 75 -278Q68 -296 68 -312Q68 -357 104 -384Q140 -410 201 -410Q234 -410 270 -402Q306 -394 361 -374Q415 -354 456 -345Q497 -336 535 -336L626 -338L585 -226Q572 -224 550 -223Q527 -222 504 -222Q481 -223 464 -224Q431 -219 392 -205Q353 -191 316 -172Q279 -152 249 -128Q205 -93 180 -53Q156 -13 156 29Q156 74 184 106Q212 138 262 156Q311 173 375 173Q426 173 486 166Q546 158 616 142L630 184Q575 215 524 238Q473 262 434 275Q394 288 373 288Z\",\"M340 -467Q289 -509 263 -539Q286 -562 304 -582Q323 -601 338 -619Q349 -607 367 -589Q385 -571 410 -547Q398 -530 380 -510Q363 -490 340 -467Z\"],\"bb\":[68,-619,630,288]},{\"c\":\"\\\\u062f\",\"p\":[\"M168 0Q34 0 34 -78Q34 -99 42 -122Q51 -146 64 -159Q89 -139 121 -129Q153 -119 200 -119Q265 -119 331 -140Q315 -169 302 -191Q288 -213 277 -229Q258 -256 244 -278Q229 -301 221 -319Q213 -337 213 -350Q213 -382 238 -411Q264 -440 297 -450Q305 -424 316 -393Q327 -362 338 -332Q350 -302 358 -280Q372 -242 382 -209Q392 -176 392 -149Q392 -140 386 -120Q381 -99 373 -77Q365 -55 357 -39Q321 -21 271 -10Q221 0 168 0Z\"],\"bb\":[34,-450,392,0]},{\"c\":\"\\\\u0630\",\"p\":[\"M168 0Q34 0 34 -78Q34 -99 42 -122Q51 -146 64 -159Q89 -139 121 -129Q153 -119 200 -119Q265 -119 331 -140Q315 -169 302 -191Q288 -213 277 -229Q258 -256 244 -278Q229 -301 221 -319Q213 -337 213 -350Q213 -382 238 -411Q264 -440 297 -450Q305 -424 316 -393Q327 -362 338 -332Q350 -302 358 -280Q372 -242 382 -209Q392 -176 392 -149Q392 -140 386 -120Q381 -99 373 -77Q365 -55 357 -39Q321 -21 271 -10Q221 0 168 0Z\",\"M227 -510Q176 -552 150 -582Q173 -605 192 -624Q210 -644 225 -662Q236 -650 254 -632Q272 -614 297 -590Q285 -573 268 -553Q250 -533 227 -510Z\"],\"bb\":[34,-662,392,0]},{\"c\":\"\\\\u0631\",\"p\":[\"M102 195Q91 195 70 185Q49 175 22 156Q-5 138 -34 114L-18 72Q9 79 34 82Q60 86 83 86Q157 86 208 49Q259 12 282 -58Q275 -73 266 -88Q258 -104 248 -119Q219 -164 196 -205Q173 -246 173 -278Q173 -307 196 -336Q219 -364 256 -383Q262 -362 270 -334Q279 -306 288 -278Q298 -251 305 -230Q318 -193 326 -157Q335 -121 335 -89Q335 -11 305 54Q275 120 222 158Q169 195 102 195Z\"],\"bb\":[-34,-383,335,195]},{\"c\":\"\\\\u0632\",\"p\":[\"M102 195Q91 195 70 185Q49 175 22 156Q-5 138 -34 114L-18 72Q9 79 34 82Q60 86 83 86Q157 86 208 49Q259 12 282 -58Q275 -73 266 -88Q258 -104 248 -119Q219 -164 196 -205Q173 -246 173 -278Q173 -307 196 -336Q219 -364 256 -383Q262 -362 270 -334Q279 -306 288 -278Q298 -251 305 -230Q318 -193 326 -157Q335 -121 335 -89Q335 -11 305 54Q275 120 222 158Q169 195 102 195Z\",\"M201 -443Q150 -485 124 -515Q147 -538 166 -558Q184 -577 199 -595Q210 -583 228 -565Q246 -547 271 -523Q259 -506 242 -486Q224 -466 201 -443Z\"],\"bb\":[-34,-595,335,195]},{\"c\":\"\\\\u0633\",\"p\":[\"M251 252Q162 252 115 200Q68 147 68 47Q68 30 70 8Q73 -13 79 -40Q85 -67 93 -98L137 -87Q123 -40 123 -7Q123 64 155 99Q187 134 254 134Q307 134 348 125Q390 116 426 96Q462 77 497 45Q463 -21 438 -70Q412 -118 412 -138Q412 -180 436 -212Q461 -245 513 -270Q515 -257 518 -236Q521 -216 526 -188Q531 -160 537 -124Q554 -122 569 -120Q584 -119 597 -119Q617 -119 629 -120Q641 -122 668 -130Q676 -144 695 -192Q703 -211 710 -229Q717 -247 724 -265Q729 -279 741 -286Q753 -293 770 -293Q791 -293 808 -283Q801 -267 790 -233Q779 -199 765 -155Q803 -136 848 -126Q893 -116 952 -110Q942 -132 930 -154Q919 -175 908 -197Q896 -220 886 -240Q877 -261 877 -281Q877 -305 904 -334Q931 -364 968 -383Q975 -349 982 -315Q988 -281 995 -248Q1003 -208 1006 -182Q1010 -156 1010 -142Q1010 -126 1004 -100Q997 -74 988 -46Q978 -19 968 0Q907 0 843 -14Q779 -29 729 -51L718 -29Q711 -16 674 -8Q655 -4 633 -2Q611 0 585 0Q577 0 568 0Q560 -1 552 -2V7Q552 74 512 131Q472 188 403 220Q369 236 330 244Q292 252 251 252Z\"],\"bb\":[68,-383,1010,252]},{\"c\":\"\\\\u0634\",\"p\":[\"M251 252Q162 252 115 200Q68 147 68 47Q68 30 70 8Q73 -13 79 -40Q85 -67 93 -98L137 -87Q123 -40 123 -7Q123 64 155 99Q187 134 254 134Q307 134 348 125Q390 116 426 96Q462 77 497 45Q463 -21 438 -70Q412 -118 412 -138Q412 -180 436 -212Q461 -245 513 -270Q515 -257 518 -236Q521 -216 526 -188Q531 -160 537 -124Q554 -122 569 -120Q584 -119 597 -119Q617 -119 629 -120Q641 -122 668 -130Q676 -144 695 -192Q703 -211 710 -229Q717 -247 724 -265Q729 -279 741 -286Q753 -293 770 -293Q791 -293 808 -283Q801 -267 790 -233Q779 -199 765 -155Q803 -136 848 -126Q893 -116 952 -110Q942 -132 930 -154Q919 -175 908 -197Q896 -220 886 -240Q877 -261 877 -281Q877 -305 904 -334Q931 -364 968 -383Q975 -349 982 -315Q988 -281 995 -248Q1003 -208 1006 -182Q1010 -156 1010 -142Q1010 -126 1004 -100Q997 -74 988 -46Q978 -19 968 0Q907 0 843 -14Q779 -29 729 -51L718 -29Q711 -16 674 -8Q655 -4 633 -2Q611 0 585 0Q577 0 568 0Q560 -1 552 -2V7Q552 74 512 131Q472 188 403 220Q369 236 330 244Q292 252 251 252Z\",\"M806 -382Q785 -399 768 -414Q751 -430 737 -445Q752 -459 769 -476Q786 -493 804 -514Q810 -507 826 -492Q842 -477 867 -453Q854 -434 838 -416Q823 -399 806 -382Z\",\"M734 -468Q713 -485 698 -500Q683 -514 673 -525Q694 -544 708 -558Q723 -571 731 -581Q742 -568 756 -554Q771 -540 789 -525Q768 -502 754 -488Q740 -473 734 -468Z\",\"M667 -368Q645 -385 628 -400Q611 -416 599 -431Q616 -448 633 -466Q650 -483 667 -500Q675 -490 690 -474Q706 -458 728 -438Q713 -418 698 -400Q683 -382 667 -368Z\"],\"bb\":[68,-581,1010,252]},{\"c\":\"\\\\u0635\",\"p\":[\"M251 252Q162 252 115 200Q68 147 68 47Q68 30 70 8Q73 -13 79 -40Q85 -67 93 -98L137 -87Q123 -40 123 -7Q123 64 155 99Q187 134 254 134Q307 134 348 125Q390 116 426 96Q462 77 497 45Q462 -21 437 -68Q412 -116 412 -144Q412 -182 436 -214Q461 -245 513 -270Q513 -269 518 -234Q524 -199 534 -144L561 -135Q661 -268 740 -334Q820 -400 878 -400Q903 -400 932 -386Q962 -372 992 -349Q1021 -326 1045 -297Q1081 -255 1081 -226Q1081 -161 1039 -110Q997 -59 914 -30Q830 0 741 0Q695 0 648 -6Q601 -12 551 -23Q551 -16 552 -8Q552 -1 552 7Q552 74 512 131Q472 188 403 220Q369 236 330 244Q292 252 251 252ZM751 -110Q823 -110 886 -127Q949 -144 1022 -179Q978 -231 936 -256Q893 -282 854 -282Q819 -282 778 -258Q738 -233 699 -196Q660 -159 626 -120Q663 -116 694 -113Q726 -110 751 -110Z\"],\"bb\":[68,-400,1081,252]},{\"c\":\"\\\\u0636\",\"p\":[\"M251 252Q162 252 115 200Q68 147 68 47Q68 30 70 8Q73 -13 79 -40Q85 -67 93 -98L137 -87Q123 -40 123 -7Q123 64 155 99Q187 134 254 134Q307 134 348 125Q390 116 426 96Q462 77 497 45Q462 -21 437 -68Q412 -116 412 -144Q412 -182 436 -214Q461 -245 513 -270Q513 -269 518 -234Q524 -199 534 -144L561 -135Q661 -268 740 -334Q820 -400 878 -400Q903 -400 932 -386Q962 -372 992 -349Q1021 -326 1045 -297Q1081 -255 1081 -226Q1081 -161 1039 -110Q997 -59 914 -30Q830 0 741 0Q695 0 648 -6Q601 -12 551 -23Q551 -16 552 -8Q552 -1 552 7Q552 74 512 131Q472 188 403 220Q369 236 330 244Q292 252 251 252ZM751 -110Q823 -110 886 -127Q949 -144 1022 -179Q978 -231 936 -256Q893 -282 854 -282Q819 -282 778 -258Q738 -233 699 -196Q660 -159 626 -120Q663 -116 694 -113Q726 -110 751 -110Z\",\"M747 -469Q696 -511 670 -541Q693 -564 712 -584Q730 -603 745 -621Q756 -609 774 -591Q792 -573 817 -549Q805 -532 788 -512Q770 -492 747 -469Z\"],\"bb\":[68,-621,1081,252]},{\"c\":\"\\\\u0637\",\"p\":[\"M402 0Q364 0 318 -2Q271 -4 232 -8Q192 -11 175 -16Q162 -20 138 -34Q115 -49 88 -70Q60 -90 34 -113L49 -156Q102 -143 142 -136Q183 -128 212 -123Q223 -136 232 -149Q242 -162 252 -175Q213 -354 192 -454Q172 -554 172 -582Q172 -623 202 -652Q231 -680 273 -680Q282 -649 292 -618Q302 -587 314 -557L282 -533Q286 -488 288 -464Q289 -439 290 -428Q291 -416 292 -409Q292 -402 293 -392Q294 -382 296 -361Q297 -340 300 -299Q301 -286 302 -271Q303 -256 304 -238Q447 -400 539 -400Q563 -400 593 -386Q623 -372 652 -349Q682 -326 706 -297Q741 -253 741 -226Q741 -160 700 -110Q659 -61 576 -30Q492 0 402 0ZM412 -110Q486 -110 550 -128Q613 -145 684 -179Q639 -231 596 -256Q554 -282 514 -282Q472 -282 416 -242Q360 -202 283 -115Q316 -113 348 -112Q381 -110 412 -110Z\"],\"bb\":[34,-680,741,0]},{\"c\":\"\\\\u0638\",\"p\":[\"M402 0Q364 0 318 -2Q271 -4 232 -8Q192 -11 175 -16Q162 -20 138 -34Q115 -49 88 -70Q60 -90 34 -113L49 -156Q102 -143 142 -136Q183 -128 212 -123Q223 -136 232 -149Q242 -162 252 -175Q213 -354 192 -454Q172 -554 172 -582Q172 -623 202 -652Q231 -680 273 -680Q282 -649 292 -618Q302 -587 314 -557L282 -533Q286 -488 288 -464Q289 -439 290 -428Q291 -416 292 -409Q292 -402 293 -392Q294 -382 296 -361Q297 -340 300 -299Q301 -286 302 -271Q303 -256 304 -238Q447 -400 539 -400Q563 -400 593 -386Q623 -372 652 -349Q682 -326 706 -297Q741 -253 741 -226Q741 -160 700 -110Q659 -61 576 -30Q492 0 402 0ZM412 -110Q486 -110 550 -128Q613 -145 684 -179Q639 -231 596 -256Q554 -282 514 -282Q472 -282 416 -242Q360 -202 283 -115Q316 -113 348 -112Q381 -110 412 -110Z\",\"M507 -479Q456 -521 430 -551Q453 -574 472 -594Q490 -613 505 -631Q516 -619 534 -601Q552 -583 577 -559Q565 -542 548 -522Q530 -502 507 -479Z\"],\"bb\":[34,-680,741,0]},{\"c\":\"\\\\u0639\",\"p\":[\"M367 301Q289 301 232 273Q175 245 144 193Q113 141 113 71Q113 -37 188 -118Q156 -133 132 -158Q107 -182 95 -209Q83 -236 83 -261Q83 -291 94 -326Q106 -360 126 -392Q147 -423 172 -444Q209 -475 250 -475Q285 -475 323 -452Q361 -429 402 -382L381 -342Q351 -354 325 -360Q299 -365 276 -365Q241 -365 214 -358Q186 -350 154 -333Q157 -279 190 -243Q224 -207 281 -193Q325 -219 373 -240Q421 -262 475 -280Q486 -264 486 -229Q486 -208 478 -192Q469 -175 450 -162Q442 -156 424 -148Q406 -139 379 -128Q292 -94 249 -66Q206 -38 185 -5Q175 11 170 29Q164 47 164 65Q164 122 216 154Q269 186 369 186Q389 186 410 184Q431 183 453 180Q474 177 511 170Q548 162 600 150L613 192Q527 245 462 273Q398 301 367 301Z\"],\"bb\":[83,-475,613,301]},{\"c\":\"\\\\u063a\",\"p\":[\"M367 301Q289 301 232 273Q175 245 144 193Q113 141 113 71Q113 -37 188 -118Q156 -133 132 -158Q107 -182 95 -209Q83 -236 83 -261Q83 -291 94 -326Q106 -360 126 -392Q147 -423 172 -444Q209 -475 250 -475Q285 -475 323 -452Q361 -429 402 -382L381 -342Q351 -354 325 -360Q299 -365 276 -365Q241 -365 214 -358Q186 -350 154 -333Q157 -279 190 -243Q224 -207 281 -193Q325 -219 373 -240Q421 -262 475 -280Q486 -264 486 -229Q486 -208 478 -192Q469 -175 450 -162Q442 -156 424 -148Q406 -139 379 -128Q292 -94 249 -66Q206 -38 185 -5Q175 11 170 29Q164 47 164 65Q164 122 216 154Q269 186 369 186Q389 186 410 184Q431 183 453 180Q474 177 511 170Q548 162 600 150L613 192Q527 245 462 273Q398 301 367 301Z\",\"M237 -539Q186 -581 160 -611Q183 -634 202 -654Q220 -673 235 -691Q246 -679 264 -661Q282 -643 307 -619Q295 -602 278 -582Q260 -562 237 -539Z\"],\"bb\":[83,-691,613,301]},{\"c\":\"\\\\u0641\",\"p\":[\"M307 0Q186 0 124 -55Q63 -110 63 -213Q63 -234 68 -262Q73 -289 83 -323H127Q126 -310 125 -297Q124 -284 124 -273Q124 -215 147 -183Q170 -151 217 -135Q241 -127 272 -122Q304 -118 343 -118Q408 -118 468 -122Q529 -126 582 -134Q635 -141 678 -152Q722 -164 754 -178Q751 -193 746 -209Q742 -225 736 -243Q708 -222 672 -208Q635 -195 599 -195Q547 -195 515 -226Q483 -258 483 -312Q483 -365 503 -414Q523 -463 554 -492Q587 -522 621 -522Q668 -522 712 -478Q756 -434 781 -357Q794 -318 800 -274Q806 -231 806 -183Q806 -171 804 -152Q803 -134 796 -114Q789 -95 771 -81Q728 -54 674 -38Q621 -22 560 -14Q499 -5 435 -2Q371 0 307 0ZM618 -280Q638 -280 662 -284Q686 -289 713 -298Q688 -351 659 -377Q630 -403 600 -403Q575 -403 555 -384Q535 -366 535 -337Q535 -313 560 -296Q584 -280 618 -280Z\",\"M620 -589Q569 -631 543 -661Q566 -684 584 -704Q603 -723 618 -741Q629 -729 647 -711Q665 -693 690 -669Q678 -652 660 -632Q643 -612 620 -589Z\"],\"bb\":[63,-741,806,0]},{\"c\":\"\\\\u0642\",\"p\":[\"M251 252Q162 252 115 200Q68 147 68 47Q68 30 70 8Q73 -13 79 -40Q85 -67 93 -98L137 -87Q123 -40 123 -7Q123 63 158 98Q193 134 263 134Q311 134 362 120Q413 105 465 77Q482 67 500 56Q518 44 535 31Q533 8 530 -16Q526 -39 521 -61Q490 -30 458 -15Q426 0 394 0Q332 0 298 -36Q264 -72 264 -138Q264 -194 285 -248Q306 -301 340 -333Q375 -366 411 -366Q461 -366 506 -325Q551 -284 576 -211Q601 -139 601 -50Q601 14 574 68Q548 121 499 162Q467 189 424 209Q382 229 338 240Q293 252 251 252ZM414 -110Q435 -110 458 -114Q480 -118 503 -125Q488 -167 470 -194Q452 -221 432 -234Q413 -246 393 -246Q371 -246 353 -234Q335 -223 326 -206Q318 -188 318 -171Q318 -141 343 -126Q368 -110 414 -110Z\",\"M478 -447Q457 -464 440 -479Q423 -494 409 -509Q428 -526 444 -544Q461 -561 476 -579Q485 -569 501 -554Q517 -539 539 -517Q512 -480 478 -447Z\",\"M344 -432Q322 -449 305 -465Q288 -481 275 -495Q292 -512 309 -530Q326 -547 343 -564Q352 -554 368 -538Q383 -522 405 -502Q392 -484 377 -466Q362 -449 344 -432Z\"],\"bb\":[68,-579,601,252]},{\"c\":\"\\\\u0643\",\"p\":[\"M264 -1Q199 -1 116 -7Q34 -12 34 -20Q34 -49 42 -84Q50 -119 60 -140Q86 -134 125 -130Q164 -125 206 -122Q247 -119 283 -119Q341 -119 397 -124Q453 -129 508 -139Q484 -235 470 -290Q457 -346 452 -366Q446 -388 439 -419Q432 -450 426 -482Q419 -514 415 -540Q411 -566 411 -577Q411 -620 442 -650Q474 -680 519 -680Q528 -646 538 -616Q548 -585 559 -557L527 -533Q543 -374 551 -274Q559 -173 559 -130Q559 -105 548 -72Q537 -39 520 -17Q462 -9 398 -5Q335 -1 264 -1Z\",\"M213 -224Q200 -224 195 -230Q190 -236 190 -244Q216 -246 240 -255Q265 -264 282 -276Q290 -281 296 -286Q301 -292 304 -298Q257 -299 231 -308Q205 -316 205 -346Q205 -362 217 -380Q229 -398 247 -411Q265 -424 283 -424Q309 -424 317 -396L301 -389Q296 -394 289 -394Q281 -394 270 -386Q259 -378 250 -367Q240 -356 238 -345Q255 -337 281 -334Q307 -332 320 -323Q329 -317 329 -304Q329 -291 310 -272Q291 -253 264 -238Q237 -224 213 -224Z\"],\"bb\":[34,-680,559,-1]},{\"c\":\"\\\\u0644\",\"p\":[\"M251 252Q161 252 114 200Q67 147 67 47Q67 30 70 8Q73 -13 78 -40Q84 -67 92 -98L136 -87Q123 -44 123 -7Q123 64 155 99Q187 134 253 134Q308 134 350 124Q393 115 430 93Q446 84 462 72Q477 59 493 45L471 -72Q463 -116 452 -178Q440 -239 429 -306Q418 -372 408 -431Q398 -490 392 -530Q386 -570 386 -578Q386 -620 418 -650Q450 -680 494 -680Q503 -646 513 -616Q523 -585 534 -557L502 -533L532 -221Q537 -172 540 -134Q544 -97 546 -64Q549 -30 549 7Q549 74 509 131Q469 188 401 220Q367 236 330 244Q292 252 251 252Z\"],\"bb\":[67,-680,549,252]},{\"c\":\"\\\\u0645\",\"p\":[\"M74 328Q74 283 71 236Q68 188 62 138Q57 87 54 52Q51 18 51 0Q51 -14 62 -44Q72 -73 93 -118Q96 -123 117 -129Q138 -135 169 -140Q200 -146 234 -150Q268 -154 298 -156Q327 -159 343 -159L324 -180Q296 -211 276 -238Q255 -266 231 -266Q208 -266 186 -249Q164 -232 140 -198L99 -219Q128 -293 168 -338Q209 -383 250 -383Q274 -383 296 -365Q318 -347 348 -304Q380 -257 408 -224Q437 -192 468 -170L422 -51Q381 -51 334 -48Q288 -45 244 -40Q201 -34 167 -28Q133 -21 115 -15Q121 13 127 41Q133 69 139 97Q148 140 157 184Q166 228 175 272Q149 291 124 305Q99 319 74 328Z\"],\"bb\":[51,-383,468,328]},{\"c\":\"\\\\u0646\",\"p\":[\"M251 252Q162 252 115 200Q68 147 68 47Q68 30 70 8Q73 -13 79 -40Q85 -67 93 -98L137 -87Q123 -40 123 -7Q123 64 155 99Q187 134 254 134Q307 134 348 125Q390 116 426 96Q462 77 497 45Q463 -21 438 -70Q412 -118 412 -138Q412 -180 436 -212Q461 -245 513 -270Q516 -250 520 -224Q525 -197 530 -170Q534 -143 537 -123Q543 -87 548 -54Q552 -20 552 7Q552 74 512 131Q472 188 403 220Q369 236 330 244Q292 252 251 252Z\",\"M283 -247Q232 -289 206 -319Q229 -342 248 -362Q266 -381 281 -399Q292 -387 310 -369Q328 -351 353 -327Q341 -310 324 -290Q306 -270 283 -247Z\"],\"bb\":[68,-399,552,252]},{\"c\":\"\\\\u0647\",\"p\":[\"M568 9Q498 7 437 -8Q376 -23 329 -48Q257 -9 154 -9Q144 -9 122 -22Q99 -34 75 -52Q51 -71 34 -90L54 -130Q81 -125 108 -122Q136 -119 164 -119Q182 -119 200 -120Q217 -121 233 -123Q198 -170 198 -216Q198 -243 209 -274Q220 -305 239 -332Q258 -360 280 -375L309 -479Q390 -459 462 -404Q534 -350 576 -274Q619 -197 619 -125Q619 -77 568 9ZM337 -153Q357 -163 370 -188Q383 -212 383 -240Q383 -264 366 -282Q350 -301 333 -301Q316 -301 301 -292Q286 -283 273 -264Q266 -254 260 -242Q254 -231 249 -217Q268 -197 290 -181Q312 -165 337 -153ZM563 -100Q546 -147 526 -183Q507 -219 486 -247Q464 -275 437 -296Q448 -266 448 -237Q448 -175 417 -125Q443 -118 480 -112Q516 -106 563 -100Z\"],\"bb\":[34,-479,619,9]},{\"c\":\"\\\\u0648\",\"p\":[\"M195 195Q183 195 158 184Q133 172 104 154Q76 135 51 114L67 72Q94 79 122 82Q149 86 177 86Q255 86 313 48Q371 9 393 -58L392 -65Q363 -35 329 -18Q295 0 260 0Q198 0 164 -36Q130 -72 130 -138Q130 -194 151 -248Q172 -301 206 -333Q239 -366 276 -366Q319 -366 358 -326Q396 -287 421 -219Q433 -185 439 -153Q445 -121 445 -89Q445 -39 430 8Q415 55 388 93Q360 131 321 157Q264 195 195 195ZM280 -110Q303 -110 326 -114Q350 -119 375 -127Q366 -155 347 -184Q328 -214 305 -230Q281 -246 259 -246Q234 -246 215 -232Q196 -219 188 -198Q184 -186 184 -171Q184 -141 209 -126Q234 -110 280 -110Z\"],\"bb\":[51,-366,445,195]},{\"c\":\"\\\\u064a\",\"p\":[\"M251 252Q162 252 115 200Q68 147 68 47Q68 30 70 8Q73 -13 79 -40Q85 -67 93 -98L137 -87Q123 -40 123 -7Q123 63 158 98Q193 134 263 134Q293 134 326 128Q358 122 392 110Q426 99 458 83Q481 71 504 58Q526 44 546 28Q534 28 522 28Q511 28 500 27Q433 23 390 8Q348 -8 327 -36Q303 -69 303 -119Q303 -157 318 -198Q334 -239 360 -278Q387 -316 420 -344Q470 -385 514 -385Q549 -385 570 -352Q592 -320 602 -256L558 -247Q551 -257 543 -262Q535 -266 526 -266Q508 -266 486 -257Q465 -248 443 -232Q421 -215 400 -192Q371 -160 354 -118Q374 -110 404 -104Q433 -98 472 -93Q507 -89 528 -82Q548 -75 563 -63Q578 -52 588 -28Q597 -4 597 19Q597 49 573 86Q549 122 506 156Q464 190 410 215Q332 252 251 252Z\",\"M348 410Q327 393 310 378Q293 363 279 348Q298 331 314 314Q331 296 346 278Q355 288 371 303Q387 318 409 340Q382 377 348 410Z\",\"M214 425Q192 408 175 392Q158 376 145 362Q162 345 179 328Q196 310 213 293Q222 303 238 319Q253 335 275 355Q262 373 247 390Q232 408 214 425Z\"],\"bb\":[68,-385,602,425]}]",
+"k": "js"
+},
+{
+"s": 86102,
+"e": 86129,
+"t": "Von oben gerade nach unten.",
+"k": "js"
+},
+{
+"s": 86136,
+"e": 86220,
+"t": "Oben kurz nach rechts, dann schräg nach links unten und im großen Bogen nach rechts.",
+"k": "js"
+},
+{
+"s": 86227,
+"e": 86311,
+"t": "Oben kurz nach rechts, dann schräg nach links unten und im großen Bogen nach rechts.",
+"k": "js"
+},
+{
+"s": 86318,
+"e": 86402,
+"t": "Oben kurz nach rechts, dann schräg nach links unten und im großen Bogen nach rechts.",
+"k": "js"
+},
+{
+"s": 86409,
+"e": 86464,
+"t": "Drei Zähne von rechts nach links, dann der große Bogen.",
+"k": "js"
+},
+{
+"s": 86471,
+"e": 86526,
+"t": "Drei Zähne von rechts nach links, dann der große Bogen.",
+"k": "js"
+},
+{
+"s": 86533,
+"e": 86606,
+"t": "Zuerst die Schleife im Uhrzeigersinn, dann der kleine Zahn und der Bogen.",
+"k": "js"
+},
+{
+"s": 86613,
+"e": 86686,
+"t": "Zuerst die Schleife im Uhrzeigersinn, dann der kleine Zahn und der Bogen.",
+"k": "js"
+},
+{
+"s": 86693,
+"e": 86754,
+"t": "Zuerst den Bauch, dann den langen Strich von oben nach unten.",
+"k": "js"
+},
+{
+"s": 86761,
+"e": 86822,
+"t": "Zuerst den Bauch, dann den langen Strich von oben nach unten.",
+"k": "js"
+},
+{
+"s": 86829,
+"e": 86909,
+"t": "Oben rechts beginnen, den Kopf rund nach links, dann im großen Bogen nach unten.",
+"k": "js"
+},
+{
+"s": 86916,
+"e": 86996,
+"t": "Oben rechts beginnen, den Kopf rund nach links, dann im großen Bogen nach unten.",
+"k": "js"
+},
+{
+"s": 87003,
+"e": 87071,
+"t": "Zuerst den kleinen Kopf im Uhrzeigersinn, dann die Linie nach links.",
+"k": "js"
+},
+{
+"s": 87078,
+"e": 87141,
+"t": "Zuerst den kleinen Kopf im Uhrzeigersinn, dann der tiefe Bogen.",
+"k": "js"
+},
+{
+"s": 87148,
+"e": 87224,
+"t": "Zuerst den kleinen Kopf im Uhrzeigersinn, dann der Schwanz nach links unten.",
+"k": "js"
+},
+{
+"s": 87231,
+"e": 87316,
+"t": "Von oben nach unten, dann die Linie nach links. Das kleine Zeichen kommt zum Schluss.",
+"k": "js"
+},
+{
+"s": 87323,
+"e": 87375,
+"t": "Von oben nach unten, dann der Bogen nach links oben.",
+"k": "js"
+},
+{
+"s": 87812,
+"e": 87828,
+"t": "So schreibt man ",
+"k": "js"
+},
+{
+"s": 87912,
+"e": 88011,
+"t": "<defs><mask id=\"${id}\" maskUnits=\"userSpaceOnUse\" x=\"-5000\" y=\"-5000\" width=\"10000\" height=\"10000\">",
+"k": "tpl"
+},
+{
+"s": 88024,
+"e": 88136,
+"t": "<path d=\"${dd}\" fill=\"none\" stroke=\"#fff\" stroke-width=\"${k.w}\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>",
+"k": "tpl"
+},
+{
+"s": 88175,
+"e": 88192,
+"t": "<g class=\"ghost\">",
+"k": "tpl"
+},
+{
+"s": 88207,
+"e": 88224,
+"t": "<path d=\"${dd}\"/>",
+"k": "tpl"
+},
+{
+"s": 88253,
+"e": 88293,
+"t": "<path class=\"trace\" d=\"${d.join(\" \")}\"/>",
+"k": "tpl"
+},
+{
+"s": 88305,
+"e": 88358,
+"t": "<path class=\"ink2\" d=\"${g.p[0]}\" mask=\"url(#${id})\"/>",
+"k": "tpl"
+},
+{
+"s": 88391,
+"e": 88425,
+"t": "<path class=\"ink2 dot\" d=\"${dd}\"/>",
+"k": "tpl"
+},
+{
+"s": 88469,
+"e": 88583,
+"t": "<circle class=\"start\" cx=\"${s0[0]}\" cy=\"${s0[1]}\" r=\"26\"/><circle class=\"tip\" r=\"24\" cx=\"${s0[0]}\" cy=\"${s0[1]}\"/>",
+"k": "tpl"
+},
+{
+"s": 88645,
+"e": 88654,
+"t": "mask path",
+"k": "js"
+},
+{
+"s": 88977,
+"e": 89009,
+"t": "(prefers-reduced-motion: reduce)",
+"k": "js"
+},
+{
+"s": 90254,
+"e": 90263,
+"t": "say ghost",
+"k": "js"
+},
+{
+"s": 90271,
+"e": 90288,
+"t": "Nochmal schreiben",
+"k": "js"
+},
+{
+"s": 90355,
+"e": 90392,
+"t": "Folge dem Stift vom grünen Punkt aus.",
+"k": "js"
+},
+{
+"s": 90428,
+"e": 90457,
+"t": " Zum Schluss kommt der Punkt.",
+"k": "js"
+},
+{
+"s": 90460,
+"e": 90521,
+"t": " Zum Schluss kommen die ${nd} Punkte – von rechts nach links.",
+"k": "tpl"
+},
+{
+"s": 90606,
+"e": 90625,
+"t": "So schreibst du ihn",
+"k": "js"
+},
+{
+"s": 90691,
+"e": 90750,
+"t": "Grüner Punkt = hier fängst du an. Fahre mit dem Finger mit!",
+"k": "js"
+},
+{
+"s": 90860,
+"e": 90864,
+"t": "Löwe",
+"k": "js"
+},
+{
+"s": 90875,
+"e": 90878,
+"t": "Tür",
+"k": "js"
+},
+{
+"s": 90890,
+"e": 90894,
+"t": "Welt",
+"k": "js"
+},
+{
+"s": 90911,
+"e": 90915,
+"t": "Haus",
+"k": "js"
+},
+{
+"s": 90926,
+"e": 90932,
+"t": "Geduld",
+"k": "js"
+},
+{
+"s": 90944,
+"e": 90948,
+"t": "Buch",
+"k": "js"
+},
+{
+"s": 90965,
+"e": 90972,
+"t": "Datteln",
+"k": "js"
+},
+{
+"s": 90984,
+"e": 90988,
+"t": "Buch",
+"k": "js"
+},
+{
+"s": 90999,
+"e": 91003,
+"t": "Haus",
+"k": "js"
+},
+{
+"s": 91020,
+"e": 91026,
+"t": "Gewand",
+"k": "js"
+},
+{
+"s": 91037,
+"e": 91051,
+"t": "wie / Beispiel",
+"k": "js"
+},
+{
+"s": 91063,
+"e": 91069,
+"t": "Hadith",
+"k": "js"
+},
+{
+"s": 91086,
+"e": 91090,
+"t": "Berg",
+"k": "js"
+},
+{
+"s": 91101,
+"e": 91106,
+"t": "Stern",
+"k": "js"
+},
+{
+"s": 91117,
+"e": 91123,
+"t": "Schnee",
+"k": "js"
+},
+{
+"s": 91141,
+"e": 91146,
+"t": "Milch",
+"k": "js"
+},
+{
+"s": 91157,
+"e": 91161,
+"t": "Meer",
+"k": "js"
+},
+{
+"s": 91172,
+"e": 91176,
+"t": "Salz",
+"k": "js"
+},
+{
+"s": 91193,
+"e": 91197,
+"t": "Brot",
+"k": "js"
+},
+{
+"s": 91208,
+"e": 91214,
+"t": "Palmen",
+"k": "js"
+},
+{
+"s": 91225,
+"e": 91232,
+"t": "Scheich",
+"k": "js"
+},
+{
+"s": 91249,
+"e": 91253,
+"t": "Haus",
+"k": "js"
+},
+{
+"s": 91264,
+"e": 91272,
+"t": "Vollmond",
+"k": "js"
+},
+{
+"s": 91283,
+"e": 91288,
+"t": "Junge",
+"k": "js"
+},
+{
+"s": 91305,
+"e": 91309,
+"t": "Gold",
+"k": "js"
+},
+{
+"s": 91320,
+"e": 91323,
+"t": "Ohr",
+"k": "js"
+},
+{
+"s": 91358,
+"e": 91362,
+"t": "Mann",
+"k": "js"
+},
+{
+"s": 91373,
+"e": 91377,
+"t": "Affe",
+"k": "js"
+},
+{
+"s": 91388,
+"e": 91393,
+"t": "Licht",
+"k": "js"
+},
+{
+"s": 91410,
+"e": 91412,
+"t": "Öl",
+"k": "js"
+},
+{
+"s": 91423,
+"e": 91433,
+"t": "Versorgung",
+"k": "js"
+},
+{
+"s": 91444,
+"e": 91448,
+"t": "Brot",
+"k": "js"
+},
+{
+"s": 91465,
+"e": 91470,
+"t": "Fisch",
+"k": "js"
+},
+{
+"s": 91482,
+"e": 91491,
+"t": "Gesandter",
+"k": "js"
+},
+{
+"s": 91502,
+"e": 91507,
+"t": "Sonne",
+"k": "js"
+},
+{
+"s": 91524,
+"e": 91529,
+"t": "Sonne",
+"k": "js"
+},
+{
+"s": 91540,
+"e": 91544,
+"t": "Gras",
+"k": "js"
+},
+{
+"s": 91555,
+"e": 91560,
+"t": "Thron",
+"k": "js"
+},
+{
+"s": 91577,
+"e": 91583,
+"t": "Geduld",
+"k": "js"
+},
+{
+"s": 91594,
+"e": 91601,
+"t": "Zwiebel",
+"k": "js"
+},
+{
+"s": 91612,
+"e": 91617,
+"t": "Käfig",
+"k": "js"
+},
+{
+"s": 91634,
+"e": 91639,
+"t": "Licht",
+"k": "js"
+},
+{
+"s": 91650,
+"e": 91654,
+"t": "grün",
+"k": "js"
+},
+{
+"s": 91665,
+"e": 91669,
+"t": "Erde",
+"k": "js"
+},
+{
+"s": 91686,
+"e": 91691,
+"t": "Vogel",
+"k": "js"
+},
+{
+"s": 91702,
+"e": 91707,
+"t": "Regen",
+"k": "js"
+},
+{
+"s": 91717,
+"e": 91722,
+"t": "Katze",
+"k": "js"
+},
+{
+"s": 91738,
+"e": 91746,
+"t": "Schatten",
+"k": "js"
+},
+{
+"s": 91757,
+"e": 91762,
+"t": "Blick",
+"k": "js"
+},
+{
+"s": 91773,
+"e": 91788,
+"t": "Auswendiglernen",
+"k": "js"
+},
+{
+"s": 91805,
+"e": 91809,
+"t": "Auge",
+"k": "js"
+},
+{
+"s": 91820,
+"e": 91824,
+"t": "Haar",
+"k": "js"
+},
+{
+"s": 91858,
+"e": 91864,
+"t": "Wolken",
+"k": "js"
+},
+{
+"s": 91893,
+"e": 91899,
+"t": "Gehirn",
+"k": "js"
+},
+{
+"s": 91916,
+"e": 91923,
+"t": "Elefant",
+"k": "js"
+},
+{
+"s": 91934,
+"e": 91939,
+"t": "Reise",
+"k": "js"
+},
+{
+"s": 91950,
+"e": 91957,
+"t": "Schwert",
+"k": "js"
+},
+{
+"s": 91974,
+"e": 91979,
+"t": "Stift",
+"k": "js"
+},
+{
+"s": 91991,
+"e": 91994,
+"t": "Kuh",
+"k": "js"
+},
+{
+"s": 92006,
+"e": 92009,
+"t": "Weg",
+"k": "js"
+},
+{
+"s": 92026,
+"e": 92030,
+"t": "Hund",
+"k": "js"
+},
+{
+"s": 92041,
+"e": 92047,
+"t": "Zucker",
+"k": "js"
+},
+{
+"s": 92058,
+"e": 92063,
+"t": "König",
+"k": "js"
+},
+{
+"s": 92080,
+"e": 92085,
+"t": "Milch",
+"k": "js"
+},
+{
+"s": 92096,
+"e": 92101,
+"t": "Stift",
+"k": "js"
+},
+{
+"s": 92112,
+"e": 92117,
+"t": "Kamel",
+"k": "js"
+},
+{
+"s": 92134,
+"e": 92140,
+"t": "Wasser",
+"k": "js"
+},
+{
+"s": 92151,
+"e": 92156,
+"t": "Fisch",
+"k": "js"
+},
+{
+"s": 92167,
+"e": 92172,
+"t": "Stift",
+"k": "js"
+},
+{
+"s": 92189,
+"e": 92194,
+"t": "Licht",
+"k": "js"
+},
+{
+"s": 92205,
+"e": 92212,
+"t": "Mädchen",
+"k": "js"
+},
+{
+"s": 92223,
+"e": 92227,
+"t": "Auge",
+"k": "js"
+},
+{
+"s": 92245,
+"e": 92255,
+"t": "Mondsichel",
+"k": "js"
+},
+{
+"s": 92266,
+"e": 92271,
+"t": "Fluss",
+"k": "js"
+},
+{
+"s": 92282,
+"e": 92289,
+"t": "Gesicht",
+"k": "js"
+},
+{
+"s": 92306,
+"e": 92311,
+"t": "Rosen",
+"k": "js"
+},
+{
+"s": 92322,
+"e": 92325,
+"t": "Tag",
+"k": "js"
+},
+{
+"s": 92336,
+"e": 92341,
+"t": "Eimer",
+"k": "js"
+},
+{
+"s": 92357,
+"e": 92361,
+"t": "Hand",
+"k": "js"
+},
+{
+"s": 92372,
+"e": 92376,
+"t": "Haus",
+"k": "js"
+},
+{
+"s": 92388,
+"e": 92393,
+"t": "Stuhl",
+"k": "js"
+},
+{
+"s": 92447,
+"e": 92452,
+"t": "ar fw",
+"k": "js"
+},
+{
+"s": 92716,
+"e": 92722,
+"t": "Allein",
+"k": "js"
+},
+{
+"s": 92740,
+"e": 92746,
+"t": "Anfang",
+"k": "js"
+},
+{
+"s": 92759,
+"e": 92764,
+"t": "Mitte",
+"k": "js"
+},
+{
+"s": 92777,
+"e": 92781,
+"t": "Ende",
+"k": "js"
+},
+{
+"s": 93238,
+"e": 93246,
+"t": " anhören",
+"k": "js"
+},
+{
+"s": 93334,
+"e": 93339,
+"t": "ar fw",
+"k": "js"
+},
+{
+"s": 93389,
+"e": 93393,
+"t": "Name",
+"k": "js"
+},
+{
+"s": 93426,
+"e": 93639,
+"t": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9v6h4l5 4V5L8 9z\" fill=\"currentColor\"/><path d=\"M16 8.5a5 5 0 010 7\"/></svg>",
+"k": "js"
+},
+{
+"s": 93936,
+"e": 94015,
+"t": "Tippe auf eine Form: Du hörst ein Wort, in dem der Buchstabe genau so vorkommt.",
+"k": "js"
+},
+{
+"s": 94075,
+"e": 94079,
+"t": "Name",
+"k": "js"
+},
+{
+"s": 94096,
+"e": 94102,
+"t": "Anfang",
+"k": "js"
+},
+{
+"s": 94119,
+"e": 94124,
+"t": "Mitte",
+"k": "js"
+},
+{
+"s": 94141,
+"e": 94145,
+"t": "Ende",
+"k": "js"
+},
+{
+"s": 95386,
+"e": 95435,
+"t": "Salām, ${S.name}! Bereit für die nächste Lektion?",
+"k": "tpl"
+},
+{
+"s": 95438,
+"e": 95485,
+"t": "Lerne den Quran lesen – Buchstabe für Buchstabe",
+"k": "js"
+},
+{
+"s": 95571,
+"e": 95592,
+"t": "Erste Lektion starten",
+"k": "js"
+},
+{
+"s": 95875,
+"e": 95880,
+"t": "Welt ",
+"k": "js"
+},
+{
+"s": 96272,
+"e": 96304,
+"t": "margin-left:calc(${off}% - 75px)",
+"k": "tpl"
+},
+{
+"s": 96493,
+"e": 96706,
+"t": "<svg viewBox=\"0 0 24 24\" width=\"30\" height=\"30\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\"><rect x=\"5\" y=\"11\" width=\"14\" height=\"10\" rx=\"2\"/><path d=\"M8 11V8a4 4 0 018 0v3\"/></svg>",
+"k": "js"
+},
+{
+"s": 96835,
+"e": 96842,
+"t": "Nochmal",
+"k": "js"
+},
+{
+"s": 96845,
+"e": 96850,
+"t": "Start",
+"k": "js"
+},
+{
+"s": 97773,
+"e": 97886,
+"t": "<path d=\"${d}\" fill=\"none\" stroke=\"var(--line)\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-dasharray=\"2 16\"/>",
+"k": "tpl"
+},
+{
+"s": 97988,
+"e": 98020,
+"t": "Erst die Lektion davor schaffen!",
+"k": "js"
+},
+{
+"s": 98460,
+"e": 98466,
+"t": "Lernen",
+"k": "js"
+},
+{
+"s": 100321,
+"e": 100327,
+"t": "Super!",
+"k": "js"
+},
+{
+"s": 100330,
+"e": 100338,
+"t": "Richtig!",
+"k": "js"
+},
+{
+"s": 100357,
+"e": 100370,
+"t": "Toll gemacht!",
+"k": "js"
+},
+{
+"s": 100373,
+"e": 100379,
+"t": "Genau!",
+"k": "js"
+},
+{
+"s": 100433,
+"e": 100438,
+"t": "go ok",
+"k": "js"
+},
+{
+"s": 100463,
+"e": 100469,
+"t": "Weiter",
+"k": "js"
+},
+{
+"s": 100824,
+"e": 100835,
+"t": "Nicht ganz.",
+"k": "js"
+},
+{
+"s": 100887,
+"e": 100893,
+"t": "go bad",
+"k": "js"
+},
+{
+"s": 100918,
+"e": 100928,
+"t": "Verstanden",
+"k": "js"
+},
+{
+"s": 101089,
+"e": 101116,
+"t": "Wähle die richtige Antwort.",
+"k": "js"
+},
+{
+"s": 101226,
+"e": 101242,
+"t": "Finde die Paare!",
+"k": "js"
+},
+{
+"s": 101273,
+"e": 101324,
+"t": "Tippe links und rechts auf das, was zusammengehört.",
+"k": "js"
+},
+{
+"s": 102064,
+"e": 102084,
+"t": "Alle Paare gefunden!",
+"k": "js"
+},
+{
+"s": 102108,
+"e": 102113,
+"t": "go ok",
+"k": "js"
+},
+{
+"s": 102138,
+"e": 102144,
+"t": "Weiter",
+"k": "js"
+},
+{
+"s": 102640,
+"e": 102645,
+"t": "Noch ",
+"k": "js"
+},
+{
+"s": 102664,
+"e": 102671,
+"t": " Paare.",
+"k": "js"
+},
+{
+"s": 103052,
+"e": 103061,
+"t": "tag heavy",
+"k": "js"
+},
+{
+"s": 103069,
+"e": 103087,
+"t": "schwerer Buchstabe",
+"k": "js"
+},
+{
+"s": 103146,
+"e": 103152,
+"t": "tag nc",
+"k": "js"
+},
+{
+"s": 103160,
+"e": 103186,
+"t": "verbindet nicht nach links",
+"k": "js"
+},
+{
+"s": 103509,
+"e": 103515,
+"t": "tag nc",
+"k": "js"
+},
+{
+"s": 103523,
+"e": 103571,
+"t": "verbindet sich nicht mit dem nächsten Buchstaben",
+"k": "js"
+},
+{
+"s": 103617,
+"e": 103665,
+"t": "Achtung: Ha sieht in jeder Form ganz anders aus!",
+"k": "js"
+},
+{
+"s": 104169,
+"e": 104274,
+"t": "Hör dir beide an und sprich sie nach. Spürst du, wie sich beim schweren Buchstaben die Zunge hinten hebt?",
+"k": "js"
+},
+{
+"s": 104487,
+"e": 104495,
+"t": " anhören",
+"k": "js"
+},
+{
+"s": 104564,
+"e": 104574,
+"t": " · klingt ",
+"k": "js"
+},
+{
+"s": 104609,
+"e": 104822,
+"t": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 9v6h4l5 4V5L8 9z\" fill=\"currentColor\"/><path d=\"M16 8.5a5 5 0 010 7\"/></svg>",
+"k": "js"
+},
+{
+"s": 105394,
+"e": 105407,
+"t": "Lösung zeigen",
+"k": "js"
+},
+{
+"s": 105584,
+"e": 105593,
+"t": "tag heavy",
+"k": "js"
+},
+{
+"s": 105601,
+"e": 105626,
+"t": "Blau = schwerer Buchstabe",
+"k": "js"
+},
+{
+"s": 105738,
+"e": 105746,
+"t": "go ghost",
+"k": "js"
+},
+{
+"s": 105788,
+"e": 105794,
+"t": "Zurück",
+"k": "js"
+},
+{
+"s": 106086,
+"e": 106092,
+"t": "Fertig",
+"k": "js"
+},
+{
+"s": 106095,
+"e": 106101,
+"t": "Weiter",
+"k": "js"
+},
+{
+"s": 106588,
+"e": 106598,
+"t": "Geschafft!",
+"k": "js"
+},
+{
+"s": 106601,
+"e": 106613,
+"t": "Gut gemacht!",
+"k": "js"
+},
+{
+"s": 106793,
+"e": 106859,
+"t": "<svg class=\"${k<=stars?\"on\":\"\"}\" style=\"animation-delay:${k*.18}s\"",
+"k": "tpl"
+},
+{
+"s": 106942,
+"e": 106949,
+"t": "Lektion",
+"k": "js"
+},
+{
+"s": 107018,
+"e": 107024,
+"t": "Fehler",
+"k": "js"
+},
+{
+"s": 107092,
+"e": 107105,
+"t": "Sterne gesamt",
+"k": "js"
+},
+{
+"s": 107265,
+"e": 107282,
+"t": "Neues Abzeichen: ",
+"k": "js"
+},
+{
+"s": 107391,
+"e": 107484,
+"t": "Für 3 Sterne brauchst du eine Runde ohne Fehler. Du kannst die Lektion jederzeit wiederholen.",
+"k": "js"
+},
+{
+"s": 107657,
+"e": 107665,
+"t": "go ghost",
+"k": "js"
+},
+{
+"s": 107692,
+"e": 107701,
+"t": "Zur Karte",
+"k": "js"
+},
+{
+"s": 107755,
+"e": 107763,
+"t": "go ghost",
+"k": "js"
+},
+{
+"s": 107800,
+"e": 107807,
+"t": "Nochmal",
+"k": "js"
+},
+{
+"s": 107862,
+"e": 107867,
+"t": "go ok",
+"k": "js"
+},
+{
+"s": 107903,
+"e": 107918,
+"t": "Nächste Lektion",
+"k": "js"
+},
+{
+"s": 108014,
+"e": 108046,
+"t": "(prefers-reduced-motion: reduce)",
+"k": "js"
+},
+{
+"s": 109453,
+"e": 109477,
+"t": "Fortschritt zurücksetzen",
+"k": "js"
+},
+{
+"s": 109540,
+"e": 109563,
+"t": "Wirklich alles löschen?",
+"k": "js"
+},
+{
+"s": 109611,
+"e": 109635,
+"t": "Fortschritt zurücksetzen",
+"k": "js"
+},
+{
+"s": 109813,
+"e": 109824,
+"t": "Mein Profil",
+"k": "js"
+},
+{
+"s": 109868,
+"e": 109879,
+"t": "Mein Profil",
+"k": "js"
+},
+{
+"s": 109919,
+"e": 109928,
+"t": "Schließen",
+"k": "js"
+},
+{
+"s": 109957,
+"e": 110096,
+"t": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"/></svg>",
+"k": "js"
+},
+{
+"s": 110151,
+"e": 110160,
+"t": "Dein Name",
+"k": "js"
+},
+{
+"s": 110261,
+"e": 110267,
+"t": "Sterne",
+"k": "js"
+},
+{
+"s": 110319,
+"e": 110328,
+"t": "Lektionen",
+"k": "js"
+},
+{
+"s": 110408,
+"e": 110417,
+"t": "Abzeichen",
+"k": "js"
+},
+{
+"s": 110478,
+"e": 110487,
+"t": "Abzeichen",
+"k": "js"
+},
+{
+"s": 110708,
+"e": 110735,
+"t": "Töne bei richtig und falsch",
+"k": "js"
+},
+{
+"s": 110775,
+"e": 110816,
+"t": "Lehrer-Modus: alle Lektionen freischalten",
+"k": "js"
+},
+{
+"s": 111079,
+"e": 111085,
+"t": "Escape",
+"k": "js"
+},
+{
+"s": 111496,
+"e": 111501,
+"t": "Enter",
+"k": "js"
+}
+]

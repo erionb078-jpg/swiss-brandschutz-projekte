@@ -1,0 +1,3272 @@
+[
+{
+"s": 161,
+"e": 175,
+"t": "Sira mit Fuffl",
+"k": "html"
+},
+{
+"s": 14003,
+"e": 14008,
+"t": "Start",
+"k": "html"
+},
+{
+"s": 14048,
+"e": 14057,
+"t": "Sira mit ",
+"k": "html"
+},
+{
+"s": 14063,
+"e": 14068,
+"t": "Fuffl",
+"k": "html"
+},
+{
+"s": 14128,
+"e": 14142,
+"t": "Zur Startseite",
+"k": "attr"
+},
+{
+"s": 14324,
+"e": 14329,
+"t": "Start",
+"k": "html"
+},
+{
+"s": 14361,
+"e": 14373,
+"t": "Deine Sterne",
+"k": "attr"
+},
+{
+"s": 14756,
+"e": 14765,
+"t": "Schließen",
+"k": "attr"
+},
+{
+"s": 15181,
+"e": 15191,
+"t": "use strict",
+"k": "js"
+},
+{
+"s": 16044,
+"e": 16202,
+"t": "<svg viewBox=\"0 0 24 24\"><path fill=\"F\" stroke=\"S\" stroke-width=\"1.2\" d=\"M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z\"/></svg>",
+"k": "js"
+},
+{
+"s": 16357,
+"e": 17665,
+"t": "<svg viewBox=\"0 0 140 140\" aria-hidden=\"true\">\n<path d=\"M98 112c22 2 36-12 34-30-1-10-8-16-14-14 6 10 2 24-12 28z\" fill=\"#ee7a2b\"/><path d=\"M118 70c8 6 9 18 2 26 4-10 0-20-6-24z\" fill=\"#fff\"/>\n<ellipse cx=\"68\" cy=\"104\" rx=\"30\" ry=\"26\" fill=\"#ee7a2b\"/><ellipse cx=\"68\" cy=\"110\" rx=\"16\" ry=\"17\" fill=\"#fff4ea\"/>\n<path d=\"M28 30l12 34 18-14z\" fill=\"#ee7a2b\"/><path d=\"M108 30l-12 34-18-14z\" fill=\"#ee7a2b\"/>\n<path d=\"M33 38l8 21 9-7z\" fill=\"#5b2a14\"/><path d=\"M103 38l-8 21-9-7z\" fill=\"#5b2a14\"/>\n<path d=\"M68 34c-24 0-38 16-38 32 0 10 6 16 14 20l24 14 24-14c8-4 14-10 14-20 0-16-14-32-38-32z\" fill=\"#ee7a2b\"/>\n<path d=\"M32 70c6 10 18 14 36 30 18-16 30-20 36-30-8 6-20 6-26 2l-10 8-10-8c-6 4-18 4-26-2z\" fill=\"#fff4ea\"/>\n<circle cx=\"54\" cy=\"62\" r=\"5.5\" fill=\"#1c2440\"/><circle cx=\"82\" cy=\"62\" r=\"5.5\" fill=\"#1c2440\"/><circle cx=\"55.8\" cy=\"60\" r=\"1.8\" fill=\"#fff\"/><circle cx=\"83.8\" cy=\"60\" r=\"1.8\" fill=\"#fff\"/>\n<ellipse cx=\"68\" cy=\"84\" rx=\"6\" ry=\"4.5\" fill=\"#1c2440\"/><path d=\"M62 92q6 5 12 0\" fill=\"none\" stroke=\"#1c2440\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>\n<circle cx=\"44\" cy=\"76\" r=\"4.5\" fill=\"#ff9e9e\" opacity=\".55\"/><circle cx=\"92\" cy=\"76\" r=\"4.5\" fill=\"#ff9e9e\" opacity=\".55\"/>\n<ellipse cx=\"54\" cy=\"128\" rx=\"9\" ry=\"5\" fill=\"#5b2a14\"/><ellipse cx=\"82\" cy=\"128\" rx=\"9\" ry=\"5\" fill=\"#5b2a14\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 17851,
+"e": 18172,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"72\" width=\"120\" height=\"18\" fill=\"var(--sand)\"/><path d=\"M34 30l26-10 26 10v44H34z\" fill=\"#1c1c22\"/><path d=\"M60 20l26 10-26 8-26-8z\" fill=\"#2c2c34\"/><rect x=\"34\" y=\"40\" width=\"52\" height=\"6\" fill=\"#d9a520\"/><rect x=\"66\" y=\"52\" width=\"10\" height=\"20\" rx=\"1\" fill=\"#d9a520\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 18186,
+"e": 18810,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"72\" width=\"120\" height=\"18\" fill=\"var(--sand)\"/><ellipse cx=\"60\" cy=\"46\" rx=\"30\" ry=\"20\" fill=\"#8e96a8\"/><rect x=\"38\" y=\"56\" width=\"9\" height=\"18\" rx=\"3\" fill=\"#7d8597\"/><rect x=\"72\" y=\"56\" width=\"9\" height=\"18\" rx=\"3\" fill=\"#7d8597\"/><circle cx=\"88\" cy=\"38\" r=\"14\" fill=\"#8e96a8\"/><path d=\"M98 44c6 8 6 18 0 24\" stroke=\"#8e96a8\" stroke-width=\"7\" fill=\"none\" stroke-linecap=\"round\"/><path d=\"M80 30c-8-4-10 10-2 14\" fill=\"#a6adbd\"/><circle cx=\"92\" cy=\"34\" r=\"2\" fill=\"#1c2440\"/><path d=\"M20 20l6 4M30 12l4 6M44 10l2 6\" stroke=\"#1c2440\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 18820,
+"e": 19164,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"66\" width=\"120\" height=\"24\" fill=\"var(--sand)\"/><circle cx=\"96\" cy=\"20\" r=\"10\" fill=\"#f2b632\"/><path d=\"M16 68l30-40 30 40z\" fill=\"#b5523b\"/><path d=\"M46 28l30 40h20L66 30z\" fill=\"#93412e\"/><path d=\"M40 68l6-14 6 14z\" fill=\"#3a1c14\"/><path d=\"M84 58c6 2 10 6 12 10h-20c2-4 4-8 8-10z\" fill=\"#fff\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 19175,
+"e": 19658,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"70\" width=\"120\" height=\"20\" fill=\"var(--sand)\"/><path d=\"M30 44c4-16 14-16 18-6 4-12 16-12 20 2l10 2c4-12 14-14 18-6l6 2-4 4-6-2-4 12H34z\" fill=\"#c8924f\"/><rect x=\"38\" y=\"50\" width=\"6\" height=\"22\" fill=\"#b07d40\"/><rect x=\"50\" y=\"50\" width=\"6\" height=\"22\" fill=\"#b07d40\"/><rect x=\"72\" y=\"50\" width=\"6\" height=\"22\" fill=\"#b07d40\"/><rect x=\"82\" y=\"50\" width=\"6\" height=\"22\" fill=\"#b07d40\"/><circle cx=\"100\" cy=\"36\" r=\"1.6\" fill=\"#1c2440\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 19668,
+"e": 19965,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"74\" width=\"120\" height=\"16\" fill=\"var(--sand)\"/><path d=\"M40 74h40l-4-30H44z\" fill=\"#d6b06a\"/><path d=\"M44 44h32l-16-22z\" fill=\"#a7783a\"/><rect x=\"50\" y=\"52\" width=\"20\" height=\"16\" rx=\"3\" fill=\"#f2b632\"/><circle cx=\"60\" cy=\"18\" r=\"4\" fill=\"#a7783a\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 19975,
+"e": 20350,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"0\" width=\"120\" height=\"90\" fill=\"var(--sky-soft)\"/><path d=\"M0 90l30-58 18 18 22-40 50 80z\" fill=\"#8a6a4a\"/><path d=\"M52 90c0-16 6-26 14-26s14 10 14 26z\" fill=\"#2b1d12\"/><circle cx=\"96\" cy=\"16\" r=\"2\" fill=\"#f2b632\"/><circle cx=\"20\" cy=\"20\" r=\"1.6\" fill=\"#f2b632\"/><path d=\"M88 30a8 8 0 1 0 6-14 7 7 0 1 1-6 14z\" fill=\"#f2b632\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 20361,
+"e": 20702,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"66\" width=\"120\" height=\"24\" fill=\"var(--sand)\"/><circle cx=\"94\" cy=\"20\" r=\"12\" fill=\"#f2b632\"/><path d=\"M28 70c0-14 12-22 30-22s32 8 32 22z\" fill=\"#8f8a80\"/><text x=\"60\" y=\"38\" text-anchor=\"middle\" font-family=\"Noto Naskh Arabic,serif\" font-size=\"22\" font-weight=\"700\" fill=\"#1c2440\">أحد</text></svg>",
+"k": "tpl"
+},
+{
+"s": 20713,
+"e": 21044,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"0\" width=\"120\" height=\"90\" fill=\"var(--sky-soft)\"/><path d=\"M0 90l36-50 20 24 24-36 40 62z\" fill=\"#7c9a5a\"/><path d=\"M80 28l10 14H70z\" fill=\"#a3bd7d\"/><circle cx=\"24\" cy=\"22\" r=\"10\" fill=\"#f2b632\"/><g fill=\"#c8924f\"><circle cx=\"20\" cy=\"80\" r=\"3\"/><circle cx=\"30\" cy=\"84\" r=\"2.6\"/></g></svg>",
+"k": "tpl"
+},
+{
+"s": 21054,
+"e": 21485,
+"t": "<svg viewBox=\"0 0 120 90\"><rect width=\"120\" height=\"90\" fill=\"#1c2a55\"/><path d=\"M70 18a24 24 0 1 0 18 40 20 20 0 1 1-18-40z\" fill=\"#f2d16b\"/><g fill=\"#fff\"><circle cx=\"20\" cy=\"18\" r=\"1.6\"/><circle cx=\"34\" cy=\"40\" r=\"1.2\"/><circle cx=\"100\" cy=\"20\" r=\"1.4\"/><circle cx=\"104\" cy=\"60\" r=\"1.2\"/><circle cx=\"16\" cy=\"66\" r=\"1.4\"/></g><path d=\"M20 84h80l-6-14H26z\" fill=\"#3b4a78\"/><path d=\"M50 70a10 10 0 0 1 20 0z\" fill=\"#d9a520\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 21495,
+"e": 22020,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"70\" width=\"120\" height=\"20\" fill=\"var(--sand)\"/><path d=\"M58 72c2-18 4-30 2-44\" stroke=\"#8a5a2b\" stroke-width=\"5\" fill=\"none\"/><path d=\"M60 28c-14-10-28-6-34 2 12-4 22-2 34-2zM60 28c14-10 28-6 34 2-12-4-22-2-34-2zM60 28c-8-12-22-16-30-12 12 0 22 4 30 12zM60 28c8-12 22-16 30-12-12 0-22 4-30 12z\" fill=\"#24946a\"/><g fill=\"#a8521c\"><circle cx=\"56\" cy=\"34\" r=\"2.4\"/><circle cx=\"62\" cy=\"35\" r=\"2.4\"/></g><path d=\"M86 72c8-4 18-4 24 0\" stroke=\"#24946a\" stroke-width=\"3\" fill=\"none\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 22032,
+"e": 22448,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"74\" width=\"120\" height=\"16\" fill=\"var(--sand)\"/><rect x=\"26\" y=\"46\" width=\"68\" height=\"28\" fill=\"#f4f1ea\"/><path d=\"M40 46a20 20 0 0 1 40 0z\" fill=\"#24946a\"/><rect x=\"96\" y=\"22\" width=\"8\" height=\"52\" fill=\"#f4f1ea\"/><path d=\"M96 22l4-8 4 8z\" fill=\"#24946a\"/><path d=\"M54 74v-12a6 6 0 0 1 12 0v12z\" fill=\"#8a5a2b\"/><path d=\"M60 26v-6\" stroke=\"#d9a520\" stroke-width=\"2\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 22458,
+"e": 22848,
+"t": "<svg viewBox=\"0 0 120 90\"><rect width=\"120\" height=\"90\" fill=\"var(--sky-soft)\"/><path d=\"M0 90c20-40 50-50 70-30s40 10 50 30z\" fill=\"#a17b52\"/><path d=\"M0 90c14-14 40-20 60-10\" stroke=\"#24946a\" stroke-width=\"4\" fill=\"none\"/><path d=\"M84 38v-22l14 6-14 6\" fill=\"#ee7a2b\" stroke=\"#5b2a14\" stroke-width=\"2\"/><path d=\"M10 84h100\" stroke=\"#5b2a14\" stroke-width=\"3\" stroke-dasharray=\"6 4\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 22857,
+"e": 23273,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"0\" y=\"72\" width=\"120\" height=\"18\" fill=\"var(--sand)\"/><path d=\"M34 30l26-10 26 10v44H34z\" fill=\"#1c1c22\"/><rect x=\"34\" y=\"40\" width=\"52\" height=\"6\" fill=\"#d9a520\"/><g fill=\"#f2b632\"><circle cx=\"16\" cy=\"18\" r=\"2\"/><circle cx=\"104\" cy=\"14\" r=\"2\"/><circle cx=\"100\" cy=\"40\" r=\"1.6\"/></g><path d=\"M8 60l14-6M112 60l-14-6\" stroke=\"#f2b632\" stroke-width=\"3\" stroke-linecap=\"round\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 23285,
+"e": 23727,
+"t": "<svg viewBox=\"0 0 120 90\"><rect width=\"120\" height=\"90\" fill=\"var(--sky-soft)\"/><path d=\"M14 90l46-56 46 56z\" fill=\"#9b8a6c\"/><rect x=\"57\" y=\"22\" width=\"6\" height=\"16\" fill=\"#f4f1ea\"/><g fill=\"#fff\"><circle cx=\"20\" cy=\"86\" r=\"3\"/><circle cx=\"30\" cy=\"84\" r=\"3\"/><circle cx=\"40\" cy=\"86\" r=\"3\"/><circle cx=\"80\" cy=\"86\" r=\"3\"/><circle cx=\"90\" cy=\"84\" r=\"3\"/><circle cx=\"100\" cy=\"86\" r=\"3\"/></g><circle cx=\"96\" cy=\"18\" r=\"9\" fill=\"#f2b632\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 23738,
+"e": 24171,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"10\" y=\"14\" width=\"100\" height=\"16\" rx=\"6\" fill=\"var(--fox-soft)\"/><rect x=\"10\" y=\"38\" width=\"100\" height=\"16\" rx=\"6\" fill=\"var(--palm-soft)\"/><rect x=\"10\" y=\"62\" width=\"100\" height=\"16\" rx=\"6\" fill=\"var(--sky-soft)\"/><g font-family=\"Baloo 2,sans-serif\" font-weight=\"800\" font-size=\"13\" fill=\"var(--ink)\"><text x=\"18\" y=\"27\">1</text><text x=\"18\" y=\"51\">2</text><text x=\"18\" y=\"75\">3</text></g></svg>",
+"k": "tpl"
+},
+{
+"s": 24180,
+"e": 24656,
+"t": "<svg viewBox=\"0 0 120 90\"><rect width=\"120\" height=\"90\" rx=\"10\" fill=\"var(--sea)\"/><path d=\"M60 0h60v90H86c-6-20-14-40-20-60z\" fill=\"var(--land)\"/><path d=\"M0 0h36c6 24 12 50 20 90H0z\" fill=\"var(--land)\"/><circle cx=\"78\" cy=\"56\" r=\"5\" fill=\"var(--fox)\" stroke=\"#fff\" stroke-width=\"2\"/><circle cx=\"74\" cy=\"34\" r=\"5\" fill=\"var(--fox)\" stroke=\"#fff\" stroke-width=\"2\"/><path d=\"M78 56c-6-8-2-14-4-22\" stroke=\"var(--fox)\" stroke-width=\"2\" stroke-dasharray=\"3 3\" fill=\"none\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 24666,
+"e": 25005,
+"t": "<svg viewBox=\"0 0 120 90\"><path d=\"M60 22v20M30 42h60M30 42v14M60 42v14M90 42v14\" stroke=\"var(--muted)\" stroke-width=\"3\" fill=\"none\"/><circle cx=\"60\" cy=\"16\" r=\"10\" fill=\"var(--fox)\"/><circle cx=\"30\" cy=\"64\" r=\"9\" fill=\"var(--palm)\"/><circle cx=\"60\" cy=\"64\" r=\"9\" fill=\"var(--sky)\"/><circle cx=\"90\" cy=\"64\" r=\"9\" fill=\"var(--gold)\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 25016,
+"e": 25382,
+"t": "<svg viewBox=\"0 0 120 90\"><rect x=\"18\" y=\"16\" width=\"44\" height=\"60\" rx=\"8\" fill=\"var(--palm)\" transform=\"rotate(-10 40 46)\"/><rect x=\"40\" y=\"12\" width=\"44\" height=\"60\" rx=\"8\" fill=\"var(--sky)\"/><rect x=\"62\" y=\"16\" width=\"44\" height=\"60\" rx=\"8\" fill=\"var(--fox)\" transform=\"rotate(10 84 46)\"/><path d=\"M84 36l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z\" fill=\"#fff\"/></svg>",
+"k": "tpl"
+},
+{
+"s": 25445,
+"e": 25467,
+"t": "Das Jahr des Elefanten",
+"k": "js"
+},
+{
+"s": 25473,
+"e": 25479,
+"t": "um 570",
+"k": "js"
+},
+{
+"s": 25507,
+"e": 25653,
+"t": "Mekka ist eine Stadt in der Wüste. In ihrer Mitte steht die Kaaba – das Haus, das der Prophet Ibrahim und sein Sohn Ismail für Allah gebaut haben.",
+"k": "js"
+},
+{
+"s": 25660,
+"e": 25874,
+"t": "Ein König namens Abraha wollte die Kaaba zerstören. Er kam mit einer großen Armee und mit Elefanten. Doch Allah schickte Schwärme von Vögeln, die kleine Steine warfen. Davon erzählt die Sure Al-Fil – „Der Elefant“.",
+"k": "js"
+},
+{
+"s": 25881,
+"e": 26031,
+"t": "In genau diesem Jahr wurde in Mekka ein Junge geboren: Muhammad ﷺ. Sein Vater Abdullah war schon vor seiner Geburt gestorben. Seine Mutter hieß Amina.",
+"k": "js"
+},
+{
+"s": 26042,
+"e": 26087,
+"t": "In welcher Stadt wurde der Prophet ﷺ geboren?",
+"k": "js"
+},
+{
+"s": 26090,
+"e": 26095,
+"t": "Mekka",
+"k": "js"
+},
+{
+"s": 26098,
+"e": 26104,
+"t": "Medina",
+"k": "js"
+},
+{
+"s": 26107,
+"e": 26116,
+"t": "Jerusalem",
+"k": "js"
+},
+{
+"s": 26121,
+"e": 26143,
+"t": "Wie hieß seine Mutter?",
+"k": "js"
+},
+{
+"s": 26146,
+"e": 26151,
+"t": "Amina",
+"k": "js"
+},
+{
+"s": 26154,
+"e": 26161,
+"t": "Khadija",
+"k": "js"
+},
+{
+"s": 26164,
+"e": 26170,
+"t": "Halima",
+"k": "js"
+},
+{
+"s": 26175,
+"e": 26228,
+"t": "Was schickte Allah gegen die Armee mit den Elefanten?",
+"k": "js"
+},
+{
+"s": 26231,
+"e": 26250,
+"t": "Schwärme von Vögeln",
+"k": "js"
+},
+{
+"s": 26253,
+"e": 26264,
+"t": "Einen Sturm",
+"k": "js"
+},
+{
+"s": 26267,
+"e": 26279,
+"t": "Ein Erdbeben",
+"k": "js"
+},
+{
+"s": 26291,
+"e": 26359,
+"t": "Die Sure Al-Fil ist kurz – vielleicht kannst du sie schon auswendig?",
+"k": "js"
+},
+{
+"s": 26376,
+"e": 26397,
+"t": "Kindheit in der Wüste",
+"k": "js"
+},
+{
+"s": 26403,
+"e": 26411,
+"t": "Kindheit",
+"k": "js"
+},
+{
+"s": 26435,
+"e": 26614,
+"t": "Damals gaben viele Familien in Mekka ihre Babys zu einer Amme in die Wüste. Dort war die Luft gesund und die Sprache besonders schön. Muhammad ﷺ kam zu Halima vom Stamm Banu Saʿd.",
+"k": "js"
+},
+{
+"s": 26621,
+"e": 26751,
+"t": "Seit der kleine Muhammad ﷺ bei ihr war, hatte Halimas Familie viel Segen: Ihre Tiere wurden satt und gaben wieder reichlich Milch.",
+"k": "js"
+},
+{
+"s": 26758,
+"e": 26915,
+"t": "Als er sechs Jahre alt war, starb seine Mutter Amina. Dann kümmerte sich sein Großvater Abd al-Muttalib um ihn – und als auch er starb, sein Onkel Abu Talib.",
+"k": "js"
+},
+{
+"s": 26926,
+"e": 26959,
+"t": "Wie hieß seine Amme in der Wüste?",
+"k": "js"
+},
+{
+"s": 26962,
+"e": 26968,
+"t": "Halima",
+"k": "js"
+},
+{
+"s": 26971,
+"e": 26977,
+"t": "Aischa",
+"k": "js"
+},
+{
+"s": 26980,
+"e": 26986,
+"t": "Fatima",
+"k": "js"
+},
+{
+"s": 26991,
+"e": 27054,
+"t": "Wer kümmerte sich um ihn, nachdem sein Großvater gestorben war?",
+"k": "js"
+},
+{
+"s": 27057,
+"e": 27077,
+"t": "Sein Onkel Abu Talib",
+"k": "js"
+},
+{
+"s": 27080,
+"e": 27088,
+"t": "Abu Bakr",
+"k": "js"
+},
+{
+"s": 27091,
+"e": 27095,
+"t": "Umar",
+"k": "js"
+},
+{
+"s": 27100,
+"e": 27139,
+"t": "Wie alt war er, als seine Mutter starb?",
+"k": "js"
+},
+{
+"s": 27142,
+"e": 27149,
+"t": "6 Jahre",
+"k": "js"
+},
+{
+"s": 27152,
+"e": 27160,
+"t": "12 Jahre",
+"k": "js"
+},
+{
+"s": 27163,
+"e": 27171,
+"t": "20 Jahre",
+"k": "js"
+},
+{
+"s": 27183,
+"e": 27285,
+"t": "Er wusste, wie es ist, ohne Eltern zu sein. Darum war er später immer besonders lieb zu Waisenkindern.",
+"k": "js"
+},
+{
+"s": 27302,
+"e": 27333,
+"t": "Al-Amin – der Vertrauenswürdige",
+"k": "js"
+},
+{
+"s": 27339,
+"e": 27345,
+"t": "Jugend",
+"k": "js"
+},
+{
+"s": 27370,
+"e": 27501,
+"t": "Als Junge hütete Muhammad ﷺ Schafe. Später reiste er mit seinem Onkel Abu Talib in Karawanen bis nach Syrien und lernte den Handel.",
+"k": "js"
+},
+{
+"s": 27508,
+"e": 27640,
+"t": "Er log nie und gab alles zurück, was man ihm anvertraute. Darum nannten ihn die Menschen in Mekka „al-Amin“ – der Vertrauenswürdige.",
+"k": "js"
+},
+{
+"s": 27647,
+"e": 27853,
+"t": "Als die Kaaba neu gebaut wurde, stritten die Stämme, wer den Schwarzen Stein an seinen Platz legen darf. Muhammad ﷺ legte den Stein auf ein Tuch – und alle Stämme trugen ihn gemeinsam. So endete der Streit.",
+"k": "js"
+},
+{
+"s": 27864,
+"e": 27887,
+"t": "Was bedeutet „al-Amin“?",
+"k": "js"
+},
+{
+"s": 27890,
+"e": 27911,
+"t": "Der Vertrauenswürdige",
+"k": "js"
+},
+{
+"s": 27914,
+"e": 27924,
+"t": "Der Starke",
+"k": "js"
+},
+{
+"s": 27927,
+"e": 27937,
+"t": "Der Reiche",
+"k": "js"
+},
+{
+"s": 27942,
+"e": 27989,
+"t": "Wie löste er den Streit um den Schwarzen Stein?",
+"k": "js"
+},
+{
+"s": 27992,
+"e": 28029,
+"t": "Alle Stämme trugen ihn auf einem Tuch",
+"k": "js"
+},
+{
+"s": 28032,
+"e": 28055,
+"t": "Er legte ihn allein hin",
+"k": "js"
+},
+{
+"s": 28058,
+"e": 28085,
+"t": "Er ließ das Los entscheiden",
+"k": "js"
+},
+{
+"s": 28090,
+"e": 28114,
+"t": "Was hütete er als Junge?",
+"k": "js"
+},
+{
+"s": 28117,
+"e": 28123,
+"t": "Schafe",
+"k": "js"
+},
+{
+"s": 28126,
+"e": 28132,
+"t": "Pferde",
+"k": "js"
+},
+{
+"s": 28135,
+"e": 28141,
+"t": "Hühner",
+"k": "js"
+},
+{
+"s": 28153,
+"e": 28219,
+"t": "Ehrlich sein macht stark. Wem vertraust du – und wer vertraut dir?",
+"k": "js"
+},
+{
+"s": 28236,
+"e": 28243,
+"t": "Khadija",
+"k": "js"
+},
+{
+"s": 28249,
+"e": 28262,
+"t": "mit 25 Jahren",
+"k": "js"
+},
+{
+"s": 28305,
+"e": 28450,
+"t": "Khadija war eine kluge und ehrliche Händlerin in Mekka. Sie schickte Muhammad ﷺ mit ihrer Ware nach Syrien – und er kam mit großem Gewinn zurück.",
+"k": "js"
+},
+{
+"s": 28457,
+"e": 28624,
+"t": "Sie bewunderte seine Ehrlichkeit und heiratete ihn. Er war damals 25 Jahre alt. Khadija war seine erste Ehefrau, und solange sie lebte, heiratete er keine andere Frau.",
+"k": "js"
+},
+{
+"s": 28631,
+"e": 28777,
+"t": "Sie bekamen sechs Kinder: die Söhne al-Qasim und Abdullah, die als kleine Kinder starben, und die Töchter Zaynab, Ruqayya, Umm Kulthum und Fatima.",
+"k": "js"
+},
+{
+"s": 28788,
+"e": 28816,
+"t": "Wer war seine erste Ehefrau?",
+"k": "js"
+},
+{
+"s": 28819,
+"e": 28826,
+"t": "Khadija",
+"k": "js"
+},
+{
+"s": 28829,
+"e": 28835,
+"t": "Aischa",
+"k": "js"
+},
+{
+"s": 28838,
+"e": 28843,
+"t": "Sawda",
+"k": "js"
+},
+{
+"s": 28848,
+"e": 28880,
+"t": "Wie alt war er bei der Hochzeit?",
+"k": "js"
+},
+{
+"s": 28883,
+"e": 28891,
+"t": "25 Jahre",
+"k": "js"
+},
+{
+"s": 28894,
+"e": 28902,
+"t": "40 Jahre",
+"k": "js"
+},
+{
+"s": 28905,
+"e": 28913,
+"t": "15 Jahre",
+"k": "js"
+},
+{
+"s": 28918,
+"e": 28947,
+"t": "Wie viele Töchter hatten sie?",
+"k": "js"
+},
+{
+"s": 28971,
+"e": 29050,
+"t": "Du hast eine Freunde-Karte bekommen: Khadija! Schau sie dir unter „Freunde“ an.",
+"k": "js"
+},
+{
+"s": 29067,
+"e": 29089,
+"t": "Lies! – Die Höhle Hira",
+"k": "js"
+},
+{
+"s": 29095,
+"e": 29108,
+"t": "mit 40 Jahren",
+"k": "js"
+},
+{
+"s": 29147,
+"e": 29267,
+"t": "Muhammad ﷺ dachte oft über Allah nach. Dafür ging er in eine kleine Höhle auf dem Berg an-Nur bei Mekka: die Höhle Hira.",
+"k": "js"
+},
+{
+"s": 29274,
+"e": 29433,
+"t": "Als er 40 Jahre alt war, kam im Monat Ramadan der Engel Dschibril zu ihm und sagte: „Iqraʾ – Lies!“ So kamen die ersten Verse des Quran, aus der Sure Al-ʿAlaq.",
+"k": "js"
+},
+{
+"s": 29440,
+"e": 29585,
+"t": "Er eilte erschrocken nach Hause. Khadija tröstete ihn und glaubte ihm als Erste. Bald glaubten auch Abu Bakr, der junge Ali und Zayd ibn Haritha.",
+"k": "js"
+},
+{
+"s": 29596,
+"e": 29640,
+"t": "Was war das erste Wort, das Dschibril sagte?",
+"k": "js"
+},
+{
+"s": 29643,
+"e": 29656,
+"t": "Iqraʾ – Lies!",
+"k": "js"
+},
+{
+"s": 29659,
+"e": 29675,
+"t": "Salam – Frieden!",
+"k": "js"
+},
+{
+"s": 29678,
+"e": 29692,
+"t": "Sabr – Geduld!",
+"k": "js"
+},
+{
+"s": 29697,
+"e": 29735,
+"t": "Welcher Engel brachte die Offenbarung?",
+"k": "js"
+},
+{
+"s": 29738,
+"e": 29747,
+"t": "Dschibril",
+"k": "js"
+},
+{
+"s": 29750,
+"e": 29756,
+"t": "Mikail",
+"k": "js"
+},
+{
+"s": 29759,
+"e": 29766,
+"t": "Israfil",
+"k": "js"
+},
+{
+"s": 29771,
+"e": 29804,
+"t": "Wie alt war der Prophet ﷺ damals?",
+"k": "js"
+},
+{
+"s": 29807,
+"e": 29815,
+"t": "40 Jahre",
+"k": "js"
+},
+{
+"s": 29818,
+"e": 29826,
+"t": "25 Jahre",
+"k": "js"
+},
+{
+"s": 29829,
+"e": 29837,
+"t": "63 Jahre",
+"k": "js"
+},
+{
+"s": 29849,
+"e": 29944,
+"t": "Das erste Wort des Quran war „Lies!“ – darum lernen wir lesen. Genau wie du in „Harf für Harf“!",
+"k": "js"
+},
+{
+"s": 29961,
+"e": 29979,
+"t": "Standhaft in Mekka",
+"k": "js"
+},
+{
+"s": 29985,
+"e": 30001,
+"t": "die ersten Jahre",
+"k": "js"
+},
+{
+"s": 30050,
+"e": 30170,
+"t": "Der Prophet ﷺ rief die Menschen auf, nur Allah anzubeten. Viele Mächtige in Mekka wurden wütend und quälten die Muslime.",
+"k": "js"
+},
+{
+"s": 30177,
+"e": 30352,
+"t": "Bilal, ein Sklave, wurde in der Mittagshitze mit einem schweren Stein auf der Brust gequält. Doch er sagte immer nur: „Ahad, Ahad – Allah ist Einer!“ Abu Bakr kaufte ihn frei.",
+"k": "js"
+},
+{
+"s": 30359,
+"e": 30560,
+"t": "Eine Gruppe Muslime wanderte nach Abessinien (Habascha) aus, zu einem gerechten christlichen König, dem Nadschaschi. Er beschützte sie. Und in Mekka wurde sogar Umar, der zuerst ein Gegner war, Muslim.",
+"k": "js"
+},
+{
+"s": 30571,
+"e": 30608,
+"t": "Was rief Bilal, als er gequält wurde?",
+"k": "js"
+},
+{
+"s": 30611,
+"e": 30622,
+"t": "Ahad, Ahad!",
+"k": "js"
+},
+{
+"s": 30625,
+"e": 30638,
+"t": "Hilfe, Hilfe!",
+"k": "js"
+},
+{
+"s": 30641,
+"e": 30654,
+"t": "Ich gebe auf!",
+"k": "js"
+},
+{
+"s": 30659,
+"e": 30681,
+"t": "Wer kaufte Bilal frei?",
+"k": "js"
+},
+{
+"s": 30684,
+"e": 30692,
+"t": "Abu Bakr",
+"k": "js"
+},
+{
+"s": 30695,
+"e": 30704,
+"t": "Abu Talib",
+"k": "js"
+},
+{
+"s": 30707,
+"e": 30713,
+"t": "Abraha",
+"k": "js"
+},
+{
+"s": 30718,
+"e": 30750,
+"t": "Wohin flohen die ersten Muslime?",
+"k": "js"
+},
+{
+"s": 30753,
+"e": 30768,
+"t": "Nach Abessinien",
+"k": "js"
+},
+{
+"s": 30771,
+"e": 30783,
+"t": "Nach Persien",
+"k": "js"
+},
+{
+"s": 30786,
+"e": 30794,
+"t": "Nach Rom",
+"k": "js"
+},
+{
+"s": 30806,
+"e": 30842,
+"t": "Neue Freunde-Karten: Bilal und Umar!",
+"k": "js"
+},
+{
+"s": 30859,
+"e": 30885,
+"t": "Das Jahr der Trauer & Taif",
+"k": "js"
+},
+{
+"s": 30891,
+"e": 30897,
+"t": "um 619",
+"k": "js"
+},
+{
+"s": 30938,
+"e": 31062,
+"t": "In einem Jahr starben Khadija und sein Onkel Abu Talib. Der Prophet ﷺ war sehr traurig – man nennt es das „Jahr der Trauer“.",
+"k": "js"
+},
+{
+"s": 31069,
+"e": 31222,
+"t": "Mit Zayd ibn Haritha ging er in die Stadt Taif, um dort von Allah zu erzählen. Doch die Leute jagten ihn fort und warfen Steine, bis seine Füße bluteten.",
+"k": "js"
+},
+{
+"s": 31229,
+"e": 31359,
+"t": "Trotzdem verfluchte er sie nicht. Er betete sogar, dass ihre Kinder einmal Allah anbeten würden. So groß war seine Barmherzigkeit.",
+"k": "js"
+},
+{
+"s": 31370,
+"e": 31401,
+"t": "Wer starb im „Jahr der Trauer“?",
+"k": "js"
+},
+{
+"s": 31404,
+"e": 31425,
+"t": "Khadija und Abu Talib",
+"k": "js"
+},
+{
+"s": 31428,
+"e": 31446,
+"t": "Amina und Abdullah",
+"k": "js"
+},
+{
+"s": 31449,
+"e": 31466,
+"t": "Abu Bakr und Umar",
+"k": "js"
+},
+{
+"s": 31471,
+"e": 31502,
+"t": "In welche Stadt ging er danach?",
+"k": "js"
+},
+{
+"s": 31505,
+"e": 31509,
+"t": "Taif",
+"k": "js"
+},
+{
+"s": 31512,
+"e": 31518,
+"t": "Medina",
+"k": "js"
+},
+{
+"s": 31521,
+"e": 31530,
+"t": "Jerusalem",
+"k": "js"
+},
+{
+"s": 31535,
+"e": 31578,
+"t": "Was tat er, als man ihn mit Steinen bewarf?",
+"k": "js"
+},
+{
+"s": 31581,
+"e": 31598,
+"t": "Er betete für sie",
+"k": "js"
+},
+{
+"s": 31601,
+"e": 31618,
+"t": "Er verfluchte sie",
+"k": "js"
+},
+{
+"s": 31621,
+"e": 31635,
+"t": "Er warf zurück",
+"k": "js"
+},
+{
+"s": 31647,
+"e": 31739,
+"t": "Wenn jemand gemein zu dir ist – kannst du trotzdem freundlich bleiben? Das ist echte Stärke.",
+"k": "js"
+},
+{
+"s": 31756,
+"e": 31770,
+"t": "Die Nachtreise",
+"k": "js"
+},
+{
+"s": 31776,
+"e": 31792,
+"t": "vor der Hidschra",
+"k": "js"
+},
+{
+"s": 31835,
+"e": 31964,
+"t": "In einer Nacht reiste der Prophet ﷺ auf dem Reittier Buraq von Mekka bis zur Al-Aqsa-Moschee in Jerusalem. Das nennt man al-Isra.",
+"k": "js"
+},
+{
+"s": 31971,
+"e": 32106,
+"t": "Von dort stieg er durch die Himmel auf – das ist der Miʿradsch. Dort bekam er ein großes Geschenk für alle Muslime: fünf Gebete am Tag.",
+"k": "js"
+},
+{
+"s": 32113,
+"e": 32269,
+"t": "Viele in Mekka lachten über diese Geschichte. Doch Abu Bakr sagte sofort: „Wenn er es sagt, dann ist es wahr.“ Darum heißt er „as-Siddiq“ – der Wahrhaftige.",
+"k": "js"
+},
+{
+"s": 32280,
+"e": 32320,
+"t": "Wohin reiste der Prophet ﷺ in der Nacht?",
+"k": "js"
+},
+{
+"s": 32323,
+"e": 32355,
+"t": "Zur Al-Aqsa-Moschee in Jerusalem",
+"k": "js"
+},
+{
+"s": 32358,
+"e": 32369,
+"t": "Nach Medina",
+"k": "js"
+},
+{
+"s": 32372,
+"e": 32387,
+"t": "Nach Abessinien",
+"k": "js"
+},
+{
+"s": 32392,
+"e": 32428,
+"t": "Welches Geschenk bekam er im Himmel?",
+"k": "js"
+},
+{
+"s": 32431,
+"e": 32449,
+"t": "Fünf Gebete am Tag",
+"k": "js"
+},
+{
+"s": 32452,
+"e": 32463,
+"t": "Den Ramadan",
+"k": "js"
+},
+{
+"s": 32466,
+"e": 32475,
+"t": "Die Kaaba",
+"k": "js"
+},
+{
+"s": 32480,
+"e": 32513,
+"t": "Warum heißt Abu Bakr „as-Siddiq“?",
+"k": "js"
+},
+{
+"s": 32516,
+"e": 32537,
+"t": "Er glaubte ihm sofort",
+"k": "js"
+},
+{
+"s": 32540,
+"e": 32557,
+"t": "Er war sehr reich",
+"k": "js"
+},
+{
+"s": 32560,
+"e": 32577,
+"t": "Er war sehr stark",
+"k": "js"
+},
+{
+"s": 32589,
+"e": 32657,
+"t": "Jedes Mal, wenn du betest, denkst du an das Geschenk der Nachtreise.",
+"k": "js"
+},
+{
+"s": 32674,
+"e": 32686,
+"t": "Die Hidschra",
+"k": "js"
+},
+{
+"s": 32735,
+"e": 32867,
+"t": "In Mekka wurde es zu gefährlich. Allah erlaubte den Muslimen, nach Yathrib auszuwandern – in eine Stadt mit vielen Palmen im Norden.",
+"k": "js"
+},
+{
+"s": 32874,
+"e": 33089,
+"t": "Der Prophet ﷺ ging mit seinem besten Freund Abu Bakr. Ali schlief in der Nacht in seinem Bett. Drei Tage versteckten sich die beiden in der Höhle Thawr. Asmaʾ, die Tochter von Abu Bakr, brachte ihnen heimlich Essen.",
+"k": "js"
+},
+{
+"s": 33096,
+"e": 33306,
+"t": "In Quba baute er die erste Moschee. Dann erreichte er Yathrib, und die Menschen sangen vor Freude. Die Stadt hieß von nun an Medina – „die Stadt des Propheten“. Mit der Hidschra beginnt der islamische Kalender.",
+"k": "js"
+},
+{
+"s": 33317,
+"e": 33353,
+"t": "Wer begleitete ihn auf der Hidschra?",
+"k": "js"
+},
+{
+"s": 33356,
+"e": 33364,
+"t": "Abu Bakr",
+"k": "js"
+},
+{
+"s": 33367,
+"e": 33371,
+"t": "Umar",
+"k": "js"
+},
+{
+"s": 33374,
+"e": 33379,
+"t": "Bilal",
+"k": "js"
+},
+{
+"s": 33384,
+"e": 33422,
+"t": "In welcher Höhle versteckten sie sich?",
+"k": "js"
+},
+{
+"s": 33425,
+"e": 33436,
+"t": "Höhle Thawr",
+"k": "js"
+},
+{
+"s": 33439,
+"e": 33449,
+"t": "Höhle Hira",
+"k": "js"
+},
+{
+"s": 33452,
+"e": 33462,
+"t": "Höhle Uhud",
+"k": "js"
+},
+{
+"s": 33467,
+"e": 33497,
+"t": "Wo baute er die erste Moschee?",
+"k": "js"
+},
+{
+"s": 33500,
+"e": 33507,
+"t": "In Quba",
+"k": "js"
+},
+{
+"s": 33510,
+"e": 33518,
+"t": "In Mekka",
+"k": "js"
+},
+{
+"s": 33521,
+"e": 33528,
+"t": "In Taif",
+"k": "js"
+},
+{
+"s": 33540,
+"e": 33616,
+"t": "Hidschra heißt Auswanderung. Unser Kalender zählt die Jahre seit diesem Tag!",
+"k": "js"
+},
+{
+"s": 33634,
+"e": 33649,
+"t": "Leben in Medina",
+"k": "js"
+},
+{
+"s": 33655,
+"e": 33661,
+"t": "ab 622",
+"k": "js"
+},
+{
+"s": 33707,
+"e": 33869,
+"t": "Zuerst wohnte der Prophet ﷺ im Haus von Abu Ayyub al-Ansari. Dann bauten alle Muslime gemeinsam seine Moschee: die Masdschid an-Nabawi. Er selbst trug Steine mit.",
+"k": "js"
+},
+{
+"s": 33876,
+"e": 34048,
+"t": "Die Muslime aus Mekka hatten alles verlassen – man nennt sie Muhadschirun. Der Prophet ﷺ machte jeden zum Bruder eines Muslims aus Medina – der Ansar –, der mit ihm teilte.",
+"k": "js"
+},
+{
+"s": 34055,
+"e": 34151,
+"t": "Bilal hatte eine schöne, laute Stimme. Er wurde der erste Muezzin und rief zum Gebet: den Adhan.",
+"k": "js"
+},
+{
+"s": 34162,
+"e": 34188,
+"t": "Wer war der erste Muezzin?",
+"k": "js"
+},
+{
+"s": 34191,
+"e": 34196,
+"t": "Bilal",
+"k": "js"
+},
+{
+"s": 34199,
+"e": 34202,
+"t": "Ali",
+"k": "js"
+},
+{
+"s": 34205,
+"e": 34209,
+"t": "Zayd",
+"k": "js"
+},
+{
+"s": 34214,
+"e": 34271,
+"t": "Wie nennt man die Muslime aus Medina, die geholfen haben?",
+"k": "js"
+},
+{
+"s": 34274,
+"e": 34279,
+"t": "Ansar",
+"k": "js"
+},
+{
+"s": 34282,
+"e": 34294,
+"t": "Muhadschirun",
+"k": "js"
+},
+{
+"s": 34297,
+"e": 34305,
+"t": "Quraisch",
+"k": "js"
+},
+{
+"s": 34310,
+"e": 34353,
+"t": "Was tat der Prophet ﷺ beim Bau der Moschee?",
+"k": "js"
+},
+{
+"s": 34356,
+"e": 34377,
+"t": "Er trug selbst Steine",
+"k": "js"
+},
+{
+"s": 34380,
+"e": 34397,
+"t": "Er schaute nur zu",
+"k": "js"
+},
+{
+"s": 34400,
+"e": 34415,
+"t": "Er war verreist",
+"k": "js"
+},
+{
+"s": 34427,
+"e": 34501,
+"t": "Teilen macht Freunde zu Geschwistern – wie die Ansar und die Muhadschirun.",
+"k": "js"
+},
+{
+"s": 34519,
+"e": 34544,
+"t": "Badr, Uhud und der Graben",
+"k": "js"
+},
+{
+"s": 34609,
+"e": 34723,
+"t": "Bei Badr trafen nur etwa 313 Muslime auf eine viel größere Armee aus Mekka. Mit Allahs Hilfe gewannen die Muslime.",
+"k": "js"
+},
+{
+"s": 34730,
+"e": 34932,
+"t": "Am Berg Uhud verließen einige Bogenschützen ihren Platz, obwohl der Prophet ﷺ gesagt hatte, sie sollen bleiben. Die Muslime lernten: Gehorsam ist wichtig. Hier starb sein Onkel Hamza, der „Löwe Allahs“.",
+"k": "js"
+},
+{
+"s": 34939,
+"e": 35090,
+"t": "Später zog eine riesige Armee gegen Medina. Salman al-Farisi hatte eine Idee: einen Graben um die Stadt. Die Armee kam nicht hinüber und zog wieder ab.",
+"k": "js"
+},
+{
+"s": 35101,
+"e": 35143,
+"t": "Wie viele Muslime waren ungefähr bei Badr?",
+"k": "js"
+},
+{
+"s": 35146,
+"e": 35154,
+"t": "Etwa 313",
+"k": "js"
+},
+{
+"s": 35157,
+"e": 35168,
+"t": "Etwa 10.000",
+"k": "js"
+},
+{
+"s": 35171,
+"e": 35178,
+"t": "Etwa 50",
+"k": "js"
+},
+{
+"s": 35183,
+"e": 35215,
+"t": "Wer wurde „Löwe Allahs“ genannt?",
+"k": "js"
+},
+{
+"s": 35218,
+"e": 35223,
+"t": "Hamza",
+"k": "js"
+},
+{
+"s": 35226,
+"e": 35235,
+"t": "Abu Talib",
+"k": "js"
+},
+{
+"s": 35238,
+"e": 35244,
+"t": "Abraha",
+"k": "js"
+},
+{
+"s": 35249,
+"e": 35276,
+"t": "Wessen Idee war der Graben?",
+"k": "js"
+},
+{
+"s": 35279,
+"e": 35295,
+"t": "Salman al-Farisi",
+"k": "js"
+},
+{
+"s": 35298,
+"e": 35306,
+"t": "Abu Bakr",
+"k": "js"
+},
+{
+"s": 35309,
+"e": 35314,
+"t": "Bilal",
+"k": "js"
+},
+{
+"s": 35326,
+"e": 35364,
+"t": "Neue Freunde-Karten: Hamza und Salman!",
+"k": "js"
+},
+{
+"s": 35382,
+"e": 35399,
+"t": "Zurück nach Mekka",
+"k": "js"
+},
+{
+"s": 35453,
+"e": 35564,
+"t": "Acht Jahre nach der Hidschra kehrte der Prophet ﷺ mit etwa 10.000 Muslimen nach Mekka zurück – fast ohne Kampf.",
+"k": "js"
+},
+{
+"s": 35571,
+"e": 35672,
+"t": "Er reinigte die Kaaba von den Götzenbildern. Bilal stieg auf die Kaaba und rief den Adhan über Mekka.",
+"k": "js"
+},
+{
+"s": 35679,
+"e": 35784,
+"t": "Die Menschen, die ihn früher verfolgt hatten, hatten Angst. Doch er vergab ihnen und ließ sie frei gehen.",
+"k": "js"
+},
+{
+"s": 35795,
+"e": 35851,
+"t": "Was machte er mit den Menschen, die ihn verfolgt hatten?",
+"k": "js"
+},
+{
+"s": 35854,
+"e": 35869,
+"t": "Er vergab ihnen",
+"k": "js"
+},
+{
+"s": 35872,
+"e": 35889,
+"t": "Er bestrafte alle",
+"k": "js"
+},
+{
+"s": 35892,
+"e": 35907,
+"t": "Er vertrieb sie",
+"k": "js"
+},
+{
+"s": 35912,
+"e": 35938,
+"t": "Was geschah mit der Kaaba?",
+"k": "js"
+},
+{
+"s": 35941,
+"e": 35978,
+"t": "Sie wurde von Götzenbildern gereinigt",
+"k": "js"
+},
+{
+"s": 35981,
+"e": 36001,
+"t": "Sie wurde abgerissen",
+"k": "js"
+},
+{
+"s": 36004,
+"e": 36026,
+"t": "Sie wurde verschlossen",
+"k": "js"
+},
+{
+"s": 36031,
+"e": 36064,
+"t": "Wer rief den Adhan von der Kaaba?",
+"k": "js"
+},
+{
+"s": 36067,
+"e": 36072,
+"t": "Bilal",
+"k": "js"
+},
+{
+"s": 36075,
+"e": 36080,
+"t": "Hamza",
+"k": "js"
+},
+{
+"s": 36083,
+"e": 36089,
+"t": "Salman",
+"k": "js"
+},
+{
+"s": 36101,
+"e": 36164,
+"t": "Vergeben ist schwer – aber der Prophet ﷺ hat es uns vorgemacht.",
+"k": "js"
+},
+{
+"s": 36182,
+"e": 36194,
+"t": "Der Abschied",
+"k": "js"
+},
+{
+"s": 36264,
+"e": 36391,
+"t": "Im 10. Jahr nach der Hidschra machte der Prophet ﷺ seine Pilgerfahrt, den Hadsch. Am Berg Arafat hielt er die Abschiedspredigt.",
+"k": "js"
+},
+{
+"s": 36398,
+"e": 36560,
+"t": "Er sagte: Alle Menschen sind gleich – keiner ist besser als ein anderer, außer durch seine Gottesfurcht. Behandelt eure Familien gut und haltet euch an den Quran.",
+"k": "js"
+},
+{
+"s": 36567,
+"e": 36724,
+"t": "Kurz danach wurde er krank. Er starb in Medina mit 63 Jahren, im Zimmer seiner Frau Aischa, und wurde dort begraben. Heute liegt sein Grab in seiner Moschee.",
+"k": "js"
+},
+{
+"s": 36735,
+"e": 36768,
+"t": "Wo hielt er die Abschiedspredigt?",
+"k": "js"
+},
+{
+"s": 36771,
+"e": 36785,
+"t": "Am Berg Arafat",
+"k": "js"
+},
+{
+"s": 36788,
+"e": 36805,
+"t": "In der Höhle Hira",
+"k": "js"
+},
+{
+"s": 36808,
+"e": 36815,
+"t": "In Taif",
+"k": "js"
+},
+{
+"s": 36820,
+"e": 36851,
+"t": "Was sagte er über die Menschen?",
+"k": "js"
+},
+{
+"s": 36854,
+"e": 36879,
+"t": "Alle Menschen sind gleich",
+"k": "js"
+},
+{
+"s": 36882,
+"e": 36900,
+"t": "Reiche sind besser",
+"k": "js"
+},
+{
+"s": 36903,
+"e": 36921,
+"t": "Starke sind besser",
+"k": "js"
+},
+{
+"s": 36926,
+"e": 36954,
+"t": "Wie alt wurde der Prophet ﷺ?",
+"k": "js"
+},
+{
+"s": 36957,
+"e": 36965,
+"t": "63 Jahre",
+"k": "js"
+},
+{
+"s": 36968,
+"e": 36976,
+"t": "40 Jahre",
+"k": "js"
+},
+{
+"s": 36979,
+"e": 36987,
+"t": "70 Jahre",
+"k": "js"
+},
+{
+"s": 36999,
+"e": 37096,
+"t": "Du kennst jetzt sein ganzes Leben! Zum Schluss: Bring die Ereignisse in die richtige Reihenfolge.",
+"k": "js"
+},
+{
+"s": 37114,
+"e": 37129,
+"t": "Was kam zuerst?",
+"k": "js"
+},
+{
+"s": 37135,
+"e": 37140,
+"t": "Spiel",
+"k": "js"
+},
+{
+"s": 37183,
+"e": 37223,
+"t": "Das Jahr des Elefanten – Geburt in Mekka",
+"k": "js"
+},
+{
+"s": 37226,
+"e": 37258,
+"t": "Kindheit bei Halima in der Wüste",
+"k": "js"
+},
+{
+"s": 37261,
+"e": 37281,
+"t": "Hochzeit mit Khadija",
+"k": "js"
+},
+{
+"s": 37284,
+"e": 37323,
+"t": "Die erste Offenbarung in der Höhle Hira",
+"k": "js"
+},
+{
+"s": 37326,
+"e": 37354,
+"t": "Das Jahr der Trauer und Taif",
+"k": "js"
+},
+{
+"s": 37357,
+"e": 37381,
+"t": "Die Hidschra nach Medina",
+"k": "js"
+},
+{
+"s": 37384,
+"e": 37405,
+"t": "Die Schlacht von Badr",
+"k": "js"
+},
+{
+"s": 37408,
+"e": 37431,
+"t": "Die Rückkehr nach Mekka",
+"k": "js"
+},
+{
+"s": 37434,
+"e": 37469,
+"t": "Die Abschiedspredigt am Berg Arafat",
+"k": "js"
+},
+{
+"s": 37503,
+"e": 37525,
+"t": "Khadija bint Khuwaylid",
+"k": "js"
+},
+{
+"s": 37542,
+"e": 37551,
+"t": "Die Treue",
+"k": "js"
+},
+{
+"s": 37584,
+"e": 37723,
+"t": "Die erste Muslima überhaupt. Sie glaubte dem Propheten ﷺ sofort und half ihm mit ihrem Herzen und ihrem Vermögen. Er hat sie nie vergessen.",
+"k": "js"
+},
+{
+"s": 37736,
+"e": 37753,
+"t": "Ali ibn Abi Talib",
+"k": "js"
+},
+{
+"s": 37768,
+"e": 37778,
+"t": "Der Mutige",
+"k": "js"
+},
+{
+"s": 37807,
+"e": 37974,
+"t": "Cousin des Propheten ﷺ. Er glaubte schon als Junge. In der Nacht der Hidschra schlief er mutig im Bett des Propheten ﷺ. Er heiratete Fatima und wurde der vierte Kalif.",
+"k": "js"
+},
+{
+"s": 37989,
+"e": 38004,
+"t": "Bilal ibn Rabah",
+"k": "js"
+},
+{
+"s": 38020,
+"e": 38030,
+"t": "Die Stimme",
+"k": "js"
+},
+{
+"s": 38059,
+"e": 38161,
+"t": "Er blieb unter schweren Qualen standhaft und rief „Ahad, Ahad!“. Er wurde der erste Muezzin des Islam.",
+"k": "js"
+},
+{
+"s": 38175,
+"e": 38194,
+"t": "Umar ibn al-Khattab",
+"k": "js"
+},
+{
+"s": 38209,
+"e": 38221,
+"t": "Der Gerechte",
+"k": "js"
+},
+{
+"s": 38250,
+"e": 38397,
+"t": "Zuerst war er ein Gegner, dann wurde er ein starker Muslim. Man nannte ihn al-Faruq – der Recht und Unrecht unterscheidet. Er war der zweite Kalif.",
+"k": "js"
+},
+{
+"s": 38411,
+"e": 38427,
+"t": "Zayd ibn Haritha",
+"k": "js"
+},
+{
+"s": 38442,
+"e": 38461,
+"t": "Der Treue Begleiter",
+"k": "js"
+},
+{
+"s": 38490,
+"e": 38629,
+"t": "Der Prophet ﷺ nahm ihn auf wie einen Sohn. Er begleitete ihn nach Taif. Zayd ist der einzige Gefährte, der im Quran mit Namen genannt wird.",
+"k": "js"
+},
+{
+"s": 38646,
+"e": 38664,
+"t": "Abu Bakr as-Siddiq",
+"k": "js"
+},
+{
+"s": 38683,
+"e": 38698,
+"t": "Der Wahrhaftige",
+"k": "js"
+},
+{
+"s": 38727,
+"e": 38848,
+"t": "Der beste Freund des Propheten ﷺ. Er glaubte ihm immer sofort, begleitete ihn auf der Hidschra und wurde der erste Kalif.",
+"k": "js"
+},
+{
+"s": 38862,
+"e": 38881,
+"t": "Asmaʾ bint Abi Bakr",
+"k": "js"
+},
+{
+"s": 38898,
+"e": 38917,
+"t": "Die Mutige Helferin",
+"k": "js"
+},
+{
+"s": 38950,
+"e": 39136,
+"t": "Sie brachte dem Propheten ﷺ und ihrem Vater heimlich Essen in die Höhle Thawr. Sie band es mit ihrem Gürtel fest, den sie in zwei Teile riss – darum heißt sie „die mit den zwei Gürteln“.",
+"k": "js"
+},
+{
+"s": 39154,
+"e": 39173,
+"t": "Abu Ayyub al-Ansari",
+"k": "js"
+},
+{
+"s": 39193,
+"e": 39206,
+"t": "Der Gastgeber",
+"k": "js"
+},
+{
+"s": 39235,
+"e": 39359,
+"t": "Als der Prophet ﷺ in Medina ankam, wohnte er in seinem Haus, bis die Moschee fertig war. Er war ein gastfreundlicher Ansari.",
+"k": "js"
+},
+{
+"s": 39374,
+"e": 39399,
+"t": "Hamza ibn Abd al-Muttalib",
+"k": "js"
+},
+{
+"s": 39415,
+"e": 39430,
+"t": "Der Löwe Allahs",
+"k": "js"
+},
+{
+"s": 39459,
+"e": 39557,
+"t": "Ein Onkel des Propheten ﷺ, stark und mutig. Er beschützte die Muslime in Mekka und starb bei Uhud.",
+"k": "js"
+},
+{
+"s": 39573,
+"e": 39589,
+"t": "Salman al-Farisi",
+"k": "js"
+},
+{
+"s": 39606,
+"e": 39625,
+"t": "Der Wahrheitssucher",
+"k": "js"
+},
+{
+"s": 39654,
+"e": 39785,
+"t": "Er kam aus Persien und suchte viele Jahre nach der Wahrheit, bis er den Propheten ﷺ fand. Seine Idee mit dem Graben rettete Medina.",
+"k": "js"
+},
+{
+"s": 39801,
+"e": 39817,
+"t": "Uthman ibn Affan",
+"k": "js"
+},
+{
+"s": 39834,
+"e": 39848,
+"t": "Der Großzügige",
+"k": "js"
+},
+{
+"s": 39877,
+"e": 40054,
+"t": "Sehr großzügig und bescheiden. Er heiratete zwei Töchter des Propheten ﷺ – darum heißt er „der mit den zwei Lichtern“. Als dritter Kalif ließ er den Quran in einem Buch sammeln.",
+"k": "js"
+},
+{
+"s": 40070,
+"e": 40090,
+"t": "Aischa bint Abi Bakr",
+"k": "js"
+},
+{
+"s": 40107,
+"e": 40119,
+"t": "Die Gelehrte",
+"k": "js"
+},
+{
+"s": 40152,
+"e": 40274,
+"t": "Ehefrau des Propheten ﷺ und Tochter von Abu Bakr. Sie war sehr klug, überlieferte viele Hadithe und lehrte viele Menschen.",
+"k": "js"
+},
+{
+"s": 40290,
+"e": 40305,
+"t": "Fatima az-Zahra",
+"k": "js"
+},
+{
+"s": 40322,
+"e": 40342,
+"t": "Die geliebte Tochter",
+"k": "js"
+},
+{
+"s": 40375,
+"e": 40490,
+"t": "Die jüngste Tochter des Propheten ﷺ, die er sehr liebte. Sie heiratete Ali und war die Mutter von Hasan und Husain.",
+"k": "js"
+},
+{
+"s": 40516,
+"e": 40546,
+"t": "Seine Eltern und seine Familie",
+"k": "js"
+},
+{
+"s": 40554,
+"e": 40562,
+"t": "Abdullah",
+"k": "js"
+},
+{
+"s": 40576,
+"e": 40581,
+"t": "Vater",
+"k": "js"
+},
+{
+"s": 40584,
+"e": 40621,
+"t": "Starb vor der Geburt des Propheten ﷺ.",
+"k": "js"
+},
+{
+"s": 40626,
+"e": 40641,
+"t": "Amina bint Wahb",
+"k": "js"
+},
+{
+"s": 40651,
+"e": 40657,
+"t": "Mutter",
+"k": "js"
+},
+{
+"s": 40660,
+"e": 40694,
+"t": "Starb, als er sechs Jahre alt war.",
+"k": "js"
+},
+{
+"s": 40699,
+"e": 40714,
+"t": "Abd al-Muttalib",
+"k": "js"
+},
+{
+"s": 40730,
+"e": 40739,
+"t": "Großvater",
+"k": "js"
+},
+{
+"s": 40742,
+"e": 40805,
+"t": "Kümmerte sich nach Amina um ihn und gab ihm den Namen Muhammad.",
+"k": "js"
+},
+{
+"s": 40810,
+"e": 40819,
+"t": "Abu Talib",
+"k": "js"
+},
+{
+"s": 40833,
+"e": 40838,
+"t": "Onkel",
+"k": "js"
+},
+{
+"s": 40841,
+"e": 40882,
+"t": "Zog ihn groß und beschützte ihn in Mekka.",
+"k": "js"
+},
+{
+"s": 40887,
+"e": 40892,
+"t": "Hamza",
+"k": "js"
+},
+{
+"s": 40902,
+"e": 40907,
+"t": "Onkel",
+"k": "js"
+},
+{
+"s": 40910,
+"e": 40928,
+"t": "Der „Löwe Allahs“.",
+"k": "js"
+},
+{
+"s": 40953,
+"e": 40958,
+"t": "Onkel",
+"k": "js"
+},
+{
+"s": 40961,
+"e": 41005,
+"t": "Ein weiterer Onkel, der später Muslim wurde.",
+"k": "js"
+},
+{
+"s": 41010,
+"e": 41028,
+"t": "Halima as-Saʿdiyya",
+"k": "js"
+},
+{
+"s": 41039,
+"e": 41043,
+"t": "Amme",
+"k": "js"
+},
+{
+"s": 41046,
+"e": 41080,
+"t": "Pflegte ihn als Baby in der Wüste.",
+"k": "js"
+},
+{
+"s": 41085,
+"e": 41094,
+"t": "Umm Aiman",
+"k": "js"
+},
+{
+"s": 41107,
+"e": 41117,
+"t": "Kinderfrau",
+"k": "js"
+},
+{
+"s": 41120,
+"e": 41199,
+"t": "Kümmerte sich um ihn als Kind; er nannte sie „meine Mutter nach meiner Mutter“.",
+"k": "js"
+},
+{
+"s": 41212,
+"e": 41251,
+"t": "Seine Frauen – die Mütter der Gläubigen",
+"k": "js"
+},
+{
+"s": 41257,
+"e": 41314,
+"t": "So werden die Ehefrauen des Propheten ﷺ im Quran genannt.",
+"k": "js"
+},
+{
+"s": 41322,
+"e": 41344,
+"t": "Khadija bint Khuwaylid",
+"k": "js"
+},
+{
+"s": 41355,
+"e": 41365,
+"t": "1. Ehefrau",
+"k": "js"
+},
+{
+"s": 41368,
+"e": 41422,
+"t": "Die erste Muslima; Mutter seiner Kinder außer Ibrahim.",
+"k": "js"
+},
+{
+"s": 41427,
+"e": 41443,
+"t": "Sawda bint Zamʿa",
+"k": "js"
+},
+{
+"s": 41453,
+"e": 41460,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 41463,
+"e": 41519,
+"t": "Heiratete ihn nach Khadijas Tod; fröhlich und großzügig.",
+"k": "js"
+},
+{
+"s": 41524,
+"e": 41544,
+"t": "Aischa bint Abi Bakr",
+"k": "js"
+},
+{
+"s": 41555,
+"e": 41562,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 41565,
+"e": 41600,
+"t": "Tochter von Abu Bakr; sehr gelehrt.",
+"k": "js"
+},
+{
+"s": 41605,
+"e": 41620,
+"t": "Hafsa bint Umar",
+"k": "js"
+},
+{
+"s": 41630,
+"e": 41637,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 41640,
+"e": 41709,
+"t": "Tochter von Umar; bei ihr wurde eine frühe Quran-Sammlung aufbewahrt.",
+"k": "js"
+},
+{
+"s": 41714,
+"e": 41734,
+"t": "Zaynab bint Khuzayma",
+"k": "js"
+},
+{
+"s": 41744,
+"e": 41751,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 41754,
+"e": 41803,
+"t": "Genannt „Mutter der Armen“, weil sie so viel gab.",
+"k": "js"
+},
+{
+"s": 41808,
+"e": 41818,
+"t": "Umm Salama",
+"k": "js"
+},
+{
+"s": 41831,
+"e": 41838,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 41841,
+"e": 41884,
+"t": "Klug; gab dem Propheten ﷺ einen weisen Rat.",
+"k": "js"
+},
+{
+"s": 41889,
+"e": 41910,
+"t": "Zaynab bint Dschahsch",
+"k": "js"
+},
+{
+"s": 41920,
+"e": 41927,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 41930,
+"e": 41975,
+"t": "Arbeitete mit ihren Händen und spendete viel.",
+"k": "js"
+},
+{
+"s": 41980,
+"e": 42007,
+"t": "Dschuwairiya bint al-Harith",
+"k": "js"
+},
+{
+"s": 42019,
+"e": 42026,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 42029,
+"e": 42080,
+"t": "Durch die Heirat wurden viele aus ihrem Stamm frei.",
+"k": "js"
+},
+{
+"s": 42085,
+"e": 42095,
+"t": "Umm Habiba",
+"k": "js"
+},
+{
+"s": 42109,
+"e": 42116,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 42119,
+"e": 42176,
+"t": "Tochter von Abu Sufyan; war nach Abessinien ausgewandert.",
+"k": "js"
+},
+{
+"s": 42181,
+"e": 42200,
+"t": "Safiyya bint Huyayy",
+"k": "js"
+},
+{
+"s": 42210,
+"e": 42217,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 42220,
+"e": 42251,
+"t": "Aus Khaybar; geduldig und edel.",
+"k": "js"
+},
+{
+"s": 42256,
+"e": 42278,
+"t": "Maimuna bint al-Harith",
+"k": "js"
+},
+{
+"s": 42290,
+"e": 42297,
+"t": "Ehefrau",
+"k": "js"
+},
+{
+"s": 42300,
+"e": 42334,
+"t": "Die letzte Frau, die er heiratete.",
+"k": "js"
+},
+{
+"s": 42339,
+"e": 42357,
+"t": "Mariya al-Qibtiyya",
+"k": "js"
+},
+{
+"s": 42368,
+"e": 42386,
+"t": "Mutter von Ibrahim",
+"k": "js"
+},
+{
+"s": 42389,
+"e": 42435,
+"t": "Kam aus Ägypten; Mutter seines Sohnes Ibrahim.",
+"k": "js"
+},
+{
+"s": 42448,
+"e": 42460,
+"t": "Seine Kinder",
+"k": "js"
+},
+{
+"s": 42488,
+"e": 42492,
+"t": "Sohn",
+"k": "js"
+},
+{
+"s": 42495,
+"e": 42571,
+"t": "Starb als kleines Kind. Darum nannte man den Propheten ﷺ auch „Abu l-Qasim“.",
+"k": "js"
+},
+{
+"s": 42576,
+"e": 42582,
+"t": "Zaynab",
+"k": "js"
+},
+{
+"s": 42592,
+"e": 42599,
+"t": "Tochter",
+"k": "js"
+},
+{
+"s": 42602,
+"e": 42643,
+"t": "Die älteste Tochter; heiratete Abu l-ʿAs.",
+"k": "js"
+},
+{
+"s": 42648,
+"e": 42655,
+"t": "Ruqayya",
+"k": "js"
+},
+{
+"s": 42665,
+"e": 42672,
+"t": "Tochter",
+"k": "js"
+},
+{
+"s": 42675,
+"e": 42692,
+"t": "Heiratete Uthman.",
+"k": "js"
+},
+{
+"s": 42697,
+"e": 42708,
+"t": "Umm Kulthum",
+"k": "js"
+},
+{
+"s": 42722,
+"e": 42729,
+"t": "Tochter",
+"k": "js"
+},
+{
+"s": 42732,
+"e": 42777,
+"t": "Heiratete nach Ruqayyas Tod ebenfalls Uthman.",
+"k": "js"
+},
+{
+"s": 42782,
+"e": 42797,
+"t": "Fatima az-Zahra",
+"k": "js"
+},
+{
+"s": 42808,
+"e": 42815,
+"t": "Tochter",
+"k": "js"
+},
+{
+"s": 42818,
+"e": 42883,
+"t": "Heiratete Ali; lebte als einziges Kind noch nach dem Propheten ﷺ.",
+"k": "js"
+},
+{
+"s": 42888,
+"e": 42896,
+"t": "Abdullah",
+"k": "js"
+},
+{
+"s": 42910,
+"e": 42914,
+"t": "Sohn",
+"k": "js"
+},
+{
+"s": 42917,
+"e": 42940,
+"t": "Starb als kleines Kind.",
+"k": "js"
+},
+{
+"s": 42945,
+"e": 42952,
+"t": "Ibrahim",
+"k": "js"
+},
+{
+"s": 42965,
+"e": 42969,
+"t": "Sohn",
+"k": "js"
+},
+{
+"s": 42972,
+"e": 43019,
+"t": "Sohn von Mariya; starb als Kleinkind in Medina.",
+"k": "js"
+},
+{
+"s": 43032,
+"e": 43043,
+"t": "Seine Enkel",
+"k": "js"
+},
+{
+"s": 43051,
+"e": 43056,
+"t": "Hasan",
+"k": "js"
+},
+{
+"s": 43067,
+"e": 43072,
+"t": "Enkel",
+"k": "js"
+},
+{
+"s": 43075,
+"e": 43099,
+"t": "Sohn von Fatima und Ali.",
+"k": "js"
+},
+{
+"s": 43104,
+"e": 43110,
+"t": "Husain",
+"k": "js"
+},
+{
+"s": 43122,
+"e": 43127,
+"t": "Enkel",
+"k": "js"
+},
+{
+"s": 43130,
+"e": 43154,
+"t": "Sohn von Fatima und Ali.",
+"k": "js"
+},
+{
+"s": 43159,
+"e": 43174,
+"t": "Zaynab bint Ali",
+"k": "js"
+},
+{
+"s": 43184,
+"e": 43191,
+"t": "Enkelin",
+"k": "js"
+},
+{
+"s": 43194,
+"e": 43221,
+"t": "Tochter von Fatima und Ali.",
+"k": "js"
+},
+{
+"s": 43226,
+"e": 43231,
+"t": "Umama",
+"k": "js"
+},
+{
+"s": 43242,
+"e": 43249,
+"t": "Enkelin",
+"k": "js"
+},
+{
+"s": 43252,
+"e": 43312,
+"t": "Tochter von Zaynab; der Prophet ﷺ trug sie sogar beim Gebet.",
+"k": "js"
+},
+{
+"s": 43334,
+"e": 43376,
+"t": "Wer war die erste Ehefrau des Propheten ﷺ?",
+"k": "js"
+},
+{
+"s": 43379,
+"e": 43386,
+"t": "Khadija",
+"k": "js"
+},
+{
+"s": 43389,
+"e": 43395,
+"t": "Aischa",
+"k": "js"
+},
+{
+"s": 43398,
+"e": 43403,
+"t": "Hafsa",
+"k": "js"
+},
+{
+"s": 43408,
+"e": 43437,
+"t": "Welche Tochter heiratete Ali?",
+"k": "js"
+},
+{
+"s": 43440,
+"e": 43446,
+"t": "Fatima",
+"k": "js"
+},
+{
+"s": 43449,
+"e": 43455,
+"t": "Zaynab",
+"k": "js"
+},
+{
+"s": 43458,
+"e": 43465,
+"t": "Ruqayya",
+"k": "js"
+},
+{
+"s": 43470,
+"e": 43510,
+"t": "Wie hießen die Söhne von Fatima und Ali?",
+"k": "js"
+},
+{
+"s": 43513,
+"e": 43529,
+"t": "Hasan und Husain",
+"k": "js"
+},
+{
+"s": 43532,
+"e": 43550,
+"t": "Qasim und Abdullah",
+"k": "js"
+},
+{
+"s": 43553,
+"e": 43569,
+"t": "Ibrahim und Zayd",
+"k": "js"
+},
+{
+"s": 43574,
+"e": 43600,
+"t": "Wessen Tochter war Aischa?",
+"k": "js"
+},
+{
+"s": 43603,
+"e": 43615,
+"t": "Von Abu Bakr",
+"k": "js"
+},
+{
+"s": 43618,
+"e": 43626,
+"t": "Von Umar",
+"k": "js"
+},
+{
+"s": 43629,
+"e": 43642,
+"t": "Von Abu Talib",
+"k": "js"
+},
+{
+"s": 43647,
+"e": 43672,
+"t": "Wessen Tochter war Hafsa?",
+"k": "js"
+},
+{
+"s": 43675,
+"e": 43683,
+"t": "Von Umar",
+"k": "js"
+},
+{
+"s": 43686,
+"e": 43698,
+"t": "Von Abu Bakr",
+"k": "js"
+},
+{
+"s": 43701,
+"e": 43710,
+"t": "Von Hamza",
+"k": "js"
+},
+{
+"s": 43715,
+"e": 43738,
+"t": "Wer war sein Großvater?",
+"k": "js"
+},
+{
+"s": 43741,
+"e": 43756,
+"t": "Abd al-Muttalib",
+"k": "js"
+},
+{
+"s": 43759,
+"e": 43768,
+"t": "Abu Talib",
+"k": "js"
+},
+{
+"s": 43771,
+"e": 43779,
+"t": "Abdullah",
+"k": "js"
+},
+{
+"s": 43784,
+"e": 43826,
+"t": "Welches seiner Kinder lebte noch nach ihm?",
+"k": "js"
+},
+{
+"s": 43829,
+"e": 43835,
+"t": "Fatima",
+"k": "js"
+},
+{
+"s": 43838,
+"e": 43844,
+"t": "Zaynab",
+"k": "js"
+},
+{
+"s": 43847,
+"e": 43854,
+"t": "Ibrahim",
+"k": "js"
+},
+{
+"s": 43859,
+"e": 43890,
+"t": "Wer war die Mutter von Ibrahim?",
+"k": "js"
+},
+{
+"s": 43893,
+"e": 43899,
+"t": "Mariya",
+"k": "js"
+},
+{
+"s": 43902,
+"e": 43909,
+"t": "Khadija",
+"k": "js"
+},
+{
+"s": 43912,
+"e": 43917,
+"t": "Sawda",
+"k": "js"
+},
+{
+"s": 43922,
+"e": 43969,
+"t": "Warum heißt Uthman „der mit den zwei Lichtern“?",
+"k": "js"
+},
+{
+"s": 43972,
+"e": 44013,
+"t": "Er heiratete zwei Töchter des Propheten ﷺ",
+"k": "js"
+},
+{
+"s": 44016,
+"e": 44036,
+"t": "Er hatte zwei Lampen",
+"k": "js"
+},
+{
+"s": 44039,
+"e": 44064,
+"t": "Er betete zweimal so viel",
+"k": "js"
+},
+{
+"s": 44069,
+"e": 44113,
+"t": "Wie nennt man die Ehefrauen des Propheten ﷺ?",
+"k": "js"
+},
+{
+"s": 44116,
+"e": 44136,
+"t": "Mütter der Gläubigen",
+"k": "js"
+},
+{
+"s": 44139,
+"e": 44156,
+"t": "Töchter der Wüste",
+"k": "js"
+},
+{
+"s": 44159,
+"e": 44177,
+"t": "Freunde von Medina",
+"k": "js"
+},
+{
+"s": 44870,
+"e": 44875,
+"t": "Mekka",
+"k": "js"
+},
+{
+"s": 44900,
+"e": 45012,
+"t": "Geburtsort des Propheten ﷺ. Hier stehen die Kaaba und in der Nähe die Höhlen Hira und Thawr und der Berg Arafat.",
+"k": "js"
+},
+{
+"s": 45041,
+"e": 45047,
+"t": "Medina",
+"k": "js"
+},
+{
+"s": 45072,
+"e": 45207,
+"t": "Früher Yathrib. Hierhin wanderte er bei der Hidschra aus. Hier stehen seine Moschee und sein Grab. In der Nähe: Quba und der Berg Uhud.",
+"k": "js"
+},
+{
+"s": 45234,
+"e": 45238,
+"t": "Taif",
+"k": "js"
+},
+{
+"s": 45263,
+"e": 45358,
+"t": "Stadt in den Bergen. Hier wurde er mit Steinen beworfen – und betete trotzdem für die Menschen.",
+"k": "js"
+},
+{
+"s": 45385,
+"e": 45389,
+"t": "Badr",
+"k": "js"
+},
+{
+"s": 45414,
+"e": 45492,
+"t": "Hier gewannen etwa 313 Muslime mit Allahs Hilfe gegen eine viel größere Armee.",
+"k": "js"
+},
+{
+"s": 45525,
+"e": 45534,
+"t": "Jerusalem",
+"k": "js"
+},
+{
+"s": 45559,
+"e": 45621,
+"t": "Hier steht die Al-Aqsa-Moschee. Ziel der Nachtreise (al-Isra).",
+"k": "js"
+},
+{
+"s": 45650,
+"e": 45669,
+"t": "Syrien (asch-Scham)",
+"k": "js"
+},
+{
+"s": 45693,
+"e": 45752,
+"t": "Bis hierher reiste er als junger Mann mit Handelskarawanen.",
+"k": "js"
+},
+{
+"s": 45785,
+"e": 45795,
+"t": "Abessinien",
+"k": "js"
+},
+{
+"s": 45818,
+"e": 45901,
+"t": "Hier beschützte der gerechte König Nadschaschi die ersten muslimischen Auswanderer.",
+"k": "js"
+},
+{
+"s": 46959,
+"e": 46991,
+"t": "(prefers-reduced-motion: reduce)",
+"k": "js"
+},
+{
+"s": 48690,
+"e": 48706,
+"t": "<svg class=\"fox\"",
+"k": "js"
+},
+{
+"s": 48747,
+"e": 48783,
+"t": "Lerne die Geschichte des Propheten ﷺ",
+"k": "js"
+},
+{
+"s": 48805,
+"e": 48949,
+"t": "Hallo, ich bin Fuffl! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden.",
+"k": "js"
+},
+{
+"s": 48979,
+"e": 48986,
+"t": ".hero p",
+"k": "js"
+},
+{
+"s": 49011,
+"e": 49155,
+"t": "Hallo, ich bin Fuffl! Komm mit auf eine Reise durch das Leben des Propheten Muhammad ﷺ – zu den Orten, zu seiner Familie und zu seinen Freunden.",
+"k": "js"
+},
+{
+"s": 49340,
+"e": 49348,
+"t": "bar prog",
+"k": "js"
+},
+{
+"s": 49459,
+"e": 49473,
+"t": "Sein Lebensweg",
+"k": "js"
+},
+{
+"s": 49476,
+"e": 49532,
+"t": "${ST.length-1} Stationen von der Geburt bis zum Abschied",
+"k": "tpl"
+},
+{
+"s": 49593,
+"e": 49602,
+"t": "Die Karte",
+"k": "js"
+},
+{
+"s": 49605,
+"e": 49632,
+"t": "Finde die Orte aus der Sira",
+"k": "js"
+},
+{
+"s": 49663,
+"e": 49674,
+"t": "Die Familie",
+"k": "js"
+},
+{
+"s": 49677,
+"e": 49709,
+"t": "Eltern, Frauen, Kinder und Enkel",
+"k": "js"
+},
+{
+"s": 49758,
+"e": 49820,
+"t": "${S.cards.length} von ${Object.keys(FRIENDS).length} gesammelt",
+"k": "tpl"
+},
+{
+"s": 50010,
+"e": 50024,
+"t": "Sein Lebensweg",
+"k": "js"
+},
+{
+"s": 50423,
+"e": 50455,
+"t": "margin-left:calc(${off}% - 85px)",
+"k": "tpl"
+},
+{
+"s": 51107,
+"e": 51220,
+"t": "<path d=\"${d}\" fill=\"none\" stroke=\"var(--sand)\" stroke-width=\"8\" stroke-linecap=\"round\" stroke-dasharray=\"2 16\"/>",
+"k": "tpl"
+},
+{
+"s": 52752,
+"e": 52770,
+"t": "<svg class=\"scene\"",
+"k": "js"
+},
+{
+"s": 52918,
+"e": 52958,
+"t": "Lies die Geschichte – dann kommen Fragen",
+"k": "js"
+},
+{
+"s": 52990,
+"e": 52998,
+"t": "go ghost",
+"k": "js"
+},
+{
+"s": 53006,
+"e": 53012,
+"t": "Zurück",
+"k": "js"
+},
+{
+"s": 53080,
+"e": 53086,
+"t": "Weiter",
+"k": "js"
+},
+{
+"s": 53221,
+"e": 53234,
+"t": "Zu den Fragen",
+"k": "js"
+},
+{
+"s": 53626,
+"e": 53634,
+"t": "Richtig!",
+"k": "js"
+},
+{
+"s": 53637,
+"e": 53643,
+"t": "Super!",
+"k": "js"
+},
+{
+"s": 53662,
+"e": 53668,
+"t": "Genau!",
+"k": "js"
+},
+{
+"s": 53694,
+"e": 53699,
+"t": "go ok",
+"k": "js"
+},
+{
+"s": 53707,
+"e": 53713,
+"t": "Weiter",
+"k": "js"
+},
+{
+"s": 54099,
+"e": 54110,
+"t": "Nicht ganz.",
+"k": "js"
+},
+{
+"s": 54134,
+"e": 54147,
+"t": "Richtig ist: ",
+"k": "js"
+},
+{
+"s": 54177,
+"e": 54183,
+"t": "go bad",
+"k": "js"
+},
+{
+"s": 54191,
+"e": 54201,
+"t": "Verstanden",
+"k": "js"
+},
+{
+"s": 54337,
+"e": 54364,
+"t": "Wähle die richtige Antwort.",
+"k": "js"
+},
+{
+"s": 54814,
+"e": 54849,
+"t": "<svg style=\"width:96px;height:96px\"",
+"k": "js"
+},
+{
+"s": 54869,
+"e": 54879,
+"t": "Geschafft!",
+"k": "js"
+},
+{
+"s": 54882,
+"e": 54894,
+"t": "Gut gemacht!",
+"k": "js"
+},
+{
+"s": 54995,
+"e": 55058,
+"t": "<svg class=\"${k<=st?\"on\":\"\"}\" style=\"animation-delay:${k*.18}s\"",
+"k": "tpl"
+},
+{
+"s": 55166,
+"e": 55186,
+"t": "Neue Freunde-Karte: ",
+"k": "js"
+},
+{
+"s": 55292,
+"e": 55362,
+"t": "Für 3 Sterne: eine Runde ohne Fehler. Du kannst jederzeit wiederholen.",
+"k": "js"
+},
+{
+"s": 55445,
+"e": 55453,
+"t": "go ghost",
+"k": "js"
+},
+{
+"s": 55461,
+"e": 55467,
+"t": "Fertig",
+"k": "js"
+},
+{
+"s": 55579,
+"e": 55584,
+"t": "go ok",
+"k": "js"
+},
+{
+"s": 55592,
+"e": 55607,
+"t": "Nächste Station",
+"k": "js"
+},
+{
+"s": 55905,
+"e": 55958,
+"t": "Tippe die Ereignisse in der richtigen Reihenfolge an!",
+"k": "js"
+},
+{
+"s": 55974,
+"e": 56030,
+"t": "Was kam zuerst? Fang ganz am Anfang an – bei der Geburt.",
+"k": "js"
+},
+{
+"s": 56460,
+"e": 56495,
+"t": "Alles in der richtigen Reihenfolge!",
+"k": "js"
+},
+{
+"s": 56519,
+"e": 56524,
+"t": "go ok",
+"k": "js"
+},
+{
+"s": 56532,
+"e": 56538,
+"t": "Weiter",
+"k": "js"
+},
+{
+"s": 56725,
+"e": 56736,
+"t": "Noch nicht.",
+"k": "js"
+},
+{
+"s": 56756,
+"e": 56776,
+"t": "Was passierte davor?",
+"k": "js"
+},
+{
+"s": 56902,
+"e": 56929,
+"t": "${EVENTS.length} Ereignisse",
+"k": "tpl"
+},
+{
+"s": 57188,
+"e": 57205,
+"t": "Karte von Arabien",
+"k": "js"
+},
+{
+"s": 57221,
+"e": 57349,
+"t": "<rect class=\"sea\" width=\"${MW}\" height=\"${MH}\"/><path class=\"land\" d=\"${poly(AFRICA)}\"/><path class=\"land\" d=\"${poly(ARABIA)}\"/>",
+"k": "tpl"
+},
+{
+"s": 57361,
+"e": 57554,
+"t": "<text x=\"${P(36.2,20)[0]}\" y=\"${P(36.2,20)[1]}\" font-size=\"7\" font-weight=\"700\" fill=\"color-mix(in srgb,var(--sea) 40%,#1c2440)\" transform=\"rotate(62 ${P(36.2,20).join(\" \")})\">Rotes Meer</text>",
+"k": "tpl"
+},
+{
+"s": 57621,
+"e": 57715,
+"t": "<path class=\"route\" d=\"M${mx} ${my}C${+mx+8} ${(+my+ +dy)/2} ${+dx+6} ${+dy+10} ${dx} ${dy}\"/>",
+"k": "tpl"
+},
+{
+"s": 57897,
+"e": 57994,
+"t": "<circle class=\"hit\" cx=\"${x}\" cy=\"${y}\" r=\"13\"/><circle class=\"dot\" cx=\"${x}\" cy=\"${y}\" r=\"6.5\"/>",
+"k": "tpl"
+},
+{
+"s": 58005,
+"e": 58136,
+"t": "<text x=\"${+x+(pl.id===\"taif\"?8:-8)}\" y=\"${+y+(pl.id===\"taif\"?10:-8)}\" text-anchor=\"${pl.id===\"taif\"?\"start\":\"end\"}\">${pl.n}</text>",
+"k": "tpl"
+},
+{
+"s": 58332,
+"e": 58341,
+"t": "Die Karte",
+"k": "js"
+},
+{
+"s": 58387,
+"e": 58400,
+"t": "margin:10px 0",
+"k": "js"
+},
+{
+"s": 58501,
+"e": 58510,
+"t": "Entdecken",
+"k": "js"
+},
+{
+"s": 58605,
+"e": 58618,
+"t": "Finde den Ort",
+"k": "js"
+},
+{
+"s": 58836,
+"e": 58855,
+"t": "Tippe auf einen Ort",
+"k": "js"
+},
+{
+"s": 58872,
+"e": 58944,
+"t": "Die gestrichelte Linie zeigt den Weg der Hidschra von Mekka nach Medina.",
+"k": "js"
+},
+{
+"s": 59577,
+"e": 59596,
+"t": "Alle Orte gefunden!",
+"k": "js"
+},
+{
+"s": 59668,
+"e": 59716,
+"t": "${err} Fehler – versuch es nochmal für 3 Sterne.",
+"k": "tpl"
+},
+{
+"s": 59719,
+"e": 59739,
+"t": "Ohne Fehler – super!",
+"k": "js"
+},
+{
+"s": 60066,
+"e": 60075,
+"t": "Wo liegt ",
+"k": "js"
+},
+{
+"s": 60132,
+"e": 60193,
+"t": "Ort ${qi+1} von ${qs.length} – tippe auf den richtigen Punkt.",
+"k": "tpl"
+},
+{
+"s": 60387,
+"e": 60398,
+"t": "Die Familie",
+"k": "js"
+},
+{
+"s": 60469,
+"e": 60482,
+"t": "person center",
+"k": "js"
+},
+{
+"s": 60570,
+"e": 60592,
+"t": "Der Prophet Muhammad ﷺ",
+"k": "js"
+},
+{
+"s": 60613,
+"e": 60643,
+"t": "Tippe auf einen Namen für mehr",
+"k": "js"
+},
+{
+"s": 61064,
+"e": 61100,
+"t": "justify-self:start;margin:6px 0 30px",
+"k": "js"
+},
+{
+"s": 61108,
+"e": 61129,
+"t": "Familien-Quiz starten",
+"k": "js"
+},
+{
+"s": 61507,
+"e": 61516,
+"t": "Schließen",
+"k": "js"
+},
+{
+"s": 61712,
+"e": 61718,
+"t": "Escape",
+"k": "js"
+},
+{
+"s": 61916,
+"e": 61952,
+"t": "color:var(--muted);margin:4px 0 12px",
+"k": "js"
+},
+{
+"s": 61961,
+"e": 62063,
+"t": "Mit jeder Station auf dem Lebensweg sammelst du Karten von Menschen, die dem Propheten ﷺ nahe standen.",
+"k": "js"
+},
+{
+"s": 62375,
+"e": 62388,
+"t": "Noch gesperrt",
+"k": "js"
+},
+{
+"s": 62420,
+"e": 62530,
+"t": "<svg viewBox=\"0 0 100 100\"><path d=\"M50 0l12 38h38L69 61l12 39-31-24-31 24 12-39L0 38h38z\" fill=\"#fff\"/></svg>",
+"k": "js"
+},
+{
+"s": 62628,
+"e": 62641,
+"t": "Noch gesperrt",
+"k": "js"
+},
+{
+"s": 62644,
+"e": 62648,
+"t": "Tipp",
+"k": "js"
+},
+{
+"s": 62651,
+"e": 62727,
+"t": "Schaffe die Station „${st.t}“ auf dem Lebensweg, um diese Karte zu bekommen.",
+"k": "tpl"
+},
+{
+"s": 62803,
+"e": 62857,
+"t": "raḍiya llāhu ʿanhā – Allah möge mit ihr zufrieden sein",
+"k": "js"
+},
+{
+"s": 62860,
+"e": 62914,
+"t": "raḍiya llāhu ʿanhu – Allah möge mit ihm zufrieden sein",
+"k": "js"
+},
+{
+"s": 63031,
+"e": 63049,
+"t": "margin:16px 0 30px",
+"k": "js"
+},
+{
+"s": 63057,
+"e": 63076,
+"t": "Spiel: Wer bin ich?",
+"k": "js"
+},
+{
+"s": 63235,
+"e": 63249,
+"t": "Wer bin ich? „",
+"k": "js"
+},
+{
+"s": 63446,
+"e": 63491,
+"t": "Ab 4 Karten kannst du „Wer bin ich?“ spielen.",
+"k": "js"
+}
+]
