@@ -222,6 +222,10 @@ form.bk{max-width:720px}
 .yt:focus-visible{outline:3px solid #8d74f0;outline-offset:-3px}
 .ytf{width:100%;height:100%;border:0;display:block}
 .av.ph{background:var(--lav);padding:0}.av.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.fcard{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:18px;align-items:start}
+.fcard .av{width:120px}.fcard h3{margin:6px 0 4px}.fbadge{display:inline-block;background:var(--lime);color:var(--plum);font-size:13px;font-weight:700;border-radius:999px;padding:2px 10px}
+.fexp{margin:4px 0 8px;padding-left:18px;font-size:15px}.fexp li{margin-bottom:2px}
+@media(max-width:460px){.fcard{grid-template-columns:88px minmax(0,1fr)}.fcard .av{width:88px}}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -261,7 +265,7 @@ const TEACHERS=[
   slots:[{w:1,t:"17:00"},{w:3,t:"18:30"},{w:6,t:"10:00"}],bio:{sq:"Mëson edukimin islam dhe Kuranin për fëmijë, të rinj dhe të rritur.",de:"Unterrichtet islamische Bildung und Koran für Kinder, Jugendliche und Erwachsene."},
   q:{sq:["I diplomuar në Universitetin Islamik të Medinës"],de:["Absolvent der Islamischen Universität Medina"]}},
  {id:"bajram",n:"Hafiz Bajram Hasanaj",ini:"BH",photo:"img/bajram.webp",c:"#D7EF91",subj:["quran","tajwid"],langs:["sq","de"],ages:["kids","teens","adults"],lvl:["beg","int","adv"],mode:["online"],price:28,
-  slots:[{w:2,t:"16:00"},{w:4,t:"19:00"},{w:0,t:"11:00"}],bio:{sq:"Hafiz i Kuranit. Mëson leximin, recitimin dhe texhvidin hap pas hapi.",de:"Hafiz des Korans. Unterrichtet Lesen, Rezitation und Tadschwīd Schritt für Schritt."},
+  slots:[{w:2,t:"16:00"},{w:4,t:"19:00"},{w:0,t:"11:00"}],bio:{sq:"Mëson leximin, recitimin dhe texhvidin hap pas hapi.",de:"Hafiz des Korans. Unterrichtet Lesen, Rezitation und Tadschwīd Schritt für Schritt."},
   q:{sq:["Hafiz i Kuranit","I diplomuar në Universitetin e Kasimit (Qassim)"],de:["Hafiz des Korans","Absolvent der Qassim-Universität"]}}
 ];
 
@@ -327,7 +331,7 @@ const quranTeaser=()=>`<section class="band" style="padding-top:0"><div class="w
 const PRICE="29,99 €";
 const PKGS={free:{sq:"Fatiha – ora e parë falas",de:"Fatiha – erste Stunde gratis"},sub:{sq:"Abonim mujor – 29,99 € për 6 orë",de:"Monatsabo – 29,99 € für 6 Stunden"}};
 const K={sq:{nav:"Këndi i Luanit",perM:"në muaj · 6 orë",priceL:"Çmimi",pkgL:"Paketa",
-  prH:"Abonimi",prT:"Një çmim i qartë – pa surpriza.",prName:"Abonimi mujor",per:"/ muaj",feats:["6 orë mësimi në muaj (≈ 5 € për orë)","Mësim me librin Abrar","Me mësuesin që zgjedh ti","Fletë ngjyrosjeje, lojëra dhe „Dëgjo dhe ndiq“"],
+  prH:"Abonimi",prT:"Një çmim i qartë – pa surpriza.",prName:"Abonimi mujor",per:"/ muaj",feats:["6 orë mësimi në muaj (≈ 5 € për orë)","Mësim me librin Abrar","Me mësuesit e TILAWA","Fletë ngjyrosjeje, lojëra dhe „Dëgjo dhe ndiq“"],
   freeName:"Fillo falas",freeT:"Ora e parë: mësojmë Fatihanë bashkë – falas.",prCta:"Kërko orën e parë",
   abH:"Mësojmë me librin Abrar",abP:"Çdo orë ndjek librin Abrar hap pas hapi – nga shkronjat e para deri te leximi i sureve.",
   ab:[["Shkronjat arabe","Elifbaja: forma dhe shqiptimi i çdo shkronje."],["Harekete dhe rrokje","Zanoret e shkurtra, sukuni, shedda dhe tenvini."],["Lidhja e shkronjave","Shkronjat në fillim, mes dhe fund – leximi i fjalëve."],["Suret e shkurtra","Leximi i sureve me rregullat bazë të texhvidit."]],
@@ -406,28 +410,28 @@ const games=(home)=>`<section class="band" style="padding-top:0"><div class="wra
 <a class="gcard l" href="sira/index.html"><span class="gl">${luani()}</span><div><h3>Sira me Luanin</h3><p>Udhëto me Luanin nëpër jetën e Pejgamberit <bdi>ﷺ</bdi> – 13 stacione nga Meka në Medinë, me hartë, familjen e tij dhe kartat e sahabëve.</p><span class="btn plumb sm">Fillo udhëtimin →</span></div></a>
 </div><p style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn ghost sm" href="buch/index.html">Lexo librin online →</a><a class="btn ghost sm" href="urkunde/index.html">Krijo certifikatë për fëmijën →</a></p><p class="small" style="margin-top:12px">Për moshën rreth 8–14 vjeç. Përparimi ruhet në këtë pajisje.</p></div></section>`;
 const pricing=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("prH")}</h2><p>${k("prT")}</p><div class="prices">
-<div class="pcard main"><h3>${k("prName")}</h3><p class="big"><b>${PRICE}</b> <span>${k("per")}</span></p><ul>${k("feats").map(f=>`<li>${f}</li>`).join("")}</ul><a class="btn lime" href="#teachers">${t("cta1")}</a></div>
-<div class="pcard free"><div class="lumini">${luani()}</div><h3>${k("freeName")}</h3><p>${k("freeT")}</p><a class="btn plumb" href="#book-${TEACHERS[0].id}" data-free="1">${k("prCta")}</a></div></div></div></section>`;
+<div class="pcard main"><h3>${k("prName")}</h3><p class="big"><b>${PRICE}</b> <span>${k("per")}</span></p><ul>${k("feats").map(f=>`<li>${f}</li>`).join("")}</ul><a class="btn lime" href="#book">${t("cta1")}</a></div>
+<div class="pcard free"><div class="lumini">${luani()}</div><h3>${k("freeName")}</h3><p>${k("freeT")}</p><a class="btn plumb" href="#book" data-free="1">${k("prCta")}</a></div></div></div></section>`;
 const abrar=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("abH")}</h2><p>${k("abP")}</p><div class="steps">${k("ab").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div><div class="bookbar"><div class="bkic"><svg viewBox="0 0 44 26" width="64"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg></div><div><h3>Libri „Mëso të lexosh Kuranin“</h3><p>Lexoje online faqe pas faqe – me shënime, theksime dhe zmadhim – ose shkarkoje si PDF.</p></div><div class="bkb"><a class="btn lime" href="buch/index.html">Lexo librin online</a><a class="btn ghost" href="buch/Meso-te-lexosh-Kuranin.pdf" target="_blank" rel="noopener">Shkarko PDF-në</a></div></div><p class="small" style="margin-top:10px">${k("abNote")}</p></div></section>`;
 const kidsTeaser=()=>`<section class="band" style="padding-top:0"><div class="wrap"><div class="kteaser"><div class="lumid">${luani()}</div><div><h2>${k("kH")}</h2><p>${k("kTeaser")}</p><a class="btn plumb" href="#kids">${k("kCta")}</a></div></div></div></section>`;
 async function dl(blank){CP.msg="";const name=blank?`tilawa-${CP.p+1}-ngjyros.svg`:`tilawa-${CP.p+1}-vizatimi-im.svg`;let data=blank?PAGES[CP.p]():document.querySelector("#canvas svg").outerHTML;
  try{await DL.save({filename:name,data})}catch(e){try{await DL.save({filename:name,data:new Blob([data],{type:"image/svg+xml"})})}catch(e2){CP.msg=k("dlFail");render()}}}
 /* ---------- strings ---------- */
 const L={
- sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Lexo Kuranin. Mëso gjuhë. Kupto Islamin.",sub:"Gjej mësuesin ose mësuesen që të përshtatet dhe kërko një orë mësimi.",cta1:"Gjej një mësues",cta2:"Shiko kurset",
-  demo:"Version demonstrues: oraret dhe terminet e lira janë të dhëna shembull.",coursesH:"Kurset tona",allC:"Të gjitha kurset",findFor:"Gjej mësues",howH:"Si funksionon",
-  steps:[["Zgjidh kursin","Kuran, texhvid, arabisht ose edukim islam – për fëmijë, të rinj dhe të rritur."],["Gjej mësuesin","Filtro sipas lëndës, gjuhës së mësimit, moshës, nivelit dhe orarit."],["Kërko orën","Zgjidh një termin të lirë ose propozo një tjetër. Ekipi e konfirmon."]],
-  teachH:"Mësuesit tanë",allT:"Të gjithë mësuesit",parH:"Për prindërit",parT:"Çdo profil tregon qartë çfarë mëson mësuesi, në cilën gjuhë dhe për cilën moshë. Për nxënësit nën 18 vjeç, kërkesa dërgohet me të dhënat e prindit ose kujdestarit.",
+ sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Lexo Kuranin. Mëso gjuhë. Kupto Islamin.",sub:"Mëso me mësues të diplomuar në Medinë dhe në Kasim – kërko një orë mësimi te TILAWA.",cta1:"Kërko një orë mësimi",cta2:"Shiko kurset",
+  demo:"Faqe në ndërtim: kërkesat për orë ende nuk dërgohen.",coursesH:"Kurset tona",allC:"Të gjitha kurset",findFor:"Kërko një orë",howH:"Si funksionon",
+  steps:[["Zgjidh kursin","Kuran, texhvid, arabisht ose edukim islam – për fëmijë, të rinj dhe të rritur."],["Kërko një orë","Na trego kursin, gjuhën dhe kohën që të përshtatet – online ose me prani fizike."],["Ne e konfirmojmë","Ekipi i TILAWA të shkruan, cakton mësuesin dhe konfirmon orën."]],
+  teachH:"Mësuesit tanë",allT:"Të gjithë mësuesit",parH:"Për prindërit",parT:"Mësimin e japin themeluesit e TILAWA – Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj. Për nxënësit nën 18 vjeç, kërkesa dërgohet me të dhënat e prindit ose kujdestarit.",
   fSubj:"Lënda",fLang:"Gjuha e mësimit",fAge:"Mosha",fLvl:"Niveli",fAv:"Disponueshmëria",all:"Të gjitha",reset:"Pastro filtrat",count:n=>n+" mësues",empty:"Asnjë mësues nuk përputhet me këta filtra.",
   prof:"Shiko profilin",book:"Kërko një orë mësimi",back:"Kthehu te mësuesit",teaches:"Mëson",in:"në",or:"ose",and:"dhe",perH:"në orë",onReq:"Çmimi sipas marrëveshjes",sample:"Oraret: shembull",photo:"Foto së shpejti",
   subjH:"Lëndët",langH:"Gjuhët e mësimit",ageH:"Për kë",lvlH:"Niveli",modeH:"Forma e mësimit",qualH:"Kualifikimet dhe përvoja",exp:n=>n+" vjet përvojë në mësimdhënie",qualNote:"Lëndët dhe oraret do t'i konfirmojë TILAWA.",
   timesH:"Termine të lira",priceH:"Çmimi për orë",noSlots:"Ende pa termine të publikuara – shkruaj një termin që të përshtatet.",sv:"Lënda = çfarë mësohet. Gjuha e mësimit = në cilën gjuhë shpjegohet mësimi.",
-  bkH:"Kërko një orë mësimi",s1:"1. Mësuesi, kursi dhe termini",s2:"2. Të dhënat e kontaktit",teacher:"Mësuesi",course:"Kursi",choose:"Zgjidh",slotsL:"Termine të lira",wish:"Propozo një termin tjetër",date:"Data",time:"Ora",
+  bkH:"Kërko një orë mësimi",s1:"1. Kursi dhe koha",s2:"2. Të dhënat e kontaktit",teacher:"Mësuesi",course:"Kursi",choose:"Zgjidh",slotsL:"Termine të lira",wish:"Propozo një termin tjetër",date:"Data",time:"Ora",
   tz:(a,b)=>"Oraret janë sipas zonës kohore "+a+". Zona jote kohore: "+b+".",name:"Emri dhe mbiemri",email:"E-mail",msg:"Mesazh (opsional)",minor:"Nxënësi ose nxënësja është nën 18 vjeç",
   minorHint:"Për nxënësit nën 18 vjeç, kontaktojmë prindin ose kujdestarin.",child:"Emri i nxënësit ose nxënëses",pName:"Emri i prindit ose kujdestarit",pMail:"E-maili i prindit ose kujdestarit",send:"Dërgo kërkesën",sending:"Duke dërguar…",
   eReq:"Plotëso këtë fushë.",eMail:"Shkruaj një adresë e-maili të vlefshme.",eSlot:"Zgjidh një termin ose propozo një termin tjetër.",ePast:"Zgjidh një datë në të ardhmen.",eFix:"Kontrollo fushat e shënuara.",
-  okH:"Kërkesa u dërgua",okT:"Termini është i sigurt vetëm pasi ekipi i TILAWA ta konfirmojë. Përgjigjen do ta marrësh në adresën e e-mailit që dhe.",okLive:"Kërkesa u ruajt me statusin „e hapur“. Oraret janë ende shembuj.",
-  okDemo:"Demo: kjo kërkesë nuk u dërgua dhe nuk u ruajt askund. Oraret janë shembuj.",more:"Shiko mësues të tjerë",when:"Termini",contactP:"Kontakti",
+  okH:"Kërkesa u dërgua",okT:"Termini është i sigurt vetëm pasi ekipi i TILAWA ta konfirmojë. Përgjigjen do ta marrësh në adresën e e-mailit që dhe.",okLive:"Kërkesa u ruajt me statusin „e hapur“.",
+  okDemo:"Faqja është ende në ndërtim: kjo kërkesë nuk u dërgua. Na kontakto drejtpërdrejt derisa formulari të jetë aktiv.",more:"Kthehu në ballinë",when:"Termini",contactP:"Kontakti",
   aboutH:"Rreth nesh",aboutT:"TILAWA është një institut arsimor për Kuranin, gjuhët dhe edukimin islam. Mësojmë fëmijë, të rinj dhe të rritur – online dhe me prani fizike, në shqip dhe në gjermanisht.",
   vals:[["Transparencë për prindërit","Çdo profil tregon lëndët, gjuhën e mësimit dhe grupmoshat."],["Mësim në gjuhën tënde","Shqip, gjermanisht ose arabisht – sipas mësuesit."],["Rezervim i qartë","Kërkesa → konfirmimi nga ekipi → ora e parë."]],
   aboutNote:"Tekst hyrës – TILAWA mund ta përshtatë.",contH:"Kontakti",contT:"Ke pyetje për kurset ose për regjistrimin? Na shkruaj.",addr:"Adresa",phone:"Telefoni / WhatsApp",tbd:"do të plotësohet",contNote:"Të dhënat e kontaktit do t'i japë TILAWA.",
@@ -500,67 +504,41 @@ const WAVE=`<svg class="wave" viewBox="0 0 1440 100" preserveAspectRatio="none" 
 /* ---------- Willkommensvideo (YouTube, lädt erst nach Klick) ---------- */
 const YT="R0wS_VozjTI";
 const ytBox=()=>`<button class="yt" data-yt="${YT}" aria-label="Luaj videon e mirëseardhjes"><img src="https://i.ytimg.com/vi/${YT}/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()"><span class="ytp"><svg viewBox="0 0 68 48" width="68"><path d="M66.5 7.7c-.8-2.9-2.5-5.4-5.4-6.2C55.8.1 34 0 34 0S12.2.1 6.9 1.6C4 2.3 2.3 4.8 1.5 7.7 0 13 0 24 0 24s0 11 1.5 16.3c.8 2.9 2.5 5.4 5.4 6.2C12.2 47.9 34 48 34 48s21.8-.1 27.1-1.6c2.9-.8 4.6-3.3 5.4-6.2C68 35 68 24 68 24s0-11-1.5-16.3z" fill="#2A203B"/><path d="M45 24 27 14v20" fill="#D7EF91"/></svg></span></button>`;
-const welcome=()=>`<section class="band welcome"><div class="wrap wgrid"><div class="wvid">${ytBox()}</div><div><span class="samp">Video</span><h2>Mirë se vini në TILAWA</h2><p>Një përshëndetje nga Hafiz Bajram Hasanaj për prindërit dhe nxënësit – njihuni me mësuesin para orës së parë.</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#book-bajram" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#t-bajram">Profili i tij</a></div></div></div></section>`;
+const welcome=()=>`<section class="band welcome"><div class="wrap wgrid"><div class="wvid">${ytBox()}</div><div><span class="samp">Video</span><h2>Mirë se vini në TILAWA</h2><p>Një përshëndetje nga Hafiz Bajram Hasanaj për prindërit dhe nxënësit – njihuni me mësuesin para orës së parë.</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#book" data-free="1">Kërko orën e parë falas</a><a class="btn ghost" href="#teachers">Mësuesit tanë</a></div></div></div></section>`;
 /* ---------- views ---------- */
 const courseCard=c=>`<button class="course" data-course="${c.id}"><span class="ic">${icon(c)}</span><h3>${nm(c.name)}</h3><p>${nm(c.desc)}</p><span class="go">${t("findFor")} →</span></button>`;
-const tCard=tc=>`<article class="tcard">${avatar(tc)}<div><span class="samp">${t("sample")}</span><h3>${tc.n}</h3>
-<p class="meta">${teachLine(tc)}</p><p class="meta">${tc.ages.map(a=>nm(AGES[a])).join(" · ")}</p><div>${price(tc)}</div></div>
-<div class="acts"><a class="btn lime sm" href="#book-${tc.id}">${t("book")}</a><a class="btn ghost sm" href="#t-${tc.id}">${t("prof")}</a></div></article>`;
+const tCard=tc=>`<article class="fcard">${avatar(tc)}<div><span class="fbadge">Themelues</span><h3>${tc.n}</h3><ul class="fexp">${nm(tc.q).map(x=>`<li>${x}</li>`).join("")}</ul><p class="meta" style="margin:0">${nm(tc.bio)}</p></div></article>`;
 function vHome(){return `<section class="hero2"><img src="hero.webp" srcset="hero-1000.webp 1000w, hero.webp 1672w" sizes="100vw" width="1672" height="941" alt="Fëmijë që mësojnë me tablet, laptop dhe telefon; në tavolinë Kurani në rahle" fetchpriority="high">
 <div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAWA</b>·<span class="ar">تلاوة</span>·<span>${t("tag")}</span></div>
 <h1>${t("h1")}</h1><p class="lead">${t("sub")}</p>
-<div class="cta"><a class="btn lime" href="#teachers">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
+<div class="cta"><a class="btn lime" href="#book">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
 ${welcome()}
 <section class="band"><div class="wrap"><div class="head"><h2>${t("coursesH")}</h2><a class="btn ghost sm" href="#courses">${t("allC")}</a></div><div class="grid">${COURSES.map(courseCard).join("")}</div></div></section>
 ${games(1)}
 <section class="band" style="padding-top:0"><div class="wrap"><h2>${t("howH")}</h2><div class="steps">${t("steps").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div></div></section>
-${abrar()}${pricing()}<section class="band" style="padding-top:0"><div class="wrap"><div class="head"><h2>${t("teachH")}</h2><a class="btn ghost sm" href="#teachers">${t("allT")}</a></div>
-<div class="tlist">${TEACHERS.slice(0,3).map(tCard).join("")}</div></div></section>
+${abrar()}${pricing()}<section class="band" style="padding-top:0"><div class="wrap"><div class="head"><h2>${t("teachH")}</h2><a class="btn lime sm" href="#book">${t("cta1")}</a></div>
+<p style="margin-top:-8px">Themeluesit e TILAWA. Ti thjesht kërkon orën – ne caktojmë mësuesin.</p><div class="tlist">${TEACHERS.map(tCard).join("")}</div></div></section>
 ${kidsTeaser()}${quranTeaser()}
 <section class="band" style="padding-top:0"><div class="wrap"><div class="parents"><svg viewBox="0 0 72 72"><circle cx="36" cy="36" r="36" fill="#D7EF91"/><path d="M14 34q11-8 22 2q11-10 22-2v18q-11-8-22 2q-11-10-22-2z" fill="#2A203B"/></svg><div><h3>${t("parH")}</h3><p style="margin:0">${t("parT")}</p></div></div></div></section>`}
 function vCourses(){return `<section class="band"><div class="wrap"><h1>${t("coursesH")}</h1>${Object.keys(GROUPS).map(g=>{const cs=COURSES.filter(c=>c.group===g);return cs.length?`<h2 style="font-size:24px;margin-top:28px">${nm(GROUPS[g])}</h2><div class="grid">${cs.map(courseCard).join("")}</div>`:""}).join("")}</div></section>${abrar()}${pricing()}${kidsTeaser()}${quranTeaser()}`}
 function opts(map,sel,lab){return `<option value="">${t("all")}</option>`+Object.entries(map).map(([k,v])=>`<option value="${k}"${sel===k?" selected":""}>${lab?lab(k,v):nm(v)}</option>`).join("")}
-function vTeachers(){const list=TEACHERS.filter(x=>(!F.subj||x.subj.includes(F.subj))&&(!F.lang||x.langs.includes(F.lang))&&(!F.age||x.ages.includes(F.age))&&(!F.lvl||x.lvl.includes(F.lvl))&&(!F.av||avMatch(x,F.av)));
- const cm=Object.fromEntries(COURSES.map(c=>[c.id,c.name]));
- return `<section class="band"><div class="wrap"><h1>${t("teachH")}</h1><p class="small">${t("sv")}</p>
-<div class="filters">
-<label class="f">${t("fSubj")}<select data-f="subj">${opts(cm,F.subj)}</select></label>
-<label class="f">${t("fLang")}<select data-f="lang">${opts(LANGS,F.lang,(k,v)=>v[lang])}</select></label>
-<label class="f">${t("fAge")}<select data-f="age">${opts(AGES,F.age)}</select></label>
-<label class="f">${t("fLvl")}<select data-f="lvl">${opts(LEVELS,F.lvl)}</select></label>
-<label class="f">${t("fAv")}<select data-f="av">${opts(AVAIL,F.av)}</select></label></div>
-<div class="bar"><b aria-live="polite">${t("count")(list.length)}</b><button class="btn ghost sm" id="reset">${t("reset")}</button></div>
-${list.length?`<div class="tlist">${list.map(tCard).join("")}</div>`:`<div class="empty"><p style="margin:0 auto 12px">${t("empty")}</p><button class="btn lime sm" id="reset2">${t("reset")}</button></div>`}</div></section>`}
-function vProfile(tc){const sl=slots(tc);return `<section class="band"><div class="wrap"><a class="back" href="#teachers">← ${t("back")}</a>
-<div class="prof"><div>${avatar(tc)}<p class="samp" style="margin-top:12px">${t("sample")}</p></div><div>
-<h1>${tc.n}</h1>${tc.id==="bajram"?`<div class="wvid" style="margin-bottom:16px">${ytBox()}</div>`:""}<p style="font-size:18px">${nm(tc.bio)}</p><p class="note"><b>${teachLine(tc)}</b></p>
-<div class="box"><dl class="kv">
-<dt>${t("subjH")}</dt><dd>${tc.subj.map(s=>`<span class="pill l">${nm(C(s).name)}</span>`).join("")}</dd>
-<dt>${t("langH")}</dt><dd>${tc.langs.map(l=>`<span class="pill g">${LANGS[l][lang]}</span>`).join("")}</dd>
-<dt>${t("ageH")}</dt><dd>${tc.ages.map(a=>`<span class="pill">${nm(AGES[a])}</span>`).join("")}</dd>
-<dt>${t("lvlH")}</dt><dd>${tc.lvl.map(a=>`<span class="pill">${nm(LEVELS[a])}</span>`).join("")}</dd>
-<dt>${t("modeH")}</dt><dd>${tc.mode.map(a=>`<span class="pill">${nm(MODES[a])}</span>`).join("")}</dd>
-<dt>${k("priceL")}</dt><dd>${price(tc)}</dd></dl></div>
-<div class="box"><h3>${t("qualH")}</h3><ul style="margin:0 0 10px;padding-left:20px">${nm(tc.q).map(q=>`<li>${q}</li>`).join("")}</ul><p class="small" style="margin:0">${t("qualNote")}</p></div>
-<div class="box"><h3>${t("timesH")}</h3>${sl.length?`<div class="slots">${sl.map(s=>`<a class="slot" href="#book-${tc.id}" data-pre="${s.date}|${s.t}">${fmtD(s.date)} · ${s.t}</a>`).join("")}</div>`:`<p style="margin:0">${t("noSlots")}</p>`}
-<p class="small" style="margin:10px 0 0">${t("tz")(TZ,userTZ)}</p></div>
-<a class="btn lime" href="#book-${tc.id}">${t("book")}</a></div></div></div></section>`}
-function newBK(id,pre){const tc=T(id)||TEACHERS[0];return {pkg:PKG0||"sub",tid:tc.id,course:tc.subj[0],tlang:tc.langs[0],mode:tc.mode[0],slot:pre||"",wish:false,wd:"",wt:"",minor:false,name:"",email:"",pname:"",pmail:"",msg:""}}
+function vTeachers(){return `<section class="band"><div class="wrap"><h1>${t("teachH")}</h1><p style="font-size:19px">TILAWA u themelua nga Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj. Nuk ke nevojë të zgjedhësh mësues – na trego çfarë dëshiron të mësosh dhe ne caktojmë orën për ty.</p>
+<div class="tlist">${TEACHERS.map(tCard).join("")}</div>
+<div class="wvid" style="max-width:720px;margin-top:28px">${ytBox()}</div>
+<p style="margin-top:24px"><a class="btn lime" href="#book">${t("cta1")}</a></p></div></section>`}
+function newBK(course){return {pkg:PKG0||"sub",course:C(course)?course:COURSES[0].id,tlang:"sq",mode:"online",wd:"",wt:"",minor:false,name:"",email:"",pname:"",pmail:"",msg:""}}
 const er=k=>ERR[k]?`<span class="err" id="e-${k}">${ERR[k]}</span>`:"";
 const inp=(k,label,type,req)=>`<label class="f">${label}${req?" *":""}<input id="i-${k}" data-b="${k}" type="${type||"text"}" value="${esc(BK[k])}"${ERR[k]?` aria-invalid="true" aria-describedby="e-${k}"`:""}${type==="email"?' autocomplete="email"':""}>${er(k)}</label>`;
-function vBook(){const tc=T(BK.tid),sl=slots(tc);
- return `<section class="band"><div class="wrap"><a class="back" href="#t-${tc.id}">← ${tc.n}</a><h1>${t("bkH")}</h1><p class="small">${t("demo")}</p>
+function vBook(){
+ return `<section class="band"><div class="wrap"><a class="back" href="#home">← Ballina</a><h1>${t("bkH")}</h1><p>Na trego çfarë dëshiron të mësosh dhe kur të përshtatet. Ekipi i TILAWA të shkruan dhe konfirmon orën.</p>
 <form class="bk" id="bk" novalidate>
 <div class="sec"><h3>${t("s1")}</h3>
 <label class="f">${k("pkgL")}<select data-b="pkg">${Object.entries(PKGS).map(([kk,v])=>`<option value="${kk}"${BK.pkg===kk?" selected":""}>${v[lang]}</option>`).join("")}</select></label>
-<div class="two"><label class="f">${t("teacher")}<select data-b="tid">${TEACHERS.map(x=>`<option value="${x.id}"${x.id===tc.id?" selected":""}>${x.n}</option>`).join("")}</select></label>
-<label class="f">${t("course")}<select data-b="course">${tc.subj.map(s=>`<option value="${s}"${s===BK.course?" selected":""}>${nm(C(s).name)}</option>`).join("")}</select></label>
-<label class="f">${t("fLang")}<select data-b="tlang">${tc.langs.map(l=>`<option value="${l}"${l===BK.tlang?" selected":""}>${LANGS[l][lang]}</option>`).join("")}</select></label>
-<label class="f">${t("modeH")}<select data-b="mode">${tc.mode.map(m=>`<option value="${m}"${m===BK.mode?" selected":""}>${nm(MODES[m])}</option>`).join("")}</select></label></div>
-<div><b style="font-size:15px">${t("slotsL")}</b>${sl.length?`<div class="slots" style="margin-top:8px" role="group">${sl.map(s=>{const v=s.date+"|"+s.t;return `<button type="button" class="slot" data-slot="${v}" aria-pressed="${!BK.wish&&BK.slot===v}">${fmtD(s.date)} · ${s.t}</button>`}).join("")}</div>`:`<p style="margin:6px 0 0">${t("noSlots")}</p>`}</div>
-<label class="chk"><input type="checkbox" data-b="wish"${BK.wish||!sl.length?" checked":""}${!sl.length?" disabled":""}>${t("wish")}</label>
-${BK.wish||!sl.length?`<div class="two">${inp("wd",t("date"),"date",1)}${inp("wt",t("time"),"time",1)}</div>`:""}
-${er("slot")}
+<div class="two"><label class="f">${t("course")}<select data-b="course">${COURSES.map(c=>`<option value="${c.id}"${c.id===BK.course?" selected":""}>${nm(c.name)}</option>`).join("")}</select></label>
+<label class="f">${t("fLang")}<select data-b="tlang">${["sq","de"].map(l=>`<option value="${l}"${l===BK.tlang?" selected":""}>${LANGS[l][lang]}</option>`).join("")}</select></label>
+<label class="f">${t("modeH")}<select data-b="mode">${Object.keys(MODES).map(m=>`<option value="${m}"${m===BK.mode?" selected":""}>${nm(MODES[m])}</option>`).join("")}</select></label></div>
+<b style="font-size:15px">Koha që të përshtatet</b>
+<div class="two">${inp("wd",t("date"),"date",1)}${inp("wt",t("time"),"time",1)}</div>
 ${BK.mode==="online"?`<p class="note" style="margin:0">${t("tz")(TZ,userTZ)}</p>`:""}</div>
 <div class="sec"><h3>${t("s2")}</h3>
 <label class="chk"><input type="checkbox" data-b="minor"${BK.minor?" checked":""}>${t("minor")}</label>
@@ -568,24 +546,24 @@ ${BK.minor?`<p class="small" style="margin:0">${t("minorHint")}</p>${inp("name",
 <label class="f">${t("msg")}<textarea data-b="msg">${esc(BK.msg)}</textarea></label></div>
 ${Object.keys(ERR).length?`<p class="err" role="alert">${t("eFix")}</p>`:""}
 <button class="btn lime" type="submit" id="sendbtn">${t("send")}</button></form></div></section>`}
-function vSent(){const r=SENT,tc=T(r.tid);return `<section class="band"><div class="wrap"><div class="ok" role="status">
+function vSent(){const r=SENT;return `<section class="band"><div class="wrap"><div class="ok" role="status">
 <div class="ic"><svg width="30" height="30" viewBox="0 0 30 30"><path d="M7 15l6 6 11-12" fill="none" stroke="#2A203B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 <div class="okLu">${luani()}</div><h1>${t("okH")}</h1><p>${t("okT")}</p>
-<dl><dt>${k("pkgL")}</dt><dd>${(PKGS[r.pkg]||PKGS.sub)[lang]}</dd><dt>${t("teacher")}</dt><dd>${tc.n}</dd><dt>${t("course")}</dt><dd>${nm(C(r.course).name)} · ${LANGS[r.tlang][lang]}</dd><dt>${t("when")}</dt><dd>${r.date?fmtD(r.date):""} · ${esc(r.time)} (${TZ})${r.wish?" – "+t("wishShort"):""}</dd><dt>${t("contactP")}</dt><dd>${esc(r.minor?r.pname+" · "+r.pmail:r.name+" · "+r.email)}</dd></dl>
+<dl><dt>${k("pkgL")}</dt><dd>${(PKGS[r.pkg]||PKGS.sub)[lang]}</dd><dt>${t("course")}</dt><dd>${nm(C(r.course).name)} · ${LANGS[r.tlang][lang]}</dd><dt>${t("when")}</dt><dd>${r.date?fmtD(r.date):""} · ${esc(r.time)} (${TZ}) · ${esc(nm(MODES[r.mode]))}</dd><dt>${t("contactP")}</dt><dd>${esc(r.minor?r.pname+" · "+r.pmail:r.name+" · "+r.email)}</dd></dl>
 <p class="flag">${r.live?t("okLive"):t("okDemo")}</p>
-<a class="btn lime" href="#teachers">${t("more")}</a></div></div></section>`}
+<a class="btn lime" href="#home">${t("more")}</a></div></div></section>`}
 function vAbout(){return `<section class="band"><div class="wrap"><h1>${t("aboutH")}</h1><p style="font-size:19px">${t("aboutT")}</p><p class="small">${t("aboutNote")}</p>
 <div class="vals">${t("vals").map((v,i)=>`<div class="course" style="cursor:default"><span class="ic">${icon(COURSES[i])}</span><h3>${v[0]}</h3><p>${v[1]}</p></div>`).join("")}</div>
-<p style="margin-top:28px"><a class="btn lime" href="#teachers">${t("cta1")}</a></p></div></section>`}
+<p style="margin-top:28px"><a class="btn lime" href="#book">${t("cta1")}</a></p></div></section>`}
 function vContact(){return `<section class="band"><div class="wrap"><h1>${t("contH")}</h1><p style="font-size:19px">${t("contT")}</p>
 <div class="box" style="max-width:640px"><dl class="kv"><dt>${t("email")}</dt><dd>${t("tbd")}</dd><dt>${t("phone")}</dt><dd>${t("tbd")}</dd><dt>${t("addr")}</dt><dd>${t("tbd")}</dd></dl></div>
-<p class="small">${t("contNote")}</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#teachers">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></section>`}
+<p class="small">${t("contNote")}</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#book">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></section>`}
 function vTeam(){let body;
  if(!db)body=`<p class="note">${t("noDb")}</p>`;
  else if(TEAM===null)body=`<p>${t("loading")}</p>`;
  else if(TEAM==="timeout")body=`<p class="note">${t("timeout")}</p>`;
  else if(!TEAM.length)body=`<p class="note">${t("teamEmpty")}</p>`;
- else body=TEAM.map(r=>{const tc=T(r.tid);return `<div class="req"><div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between"><b>${esc(tc?tc.n:r.tid)} · ${esc(nm((C(r.course)||{}).name))}</b><span class="st ${esc(r.status)}">${esc(t("st")[r.status]||r.status)}</span></div>
+ else body=TEAM.map(r=>{return `<div class="req"><div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between"><b>${esc(nm((C(r.course)||{}).name))}</b><span class="st ${esc(r.status)}">${esc(t("st")[r.status]||r.status)}</span></div>
 <div class="small">${esc((PKGS[r.pkg]||{})[lang]||"")} · ${t("asked")}: ${esc(r.date)} ${esc(r.time)} (${TZ})${r.wish?" – "+t("wishShort"):""} · ${esc(LANGS[r.tlang]?LANGS[r.tlang][lang]:r.tlang)} · ${esc(nm(MODES[r.mode]))}${r.alt?` · ${t("proposed")}: ${esc(r.alt)}`:""}</div>
 <div>${esc(r.name)}${r.minor?` · ${t("parent")}: ${esc(r.pname)}, ${esc(r.pmail)}`:` · ${esc(r.email)}`}</div>${r.msg?`<div class="small">“${esc(r.msg)}”</div>`:""}
 <div class="racts" data-u="${esc(r._u)}" data-id="${esc(r.id)}"><button class="btn lime sm" data-act="confirmed">${t("conf")}</button><button class="btn ghost sm" data-act="declined">${t("decl")}</button>
@@ -599,9 +577,9 @@ function render(){
  document.getElementById("demo").textContent=t("demo");
  document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===lang));
  const h=location.hash.slice(1)||"home";let html,cur=h;
- if(h.startsWith("t-")&&T(h.slice(2))){html=vProfile(T(h.slice(2)));cur="teachers"}
- else if(h.startsWith("book-")||h==="book"){const id=h.slice(5)||TEACHERS[0].id;if(!BK||BK.tid!==id)BK=newBK(id,PRE);if(PKG0)BK.pkg=PKG0;PRE="";PKG0="";html=vBook();cur="teachers"}
- else if(h==="sent"&&SENT){html=vSent();cur="teachers"}
+ if(h.startsWith("t-")){html=vTeachers();cur="teachers"}
+ else if(h.startsWith("book-")||h==="book"){const c=h.slice(5);if(!BK)BK=newBK(c);else if(C(c))BK.course=c;if(PKG0)BK.pkg=PKG0;PKG0="";html=vBook();cur=""}
+ else if(h==="sent"&&SENT){html=vSent();cur=""}
  else if(h==="team"){html=vTeam()}
  else if(h==="quran"){html=vQuran();cur="kids"}
  else{cur=ROUTES.includes(h)?h:"home";html={home:vHome,courses:vCourses,teachers:vTeachers,kids:vKids,about:vAbout,contact:vContact}[cur]()}
@@ -617,8 +595,8 @@ function render(){
 let PRE="",PKG0="";
 /* ---------- validation & submit ---------- */
 const mailOK=s=>/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s.trim());
-function validate(){ERR={};const tc=T(BK.tid),useWish=BK.wish||!slots(tc).length;
- if(useWish){if(!BK.wd)ERR.wd=t("eReq");else if(BK.wd<=iso(new Date()))ERR.wd=t("ePast");if(!BK.wt)ERR.wt=t("eReq")}else if(!BK.slot)ERR.slot=t("eSlot");
+function validate(){ERR={};
+ if(!BK.wd)ERR.wd=t("eReq");else if(BK.wd<=iso(new Date()))ERR.wd=t("ePast");if(!BK.wt)ERR.wt=t("eReq");
  if(!BK.name.trim())ERR.name=t("eReq");
  if(BK.minor){if(!BK.pname.trim())ERR.pname=t("eReq");if(!mailOK(BK.pmail))ERR.pmail=BK.pmail?t("eMail"):t("eReq")}
  else if(!mailOK(BK.email))ERR.email=BK.email?t("eMail"):t("eReq");
@@ -629,8 +607,8 @@ async function save(req){if(!db||!uid)return false;
   await withTimeout(ref.set({uid,updatedAt:Date.now(),items}),10000);return true}catch(e){return false}}
 async function submit(){
  if(!validate()){render();const f=document.querySelector("[aria-invalid=true]")||document.querySelector(".err");f&&f.focus&&f.focus();f&&f.scrollIntoView({block:"center"});return}
- const tc=T(BK.tid),useWish=BK.wish||!slots(tc).length,[d,tm]=useWish?[BK.wd,BK.wt]:BK.slot.split("|");
- const req={pkg:BK.pkg,id:"r"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),status:"open",createdAt:Date.now(),tid:BK.tid,course:BK.course,tlang:BK.tlang,mode:BK.mode,date:d,time:tm,wish:useWish,tz:TZ,userTz:userTZ,
+ const d=BK.wd,tm=BK.wt;
+ const req={pkg:BK.pkg,id:"r"+Date.now().toString(36)+Math.random().toString(36).slice(2,6),status:"open",createdAt:Date.now(),course:BK.course,tlang:BK.tlang,mode:BK.mode,date:d,time:tm,tz:TZ,userTz:userTZ,
   minor:BK.minor,name:BK.name.trim(),email:BK.minor?"":BK.email.trim(),pname:BK.minor?BK.pname.trim():"",pmail:BK.minor?BK.pmail.trim():"",msg:BK.msg.trim().slice(0,1000),lang};
  const b=document.getElementById("sendbtn");b.disabled=true;b.textContent=t("sending");
  const live=await save(req);SENT={...req,live};BK=null;ERR={};TEAM=null;location.hash="sent";render()}
@@ -662,7 +640,7 @@ app.addEventListener("click",e=>{
  const qo=e.target.closest("[data-qo]");if(qo&&QZ.a===null){QZ.a=+qo.dataset.qo;if(QZ.a===QZ.q)QZ.s++;render();return}
  if(e.target.closest("#qznext")){QZ.r++;if(QZ.r<10)newQ();render();return}
  if(e.target.closest("#qznew")){QZ.r=0;QZ.s=0;newQ();render();return}
- const c=e.target.closest("[data-course]");if(c){Object.keys(F).forEach(k=>F[k]="");F.subj=c.dataset.course;location.hash="teachers";return}
+ const c=e.target.closest("[data-course]");if(c){BK=null;location.hash="book-"+c.dataset.course;return}
  if(e.target.closest("#reset,#reset2")){Object.keys(F).forEach(k=>F[k]="");render();return}
  const p=e.target.closest("[data-pre]");if(p){BK=null;PRE=p.dataset.pre;return}
  const s=e.target.closest("[data-slot]");if(s){BK.slot=s.dataset.slot;BK.wish=false;delete ERR.slot;render();return}
