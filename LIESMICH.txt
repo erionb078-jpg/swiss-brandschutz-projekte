@@ -1,5 +1,9 @@
-Abrar – albanische Website (Vertretung Kosovo)
+Akademia Ikra – albanische Website (Vertretung Kosovo)
 
-Grundlage: deutsche Abrar-Website (Zweig abrar-website), übersetzt ins Albanische.
-Buch: englische 3. Auflage „Quran Reading – Step by Step“ (buch/Abrar_Quran_Reading_2026.pdf, Online-Buch in buch/).
+Grundlage: deutsche Abrar-Website (Zweig abrar-website), übersetzt ins Albanische und umbenannt in „Akademia Ikra“.
+Angebot: Mësim me orë (Stundenabrechnung) für Kinder – Kurani, Texhvidi, Bazat e fesë – mit
+Hoxhë Blerim Musliu (Bachelor, Universiteti Islamik i Medinës), Hafiz Hoxhë Bajram Hasanaj und
+Hafiz Hoxhë Besnik Foniqi (Bachelor, Universiteti i Kasimit). Kostenlos: Fatiha-Check, Lesetest, Suren abhören.
+Buch: 3. Auflage von Abrar, ins Albanische übersetzt (buch/Meso-te-lexosh-Kuranin.pdf, Online-Buch in buch/).
+Entfernt: Gebet lernen (gebet/), Gutschein, Buchstabe der Woche.
 Vercel-Projekt: abrar-website-sq
