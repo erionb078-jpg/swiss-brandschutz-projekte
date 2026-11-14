@@ -238,7 +238,7 @@ form.bk{max-width:720px}
 @media(max-width:600px){.wtgrid{grid-template-columns:1fr}.wtic{width:64px;border-radius:18px}}
 .motto{margin-top:14px;max-width:420px;display:grid;gap:4px}.motto>span{font-size:13px;font-weight:700;color:var(--lav)}.motto .ar{color:var(--lime)}.motto b{font-size:20px;line-height:1.2;color:var(--cream)}.motto p{margin:0;font-size:14px;color:#cfc4e0}
 .abgrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));margin-top:24px}.abgrid .box{margin:0}
-.ptab{width:100%;border-collapse:collapse;margin:6px 0 14px;font-size:17px}.ptab th{text-align:left;font-size:13px;font-weight:500;color:var(--lav);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.2)}.ptab th:last-child,.ptab td:last-child{text-align:right;white-space:nowrap}.ptab td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}.ptab td b{font-size:22px;color:var(--lime)}
+.ptab{width:100%;border-collapse:collapse;margin:6px 0 14px;font-size:17px}.ptab th{text-align:left;font-size:13px;font-weight:500;color:var(--lav);padding:6px 0;border-bottom:1px solid rgba(255,255,255,.2)}.ptab th:last-child,.ptab td:last-child{text-align:right;white-space:nowrap}.ptab td:nth-child(2){font-size:14px;color:#cfc4e0;padding:0 10px}.ptab th:nth-child(2){padding:6px 10px}@media(max-width:480px){.ptab th:nth-child(2),.ptab td:nth-child(2){display:none}}.ptab td{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.12)}.ptab td b{font-size:22px;color:var(--lime)}
 .pcard.main p{color:#e8e0f5}.pside{display:grid;gap:16px}.pcard.fam{background:var(--lav);color:var(--plum)}.pcard.fam h3{margin-top:0}.pcard.fam p{margin:0 0 8px}.pcard.fam .ex{margin:0;background:rgba(255,255,255,.55);border-radius:12px;padding:8px 12px}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
@@ -343,8 +343,8 @@ function bindAudio(){const au=document.getElementById("qa");if(!au)return;const 
 const quranTeaser=()=>`<section class="band" style="padding-top:0"><div class="wrap"><div class="qteaser"><div><h2>${q("homeT")}</h2><p>${q("homeP")}</p><p class="small" style="color:#e8e0f5">${q("rec")}</p><a class="btn lime" href="suren/index.html">${q("homeB")}</a></div>
 <div class="mushaf mini"><p class="ar">${tajwid(SURAHS[3].v[0])} <span class="vn">﴿١﴾</span></p><p class="ar">${tajwid(SURAHS[3].v[1])} <span class="vn">﴿٢﴾</span></p></div></div></div></section>`;
 /* ---------- Abo, Abrar-Lernplan, Luani, Malblätter, Spiele ---------- */
-const PRICE="29,99 €";
-const PKGS={free:{sq:"Fatiha – ora e parë falas",de:"Fatiha – erste Stunde gratis"},kid:{sq:"Abonim për fëmijë (6–12 vjeç) – 29,99 € në muaj",de:"Abo Kinder – 29,99 €"},sib:{sq:"Fëmijë tjetër i familjes (6–12 vjeç) – 9,99 € në muaj",de:"Geschwisterkind – 9,99 €"},teen:{sq:"Abonim për të rinj (13–17 vjeç) – 34,99 € në muaj",de:"Abo Jugendliche – 34,99 €"},adult:{sq:"Abonim për të rritur (18+) – 39,99 € në muaj",de:"Abo Erwachsene – 39,99 €"}};
+const PRICE="39,99 €";
+const PKGS={free:{sq:"Fatiha – ora e parë falas",de:"Fatiha – erste Stunde gratis"},kid:{sq:"Abonim për fëmijë (6–12 vjeç) – 39,99 € në muaj",de:"Abo Kinder – 39,99 €"},sib:{sq:"Fëmija i dytë në të njëjtat seanca (6–12 vjeç) – +9,99 € në muaj",de:"Geschwisterkind – 9,99 €"},teen:{sq:"Abonim për të rinj (13–17 vjeç) – 44,99 € në muaj",de:"Abo Jugendliche – 44,99 €"},adult:{sq:"Abonim për të rritur (18+) – 49,99 € në muaj",de:"Abo Erwachsene – 49,99 €"}};
 const K={sq:{nav:"Këndi i Luanit",perM:"në muaj · 8 seanca nga 25 min",priceL:"Çmimi",pkgL:"Paketa",
   prH:"Abonimi",prT:"Një çmim i qartë – pa surpriza.",prName:"Abonimi mujor",per:"/ muaj",feats:["8 seanca mësimore online në muaj, nga 25 minuta","Mësim me librin Abrar","Me mësuesit e TILAVA","Fletë ngjyrosjeje, lojëra dhe „Dëgjo dhe ndiq“"],
   freeName:"Fillo falas",freeT:"Ora e parë: mësojmë Fatihanë bashkë – falas.",prCta:"Kërko orën e parë",
@@ -427,10 +427,13 @@ const games=(home)=>`<section class="band" style="padding-top:0"><div class="wra
 </div><p style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn ghost sm" href="buch/index.html">Lexo librin online →</a></p></div></section>`;
 const pricing=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("prH")}</h2><p>${k("prT")}</p><div class="prices">
 <div class="pcard main"><h3>Abonimi mujor</h3>
-<table class="ptab"><thead><tr><th>Grupmosha</th><th>Çmimi në muaj</th></tr></thead><tbody><tr><td>Fëmijë (6–12 vjeç)</td><td><b>29,99 €</b></td></tr><tr><td>Të rinj (13–17 vjeç)</td><td><b>34,99 €</b></td></tr><tr><td>Të rritur (18 vjeç e lart)</td><td><b>39,99 €</b></td></tr></tbody></table>
-<p>Çdo abonim përfshin <b>8 seanca mësimore online në muaj, nga 25 minuta secila</b>.</p>
-<a class="btn lime" href="#book">${t("cta1")}</a></div>
-<div class="pside"><div class="pcard fam"><h3>Zbritje familjare</h3><p>Fëmija i parë paguan <b>29,99 € në muaj</b>. Çdo fëmijë tjetër i së njëjtës familje, nga 6 deri në 12 vjeç, paguan <b>9,99 € në muaj</b>, për sa kohë që abonimi i fëmijës së parë është aktiv.</p></div>
+<p>Çdo abonim përfshin <b>8 seanca mësimore online në muaj, nga 25 minuta secila</b>, me mësues të kualifikuar të TILAVA-s.</p>
+<table class="ptab"><thead><tr><th>Grupi</th><th>Formati</th><th>Çmimi në muaj</th></tr></thead><tbody>
+<tr><td>Fëmijë (6–12 vjeç)</td><td>Mësim individual</td><td><b>39,99 €</b></td></tr>
+<tr><td>Të rinj (13–17 vjeç)</td><td>Mësim individual</td><td><b>44,99 €</b></td></tr>
+<tr><td>Të rritur (18 vjeç e lart)</td><td>Mësim individual</td><td><b>49,99 €</b></td></tr></tbody></table>
+<a class="btn lime" href="#book"><b>Zgjidh abonimin tënd</b></a></div>
+<div class="pside"><div class="pcard fam"><h3>Zbritje familjare për fëmijët (6–12 vjeç)</h3><p>Nëse dy fëmijë të së njëjtës familje kanë nivel të përafërt, mund të mësojnë së bashku me të njëjtin mësues. Abonimi i fëmijës së parë kushton <b>39,99 €</b>, ndërsa fëmija i dytë merr pjesë në të njëjtat seanca për <b>9,99 € shtesë në muaj</b>. Seanca zgjat <b>25 minuta gjithsej për të dy fëmijët</b>. Çmimi për dy fëmijë është <b>49,98 € në muaj</b>.</p></div>
 <div class="pcard free"><div class="lumini">${luani()}</div><h3>${k("freeName")}</h3><p>${k("freeT")}</p><a class="btn plumb" href="#book" data-free="1">${k("prCta")}</a></div></div></div></div></section>`;
 const abrar=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("abH")}</h2><p>${k("abP")}</p><div class="steps">${k("ab").map((s,i)=>`<div class="step"><b class="n">${i+1}</b><h3>${s[0]}</h3><p style="margin:0">${s[1]}</p></div>`).join("")}</div><div class="bookbar"><div class="bkic"><svg viewBox="0 0 44 26" width="64"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg></div><div><h3>Libri „Mëso të lexosh Kuranin“</h3><p>Lexoje online faqe pas faqe – me shënime, theksime dhe zmadhim – ose shkarkoje si PDF.</p></div><div class="bkb"><a class="btn lime" href="buch/index.html">Lexo librin online</a><a class="btn ghost" href="buch/Meso-te-lexosh-Kuranin.pdf" target="_blank" rel="noopener">Shkarko PDF-në</a></div></div></div></section>`;
 const kidsTeaser=()=>`<section class="band" style="padding-top:0"><div class="wrap"><div class="kteaser"><div class="lumid">${luani()}</div><div><h2>${k("kH")}</h2><p>${k("kTeaser")}</p><a class="btn plumb" href="#kids">${k("kCta")}</a></div></div></div></section>`;
