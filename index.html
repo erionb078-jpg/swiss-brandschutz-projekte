@@ -237,6 +237,7 @@ form.bk{max-width:720px}
 .wtext h2{margin-bottom:12px}.wtext p{font-size:17px}.wtext .wlead{font-size:clamp(19px,2vw,22px);font-weight:500}
 @media(max-width:600px){.wtgrid{grid-template-columns:1fr}.wtic{width:64px;border-radius:18px}}
 .motto{margin-top:14px;max-width:420px;display:grid;gap:4px}.motto>span{font-size:13px;font-weight:700;color:var(--lav)}.motto .ar{color:var(--lime)}.motto b{font-size:20px;line-height:1.2;color:var(--cream)}.motto p{margin:0;font-size:14px;color:#cfc4e0}
+.abgrid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));margin-top:24px}.abgrid .box{margin:0}
 footer{background:var(--plum);color:var(--cream);margin-top:40px;position:relative}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{text-decoration:none;color:var(--cream)}footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
@@ -420,6 +421,7 @@ ${games()}<section class="band" style="padding-top:0"><div class="wrap"><h2>Prin
 const games=(home)=>`<section class="band" style="padding-top:0"><div class="wrap"><div class="head"><h2>Lojëra për fëmijë</h2>${home?`<a class="btn ghost sm" href="#kids">Këndi i Luanit →</a>`:""}</div><div class="gcards">
 <a class="gcard" href="harf/index.html"><span class="ar gbig">حَرْف</span><div><h3>Harf për Harf</h3><p>Mëso shkronjat arabe një nga një me Kalemin – gjashtë botë: shkronjat, format, zanoret, sukuni, shkronjat e rënda dhe të lehta, numrat. Me dëgjim, shkrim, kuize, yje dhe medalje.</p><span class="btn lime sm">Fillo lojën →</span></div></a>
 <a class="gcard l" href="sira/index.html"><span class="gl">${luani()}</span><div><h3>Sira me Luanin</h3><p>Udhëto me Luanin nëpër jetën e Pejgamberit <bdi>ﷺ</bdi> – 13 stacione nga Meka në Medinë, me hartë, familjen e tij dhe kartat e sahabëve.</p><span class="btn plumb sm">Fillo udhëtimin →</span></div></a>
+<a class="gcard" href="lojera/index.html"><span class="gbig"><svg width="56" height="56" viewBox="0 0 26 26" aria-hidden="true"><rect x="2" y="2" width="10" height="10" rx="2" fill="#D7EF91"/><rect x="14" y="2" width="10" height="10" rx="2" fill="#C6B5FF"/><rect x="2" y="14" width="10" height="10" rx="2" fill="#C6B5FF"/><rect x="14" y="14" width="10" height="10" rx="2" fill="#F8F3EA"/></svg></span><div><h3>Lojëra me Luanin</h3><p>Puzzle me figura, gjej çiftet e shkronjave, kuiz i shpejtë dhe rendit ajetet e sureve – për argëtim pas mësimit.</p><span class="btn lime sm">Luaj tani →</span></div></a>
 </div><p style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px"><a class="btn ghost sm" href="buch/index.html">Lexo librin online →</a></p><p class="small" style="margin-top:12px">Për moshën rreth 8–14 vjeç. Përparimi ruhet në këtë pajisje.</p></div></section>`;
 const pricing=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("prH")}</h2><p>${k("prT")}</p><div class="prices">
 <div class="pcard main"><h3>${k("prName")}</h3><p class="big"><b>${PRICE}</b> <span>${k("per")}</span></p><ul>${k("feats").map(f=>`<li>${f}</li>`).join("")}</ul><a class="btn lime" href="#book">${t("cta1")}</a></div>
@@ -569,9 +571,13 @@ function vSent(){const r=SENT;return `<section class="band"><div class="wrap"><d
 <dl><dt>${k("pkgL")}</dt><dd>${(PKGS[r.pkg]||PKGS.sub)[lang]}</dd><dt>${t("course")}</dt><dd>${nm(C(r.course).name)} · ${LANGS[r.tlang][lang]}</dd><dt>${t("when")}</dt><dd>${r.date?fmtD(r.date):""} · ${esc(r.time)} (${TZ}) · ${esc(nm(MODES[r.mode]))}</dd><dt>${t("contactP")}</dt><dd>${esc(r.minor?r.pname+" · "+r.pmail:r.name+" · "+r.email)}</dd></dl>
 <p class="flag">${r.live?t("okLive"):t("okDemo")}</p>
 <a class="btn lime" href="#home">${t("more")}</a></div></div></section>`}
-function vAbout(){return `<section class="band"><div class="wrap"><h1>${t("aboutH")}</h1><p style="font-size:19px">${t("aboutT")}</p><p class="small">${t("aboutNote")}</p>
-<div class="vals">${t("vals").map((v,i)=>`<div class="course" style="cursor:default"><span class="ic">${icon(COURSES[i])}</span><h3>${v[0]}</h3><p>${v[1]}</p></div>`).join("")}</div>
-<p style="margin-top:28px"><a class="btn lime" href="#book">${t("cta1")}</a></p></div></section>`}
+function vAbout(){return `<section class="band"><div class="wrap" style="max-width:900px"><h1>Rreth nesh</h1>
+<p style="font-size:19px">TILAVA është një institut arsimor online për fëmijë, të rinj dhe të rritur. Ofrojmë kurse të Kuranit, texhvidit, gjuhës arabe, gjuhës shqipe dhe edukimit islam.</p>
+<p>Në kursin e gjuhës arabe, pjesëmarrësit mësojnë të lexojnë, të shkruajnë dhe të komunikojnë në arabisht. Në kursin e gjuhës shqipe, ata zhvillojnë aftësitë e të folurit, leximit dhe shkrimit, ndërsa njohin më nga afër kulturën shqiptare.</p>
+<p>Të gjitha kurset zhvillohen online. Për momentin, shpjegimet jepen në shqip, edhe në kursin e arabishtes. Mësimet jepen nga mësues të kualifikuar nën mbikëqyrjen e themeluesve.</p>
+<div class="abgrid"><div class="box"><h3>Informacion për prindërit</h3><p style="margin:0">Në profilin e çdo mësuesi ose mësueseje mund të shihni lëndët që jep dhe grupmoshat me të cilat punon.</p></div>
+<div class="box"><h3>Si të caktoni orën e parë</h3><p style="margin:0">Zgjidhni kursin dhe dërgoni kërkesën. Ekipi ynë ju kontakton për të konfirmuar orarin e mësimit.</p></div></div>
+<p style="margin-top:24px"><a class="btn lime" href="#book">Zgjidh kursin tënd</a></p></div></section>`}
 function vContact(){return `<section class="band"><div class="wrap"><h1>${t("contH")}</h1><p style="font-size:19px">${t("contT")}</p>
 <div class="box" style="max-width:640px"><dl class="kv"><dt>${t("email")}</dt><dd>${t("tbd")}</dd><dt>${t("phone")}</dt><dd>${t("tbd")}</dd><dt>${t("addr")}</dt><dd>${t("tbd")}</dd></dl></div>
 <p class="small">${t("contNote")}</p><div class="cta" style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn lime" href="#book">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></section>`}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lojëra me Luanin · TILAVA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&family=Noto+Naskh+Arabic:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#2A203B;--lav:#C6B5FF;--cream:#F8F3EA;--lime:#D7EF91;--ink:#2A203B;--mute:#6b6177;--card:#fffdf8;--line:rgba(42,32,59,.13);--ok:#4E9F5B;--bad:#d9534f}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.5 "DM Sans",system-ui,sans-serif;overflow-x:clip}
+.ar{font-family:"Noto Naskh Arabic",serif;font-weight:700}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid #8d74f0;outline-offset:2px}
+header{background:var(--plum);color:var(--cream)}
+.hd{max-width:1100px;margin:0 auto;padding:12px max(4vw,16px);display:flex;align-items:center;gap:14px}
+.hd a{color:var(--cream);text-decoration:none;font-weight:700}
+.brand{display:flex;align-items:center;gap:8px;font-weight:800;font-size:22px}.brand svg{width:40px;height:24px}
+.stars{margin-left:auto;background:rgba(255,255,255,.12);border-radius:999px;padding:6px 14px;font-weight:800;white-space:nowrap}
+.wrap{max-width:1100px;margin:0 auto;padding:0 max(4vw,16px)}
+.hero{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;align-items:center;padding:24px 0 8px}
+.hero .lu{width:120px}
+.bubble{background:#fff;border-radius:22px 22px 22px 6px;padding:14px 18px;font-size:18px;font-weight:500;box-shadow:0 5px 0 rgba(42,32,59,.1)}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;margin:0 0 6px}
+.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px;margin:18px 0}
+.tab{border:0;border-radius:22px;padding:16px;text-align:left;display:grid;grid-template-columns:52px minmax(0,1fr);gap:12px;align-items:center;background:var(--lav);color:var(--plum);min-height:84px}
+.tab:nth-child(2n){background:var(--lime)}
+.tab[aria-pressed=true]{outline:3px solid var(--plum)}
+.tab b{display:block;font-size:17px}.tab span{font-size:13px}
+.tab i{width:52px;height:52px;border-radius:16px;background:var(--plum);color:var(--cream);display:grid;place-items:center;font-style:normal;font-size:24px}
+.stage{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:clamp(16px,3vw,28px);margin-bottom:40px}
+.stage h2{margin:0 0 4px;font-size:24px}.stage .sub{margin:0 0 16px;color:var(--mute)}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-top:14px}
+.btn{border:0;border-radius:999px;padding:10px 18px;min-height:44px;font-weight:700;background:var(--lime);color:var(--plum)}
+.btn.g{background:none;border:2px solid var(--plum)}
+.seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.seg button{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:8px 12px;min-height:44px;font-weight:500}
+.seg button[aria-pressed=true]{background:var(--plum);color:var(--cream);border-color:var(--plum)}
+/* puzzle */
+.pzwrap{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:20px;align-items:start}
+@media(max-width:700px){.pzwrap{grid-template-columns:1fr}.pzprev{max-width:140px}}
+.pz{display:grid;gap:3px;background:var(--plum);padding:3px;border-radius:18px;max-width:520px;aspect-ratio:1;touch-action:manipulation}
+.pz button{border:0;padding:0;background:#fff;border-radius:6px;overflow:hidden;position:relative}
+.pz button svg{width:100%;height:100%;display:block}
+.pz button.sel{outline:4px solid var(--lime);outline-offset:-4px;z-index:1}
+.pz button.ok::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 3px rgba(78,159,91,.0)}
+.pzprev{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#fff}.pzprev svg{display:block;width:100%;height:auto}
+/* memory */
+.mem{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-width:560px}
+.mc{aspect-ratio:1;border-radius:16px;border:0;background:var(--plum);display:grid;place-items:center;color:var(--plum);font-weight:800;font-size:17px;min-height:60px}
+.mc.up{background:var(--lav)}.mc.ok{background:var(--lime)}.mc .ar{font-size:clamp(30px,6vw,42px);line-height:1}
+/* quiz */
+.qname{font-size:24px;background:var(--lav);padding:2px 14px;border-radius:999px}
+.qopts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;max-width:560px;margin-top:12px}
+.qo{aspect-ratio:1;border-radius:20px;border:2px solid var(--line);background:#fff;min-height:70px}.qo .ar{font-size:clamp(36px,7vw,52px);line-height:1}
+.qo.right{background:var(--lime);border-color:var(--ok)}.qo.wrong{background:#f6d0cc;border-color:var(--bad)}
+/* order */
+.ord{display:grid;gap:8px}
+.slot{min-height:56px;border:2px dashed var(--line);border-radius:16px;padding:8px 14px;direction:rtl;text-align:right;display:flex;align-items:center;gap:10px;justify-content:space-between}
+.slot.fill{border-style:solid;border-color:var(--ok);background:#eef7e6}
+.slot .n{direction:ltr;font-weight:800;color:var(--mute);font-size:14px}
+.pool{display:grid;gap:8px;margin-top:14px}
+.vb{border:0;background:var(--lav);border-radius:16px;padding:10px 16px;direction:rtl;text-align:right;min-height:52px}
+.vb.no{animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.vt{font-size:clamp(20px,3.6vw,26px);line-height:1.9}
+.win{display:grid;grid-template-columns:90px minmax(0,1fr);gap:14px;align-items:center;background:var(--lime);border-radius:20px;padding:14px;margin-top:14px}
+.win .lu{width:90px}.win b{font-size:20px}
+@media(prefers-reduced-motion:reduce){.vb.no{animation:none}}
+</style>
+</head>
+<body>
+<header><div class="hd"><a class="brand" href="../index.html"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilava</a><a href="../index.html#kids">← Këndi i Luanit</a><span class="stars" id="stars" aria-live="polite">★ 0</span></div></header>
+<main class="wrap">
+<section class="hero"><div class="lu" id="luHero"></div><div><h1>Lojëra me Luanin</h1><div class="bubble">Bravo që mësove sot! Tani zgjidh një lojë – për çdo lojë të zgjidhur fiton yje.</div></div></section>
+<div class="tabs" role="group" aria-label="Zgjidh lojën">
+<button class="tab" data-g="puzzle"><i><svg width="28" height="28" viewBox="0 0 26 26" aria-hidden="true"><rect x="2" y="2" width="10" height="10" rx="2" fill="#D7EF91"/><rect x="14" y="2" width="10" height="10" rx="2" fill="#C6B5FF"/><rect x="2" y="14" width="10" height="10" rx="2" fill="#C6B5FF"/><rect x="14" y="14" width="10" height="10" rx="2" fill="#F8F3EA"/></svg></i><div><b>Puzzle</b><span>Rregullo pjesët e figurës</span></div></button>
+<button class="tab" data-g="memory"><i class="ar">ب</i><div><b>Gjej çiftet</b><span>Shkronja arabe dhe emri i saj</span></div></button>
+<button class="tab" data-g="quiz"><i class="ar">ع</i><div><b>Cila shkronjë?</b><span>10 pyetje të shpejta</span></div></button>
+<button class="tab" data-g="order"><i>↕</i><div><b>Rendit ajetet</b><span>Vendosi ajetet me radhë</span></div></button>
+</div>
+<section class="stage" id="stage" aria-live="polite"></section>
+</main>
+<script>
+{
+function luani(white){const f=c=>white?"#fff":c,S='stroke="#2A203B" stroke-width="3" stroke-linejoin="round"';
+ const mane=Array.from({length:12},(_,i)=>{const a=i/12*Math.PI*2;return `<circle data-r cx="${(100+Math.cos(a)*56).toFixed(1)}" cy="${(96+Math.sin(a)*54).toFixed(1)}" r="24" fill="${f(i%2?"#E8A04A":"#F2B45E")}" ${S}/>`}).join("");
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 205" class="lu" role="img" aria-label="Luani">${mane}
+<circle data-r cx="58" cy="50" r="17" fill="${f("#F6D28B")}" ${S}/><circle data-r cx="142" cy="50" r="17" fill="${f("#F6D28B")}" ${S}/>
+<circle data-r cx="58" cy="50" r="8" fill="${f("#F1A7B8")}" ${S}/><circle data-r cx="142" cy="50" r="8" fill="${f("#F1A7B8")}" ${S}/>
+<ellipse data-r cx="100" cy="100" rx="52" ry="50" fill="${f("#F6D28B")}" ${S}/>
+${white?"":'<circle cx="68" cy="114" r="8" fill="#F1A7B8" opacity=".6"/><circle cx="132" cy="114" r="8" fill="#F1A7B8" opacity=".6"/>'}
+<ellipse cx="80" cy="92" rx="6" ry="8" fill="#2A203B"/><circle cx="82" cy="89" r="2.2" fill="#fff"/><ellipse cx="120" cy="92" rx="6" ry="8" fill="#2A203B"/><circle cx="122" cy="89" r="2.2" fill="#fff"/>
+<ellipse data-r cx="100" cy="121" rx="24" ry="17" fill="${f("#FFF4DA")}" ${S}/>
+<path d="M92 109h16l-8 9z" fill="#2A203B" ${S}/><path d="M89 125q11 10 22 0" fill="none" stroke="#2A203B" stroke-width="3" stroke-linecap="round"/>
+<path data-r d="M100 198Q70 180 32 188L28 152Q68 140 100 162Z" fill="${f("#C6B5FF")}" ${S}/><path data-r d="M100 198Q130 180 168 188L172 152Q132 140 100 162Z" fill="${f("#D7EF91")}" ${S}/>
+<path d="M100 162V198" stroke="#2A203B" stroke-width="3"/><ellipse data-r cx="64" cy="156" rx="15" ry="11" fill="${f("#F6D28B")}" ${S}/><ellipse data-r cx="136" cy="156" rx="15" ry="11" fill="${f("#F6D28B")}" ${S}/></svg>`}
+const LETTERS=[["ا","Elif","Alif"],["ب","Ba","Ba"],["ت","Ta","Ta"],["ث","Tha","Tha"],["ج","Xhim","Dschim"],["ح","Ha","Ḥa"],["خ","Hi","Cha"],["د","Dal","Dal"],["ذ","Dhel","Dhal"],["ر","Ra","Ra"],["ز","Ze","Zay"],["س","Sin","Sin"],["ش","Shin","Schin"],["ص","Sad","Ṣad"],["ض","Dad","Ḍad"],["ط","Tâ","Ṭa"],["ظ","Dhâ","Ẓa"],["ع","Ajn","ʿAin"],["غ","Gajn","Ghain"],["ف","Fa","Fa"],["ق","Kaf","Qaf"],["ك","Kef","Kaf"],["ل","Lam","Lam"],["م","Mim","Mim"],["ن","Nun","Nun"],["ه","He","Ha"],["و","Vav","Waw"],["ي","Ja","Ya"]].map(([ar,sq,de])=>({ar,sq,de}));
+const SURAHS=[
+ {n:1,ar:"الفاتحة",sq:"El-Fatiha",sqm:"Hapja",de:"Al-Fātiha",dem:"Die Eröffnende",audio:"",t:[],v:["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ","الرَّحْمَٰنِ الرَّحِيمِ","مَالِكِ يَوْمِ الدِّينِ","إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ","اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ","صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ"]},
+ {n:114,ar:"الناس",sq:"En-Nas",sqm:"Njerëzit",de:"An-Nās",dem:"Die Menschen",audio:"",t:[],v:["قُلْ أَعُوذُ بِرَبِّ النَّاسِ","مَلِكِ النَّاسِ","إِلَٰهِ النَّاسِ","مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ","الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ","مِنَ الْجِنَّةِ وَالنَّاسِ"]},
+ {n:113,ar:"الفلق",sq:"El-Felek",sqm:"Agimi",de:"Al-Falaq",dem:"Das Morgengrauen",audio:"",t:[],v:["قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ","مِنْ شَرِّ مَا خَلَقَ","وَمِنْ شَرِّ غَاسِقٍ إِذَا وَقَبَ","وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ","وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ"]},
+ {n:112,ar:"الإخلاص",sq:"El-Ihlas",sqm:"Sinqeriteti",de:"Al-Ichlās",dem:"Die Aufrichtigkeit",audio:"",t:[],v:["قُلْ هُوَ اللَّهُ أَحَدٌ","اللَّهُ الصَّمَدُ","لَمْ يَلِدْ وَلَمْ يُولَدْ","وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ"]},
+ {n:110,ar:"النصر",sq:"En-Nasr",sqm:"Ndihma",de:"An-Nasr",dem:"Die Hilfe",audio:"",t:[],v:["إِذَا جَاءَ نَصْرُ اللَّهِ وَالْفَتْحُ","وَرَأَيْتَ النَّاسَ يَدْخُلُونَ فِي دِينِ اللَّهِ أَفْوَاجًا","فَسَبِّحْ بِحَمْدِ رَبِّكَ وَاسْتَغْفِرْهُ إِنَّهُ كَانَ تَوَّابًا"]},
+ {n:109,ar:"الكافرون",sq:"El-Kafirun",sqm:"Mohuesit",de:"Al-Kāfirūn",dem:"Die Ungläubigen",audio:"",t:[],v:["قُلْ يَا أَيُّهَا الْكَافِرُونَ","لَا أَعْبُدُ مَا تَعْبُدُونَ","وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ","وَلَا أَنَا عَابِدٌ مَا عَبَدْتُمْ","وَلَا أَنْتُمْ عَابِدُونَ مَا أَعْبُدُ","لَكُمْ دِينُكُمْ وَلِيَ دِينِ"]},
+ {n:108,ar:"الكوثر",sq:"El-Kevther",sqm:"Bollëku",de:"Al-Kauthar",dem:"Die Fülle",audio:"",t:[],v:["إِنَّا أَعْطَيْنَاكَ الْكَوْثَرَ","فَصَلِّ لِرَبِّكَ وَانْحَرْ","إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ"]},
+ {n:106,ar:"قريش",sq:"Kurejsh",sqm:"Kurejshët",de:"Quraisch",dem:"Die Quraisch",audio:"",t:[],v:["لِإِيلَافِ قُرَيْشٍ","إِيلَافِهِمْ رِحْلَةَ الشِّتَاءِ وَالصَّيْفِ","فَلْيَعْبُدُوا رَبَّ هَٰذَا الْبَيْتِ","الَّذِي أَطْعَمَهُمْ مِنْ جُوعٍ وَآمَنَهُمْ مِنْ خَوْفٍ"]},
+ {n:105,ar:"الفيل",sq:"El-Fil",sqm:"Elefanti",de:"Al-Fīl",dem:"Der Elefant",audio:"",t:[],v:["أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ","أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ","وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ","تَرْمِيهِمْ بِحِجَارَةٍ مِنْ سِجِّيلٍ","فَجَعَلَهُمْ كَعَصْفٍ مَأْكُولٍ"]},
+ {n:103,ar:"العصر",sq:"El-Asr",sqm:"Koha",de:"Al-ʿAsr",dem:"Die Zeit",audio:"",t:[],v:["وَالْعَصْرِ","إِنَّ الْإِنْسَانَ لَفِي خُسْرٍ","إِلَّا الَّذِينَ آمَنُوا وَعَمِلُوا الصَّالِحَاتِ وَتَوَاصَوْا بِالْحَقِّ وَتَوَاصَوْا بِالصَّبْرِ"]}
+];
+const $=s=>document.querySelector(s);
+const shuffle=a=>{for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const arNum=n=>String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+let STARS=0;try{STARS=+localStorage.getItem("tilava-yje")||0}catch(e){}
+function addStars(n){STARS+=n;try{localStorage.setItem("tilava-yje",STARS)}catch(e){}$("#stars").textContent="★ "+STARS}
+$("#stars").textContent="★ "+STARS;
+$("#luHero").innerHTML=luani();
+const win=(t,n)=>`<div class="win">${luani()}<div><b>${t}</b><div>+${n} yje ★</div></div></div>`;
+let game="puzzle";const stage=$("#stage");
+
+/* ---------- Puzzle pictures (colored scenes, viewBox 0 0 300 300) ---------- */
+const star=(x,y,r,f)=>{let p="";for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5,rr=i%2?r*.45:r;p+=(i?"L":"M")+(x+Math.cos(a)*rr).toFixed(1)+" "+(y+Math.sin(a)*rr).toFixed(1)}return `<path d="${p}Z" fill="${f}"/>`};
+const PICS=[
+ {n:"Luani",svg:()=>`<rect width="300" height="300" fill="#C6B5FF"/><circle cx="150" cy="300" r="160" fill="#D7EF91"/>${star(40,40,14,"#fff")}${star(260,60,10,"#fff")}<g transform="translate(25 22) scale(1.25)">${luani().replace(/<svg[^>]*>|<\/svg>/g,"")}</g>`},
+ {n:"Xhamia",svg:()=>`<rect width="300" height="300" fill="#2A203B"/>${star(50,50,10,"#D7EF91")}${star(250,40,8,"#fff")}${star(200,90,6,"#C6B5FF")}<path d="M220 30a34 34 0 1 0 24 58a26 26 0 1 1-24-58z" fill="#F6D28B"/><rect y="230" width="300" height="70" fill="#D7EF91"/><rect x="60" y="150" width="180" height="90" fill="#F8F3EA"/><path d="M90 150q60-90 120 0z" fill="#C6B5FF"/><rect x="30" y="90" width="22" height="150" fill="#F8F3EA"/><path d="M30 90l11-30 11 30z" fill="#C6B5FF"/><rect x="248" y="90" width="22" height="150" fill="#F8F3EA"/><path d="M248 90l11-30 11 30z" fill="#C6B5FF"/><path d="M130 240v-40q20-26 40 0v40z" fill="#2A203B"/><circle cx="100" cy="185" r="10" fill="#F2B45E"/><circle cx="200" cy="185" r="10" fill="#F2B45E"/><path d="M150 90v-18" stroke="#F6D28B" stroke-width="4"/>`},
+ {n:"Fanari",svg:()=>`<rect width="300" height="300" fill="#D7EF91"/><circle cx="150" cy="170" r="110" fill="#F8F3EA"/>${star(50,60,12,"#C6B5FF")}${star(255,230,14,"#C6B5FF")}<circle cx="150" cy="40" r="14" fill="none" stroke="#2A203B" stroke-width="6"/><path d="M105 90q45-50 90 0z" fill="#2A203B"/><rect x="98" y="90" width="104" height="16" rx="4" fill="#E8A04A"/><path d="M106 106h88l14 110h-116z" fill="#C6B5FF"/><path d="M128 205v-60q22-30 44 0v60z" fill="#F6D28B"/><path d="M150 196q-16-18 0-40q16 22 0 40z" fill="#E8A04A"/><rect x="88" y="216" width="124" height="18" rx="6" fill="#2A203B"/><path d="M118 234h64l-10 24h-44z" fill="#E8A04A"/>`},
+ {n:"Libri",svg:()=>`<rect width="300" height="300" fill="#F8F3EA"/><circle cx="150" cy="150" r="130" fill="#C6B5FF"/><path d="M150 230q-50-30-110-16l-6-110q62-18 116 14z" fill="#fff"/><path d="M150 230q50-30 110-16l6-110q-62-18-116 14z" fill="#D7EF91"/><path d="M150 118v112" stroke="#2A203B" stroke-width="5"/><g stroke="#2A203B" stroke-width="3" opacity=".35" fill="none"><path d="M60 140q40-12 80 4"/><path d="M62 162q40-12 78 4"/><path d="M64 184q40-12 76 4"/></g><text x="208" y="178" text-anchor="middle" font-family="Noto Naskh Arabic,serif" font-weight="700" font-size="44" fill="#2A203B">اقرأ</text>${star(60,60,12,"#D7EF91")}${star(240,50,9,"#fff")}`}
+];
+let PZ={pic:0,n:3,tiles:[],sel:-1,moves:0,done:false};
+function newPuzzle(){const N=PZ.n*PZ.n;let t;do{t=shuffle([...Array(N).keys()])}while(t.every((v,i)=>v===i));PZ.tiles=t;PZ.sel=-1;PZ.moves=0;PZ.done=false}
+function tileSvg(k){const s=300/PZ.n,x=(k%PZ.n)*s,y=Math.floor(k/PZ.n)*s;return `<svg viewBox="${x} ${y} ${s} ${s}" preserveAspectRatio="none" aria-hidden="true">${PICS[PZ.pic].svg()}</svg>`}
+function vPuzzle(){return `<h2>Puzzle me Luanin</h2><p class="sub">Prek dy pjesë për t'i ndërruar vendet. Shiko figurën djathtas.</p>
+<div class="seg">${PICS.map((p,i)=>`<button data-pic="${i}" aria-pressed="${i===PZ.pic}">${p.n}</button>`).join("")}<span style="width:12px"></span>${[3,4].map(n=>`<button data-size="${n}" aria-pressed="${n===PZ.n}">${n}×${n}</button>`).join("")}</div>
+<div class="pzwrap"><div class="pz" style="grid-template-columns:repeat(${PZ.n},1fr)">${PZ.tiles.map((k,i)=>`<button data-t="${i}" class="${PZ.sel===i?"sel":""}" aria-label="Pjesa ${i+1}">${tileSvg(k)}</button>`).join("")}</div>
+<div><div class="pzprev"><svg viewBox="0 0 300 300" aria-label="Figura e plotë">${PICS[PZ.pic].svg()}</svg></div></div></div>
+<div class="bar"><span>Lëvizje: ${PZ.moves}</span><button class="btn g" id="pzNew">Përziej përsëri</button></div>
+${PZ.done?win("Bravo! E rregullove figurën.",PZ.n===3?2:4):""}`}
+/* ---------- Memory ---------- */
+let MG={cards:[],open:[],done:[],moves:0,won:false};
+function newMemory(){MG={cards:shuffle(shuffle([...LETTERS.keys()]).slice(0,6).flatMap(i=>[{l:i,t:"ar"},{l:i,t:"nm"}])),open:[],done:[],moves:0,won:false}}
+function vMemory(){return `<h2>Gjej çiftet</h2><p class="sub">Gjej shkronjën arabe dhe emrin e saj.</p>
+<div class="mem">${MG.cards.map((c,i)=>{const up=MG.open.includes(i)||MG.done.includes(i),L=LETTERS[c.l];return `<button class="mc${up?" up":""}${MG.done.includes(i)?" ok":""}" data-mc="${i}" aria-label="${up?(c.t==="ar"?L.ar:L.sq):"Kartë e mbyllur"}">${up?(c.t==="ar"?`<span class="ar">${L.ar}</span>`:L.sq):`<svg viewBox="0 0 44 26" width="40" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>`}</button>`}).join("")}</div>
+<div class="bar"><span>Lëvizje: ${MG.moves}</span><button class="btn g" id="memNew">Luaj përsëri</button></div>${MG.won?win("Bravo! I gjete të gjitha çiftet.",3):""}`}
+/* ---------- Quiz ---------- */
+let QZ={r:0,s:0,q:0,opts:[],a:null,given:false};
+function newQ(){const ids=shuffle([...LETTERS.keys()]).slice(0,4);QZ.q=ids[0];QZ.opts=shuffle(ids.slice());QZ.a=null}
+function vQuiz(){if(QZ.r>=10)return `<h2>Cila shkronjë?</h2>${win(`Mbarove! ${QZ.s} nga 10 të sakta.`,Math.ceil(QZ.s/2))}<div class="bar"><span></span><button class="btn" id="qzNew">Luaj përsëri</button></div>`;
+ return `<h2>Cila shkronjë?</h2><p class="sub">Pyetja ${QZ.r+1} nga 10 · ${QZ.s} të sakta</p><p>Gjej shkronjën: <b class="qname">${LETTERS[QZ.q].sq}</b></p>
+<div class="qopts">${QZ.opts.map(i=>`<button class="qo${QZ.a!==null?(i===QZ.q?" right":i===QZ.a?" wrong":""):""}" data-qo="${i}"${QZ.a!==null?" disabled":""}><span class="ar">${LETTERS[i].ar}</span></button>`).join("")}</div>
+${QZ.a!==null?`<div class="bar"><b>${QZ.a===QZ.q?"Saktë! Mashallah!":"Jo kjo – e sakta është me të gjelbër."}</b><button class="btn" id="qzNext">Tjetra</button></div>`:""}`}
+/* ---------- Order verses ---------- */
+const ORD=[3,6,9,1,2,0].map(i=>SURAHS[i]).filter(Boolean);
+let OR={s:0,placed:[],pool:[],bad:-1,done:false};
+function newOrder(){const S=ORD[OR.s];OR.placed=[];OR.pool=shuffle([...S.v.keys()]);OR.bad=-1;OR.done=false}
+function vOrder(){const S=ORD[OR.s];return `<h2>Rendit ajetet</h2><p class="sub">Prek ajetet sipas radhës së saktë – nga ajeti i parë te i fundit.</p>
+<div class="seg">${ORD.map((x,i)=>`<button data-sura="${i}" aria-pressed="${i===OR.s}">${x.sq} <span class="ar">${x.ar}</span></button>`).join("")}</div>
+<div class="ord">${S.v.map((v,i)=>{const k=OR.placed[i];return k===undefined?`<div class="slot"><span class="n">${i+1}</span></div>`:`<div class="slot fill"><span class="vt ar">${S.v[k]} ﴿${arNum(k+1)}﴾</span><span class="n">${i+1}</span></div>`}).join("")}</div>
+<div class="pool">${OR.pool.filter(k=>!OR.placed.includes(k)).map(k=>`<button class="vb${OR.bad===k?" no":""}" data-v="${k}"><span class="vt ar">${S.v[k]}</span></button>`).join("")}</div>
+${OR.done?win(`Bravo! E rendite suren ${S.sq}.`,3):""}<div class="bar"><span>${OR.placed.length} nga ${S.v.length}</span><button class="btn g" id="orNew">Fillo nga e para</button></div>`}
+
+function render(){document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-pressed",b.dataset.g===game));
+ stage.innerHTML={puzzle:vPuzzle,memory:vMemory,quiz:vQuiz,order:vOrder}[game]()}
+newPuzzle();newMemory();newQ();newOrder();
+const fromHash=location.hash.slice(1);if(["puzzle","memory","quiz","order"].includes(fromHash))game=fromHash;
+render();
+
+document.querySelector(".tabs").addEventListener("click",e=>{const b=e.target.closest("[data-g]");if(!b)return;game=b.dataset.g;history.replaceState(null,"","#"+game);render();stage.scrollIntoView({block:"start",behavior:"smooth"})});
+stage.addEventListener("click",e=>{
+ const t=e.target.closest("[data-t]");
+ if(t&&!PZ.done){const i=+t.dataset.t;if(PZ.sel<0){PZ.sel=i}else if(PZ.sel===i){PZ.sel=-1}else{[PZ.tiles[PZ.sel],PZ.tiles[i]]=[PZ.tiles[i],PZ.tiles[PZ.sel]];PZ.sel=-1;PZ.moves++;if(PZ.tiles.every((v,k)=>v===k)){PZ.done=true;addStars(PZ.n===3?2:4)}}render();return}
+ const pc=e.target.closest("[data-pic]");if(pc){PZ.pic=+pc.dataset.pic;newPuzzle();render();return}
+ const sz=e.target.closest("[data-size]");if(sz){PZ.n=+sz.dataset.size;newPuzzle();render();return}
+ if(e.target.closest("#pzNew")){newPuzzle();render();return}
+ const mc=e.target.closest("[data-mc]");if(mc){const i=+mc.dataset.mc;if(MG.open.length>=2||MG.open.includes(i)||MG.done.includes(i))return;MG.open.push(i);
+  if(MG.open.length===2){MG.moves++;const[a,b]=MG.open.map(j=>MG.cards[j]);if(a.l===b.l&&a.t!==b.t){MG.done.push(...MG.open);MG.open=[];if(MG.done.length===MG.cards.length){MG.won=true;addStars(3)}}else setTimeout(()=>{MG.open=[];render()},900)}render();return}
+ if(e.target.closest("#memNew")){newMemory();render();return}
+ const qo=e.target.closest("[data-qo]");if(qo&&QZ.a===null){QZ.a=+qo.dataset.qo;if(QZ.a===QZ.q)QZ.s++;render();return}
+ if(e.target.closest("#qzNext")){QZ.r++;if(QZ.r<10)newQ();else addStars(Math.ceil(QZ.s/2));render();return}
+ if(e.target.closest("#qzNew")){QZ.r=0;QZ.s=0;newQ();render();return}
+ const su=e.target.closest("[data-sura]");if(su){OR.s=+su.dataset.sura;newOrder();render();return}
+ const vb=e.target.closest("[data-v]");if(vb&&!OR.done){const k=+vb.dataset.v;if(k===OR.placed.length){OR.placed.push(k);OR.bad=-1;if(OR.placed.length===ORD[OR.s].v.length){OR.done=true;addStars(3)}}else{OR.bad=k}render();return}
+ if(e.target.closest("#orNew")){newOrder();render();return}
+});
+}
+</script>
+</body>
+</html>
