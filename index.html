@@ -345,8 +345,8 @@ const quranTeaser=()=>`<section class="band" style="padding-top:0"><div class="w
 /* ---------- Abo, Abrar-Lernplan, Luani, Malblätter, Spiele ---------- */
 const PRICE="29,99 €";
 const PKGS={free:{sq:"Fatiha – ora e parë falas",de:"Fatiha – erste Stunde gratis"},kid:{sq:"Abonim për fëmijë (6–12 vjeç) – 29,99 € në muaj",de:"Abo Kinder – 29,99 €"},sib:{sq:"Fëmijë tjetër i familjes (6–12 vjeç) – 9,99 € në muaj",de:"Geschwisterkind – 9,99 €"},teen:{sq:"Abonim për të rinj (13–17 vjeç) – 34,99 € në muaj",de:"Abo Jugendliche – 34,99 €"},adult:{sq:"Abonim për të rritur (18+) – 39,99 € në muaj",de:"Abo Erwachsene – 39,99 €"}};
-const K={sq:{nav:"Këndi i Luanit",perM:"në muaj · 12 seanca nga 30 min",priceL:"Çmimi",pkgL:"Paketa",
-  prH:"Abonimi",prT:"Një çmim i qartë – pa surpriza.",prName:"Abonimi mujor",per:"/ muaj",feats:["12 seanca online në muaj, nga 30 minuta","Mësim me librin Abrar","Me mësuesit e TILAVA","Fletë ngjyrosjeje, lojëra dhe „Dëgjo dhe ndiq“"],
+const K={sq:{nav:"Këndi i Luanit",perM:"në muaj · 8 seanca nga 25 min",priceL:"Çmimi",pkgL:"Paketa",
+  prH:"Abonimi",prT:"Një çmim i qartë – pa surpriza.",prName:"Abonimi mujor",per:"/ muaj",feats:["8 seanca mësimore online në muaj, nga 25 minuta","Mësim me librin Abrar","Me mësuesit e TILAVA","Fletë ngjyrosjeje, lojëra dhe „Dëgjo dhe ndiq“"],
   freeName:"Fillo falas",freeT:"Ora e parë: mësojmë Fatihanë bashkë – falas.",prCta:"Kërko orën e parë",
   abH:"Nga shkronjat e para te suret e shkurtra",abP:"Me librin Abrar, fëmijët mësojnë të lexojnë Kuranin hap pas hapi. Fillojnë me alfabetin arab, lexojnë fjalët e para dhe më pas ushtrohen me sure të shkurtra.",
   ab:[["Njohim shkronjat","Mësojmë të dallojmë dhe të shqiptojmë shkronjat e alfabetit arab."],["Lexojmë rrokjet","Ushtrojmë zanoret e shkurtra dhe mësojmë si të lexojmë shkronjat me sukun, shedde dhe tenvin."],["Lexojmë fjalët e para","Dallojmë format e shkronjave në fillim, në mes dhe në fund të fjalës. Pastaj i lexojmë të lidhura."],["Lexojmë sure të shkurtra","Zbatojmë rregullat bazë të texhvidit gjatë leximit të sureve të shkurtra."]],
@@ -428,7 +428,7 @@ const games=(home)=>`<section class="band" style="padding-top:0"><div class="wra
 const pricing=()=>`<section class="band" style="padding-top:0"><div class="wrap"><h2>${k("prH")}</h2><p>${k("prT")}</p><div class="prices">
 <div class="pcard main"><h3>Abonimi mujor</h3>
 <table class="ptab"><thead><tr><th>Grupmosha</th><th>Çmimi në muaj</th></tr></thead><tbody><tr><td>Fëmijë (6–12 vjeç)</td><td><b>29,99 €</b></td></tr><tr><td>Të rinj (13–17 vjeç)</td><td><b>34,99 €</b></td></tr><tr><td>Të rritur (18 vjeç e lart)</td><td><b>39,99 €</b></td></tr></tbody></table>
-<p>Çdo abonim përfshin <b>12 seanca online në muaj, nga 30 minuta secila</b>, me mësuesit e TILAVA-s.</p>
+<p>Çdo abonim përfshin <b>8 seanca mësimore online në muaj, nga 25 minuta secila</b>.</p>
 <a class="btn lime" href="#book">${t("cta1")}</a></div>
 <div class="pside"><div class="pcard fam"><h3>Zbritje familjare</h3><p>Fëmija i parë paguan <b>29,99 € në muaj</b>. Çdo fëmijë tjetër i së njëjtës familje, nga 6 deri në 12 vjeç, paguan <b>9,99 € në muaj</b>, për sa kohë që abonimi i fëmijës së parë është aktiv.</p></div>
 <div class="pcard free"><div class="lumini">${luani()}</div><h3>${k("freeName")}</h3><p>${k("freeT")}</p><a class="btn plumb" href="#book" data-free="1">${k("prCta")}</a></div></div></div></div></section>`;
