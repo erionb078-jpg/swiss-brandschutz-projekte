@@ -67,7 +67,7 @@ nav.main.open{display:flex}.burger{display:grid;place-items:center}nav.main a{pa
 @media(prefers-reduced-motion:no-preference){.float{animation:fl 6s ease-in-out infinite}@keyframes fl{50%{transform:translateY(-8px)}}}
 @media(max-width:720px){.hero .wrap{grid-template-columns:1fr}.hero .fig{order:2;max-width:460px;justify-self:center}}
 /* cards */
-.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr))}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr))}
 .course{background:var(--lav);color:var(--plum);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:10px;text-decoration:none;border:0;text-align:left;font:inherit;cursor:pointer;position:relative;overflow:hidden}
 .course:nth-child(3n+2){background:var(--lime)}
 .course .ic{width:52px;height:52px;border-radius:16px;background:var(--plum);color:var(--cream);display:grid;place-items:center;font-size:26px}
@@ -261,6 +261,7 @@ const COURSES=[
  {id:"quran",group:"quran",ic:"book",name:{sq:"Lexim dhe recitim i Kuranit",de:"Koran lesen und rezitieren"},short:{sq:"Kurani",de:"Koran"},desc:{sq:"Nga shkronjat e para deri te leximi i rrjedhshëm.",de:"Von den ersten Buchstaben bis zum flüssigen Lesen."}},
  {id:"tajwid",group:"quran",ic:"wave",name:{sq:"Texhvid",de:"Tadschwīd"},short:{sq:"Texhvid",de:"Tadschwīd"},desc:{sq:"Rregullat e shqiptimit të saktë gjatë recitimit.",de:"Die Regeln der korrekten Aussprache beim Rezitieren."}},
  {id:"arabic",group:"lang",ic:"ض",name:{sq:"Gjuha arabe",de:"Arabisch"},short:{sq:"Arabisht",de:"Arabisch"},desc:{sq:"Lexim, shkrim dhe bisedë – për fillestarë dhe të avancuar.",de:"Lesen, Schreiben und Sprechen – für Anfänger und Fortgeschrittene."}},
+ {id:"albanian",group:"lang",ic:"abc",name:{sq:"Gjuha shqipe",de:"Albanisch"},short:{sq:"Shqip",de:"Albanisch"},desc:{sq:"Mëso të flasësh, të lexosh dhe të shkruash shqip.",de:"Albanisch sprechen, lesen und schreiben lernen."}},
  {id:"islam",group:"edu",ic:"dome",name:{sq:"Edukimi islam",de:"Islamische Bildung"},short:{sq:"Edukim islam",de:"Islamische Bildung"},desc:{sq:"Besimi, ibadetet dhe ahlaku – të shpjeguara qartë.",de:"Glaube, Gottesdienst und Ethik – verständlich erklärt."}}
 ];
 const LANGS={sq:{sq:"Shqip",de:"Albanisch",adv:"shqip"},de:{sq:"Gjermanisht",de:"Deutsch",adv:"gjermanisht"},ar:{sq:"Arabisht",de:"Arabisch",adv:"arabisht"}};
@@ -428,7 +429,7 @@ async function dl(blank){CP.msg="";const name=blank?`tilava-${CP.p+1}-ngjyros.sv
  try{await DL.save({filename:name,data})}catch(e){try{await DL.save({filename:name,data:new Blob([data],{type:"image/svg+xml"})})}catch(e2){CP.msg=k("dlFail");render()}}}
 /* ---------- strings ---------- */
 const L={
- sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Mëso Kuranin, kudo që jeton.",sub:"Kurse online të Kuranit, texhvidit, gjuhës arabe dhe edukimit islam, me mësues të kualifikuar nën mbikëqyrjen e themeluesve.",cta1:"Fillo me TILAVA-n",cta2:"Shiko kurset",
+ sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Mëso me TILAVA, kudo që jeton.",sub:"Kurse online të Kuranit, texhvidit, arabishtes, shqipes dhe edukimit islam. Mësimet zhvillohen nga mësues të kualifikuar, nën mbikëqyrjen e themeluesve.",cta1:"Fillo me TILAVA-n",cta2:"Shiko kurset",
   demo:"Faqe në ndërtim: kërkesat për orë ende nuk dërgohen.",coursesH:"Kurset tona",allC:"Të gjitha kurset",findFor:"Kërko një orë",howH:"Si funksionon",
   steps:[["Zgjidh kursin","Kuran, texhvid, arabisht ose edukim islam – për fëmijë, të rinj dhe të rritur."],["Kërko një orë","Na trego kursin, gjuhën dhe kohën që të përshtatet – online ose me prani fizike."],["Ne e konfirmojmë","Ekipi i TILAVA të shkruan, cakton mësuesin dhe konfirmon orën."]],
   teachH:"Mësuesit tanë",allT:"Të gjithë mësuesit",parH:"Për prindërit",parT:"Mësimin e japin themeluesit e TILAVA – Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj. Për nxënësit nën 18 vjeç, kërkesa dërgohet me të dhënat e prindit ose kujdestarit.",
@@ -487,7 +488,7 @@ function slots(tc){const out=[],d=new Date();d.setHours(12,0,0,0);for(let i=1;i<
 const price=tc=>`<span class="price">${PRICE}</span> <span class="small">${k("perM")}</span>`;
 const avMatch=(tc,av)=>tc.slots.some(s=>av==="we"?(s.w===0||s.w===6):s.w>0&&s.w<6&&(av==="ev"?s.t>="18:00":s.t<"18:00"));
 /* ---------- pictures ---------- */
-const ICONS={book:'<svg width="30" height="30" viewBox="0 0 30 30"><path d="M3 9q6-4 12 1q6-5 12-1v14q-6-4-12 1q-6-5-12-1z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 10v14" stroke="currentColor" stroke-width="2"/></svg>',
+const ICONS={abc:'<b style="font-size:24px;line-height:1;font-family:DM Sans,system-ui,sans-serif">Ë</b>',book:'<svg width="30" height="30" viewBox="0 0 30 30"><path d="M3 9q6-4 12 1q6-5 12-1v14q-6-4-12 1q-6-5-12-1z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 10v14" stroke="currentColor" stroke-width="2"/></svg>',
  wave:'<svg width="30" height="30" viewBox="0 0 30 30"><path d="M3 15q3-8 6 0t6 0t6 0t6 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>',
  dome:'<svg width="30" height="30" viewBox="0 0 30 30"><path d="M6 24v-6q0-8 9-10q9 2 9 10v6z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M15 3v5M3 24h24" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'};
 const icon=c=>ICONS[c.ic]||`<span class="ar">${c.ic}</span>`;
@@ -523,7 +524,7 @@ const tCard=tc=>`<article class="fcard">${avatar(tc)}<div><span class="fbadge">T
 function vHome(){return `<section class="hero2"><img src="hero.webp" srcset="hero-1000.webp 1000w, hero.webp 1672w" sizes="100vw" width="1672" height="941" alt="Fëmijë që mësojnë me tablet, laptop dhe telefon; në tavolinë Kurani në rahle" fetchpriority="high">
 <div class="wrap hwrap"><div class="hcopy"><div class="tag"><b>TILAVA</b> | <span class="ar">تلاوة</span></div>
 <h1>${t("h1")}</h1><p class="lead">${t("sub")}</p>
-<div class="cta"><a class="btn lime" href="#book">${t("cta1")}</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
+<div class="cta"><a class="btn lime" href="#book">Zgjidh kursin tënd</a><a class="btn ghost" href="#courses">${t("cta2")}</a></div></div></div>${WAVE}</section>
 ${welcomeText()}
 <section class="band"><div class="wrap"><div class="head"><h2>${t("coursesH")}</h2><a class="btn ghost sm" href="#courses">${t("allC")}</a></div><div class="grid">${COURSES.map(courseCard).join("")}</div></div></section>
 ${games(1)}
