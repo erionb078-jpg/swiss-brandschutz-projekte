@@ -428,7 +428,7 @@ async function dl(blank){CP.msg="";const name=blank?`tilava-${CP.p+1}-ngjyros.sv
  try{await DL.save({filename:name,data})}catch(e){try{await DL.save({filename:name,data:new Blob([data],{type:"image/svg+xml"})})}catch(e2){CP.msg=k("dlFail");render()}}}
 /* ---------- strings ---------- */
 const L={
- sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Mëso Kuranin, kudo që jeton.",sub:"Kurse online të Kuranit, texhvidit, gjuhës arabe dhe edukimit islam, me mësues të kualifikuar nën mbikëqyrjen e themeluesve.",cta1:"Kërko një orë mësimi",cta2:"Shiko kurset",
+ sq:{nav:["Ballina","Kurset","Mësuesit","Këndi i Luanit","Rreth nesh","Kontakti"],tag:"Kurani · Gjuhët · Edukimi islam",h1:"Mëso Kuranin, kudo që jeton.",sub:"Kurse online të Kuranit, texhvidit, gjuhës arabe dhe edukimit islam, me mësues të kualifikuar nën mbikëqyrjen e themeluesve.",cta1:"Fillo me TILAVA-n",cta2:"Shiko kurset",
   demo:"Faqe në ndërtim: kërkesat për orë ende nuk dërgohen.",coursesH:"Kurset tona",allC:"Të gjitha kurset",findFor:"Kërko një orë",howH:"Si funksionon",
   steps:[["Zgjidh kursin","Kuran, texhvid, arabisht ose edukim islam – për fëmijë, të rinj dhe të rritur."],["Kërko një orë","Na trego kursin, gjuhën dhe kohën që të përshtatet – online ose me prani fizike."],["Ne e konfirmojmë","Ekipi i TILAVA të shkruan, cakton mësuesin dhe konfirmon orën."]],
   teachH:"Mësuesit tanë",allT:"Të gjithë mësuesit",parH:"Për prindërit",parT:"Mësimin e japin themeluesit e TILAVA – Hoxhë Blerim Musliu dhe Hafiz Bajram Hasanaj. Për nxënësit nën 18 vjeç, kërkesa dërgohet me të dhënat e prindit ose kujdestarit.",
