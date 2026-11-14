@@ -597,13 +597,13 @@ function render(){
  if(h.startsWith("t-")){html=vTeachers();cur="teachers"}
  else if(h.startsWith("book-")||h==="book"){const c=h.slice(5);if(!BK)BK=newBK(c);else if(C(c))BK.course=c;if(PKG0)BK.pkg=PKG0;PKG0="";html=vBook();cur=""}
  else if(h==="sent"&&SENT){html=vSent();cur=""}
- else if(h==="team"){html=vTeam()}
+ else if(h==="team"){html=vHome();cur="home"}
  else if(h==="quran"){html=vQuran();cur="kids"}
  else{cur=ROUTES.includes(h)?h:"home";html={home:vHome,courses:vCourses,teachers:vTeachers,kids:vKids,about:vAbout,contact:vContact}[cur]()}
  app.innerHTML=html;
  document.getElementById("nav").innerHTML=ROUTES.map((r,i)=>`<a href="#${r}"${r===cur?' aria-current="page"':""}>${t("nav")[i]}</a>`).join("");
  document.getElementById("foot").innerHTML=`<div class="band wrap"><div><a class="logo" href="#home"><svg viewBox="0 0 44 26" aria-hidden="true"><path d="M2 11Q12 2 22 11Q32 2 42 11L40 14Q31 6 22 15Q13 6 4 14Z" fill="#C6B5FF"/><path d="M2 18Q12 9 22 18Q32 9 42 18L40 21Q31 13 22 22Q13 13 4 21Z" fill="#D7EF91"/></svg>tilava<span class="ar" style="color:#C6B5FF">تلاوة</span></a><div class="motto"><span>TILAVA | <span class="ar">تلاوة</span></span><b>Pranë Kuranit, pranë gjuhës dhe kulturës sonë.</b></div></div>
-<nav>${ROUTES.map((r,i)=>`<a href="#${r}">${t("nav")[i]}</a>`).join("")}<a href="buch/index.html">Libri online</a><a href="suren/index.html">Suret e shkurtra</a><a href="urkunde/index.html">Krijo certifikatë</a><a href="#team">${t("teamL")}</a></nav><p class="small" style="color:#cfc4e0;width:100%;margin:0">${t("demo")}</p></div>`;
+<nav>${ROUTES.map((r,i)=>`<a href="#${r}">${t("nav")[i]}</a>`).join("")}<a href="buch/index.html">Libri online</a><a href="suren/index.html">Suret e shkurtra</a><a href="urkunde/index.html">Krijo certifikatë</a></nav><p class="small" style="color:#cfc4e0;width:100%;margin:0">${t("demo")}</p></div>`;
  if(h!==lastRoute){window.scrollTo(0,0);lastRoute=h}
  if(h==="team"&&db&&TEAM===null)loadTeam();
  if(h==="quran")bindAudio();
