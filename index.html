@@ -418,6 +418,25 @@ footer .fcontact{text-align:right}
 footer .wrap>div:first-child p{max-width:420px}
 @media (max-width:760px){footer .wrap{grid-template-columns:1fr}footer .fcontact{text-align:left}}
 .legal{text-align:center}
+
+/* compact footer: 4 columns in one row */
+footer{padding-block:28px calc(20px + env(safe-area-inset-bottom,0px))}
+footer .wrap{grid-template-columns:1.2fr 1fr .9fr 1.3fr;gap:22px 32px;align-items:start}
+footer .fcontact{text-align:left}
+footer p,footer li{font-size:13.5px;line-height:1.5}
+footer h4{font-size:14px;margin:0 0 8px}
+footer .logo{height:34px;margin-bottom:10px}
+footer .wrap>div:first-child p{max-width:none}
+footer ul{gap:3px}
+.partners{grid-column:auto;text-align:left;margin:0;padding:0;border:0}
+.partners h4{margin-bottom:8px}
+.partners img{display:block;width:150px;height:auto;background:#fff;border-radius:10px;padding:6px 9px;margin-bottom:8px}
+.partners p{margin:0;font-size:13px}
+.sadaqa{grid-column:auto;max-width:none;margin:0;padding:12px 14px;font-size:13.5px;line-height:1.5;border-radius:14px}
+.sadaqa .ar{font-size:18px!important;margin:0!important}
+.legal{padding-top:12px;font-size:12.5px}
+@media (max-width:980px){footer .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){footer .wrap{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -756,7 +775,7 @@ footer .wrap>div:first-child p{max-width:420px}
     <p>“Quran Reading – Step by Step” is a free e-book from Abrar. It may be shared freely and printed for personal use.</p>
   </div>
   <div class="fcontact"><h4>Contact</h4><ul><li>Abrar Online Ltd. · Solihull, Birmingham, UK</li><li><a href="mailto:info@abrarlearning.com">info@abrarlearning.com</a></li><li><a href="https://www.abrarlearning.com" target="_blank" rel="noopener">www.abrarlearning.com</a></li></ul></div>
-  <div class="partners"><h4>Our partners</h4><div class="plist"><figure class="partner"><img src="partner/sagetree.webp" alt="SageTree Foundation" width="640" height="274" loading="lazy"><figcaption>SageTree Foundation<br><span>Circles of Light, Florida, USA</span></figcaption></figure></div><p>The book was made in cooperation with the SageTree Foundation.</p></div>
+  <div class="partners"><h4>Partner</h4><img src="partner/sagetree.webp" alt="SageTree Foundation" width="640" height="274"><p>SageTree Foundation<br>Circles of Light, Florida, USA</p></div>
   <div class="sadaqa"><span class="ar" lang="ar">صَدَقَةٌ جَارِيَة</span>This website is a <b>Sadaqah Jariyah</b> – an ongoing charity. May Allah accept it from everyone who helped make it, and from everyone who learns and teaches with it.<span class="ar" lang="ar" style="font-size:20px;margin:6px 0 0">تَقَبَّلَ ٱللَّهُ مِنَّا</span></div>
 <p class="legal">© Abrar 2026 · 3rd edition · The book may not be sold – neither in print nor as an e-book.</p>
 </div></footer>
